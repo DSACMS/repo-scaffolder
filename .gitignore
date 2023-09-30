@@ -1,0 +1,6 @@
+# Files ignored because they're binary/unnecessary
+.DS_STORE
+# Files/Dirs ignored because they're secret/internal only
+id_rsa
+secrets_repo/
+internal_only_repo/
