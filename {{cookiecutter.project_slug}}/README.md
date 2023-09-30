@@ -1,8 +1,6 @@
-<!--- # NOTE: Modify sections marked with `TODO` and then rename the file.-->
+# {{ cookiecutter.project_name }}
 
-# TODO Project Name
-
-TODO: Project Description (could match GitHub.com Repo Description)
+{{ cookiecutter.project_description }}
 
 ## Getting Started
 
@@ -39,7 +37,7 @@ TODO: Example Sections
 
 1. Clone the repo
 
-    `git clone https://github.com/cmsgov/PROJECT_REPO.git`
+    `git clone https://github.com/cmsgov/{{ cookiecutter.project_repo_name }}.git`
 
 1. Setup your development environment
 
