@@ -37,9 +37,9 @@ subprocess.call(["git", "commit", "-m", "first commit"])
 gh_cli_command = [
     "gh", "repo", "create",
     f"{REPO_NAME}",
-    "--source=.",
     f"--{VISIBILITY}",
-    "--push",
     f"--description={DESCRIPTION}",
 ]
 subprocess.call(gh_cli_command)
+
+subprocess.call(["git", "push", "--set-upstream", "origin", "main"])
