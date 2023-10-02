@@ -3,5 +3,6 @@
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
   "project_repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
   "author": "Anonymous",
-  "project_description": "This is the project description, could match github.com repo description."
+  "project_description": "This is the project description, could match github.com repo description.",
+  "project_visibility": "private"
 }
