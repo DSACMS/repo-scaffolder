@@ -37,7 +37,7 @@ TODO: Example Sections
 
 1. Clone the repo
 
-    `git clone https://github.com/cmsgov/{{ cookiecutter.project_repo_name }}.git`
+    `git clone https://github.com/cmsgov/{{ cookiecutter.repo_name }}.git`
 
 1. Setup your development environment
 

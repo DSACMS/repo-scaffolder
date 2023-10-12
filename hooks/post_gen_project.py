@@ -2,7 +2,7 @@ import re
 import sys
 import subprocess
 
-REPO_NAME = '{{ cookiecutter.project_repo_name }}'
+REPO_NAME = '{{ cookiecutter.repo_name }}'
 VISIBILITY = '{{cookiecutter.project_visibility}}'
 DESCRIPTION = '{{cookiecutter.project_description}}'
 
