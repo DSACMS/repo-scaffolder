@@ -14,7 +14,7 @@ An up-to-date list of core team members can be found in MAINTAINERS.md. At this 
 Thank you for considering contributing to an Open Source project of the US Government! For more information about our contribution guidelines, see CONTRIBUTING.md
 
 
-##C odeowners
+## Codeowners
 The contents of this repository are managed by {responsible organization(s)}. Those responsible for the code and documentation in this repository can be found in CODEOWNERS.md.
 
 ## Maintainers
