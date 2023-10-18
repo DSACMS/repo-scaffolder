@@ -34,7 +34,7 @@ Pull-requests are merged to `main` and the changes are immediately deployed to t
 Prefix the branch name with your name, and include the ticket number in the branch name e.g. `cooldev/issue-1234-new-feature`.
 
 Commit messages should, but are not required, to follow [git best practice conventions](https://cbea.ms/git-commit/#seven-rules) for consistency and legibility. Commit messages will be squashed, so individual commit messages will only be visible in the commit history of the pull request.
--->
+
 
 ### Title
 
