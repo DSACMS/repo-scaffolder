@@ -1,3 +1,5 @@
 [submodule "cookiecutter-django"]
 	path = cookiecutter-django
 	url = https://github.com/audreyr/cookiecutter-django
+	recurse = true
+
