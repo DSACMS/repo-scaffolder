@@ -1,3 +1,3 @@
 import subprocess
 
-subprocess.call(["git", "submodule", "init", "-b", "main"], cwd="./cookiecutter-django")
+subprocess.call(["git", "submodule", "init"], cwd="./cookiecutter-django")
