@@ -19,6 +19,5 @@ runs:
       run: |
         repos=$(${{ github.action_path }}/find.sh ${{ inputs.query }} ${{ inputs.token }})
         echo $repos
-        repo="${{ github.event.inputs.repo }}"
-        echo "repo=$repos" >> $GITHUB_ENV
+        echo "repo=$repos" >> "$GITHUB_ENV"
       shell: bash
