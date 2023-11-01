@@ -28,7 +28,7 @@ jobs:
         name: Find repos and generate matrix
         steps:
             - name: Find repos
-              uses: ./findRepos
+              uses: .github/findRepos
               with:
                 query: ${{ github.event.inputs.query }}
                 token: ${{ secrets.pat }}
@@ -44,7 +44,7 @@ jobs:
                 repo: ${{ fromJSON(needs.find-repos.outputs.matrix ) }}
         steps:
             - name: Update file
-              uses: ./fileUpdater
+              uses: .github/fileUpdater
               with:
                 repository: ${{ matrix.repo }}
                 find: ${{ github.event.inputs.find }}
