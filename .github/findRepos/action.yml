@@ -1,0 +1,24 @@
+name: 'githubApiFindRepos'
+
+description: 'Returns list of repos from github api given a query'
+
+inputs:
+    query:
+        description: Query for github api (for example topic:xyz)
+        required: true
+    token:
+        description: Token to query github api
+        required: true
+
+runs:
+    using: 'composite'
+    steps:
+    - name: Checkout Action
+      uses: actions/checkout@v4
+    - name: Query Github Api
+      run: |
+        repos=$(${{ github.action_path }}/find.sh ${{ inputs.query }} ${{ inputs.token }})
+        echo $repos
+        repo="${{ github.event.inputs.repo }}"
+        echo "repo=$repos" >> $GITHUB_ENV
+      shell: bash

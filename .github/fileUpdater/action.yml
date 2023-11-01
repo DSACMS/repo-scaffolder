@@ -1,0 +1,64 @@
+name: 'Update'
+
+description: 'Update strings'
+
+inputs:
+  find:
+    description: String to replace
+    required: true
+  replace:
+    description: Replacement string
+    required: true
+  repository:
+    description: Repository to update
+    required: true
+  file:
+    description: File to replace in
+    required: true
+  commit-message:
+    description: Commit message when raising pr
+    default: "chore: updated string"
+    required: false
+  branch-name:
+    description: Branch name when raising pr
+    default: chore/update-string
+    required: false
+  title:
+    description: Title of raised pr
+    default: 'chore: updated string'
+    required: false
+  body:
+    description: Body of raised pr
+    default: Updated string
+    required: false
+  labels:
+    description: Lavels for pr (separated by new line)
+    default: automated pr
+    required: false
+  token:
+    description: Access token to push and raise pr
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ inputs.repository }}
+        token: ${{ inputs.token }}
+    - name: Update files
+      run: ${{ github.action_path }}/update.sh ${{ inputs.find }} ${{ inputs.replace }} ${{ inputs.filename }}
+      shell: bash
+    - name: Create pull request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ inputs.token }}
+        commit-message: ${{ inputs.commit-message }}
+        branch: ${{ inputs.branch-name }}
+        delete-branch: true
+        title: ${{ inputs.title }}
+        body: |
+          ${{ inputs.body }}
+        labels: |
+          ${{ inputs.labels }}

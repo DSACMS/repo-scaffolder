@@ -1,0 +1,53 @@
+name: Update string
+
+on:
+    workflow_dispatch:
+        inputs:
+            query:
+                description: 'Query from github API'
+                default: 'topic:x'
+                required: true
+            find:
+                description: 'String to search for'
+                default: 'x'
+                required: true
+            replace:
+                description: 'Replacement string'
+                default: 'y'
+                required: true
+            file:
+                description: 'File to replace in'
+                default: 'CONTRIBUTING.md'
+
+env:
+    repo: ""
+
+jobs:
+    find-repos:
+        runs-on: ubuntu-latest
+        name: Find repos and generate matrix
+        steps:
+            - name: Find repos
+              uses: ./findRepos
+              with:
+                query: ${{ github.event.inputs.query }}
+                token: ${{ secrets.pat }}
+        outputs:
+            matrix: ${{ env.repo }}
+
+    update:
+        runs-on: ubuntu-latest
+        name: Update file
+        needs: [find-repos]
+        strategy:
+            matrix:
+                repo: ${{ fromJSON(needs.find-repos.outputs.matrix ) }}
+        steps:
+            - name: Update file
+              uses: ./fileUpdater
+              with:
+                repository: ${{ matrix.repo }}
+                find: ${{ github.event.inputs.find }}
+                replace: ${{ github.event.inputs.replace }}
+                file: ${{ github.event.inputs.file }}
+                token: ${{ secrets.pat }}
