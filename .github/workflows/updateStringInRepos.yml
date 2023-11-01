@@ -27,6 +27,8 @@ jobs:
         runs-on: ubuntu-latest
         name: Find repos and generate matrix
         steps:
+            - name: Checkout Action
+              uses: actions/checkout@v4
             - name: Find repos
               uses: .github/findRepos
               with:
@@ -43,6 +45,8 @@ jobs:
             matrix:
                 repo: ${{ fromJSON(needs.find-repos.outputs.matrix ) }}
         steps:
+            - name: Checkout Action
+              uses: actions/checkout@v4
             - name: Update file
               uses: .github/fileUpdater
               with:
