@@ -30,7 +30,7 @@ jobs:
             - name: Checkout Action
               uses: actions/checkout@v4
             - name: Find repos
-              uses: .github/findRepos
+              uses: ./.github/findRepos
               with:
                 query: ${{ github.event.inputs.query }}
                 token: ${{ secrets.pat }}
@@ -48,7 +48,7 @@ jobs:
             - name: Checkout Action
               uses: actions/checkout@v4
             - name: Update file
-              uses: .github/fileUpdater
+              uses: ./.github/fileUpdater
               with:
                 repository: ${{ matrix.repo }}
                 find: ${{ github.event.inputs.find }}
