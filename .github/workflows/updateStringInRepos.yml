@@ -31,7 +31,7 @@ jobs:
               uses: ./findRepos
               with:
                 query: ${{ github.event.inputs.query }}
-                token: ${{ secrets.accesss_token }}
+                token: ${{ secrets.pat }}
         outputs:
             matrix: ${{ env.repo }}
 
@@ -50,4 +50,4 @@ jobs:
                 find: ${{ github.event.inputs.find }}
                 replace: ${{ github.event.inputs.replace }}
                 file: ${{ github.event.inputs.file }}
-                token: ${{ secrets.access_token }}
+                token: ${{ secrets.pat }}
