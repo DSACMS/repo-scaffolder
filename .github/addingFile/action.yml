@@ -56,7 +56,8 @@ runs:
     - name: Checkout branch and copy over files
       run: |
         git checkout -b ${{ inputs.branch-name }}
-        ls
+        cp -R ${{ inputs.files }} target
+        cd target
       shell: bash
     - name: Add to git
       run: |
