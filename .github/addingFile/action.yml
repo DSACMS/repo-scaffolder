@@ -45,6 +45,7 @@ runs:
         ref: main
         fetch-depth: 0
         token: ${{ inputs.token }}
+        path: main
     - name: Configure git
       run: |
         git config user.name 'Github Action'
@@ -53,7 +54,7 @@ runs:
     - name: Copy over files
       run: |
         ls
-        cp -R ${{ inputs.files }} ./
+        cp -R ${{ inputs.files }} main/
         echo "debug"
         cd ..
         ls
