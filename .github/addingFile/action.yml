@@ -51,6 +51,7 @@ runs:
       run: |
         git config user.name 'Github Action'
         git config user.email 'github-action@users.noreply.github.com'
+      shell: bash
     - name: Checkout branch and copy over files
       run: |
         git checkout -b ${{ inputs.branch-name }}
@@ -59,9 +60,11 @@ runs:
         cp -R /home/runner/work/repo-scaffolder/${{ inputs.files }} /home/runner/work/${{ inputs.repository }}/
         cd /home/runner/work/${{ inputs.repository }}/
         ls
+      shell: bash
     - name: Add to git
       run: |
         git add ${{ inputs.files }}
+      shell: bash
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
       with:
