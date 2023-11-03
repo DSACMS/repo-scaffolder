@@ -45,7 +45,10 @@ runs:
         ref: main
         fetch-depth: 0
         token: ${{ inputs.token }}
-        path: main
+    - name: Checkout scaffolder inside target
+        uses: actions/checkout@v4
+        with:
+          path: scaffolder
     - name: Configure git
       run: |
         git config user.name 'Github Action'
@@ -54,7 +57,7 @@ runs:
     - name: Copy over files
       run: |
         ls
-        cp -R ${{ inputs.files }} main/
+        cp -R scaffolder/${{ inputs.files }} ./
         echo "debug"
         cd ..
         ls
