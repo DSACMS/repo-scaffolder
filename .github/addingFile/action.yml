@@ -1,0 +1,76 @@
+name: 'addingFiles'
+
+description: 'Adds files to git'
+
+inputs:
+    files:
+        description: File or folder to add
+        required: true
+    commit-message:
+      description: Commit message when raising pr
+      default: "chore: adding files"
+      required: false
+    branch-name:
+      description: Branch name when raising pr
+      default: chore/add-files
+      required: false
+    title:
+      description: Title of raised pr
+      default: 'chore: adding files'
+      required: false
+    body:
+      description: Body of raised pr
+      default: Adding files
+      required: false
+    labels:
+      description: Lavels for pr (separated by new line)
+      default: automated pr
+      required: false
+    token:
+      description: Access token to push and raise pr
+      required: true
+
+
+runs:
+    using: 'composite'
+    steps:
+    - name: Checkout scaffolder repo
+      uses: actions/checkout@v4
+    - name: Check file or folder exists
+      run: |
+        ${{ github.action_path }}/lintInput.sh ${{ inputs.files }}
+      shell: bash
+    - name: Checkout target repository
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ inputs.repository }}
+        ref: main
+        fetch-depth: 0
+        token: ${{ inputs.token }}
+    - name: Configure git
+      run: |
+        git config user.name 'Github Action'
+        git config user.email 'github-action@users.noreply.github.com'
+    - name: Checkout branch and copy over files
+      run: |
+        git checkout -b ${{ inputs.branch-name }}
+        cd .
+        ls
+        cp -R /home/runner/work/repo-scaffolder/${{ inputs.files }} /home/runner/work/${{ inputs.repository }}/
+        cd /home/runner/work/${{ inputs.repository }}/
+        ls
+    - name: Add to git
+      run: |
+        git add ${{ inputs.files }}
+    - name: Create pull request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ inputs.token }}
+        commit-message: ${{ inputs.commit-message }}
+        branch: ${{ inputs.branch-name }}
+        delete-branch: true
+        title: ${{ inputs.title }}
+        body: |
+          ${{ inputs.body }}
+        labels: |
+          ${{ inputs.labels }}

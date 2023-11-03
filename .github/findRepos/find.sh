@@ -1,9 +1,10 @@
 #!/bin/bash
 
 query=$1
-token=$2
+org=$2
+token=$3
 
-curl -s -H "Authorization: token $token" GET https://api.github.com/search/repositories?q=org:DSACMS+$query >> apiJson.json
+curl -s -H "Authorization: token $token" GET https://api.github.com/search/repositories?q=org:$org+$query >> apiJson.json
 total_count=$(jq '.total_count' apiJson.json)
 if [ -z "$total_count" ]; then
     cat apiJson.json
