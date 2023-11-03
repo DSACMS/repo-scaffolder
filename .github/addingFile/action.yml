@@ -48,14 +48,9 @@ runs:
         fetch-depth: 0
         token: ${{ inputs.token }}
         path: target
-    - name: Configure git
-      run: |
-        git config user.name 'Github Action'
-        git config user.email 'github-action@users.noreply.github.com'
       shell: bash
-    - name: Checkout branch and copy over files
+    - name: Copy over files
       run: |
-        git checkout -b ${{ inputs.branch-name }}
         cp -R ${{ inputs.files }} target
         cd target
       shell: bash
