@@ -1,7 +1,6 @@
-<!--- # NOTE: Modify sections marked with `TODO` and then rename the file.-->
+<!--- # NOTE: Modify sections marked with `TODO`-->
 
 # How to Contribute
-
 We're so thankful you're considering contributing to an [open source project of
 the U.S. government](https://code.gov/)! If you're unsure about anything, just
 ask -- or submit the issue or pull request anyway. The worst that can happen is
@@ -10,24 +9,22 @@ contributions.
 
 We encourage you to read this project's CONTRIBUTING policy (you are here), its
 [LICENSE](LICENSE.md), and its [README](README.md).
+-->
 
 ## Getting Started
 <!--- ### TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
 
 ### Team Specific Guidelines
+<!--- ### TODO -->
 
 ### Building dependencies
-
 <!--- ### TODO -->
 
 ### Building the Project
-
 <!--- ### TODO -->
 
 ### Workflow and Branching
-
-<!---
-TODO: Workflow Example
+<!--- TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
 1.  Fork the project 
@@ -41,48 +38,41 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 -->
 
 ### Testing Conventions
-
 <!--- TODO -->
 
 ### Coding Style and Linters
-
 <!--- TODO: Code Style Guide 
 
 1. Mention any style guides you adhere to (e.g. pep8, etc...)
 1. Mention any linters your project uses (e.g. flake8, jslint, etc...) 
 1. Mention any naming conventions your project uses (e.g. Semantic Versioning, CamelCasing, etc...)
 1. Mention any other content guidelines the project adheres to (e.g. plainlanguage.gov, etc...)
-
 -->
 
-### Issues
+### Writing Issues
 
-<!---
-TODO: Example Issue Guides
+> Example Issue Guides
+> When creating an issue please try to adhere to the following format:
+> 
+>     module-name: One line summary of the issue (less than 72 characters)
+> 
+>     ### Expected behavior
+> 
+>     As concisely as possible, describe the expected behavior.
+> 
+>    ### Actual behavior
+>
+>    As concisely as possible, describe the observed behavior.
+>
+>    ### Steps to reproduce the behavior
+>
+>    List all relevant steps to reproduce the observed behavior.
+>
+>    see our .github/ISSUE_TEMPLATE.md for more examples.
 
-When creating an issue please try to adhere to the following format:
-
-    module-name: One line summary of the issue (less than 72 characters)
-
-    ### Expected behavior
-
-    As concisely as possible, describe the expected behavior.
-
-    ### Actual behavior
-
-    As concisely as possible, describe the observed behavior.
-
-    ### Steps to reproduce the behavior
-
-    List all relevant steps to reproduce the observed behavior.
-
-    see our .github/ISSUE_TEMPLATE.md for more examples.
--->
-
-### Pull Requests
-
-<!---
-### TODO: Confirm
+### Writing Pull Requests
+<!--- 
+### TODO: Pull request example
 
 Comments should be formatted to a width no greater than 80 columns.
 
@@ -92,22 +82,22 @@ We adhere to a specific format for commit messages. Please write your commit
 messages along these guidelines. Please keep the line width no greater than 80
 columns (You can use `fmt -n -p -w 80` to accomplish this).
 
-    module-name: One line description of your change (less than 72 characters)
-
-    Problem
-
-    Explain the context and why you're making that change.  What is the problem
-    you're trying to solve? In some cases there is not a problem and this can be
-    thought of being the motivation for your change.
-
-    Solution
-
-    Describe the modifications you've done.
-
-    Result
-
-    What will change as a result of your pull request? Note that sometimes this
-    section is unnecessary because it is self-explanatory based on the solution.
+>    module-name: One line description of your change (less than 72 characters)
+>
+>    Problem
+>
+>    Explain the context and why you're making that change.  What is the problem
+>    you're trying to solve? In some cases there is not a problem and this can be
+>    thought of being the motivation for your change.
+>
+>    Solution
+>
+>    Describe the modifications you've done.
+>
+>    Result
+>
+>    What will change as a result of your pull request? Note that sometimes this
+>    section is unnecessary because it is self-explanatory based on the solution.
 
 Some important notes regarding the summary line:
 
@@ -122,8 +112,7 @@ Some important notes regarding the summary line:
 -->
 
 ## Code Review
-
-<!---
+<!--- 
 ### TODO: Code Review Example
 
 The repository on GitHub is kept in sync with an internal repository at
@@ -144,11 +133,10 @@ request will be closed.
 
 The changes in the pull request will be collapsed into a single commit, but the
 authorship metadata will be preserved.
-
 -->
 
-## Documentation
 
+## Documentation
 <!--- 
 ### TODO: Documentation Example
 
@@ -159,13 +147,11 @@ docs. Please file an [issue](https://github.com/cmsgov/cmsgov-example-repo/issue
 ## Policies
 
 ### Open Source Policy
-
 We adhere to the [CMS Open Source
 Policy](https://github.com/CMSGov/cms-open-source-policy). If you have any
 questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
-
 The Centers for Medicare & Medicaid Services is committed to ensuring the
 security of the American public by protecting their information from
 unwarranted disclosure. We want security researchers to feel comfortable
@@ -191,7 +177,6 @@ If you have other cybersecurity related questions, please contact us at
 [csirc@hhs.gov](mailto:csirc@hhs.gov).
 
 ## Public domain
-
 This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
 
 All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
