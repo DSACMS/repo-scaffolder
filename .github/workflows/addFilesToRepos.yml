@@ -51,3 +51,5 @@ jobs:
                 repository: ${{ matrix.repo }}
                 files: ${{ github.event.inputs.files }}
                 token: ${{ secrets.pat }}
+            - name: Checkout Action
+              uses: actions/checkout@v4
