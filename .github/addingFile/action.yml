@@ -46,9 +46,9 @@ runs:
         fetch-depth: 0
         token: ${{ inputs.token }}
     - name: Checkout scaffolder inside target
-        uses: actions/checkout@v4
-        with:
-          path: scaffolder
+      uses: actions/checkout@v4
+      with:
+        path: scaffolder
     - name: Configure git
       run: |
         git config user.name 'Github Action'
