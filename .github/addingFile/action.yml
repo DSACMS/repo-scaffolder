@@ -48,15 +48,10 @@ runs:
         fetch-depth: 0
         token: ${{ inputs.token }}
         path: target
-      shell: bash
     - name: Copy over files
       run: |
         cp -R ${{ inputs.files }} target
         cd target
-      shell: bash
-    - name: Add to git
-      run: |
-        git add ${{ inputs.files }}
       shell: bash
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
