@@ -34,6 +34,10 @@ inputs:
 runs:
     using: 'composite'
     steps:
+    - name: Check file or folder exists
+      run: |
+        ${{ github.action_path }}/lintInput.sh ${{ inputs.files }}
+      shell: bash
     - name: Checkout target repository
       uses: actions/checkout@v4
       with:
@@ -41,15 +45,6 @@ runs:
         ref: main
         fetch-depth: 0
         token: ${{ inputs.token }}
-        path: target
-    - name: Checkout scaffolder repo
-      uses: actions/checkout@v4
-      with:
-        path: main
-    - name: Check file or folder exists
-      run: |
-        ${{ github.action_path }}/lintInput.sh ${{ inputs.files }}
-      shell: bash
     - name: Configure git
       run: |
         git config user.name 'Github Action'
@@ -58,9 +53,9 @@ runs:
     - name: Copy over files
       run: |
         ls
-        cp -R main/${{ inputs.files }} target/
-        echo "going into target repo"
-        cd target
+        cp -R ${{ inputs.files }} ./
+        echo "debug"
+        cd ..
         ls
       shell: bash
     - name: Add to git
