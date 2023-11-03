@@ -34,6 +34,12 @@ inputs:
 runs:
     using: 'composite'
     steps:
+    - name: Checkout scaffolder repo
+      uses: actions/checkout@v4
+    - name: Check file or folder exists
+      run: |
+        ${{ github.action_path }}/lintInput.sh ${{ inputs.files }}
+      shell: bash
     - name: Checkout target repository
       uses: actions/checkout@v4
       with:
@@ -41,14 +47,7 @@ runs:
         ref: main
         fetch-depth: 0
         token: ${{ inputs.token }}
-    - name: Check file or folder exists
-      run: |
-        ${{ github.action_path }}/lintInput.sh ${{ inputs.files }}
-      shell: bash
-    - name: Checkout scaffolder repo
-      uses: actions/checkout@v4
-      with:
-        path: scaffolder
+        path: target
     - name: Configure git
       run: |
         git config user.name 'Github Action'
