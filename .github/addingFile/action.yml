@@ -36,6 +36,8 @@ runs:
     steps:
     - name: Checkout scaffolder repo
       uses: actions/checkout@v4
+      with:
+        path: main
     - name: Check file or folder exists
       run: |
         ${{ github.action_path }}/lintInput.sh ${{ inputs.files }}
@@ -55,7 +57,8 @@ runs:
       shell: bash
     - name: Copy over files
       run: |
-        cp -R ${{ inputs.files }} target
+        ls
+        cp -R ${{ inputs.files }} target/
         cd target
         ls
       shell: bash
