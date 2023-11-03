@@ -20,7 +20,7 @@ runs:
       uses: actions/checkout@v4
     - name: Query Github Api
       run: |
-        repos=$(${{ github.action_path }}/find.sh ${{ inputs.query }} ${{ input.org }} ${{ inputs.token }})
+        repos=$(${{ github.action_path }}/find.sh ${{ inputs.query }} ${{ inputs.org }} ${{ inputs.token }})
         echo $repos
         echo "repo="$repos"" >> $GITHUB_ENV
       shell: bash
