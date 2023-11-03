@@ -78,3 +78,5 @@ runs:
           ${{ inputs.body }}
         labels: |
           ${{ inputs.labels }}
+        add-paths: |
+          ${{ inputs.files }}
