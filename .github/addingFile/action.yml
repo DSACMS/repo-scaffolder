@@ -57,7 +57,6 @@ runs:
       shell: bash
     - name: Copy over files
       run: |
-        cd ..
         ls
         cp -R main/${{ inputs.files }} target/
         echo "going into target repo"
