@@ -1,22 +1,15 @@
 {
-  "greater_one_contributors": ["yes", "no"],
-  "greater_one_release": ["yes", "no"],
-  "work_as_team": ["yes", "no"],
-  "maintain_as_team": ["yes", "no"],
-  "roadmap_as_team": ["yes", "no"],
-  "_copy_without_render": [
-    "*scaffold-templates"
-  ],
+  "CONTRIBUTORS": [true, false],
+  "RELEASE": [true, false],
+  "WORK": [true, false],
+  "MAINTAIN": [true, false],
+  "ROADMAP": [true, false],
+  "template": "{{ Tier 0 (./scaffold-templates/tier0) if !cookiecutter.CONTRIBUTORS else Tier 1 (./scaffold-templates/tier1) }}",
   "__prompts__": {
-    "greater_one_contributors": "Does your project have more than one contributor?",
-    "greater_one_release": "Do you plan on cutting more than one release?",
+    "CONTRIBUTORS": "Does your project have more than one contributor?",
+    "RELEASE": "Do you plan on cutting more than one release?",
     "work_as_team": "Do you plan on having other individuals/teams work with you?",
     "maintain_as_team": "Do you plan on having other individuals/teams maintain the project with you?",
     "roadmap_as_team": "Do you plan on having other individuals/teams plan the development roadmap with you?"
-  },
-  "template" : [
-    "Tier 0 (./scaffold-templates/tier0)",
-    "Tier 1 (./scaffold-templates/tier1)",
-    "Tier 2 (./scaffold-templates/tier2)"
-  ]
+  }
 }
