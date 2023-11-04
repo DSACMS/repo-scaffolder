@@ -11,7 +11,7 @@
   "_tier": "{{ cookiecutter._t0 and '0' or cookiecutter._t1 and '1' or cookiecutter._t2 and '2' or cookiecutter._t3 and '3' or '4' }}",
   "template" : [
     "Test {{cookiecutter._tier}} (./test-{{cookiecutter._tier}})",
-    "{{ cookiecuter._tier }}",
+    "{{ cookiecutter._tier }}",
     "{{ cookiecutter._t0 }}",
     "Test 0 (./test-0)",
     "Test 1 (./test-1)",
