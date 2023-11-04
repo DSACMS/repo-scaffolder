@@ -49,6 +49,7 @@ runs:
       uses: actions/checkout@v4
       with:
         path: scaffolder
+        fetch-depth: 0
     - name: Configure git
       run: |
         git config user.name 'Github Action'
