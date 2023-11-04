@@ -1,5 +1,6 @@
 {
     "project_name": "My Project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "project_org": "DSACMS",
     "project_repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "project_description": "This is the project description, could match github.com repo description.",
