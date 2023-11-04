@@ -48,7 +48,7 @@ runs:
         repository: ${{ inputs.repository }}
         token: ${{ inputs.token }}
     - name: Update files
-      run: ${{ github.action_path }}/update.sh ${{ inputs.find }} ${{ inputs.replace }} ${{ inputs.file }}
+      run: .github/update.sh ${{ inputs.find }} ${{ inputs.replace }} ${{ inputs.file }}
       shell: bash
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
