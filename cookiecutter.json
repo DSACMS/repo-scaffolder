@@ -4,9 +4,7 @@
   "WORK": [true, false],
   "MAINTAIN": [true, false],
   "ROADMAP": [true, false],
-  {% if cookiecutter.CONTRUBUTORS %}
-    {% set cookiecutter.__t0 = False %}
-  {% endif %}
+  "__t0": "{{ not cookiecutter.CONTRIBUTORS }}",
   "__t1": "{{ not cookiecutter.RELEASE or not cookiecutter.WORK }}",
   "__t2": "{{ not cookiecutter.MAINTAIN }}",
   "__t3": "{{ not cookiecutter.ROADMAP }}",
