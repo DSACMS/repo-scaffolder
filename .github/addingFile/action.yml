@@ -49,7 +49,6 @@ runs:
       uses: actions/checkout@v4
       with:
         path: scaffolder
-        fetch-depth: 0
     - name: Configure git
       run: |
         git config user.name 'Github Action'
@@ -57,10 +56,7 @@ runs:
       shell: bash
     - name: Copy over files
       run: |
-        ls
         cp -R scaffolder/${{ inputs.files }} ./
-        echo "debug"
-        cd ..
         ls
       shell: bash
     - name: Add to git
