@@ -1,47 +1,30 @@
-import re
-import sys
-import subprocess
+CONTRIBUTORS = '{{ cookiecutter.greater_one_contributors }}'
+RELEASE = '{{cookiecutter.greater_one_release}}'
+WORK = '{{cookiecutter.work_as_team}}'
+MAINTAIN = '{{cookiecutter.maintain_as_team}}'
+ROADMAP = '{{cookiecutter.roadmap_as_team}}'
 
-REPO_NAME = '{{ cookiecutter.project_repo_name }}'
-VISIBILITY = '{{cookiecutter.project_visibility}}'
-DESCRIPTION = '{{cookiecutter.project_description}}'
-
-if not re.match(r'^[-._a-zA-Z0-9]+$', REPO_NAME):
-    print(f'ERROR: {REPO_NAME} is not a valid Python module name!')
-    sys.exit(1)
-
-if VISIBILITY not in ["public", "private", "internal"]:
-    print(f'ERROR: {VISIBILITY} is not a valid visibility for github, it must be one of "public", "private" or "internal"')
-    sys.exit(1)
-
-def check_dependencies() -> bool:
-    try:
-        subprocess.run(["git", "--version"], capture_output=True, check=True)
-    except subprocess.CalledProcessError as exception:
-        print(f"ERROR: git failed with exit code: {exception.returncode}. (is git installed?)")
-        return False
-    try:
-        subprocess.run(["gh", "--version"], capture_output=True, check=True)
-        return True
-    except subprocess.CalledProcessError as exception:
-        print(f"ERROR: gh failed with exit code {exception.returncode}. (is gh installed? gh is github CLI)")
-        return False
-
-if not check_dependencies():
-    sys.exit(1)
-
-subprocess.call(["git", "init", "-b", "main"])
-subprocess.call(["git", "add", "."])
-subprocess.call(["git", "commit", "-m", "first commit"])
-
-gh_cli_command = [
-    "gh", "repo", "create",
-    f"{REPO_NAME}",
-    "--source=.",
-    f"--{VISIBILITY}",
-    "--push",
-    f"--description={DESCRIPTION}",
-]
-subprocess.call(gh_cli_command)
-
-subprocess.call(["git", "push", "--set-upstream", "origin", "main"])
+if CONTRIBUTORS == "no":
+    # tier 0
+    print("We suggest using the tier 0 template for your project.  Run: ")
+    print("cookiecutter https://github.com/DSACMS/repo-scaffolder/scaffold-templates/tier0")
+elif RELEASE == "no":
+    #tier 1
+    print("We suggest using the tier 1 template for your project.  Run: ")
+    print("cookiecutter https://github.com/DSACMS/repo-scaffolder/scaffold-templates/tier1")
+elif WORK == "no":
+    #tier 1
+    print("We suggest using the tier 1 template for your project.  Run: ")
+    print("cookiecutter https://github.com/DSACMS/repo-scaffolder/scaffold-templates/tier1")
+elif MAINTAIN == "no":
+    # tier 2
+    print("We suggest using the tier 2 template for your project.  Run: ")
+    print("cookiecutter https://github.com/DSACMS/repo-scaffolder/scaffold-templates/tier2")
+elif ROADMAP == "no":
+    # tier 3
+    print("We suggest using the tier 3 template for your project.  Run: ")
+    print("cookiecutter https://github.com/DSACMS/repo-scaffolder/scaffold-templates/tier3")
+else:
+    # tier 4
+    print("We suggest using the tier 4 template for your project.  Run: ")
+    print("cookiecutter https://github.com/DSACMS/repo-scaffolder/scaffold-templates/tier4")

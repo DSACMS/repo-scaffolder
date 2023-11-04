@@ -1,8 +1,17 @@
 {
-  "project_name": "My Open Source Project",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-  "project_repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-  "author": "Anonymous",
-  "project_description": "This is the project description, could match github.com repo description.",
-  "project_visibility": "private"
+  "greater_one_contributors": ["yes", "no"],
+  "greater_one_release": ["yes", "no"],
+  "work_as_team": ["yes", "no"],
+  "maintain_as_team": ["yes", "no"],
+  "roadmap_as_team": ["yes", "no"],
+  "_copy_without_render": [
+    "*scaffold-templates"
+  ],
+  "__prompts__": {
+    "greater_one_contributors": "Does your project have more than one contributor?",
+    "greater_one_release": "Do you plan on cutting more than one release?",
+    "work_as_team": "Do you plan on having other individuals/teams work with you?",
+    "maintain_as_team": "Do you plan on having other individuals/teams maintain the project with you?",
+    "roadmap_as_team": "Do you plan on having other individuals/teams plan the development roadmap with you?"
+}
 }
