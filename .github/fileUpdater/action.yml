@@ -42,17 +42,19 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Checkout repository
+    - name: Checkout target repository
       uses: actions/checkout@v4
       with:
         repository: ${{ inputs.repository }}
+        ref: main
+        fetch-depth: 0
         token: ${{ inputs.token }}
-    - name: debug
-      run: |
-        echo ${{ github.action_path }}
-      shell: bash
+    - name: Checkout scaffolder inside target
+      uses: actions/checkout@v4
+      with:
+        path: scaffolder
     - name: Update files
-      run: repo-scaffolder/.github/fileUpdater/update.sh ${{ inputs.find }} ${{ inputs.replace }} ${{ inputs.file }}
+      run: scaffolder/.github/fileUpdater/update.sh ${{ inputs.find }} ${{ inputs.replace }} ${{ inputs.file }}
       shell: bash
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
