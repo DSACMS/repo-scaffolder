@@ -4,7 +4,7 @@
   "WORK": [true, false],
   "MAINTAIN": [true, false],
   "ROADMAP": [true, false],
-  "template": ["{{ 'Tier 0 (./scaffold-templates/tier0)' if !cookiecutter.CONTRIBUTORS else 'Tier 1 (./scaffold-templates/tier1)' }}"],
+  "template": ["{{ 'Tier 0 (./scaffold-templates/tier0)' if cookiecutter.CONTRIBUTORS else 'Tier 1 (./scaffold-templates/tier1)' }}"],
   "__prompts__": {
     "CONTRIBUTORS": "Does your project have more than one contributor?",
     "RELEASE": "Do you plan on cutting more than one release?",
