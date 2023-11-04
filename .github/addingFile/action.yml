@@ -49,10 +49,17 @@ runs:
       uses: actions/checkout@v4
       with:
         path: scaffolder
+    - name: Configure git
+      run: |
+        git config user.name 'Github Action'
+        git config user.email 'github-action@users.noreply.github.com'
+      shell: bash
     - name: Copy over files
       run: |
         cp -R scaffolder/${{ inputs.files }} ./
         rm -rf scaffolder
+        ls
+        git add .
       shell: bash
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
