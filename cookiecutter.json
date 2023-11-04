@@ -15,7 +15,12 @@
     "Test 1 (./test-1)",
     "Test 2 (./test-2)",
     "Test 3 (./test-3)",
-    "Test 4 (./test-4)"
+    "Test 4 (./test-4)",
+    "{{ cookiecutter.__t0 }}",
+    "{{ cookiecutter.__t1 }}",
+    "{{ cookiecutter.__t2 }}",
+    "{{ cookiecutter.__t3 }}",
+    "{{ cookiecutter.__tier }}"
   ],
   "__prompts__": {
     "CONTRIBUTORS": "Does your project have more than one contributor?",
