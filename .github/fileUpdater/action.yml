@@ -47,8 +47,12 @@ runs:
       with:
         repository: ${{ inputs.repository }}
         token: ${{ inputs.token }}
+    - name: debug
+      run: |
+        echo ${{ github.action_path }}
+      shell: bash
     - name: Update files
-      run: .github/update.sh ${{ inputs.find }} ${{ inputs.replace }} ${{ inputs.file }}
+      run: ${{ github.action_path }}/fileUpdater/update.sh ${{ inputs.find }} ${{ inputs.replace }} ${{ inputs.file }}
       shell: bash
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
