@@ -60,5 +60,3 @@ jobs:
                 replace: ${{ github.event.inputs.replace }}
                 file: ${{ github.event.inputs.file }}
                 token: ${{ secrets.pat }}
-            - name: Checkout Action again to stop post error
-              uses: actions/checkout@v4
