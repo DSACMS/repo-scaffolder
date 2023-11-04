@@ -4,7 +4,7 @@
   "WORK": [true, false],
   "MAINTAIN": [true, false],
   "ROADMAP": [true, false],
-  "_t0": "{{ False if cookiecutter.CONTRIBUTORS else True }}",
+  "_t0": "{{ '0' if cookiecutter.CONTRIBUTORS else '1' }}",
   "_t1": "{{ True if not cookiecutter.RELEASE or not cookiecutter.WORK else False}}",
   "_t2": "{{ True if not cookiecutter.MAINTAIN else False }}",
   "_t3": "{{ True if not cookiecutter.ROADMAP else False }}",
