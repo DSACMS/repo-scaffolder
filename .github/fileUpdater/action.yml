@@ -54,7 +54,9 @@ runs:
       with:
         path: scaffolder
     - name: Update files
-      run: scaffolder/.github/fileUpdater/update.sh ${{ inputs.find }} ${{ inputs.replace }} ${{ inputs.file }}
+      run: |
+        scaffolder/.github/fileUpdater/update.sh ${{ inputs.find }} ${{ inputs.replace }} ${{ inputs.file }}
+        rm -rf scaffolder
       shell: bash
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
