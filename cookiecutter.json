@@ -6,7 +6,7 @@
   "project_description": "This is the project description, could match github.com repo description.",
   "project_visibility": "private",
   "template" : [
-    "Django (./cookiecutter-django)",
+    "Test 1 (./test-1)",
     "Test 1 (./test-1)",
     "None"
   ]
