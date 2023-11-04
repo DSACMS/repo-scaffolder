@@ -59,7 +59,7 @@ runs:
         cp -R scaffolder/${{ inputs.files }} ./
         rm -rf scaffolder
         ls
-        git add .
+        git add --all
       shell: bash
     - name: Create pull request
       uses: peter-evans/create-pull-request@v5
