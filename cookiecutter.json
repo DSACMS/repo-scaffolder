@@ -4,12 +4,12 @@
   "WORK": [true, false],
   "MAINTAIN": [true, false],
   "ROADMAP": [true, false],
-  "template": ["{{ 'Tier 0 (./scaffold-templates/tier0)' if not cookiecutter.CONTRIBUTORS else 'Tier 1 (./scaffold-templates/tier1)' if not cookiecutter.RELEASE else 'Tier 1 (./scaffold-templates/tier1)' if not cookiecutter.WORK else 'Tier 2 (./scaffold-templates/tier2)' if not cookiecutter.MAINTAIN else 'Tier 3 (./scaffold-templates/tier3)' if not cookiecutter.ROADMAP else 'Tier 4 (./scaffold-templates/tier4)'}}"],
+  "template": ["{{ 'Tier 0 (./tier0)' if not cookiecutter.CONTRIBUTORS else 'Tier 1 (./tier1)' if not cookiecutter.RELEASE else 'Tier 1 (./tier1)' if not cookiecutter.WORK else 'Tier 2 (./tier2)' if not cookiecutter.MAINTAIN else 'Tier 3 (./tier3)' if not cookiecutter.ROADMAP else 'Tier 4 (./tier4)'}}"],
   "__prompts__": {
     "CONTRIBUTORS": "Does your project have more than one contributor?",
     "RELEASE": "Do you plan on cutting more than one release?",
-    "work_as_team": "Do you plan on having other individuals/teams work with you?",
-    "maintain_as_team": "Do you plan on having other individuals/teams maintain the project with you?",
-    "roadmap_as_team": "Do you plan on having other individuals/teams plan the development roadmap with you?"
+    "WORK": "Do you plan on having other individuals/teams work with you?",
+    "MAINTAIN": "Do you plan on having other individuals/teams maintain the project with you?",
+    "ROADMAP": "Do you plan on having other individuals/teams plan the development roadmap with you?"
   }
 }
