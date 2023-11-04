@@ -1,5 +1,3 @@
-import re
-import sys
 import subprocess
 
 REPO_NAME = '{{ cookiecutter.project_repo_name }}'
