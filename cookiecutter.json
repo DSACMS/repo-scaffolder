@@ -10,17 +10,12 @@
   "__t3": "{{ not cookiecutter.ROADMAP }}",
   "__tier": "{{ '0' if cookiecutter.__t0 == 'True' else '1' if cookiecutter.__t1 == 'True' else '2' if cookiecutter.__t2 == 'True' else '3' if cookiecutter.__t3 == 'True' else '4' }}",
   "template" : [
-    "Test {{cookiecutter.__tier}} (./test-{{cookiecutter.__tier}})",
-    "Test 0 (./test-0)",
-    "Test 1 (./test-1)",
-    "Test 2 (./test-2)",
-    "Test 3 (./test-3)",
-    "Test 4 (./test-4)",
-    "{{ cookiecutter.__t0 }}",
-    "{{ cookiecutter.__t1 }}",
-    "{{ cookiecutter.__t2 }}",
-    "{{ cookiecutter.__t3 }}",
-    "{{ cookiecutter.__tier }}"
+    "According to your answers: Tier {{cookiecutter.__tier}} (./tier-{{cookiecutter.__tier}})",
+    "Tier 0 (./tier-0)",
+    "Tier 1 (./tier-1)",
+    "Tier 2 (./tier-2)",
+    "Tier 3 (./tier-3)",
+    "Tier 4 (./tier-4)"
   ],
   "__prompts__": {
     "CONTRIBUTORS": "Does your project have more than one contributor?",
