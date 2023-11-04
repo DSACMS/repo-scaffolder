@@ -8,7 +8,7 @@
   "__t1": "{{ not cookiecutter.RELEASE or not cookiecutter.WORK }}",
   "__t2": "{{ not cookiecutter.MAINTAIN }}",
   "__t3": "{{ not cookiecutter.ROADMAP }}",
-  "__tier": "{{ '0' if cookiecutter.__t0 is sameas true else '1' if cookiecutter.__t1 is sameas true else '2' if cookiecutter.__t2 is sameas true else '3' if cookiecutter.__t3 is sameas true else '4' }}",
+  "__tier": "{{ '0' if cookiecutter.__t0 == 'True' else '1' if cookiecutter.__t1 == 'True' else '2' if cookiecutter.__t2 == 'True' else '3' if cookiecutter.__t3 == 'True' else '4' }}",
   "template" : [
     "Test {{cookiecutter.__tier}} (./test-{{cookiecutter.__tier}})",
     "Test 0 (./test-0)",
