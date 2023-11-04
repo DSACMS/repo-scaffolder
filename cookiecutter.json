@@ -4,7 +4,7 @@
   "WORK": [true, false],
   "MAINTAIN": [true, false],
   "ROADMAP": [true, false],
-  "TEMPLATE": ["{{ 'Tier 0 (./tier0)' if not cookiecutter.CONTRIBUTORS else 'Tier 1 (./tier1)' if not cookiecutter.RELEASE else 'Tier 1 (./tier1)' if not cookiecutter.WORK else 'Tier 2 (./tier2)' if not cookiecutter.MAINTAIN else 'Tier 3 (./tier3)' if not cookiecutter.ROADMAP else 'Tier 4 (./tier4)'}}"],
+  "TEMPLATE": ["{{ 'Tier 0 (./templates/tier0)' if not cookiecutter.CONTRIBUTORS else 'Tier 1 (./templates/tier1)' if not cookiecutter.RELEASE else 'Tier 1 (./templates/tier1)' if not cookiecutter.WORK else 'Tier 2 (./templates/tier2)' if not cookiecutter.MAINTAIN else 'Tier 3 (./templates/tier3)' if not cookiecutter.ROADMAP else 'Tier 4 (./templates/tier4)'}}"],
   "__prompts__": {
     "CONTRIBUTORS": "Does your project have more than one contributor?",
     "RELEASE": "Do you plan on cutting more than one release?",
