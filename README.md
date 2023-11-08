@@ -6,13 +6,13 @@
 - cookiecutter
 
 ## Need help picking a tier?
-If you do not know what tier you project is the cookiecutter will walk you through questions to figure out what tier you need.  Run:
+If you do not know what tier your project is, the cookiecutter will walk you through questions to figure out what tier you need.  Run:
 ```
 cookiecutter https://github.com/DSACMS/repo-scaffolder
 ```
 
 ## Know what tier you need?
-If you know what tier you need you can run the cookiecutter for an individual tier.  Use the below command with `X` substituted for the tier number.
+If you know what tier you need, you can run the cookiecutter for an individual tier.  Use the below command with `X` substituted for the tier number.
 ```
 cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
 ```
