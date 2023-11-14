@@ -16,16 +16,18 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 
 # Development and Software Delivery Lifecycle 
 The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that externabl contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contribributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
+-->
 
 ## Local Development
 <!--- # TODO - with example below:
 This project is monorepo with several apps. Please see the [api](./api/README.md) and [frontend](./frontend/README.md) READMEs for information on spinning up those projects locally. Also see the project [documentation](./documentation) for more info.
+-->
 
 ## Coding Style and Linters
-
 Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
 
 
+<!--
 ## Branching Model
 <!--- # TODO - with example below:
 This project follows [trunk-based development](https://trunkbaseddevelopment.com/), which means:
@@ -39,6 +41,7 @@ This project follows [trunk-based development](https://trunkbaseddevelopment.com
 This project uses **continuous deployment** using [Github Actions](https://github.com/features/actions) which is configured in the [./github/worfklows](.github/workflows) directory.
 
 Pull-requests are merged to `main` and the changes are immediately deployed to the development environment. Releases are created to push changes to production.
+-->
 
 
 ## Contributing
@@ -57,11 +60,16 @@ We also recognize capacity building as a key part of involving a diverse open so
 ### Community Guidelines
 Principles and guidelines for participating in our open source community are can be found in [COMMUNITY_GUIDELINES.md](COMMUNITY_GUIDELINES.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events. 
 
-## Glossary
-Information about terminology and acronyms used in this documentation may be found in [GLOSSARY.md](GLOSSARY.md).
+<!--
+## Governance
+Information about how the **{project_name}** community is governed may be found in [GOVERNANCE.md](GOVERNANCE.md).
 
+<!--
 ## Feedback
 If you have ideas for how we can improve or add to our capacity building efforts and methods for welcoming people into our community, please let us know at **{contact email}**. If you would like to comment on the tool itself, please let us know by filing an **issue on our GitHub repository.**
+
+## Glossary
+Information about terminology and acronyms used in this documentation may be found in [GLOSSARY.md](GLOSSARY.md).
 -->
 
 ## Policies
