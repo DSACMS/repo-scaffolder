@@ -1,8 +1,16 @@
 {
-  "project_name": "My Open Source Project",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-  "project_repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-  "author": "Anonymous",
-  "project_description": "This is the project description, could match github.com repo description.",
-  "project_visibility": "private"
+  "CONTRIBUTORS": [true, false],
+  "RELEASE": [true, false],
+  "WORK": [true, false],
+  "MAINTAIN": [true, false],
+  "ROADMAP": [true, false],
+  "template": ["{{ 'Tier 0 (./tier0)' if not cookiecutter.CONTRIBUTORS else 'Tier 1 (./tier1)' if not cookiecutter.RELEASE else 'Tier 1 (./tier1)' if not cookiecutter.WORK else 'Tier 2 (./tier2)' if not cookiecutter.MAINTAIN else 'Tier 3 (./tier3)' if not cookiecutter.ROADMAP else 'Tier 4 (./tier4)'}}"],
+  "__prompts__": {
+    "CONTRIBUTORS": "Does your project have more than one contributor?",
+    "RELEASE": "Do you plan on cutting more than one release?",
+    "WORK": "Do you plan on having other individuals/teams work with you?",
+    "MAINTAIN": "Do you plan on having other individuals/teams maintain the project with you?",
+    "ROADMAP": "Do you plan on having other individuals/teams plan the development roadmap with you?",
+    "template": "We suggest using this template:"
+  }
 }

@@ -6,6 +6,9 @@ inputs:
     query:
         description: Query for github api (for example topic:xyz)
         required: true
+    org:
+        description: Org to search for repos in (for example DSACMS)
+        required: true
     token:
         description: Token to query github api
         required: true
@@ -17,7 +20,7 @@ runs:
       uses: actions/checkout@v4
     - name: Query Github Api
       run: |
-        repos=$(${{ github.action_path }}/find.sh ${{ inputs.query }} ${{ inputs.token }})
+        repos=$(${{ github.action_path }}/find.sh ${{ inputs.query }} ${{ inputs.org }} ${{ inputs.token }})
         echo $repos
         echo "repo="$repos"" >> $GITHUB_ENV
       shell: bash

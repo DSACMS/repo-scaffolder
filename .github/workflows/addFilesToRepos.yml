@@ -1,27 +1,20 @@
-name: Update string
+name: Add files to repos
 
 on:
     workflow_dispatch:
         inputs:
             query:
-                description: 'Query from github API'
+                description: 'Query for github API'
                 default: 'topic:x'
                 required: true
             org:
                 description: 'Org to search for repos in'
                 default: 'DSACMS'
                 required: true
-            find:
-                description: 'String to search for'
-                default: 'x'
+            files:
+                description: 'File or folders to add'
+                default: 'tier1/LICENSE'
                 required: true
-            replace:
-                description: 'Replacement string'
-                default: 'y'
-                required: true
-            file:
-                description: 'File to replace in'
-                default: 'CONTRIBUTING.md'
 
 env:
     repo: ""
@@ -42,9 +35,9 @@ jobs:
         outputs:
             matrix: ${{ env.repo }}
 
-    update:
+    add-files:
         runs-on: ubuntu-latest
-        name: Update file
+        name: Add files
         needs: [find-repos]
         strategy:
             matrix:
@@ -53,12 +46,10 @@ jobs:
             - name: Checkout Action
               uses: actions/checkout@v4
             - name: Update file
-              uses: ./.github/fileUpdater
+              uses: ./.github/addingFile
               with:
                 repository: ${{ matrix.repo }}
-                find: ${{ github.event.inputs.find }}
-                replace: ${{ github.event.inputs.replace }}
-                file: ${{ github.event.inputs.file }}
+                files: ${{ github.event.inputs.files }}
                 token: ${{ secrets.pat }}
             - name: Checkout Action again to stop post error
               uses: actions/checkout@v4

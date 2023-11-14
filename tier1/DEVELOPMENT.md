@@ -5,15 +5,17 @@
 The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that externabl contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contribributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Local Development
-
+<!--- # TODO - with example below:
 This project is monorepo with several apps. Please see the [api](./api/README.md) and [frontend](./frontend/README.md) READMEs for information on spinning up those projects locally. Also see the project [documentation](./documentation) for more info.
 
 ### Linting and Testing
 
 Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
+-->
+
 
 ## Branching Model
-
+<!--- # TODO - with example below:
 This project follows [trunk-based development](https://trunkbaseddevelopment.com/), which means:
 
 * Make small changes in [short-lived feature branches](https://trunkbaseddevelopment.com/short-lived-feature-branches/) and merge to `main` frequently.
@@ -25,16 +27,19 @@ This project follows [trunk-based development](https://trunkbaseddevelopment.com
 This project uses **continuous deployment** using [Github Actions](https://github.com/features/actions) which is configured in the [./github/worfklows](.github/workflows) directory.
 
 Pull-requests are merged to `main` and the changes are immediately deployed to the development environment. Releases are created to push changes to production.
+-->
 
 ## Writing Pull Requests
-
+<!--- # TODO - with example below:
 Prefix the branch name with your name, and include the ticket number in the branch name e.g. `cooldev/issue-1234-new-feature`.
 
 Commit messages should, but are not required, to follow [git best practice conventions](https://cbea.ms/git-commit/#seven-rules) for consistency and legibility. Commit messages will be squashed, so individual commit messages will only be visible in the commit history of the pull request.
 
+
 ### Title
 
 Pull request should have the following format: `[Issue N] Description`. The description should follow the imperative voice and lack of period from the [git best practice conventions](https://cbea.ms/git-commit/#seven-rules).
+
 
 ### Recommendations
 
@@ -64,9 +69,11 @@ Once a PR is accepted by a reviewer, the author should merge.
 This project uses the squash merge strategy. When squashing, retain the `[Issue N] Description` format. Any notes in the body of the commit should follow commit best practices.
 
 All changes, including small ones, should have an issue. If they don't `[Hotfix]` should be used in lieu of the issue and number.
+-->
+
 
 ## Reviewing Pull Requests
-
+<!--- # TODO - with example below:
 This project takes a very collaborative and [agile](https://agilemanifesto.org/) approach to code reviews. Working versions of code, self-organizing, and individuals are prioritized When reviewing pull requests:
 
 * **Be prompt**. Aim to respond to a review within 24 hours (although sooner is preferable), and if you cannot do so, be sure to communicate delays to the code author.
@@ -83,13 +90,16 @@ This project takes a very collaborative and [agile](https://agilemanifesto.org/)
 ![add a suggestion pop-up](https://github.com/HHS/grants-equity/assets/512243/e08efbd3-91de-43ce-a0d5-4529ccb1ac13)
 
 * **The "Request Changes"** feature *requires* the reviewer approve changes. This takes autonomy from the engineer, and should only be used if there is an urgent need.
+-->
 
 ## Releases
-
+<!--- # TODO - with example below:
 Releases follow the [CalVer](https://calver.org/) versioning using a `YYY.MM.DD` format. Optionally include a `-N` if more than one releases are published in the same day.
 
 Releases should be [created in Github](https://github.com/HHS/grants-equity/releases) and include a log of changes.
+-->
 
 ## Documentation
-
+<!--- # TODO - with example below:
 Any changes to features, tools, or workflows should include updates or additions to documentation.
+-->
