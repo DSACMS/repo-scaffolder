@@ -1,4 +1,5 @@
 # Repo Scaffolder
+Templates and commandline tools for creating repositories for US Federal open source projects
 
 ## Prerequisites
 - python
@@ -27,3 +28,6 @@ You can update existing projects with the repo scaffolder.  Using the `-s` flag 
 
 ## Updating Projects
 When creating projects, if you want to receive updates then add `dsacms-tierX` as a github topic to the repo.  The scaffolder repo includes github workflows that will find all repos with that tag and can raise a pull request with an updated string or adding a file.
+
+## Maturity Models
+See our Maturity Model Tiers Document for reference: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.pdf
