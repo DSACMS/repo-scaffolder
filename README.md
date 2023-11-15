@@ -31,3 +31,6 @@ When creating projects, if you want to receive updates then add `dsacms-tierX` a
 
 ## Maturity Models
 See our Maturity Model Tiers Document for reference: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.pdf
+
+## Acknowlegements
+This project was developed as a collaboration between the United States Digital Service [USDS.gov](https://usds.gov), The Department of Health and Human Services [HHS.gov](https://hhs.gov), The Digital Service at the Centers for Medicare & Medicaid Services [CMS.gov](https://cms.gov) and The [USDigitalResponse.org](https://usdigitalresponse.org).
