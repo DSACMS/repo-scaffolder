@@ -7,13 +7,13 @@ Templates and commandline tools for creating repositories for US Federal open so
 - cookiecutter
 
 ## Need help picking a tier?
-If you do not know what tier you project is the cookiecutter will walk you through questions to figure out what tier you need.  Run:
+If you do not know what tier your project is, the cookiecutter will walk you through questions to figure out what tier you need.  Run:
 ```
 cookiecutter https://github.com/DSACMS/repo-scaffolder
 ```
 
 ## Know what tier you need?
-If you know what tier you need you can run the cookiecutter for an individual tier.  Use the below command with `X` substituted for the tier number.
+If you know what tier you need, you can run the cookiecutter for an individual tier.  Use the below command with `X` substituted for the tier number.
 ```
 cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
 ```
@@ -27,10 +27,15 @@ You can update existing projects with the repo scaffolder.  Using the `-s` flag 
 5. Raise pr into main
 
 ## Updating Projects
-When creating projects, if you want to receive updates then add `dsacms-tierX`
-as a github topic to the repo.  The scaffolder repo includes github workflows
-that will find all repos with that tag and can raise a pull request with an
-updated string or adding a file.
+When creating projects, if you want to receive updates then add `dsacms-tierX` as a github topic to the repo.  The scaffolder repo includes github workflows that will find all repos with that tag and can raise a pull request with an updated string or adding a file.  See [actions.md](https://github.com/DSACMS/repo-scaffolder/blob/main/.github/actions.md) for more information.
+
+## Editing or Adding Tiers
+At a top level, each tier consisters of a folder for `hooks`, a folder containing the files to be added (`{{cookiecutter.project_slug}}`), and a `cookiecutter.json` defining the questions cookiecutter asks.  These naming conventions must be 
+followed as that is what cookiecutter picks up.  The `hooks` folder needs to be duplicated in each tier.  The folder 
+containing the files to be added can include slugged out variables such as `{{ cookiecutter.project_name }}` that can 
+be filled in by the answers to `cookiecutter.json`.  For example, `{{ cookiecutter.project_name }}` will be filled in by 
+this question - `"project_name": "My Project",`.  See the [cookiecutter docs](https://cookiecutter.readthedocs.io/en/stable/) 
+for more information.
 
 ## Maturity Models
 See our Maturity Model Tiers Document for reference: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.pdf
