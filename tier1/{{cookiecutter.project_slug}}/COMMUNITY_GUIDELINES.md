@@ -1,5 +1,5 @@
 # Community
-This document contains principles and guidelines for participating in the **{project name}** open source community.
+This document contains principles and guidelines for participating in the {{ cookiecutter.project_name }} open source community.
 
 ## Principles
 These principles guide our data, product, and process decisions, architecture, and approach. These guidelines are inspired by the [Justice40 Community Guidelines](https://github.com/usds/justice40-tool/blob/main/COMMUNITY_GUIDELINES.md).
@@ -10,7 +10,7 @@ Open means transparent and participatory.
 - Fostering community includes building capacity and making our software and processes accessible to participants with diverse backgrounds and skillsets.
 - Data (and data science) is as important as software and process. We build open data sets where possible.
 - We strive for transparency for algorithms and places we might be introducing bias.
-- We prioritize data sets that address community vulnerabilities for programs in **{project name}**.
+- We prioritize data sets that address community vulnerabilities for programs in {{ cookiecutter.project_name }}.
 
 ## Community Guidelines
 All community members are expected to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). 
@@ -18,7 +18,7 @@ All community members are expected to adhere to our [Code of Conduct](CODE_OF_CO
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an issue or contacting one or more of the project maintainers at {contact email}.
 Information on contributing to this repository is available in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-When participating in the **{project name}** open source community conversations and spaces, we ask individuals to follow the following guidelines:
+When participating in the {{ cookiecutter.project_name }} open source community conversations and spaces, we ask individuals to follow the following guidelines:
 - When joining a conversation for the first time, please introduce yourself by providing a brief intro that includes:
 -- your related organization, if applicable
 -- your pronouns, if you would like to share those 
