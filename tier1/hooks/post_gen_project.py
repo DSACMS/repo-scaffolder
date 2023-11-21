@@ -26,7 +26,7 @@ def addTopic():
     gh_cli_command = [
         "gh", "repo", "edit",
         f"{ORG_NAME}/{REPO_NAME}",
-        "--add-topic=dsacms-tier0",
+        "--add-topic=dsacms-tier1",
     ]
     subprocess.call(gh_cli_command)
 
