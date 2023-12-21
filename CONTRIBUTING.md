@@ -15,8 +15,6 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 <!--- ### TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
 
-### Team Specific Guidelines
-
 ### Building dependencies
 
 <!--- ### TODO -->
@@ -27,19 +25,16 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 ### Workflow and Branching
 
-<!---
-TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
 1.  Fork the project
-1.  Check out the `main` branch
-1.  Create a feature branch
-1.  Write code and tests for your change
-1.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main`
-1.  Work with repo maintainers to get your change reviewed
-1.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
-1.  Delete your feature branch
--->
+2.  Check out the `main` branch
+3.  Create a feature branch
+4.  Write code and tests for your change
+5.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main`
+6.  Work with repo maintainers to get your change reviewed
+7.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
+8.  Delete your feature branch
 
 ### Testing Conventions
 
@@ -58,9 +53,6 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 
 ### Issues
 
-<!---
-TODO: Example Issue Guides
-
 When creating an issue please try to adhere to the following format:
 
     module-name: One line summary of the issue (less than 72 characters)
@@ -78,12 +70,8 @@ When creating an issue please try to adhere to the following format:
     List all relevant steps to reproduce the observed behavior.
 
     see our .github/ISSUE_TEMPLATE.md for more examples.
--->
 
 ### Pull Requests
-
-<!---
-### TODO: Confirm
 
 Comments should be formatted to a width no greater than 80 columns.
 
@@ -110,17 +98,14 @@ columns (You can use `fmt -n -p -w 80` to accomplish this).
     What will change as a result of your pull request? Note that sometimes this
     section is unnecessary because it is self-explanatory based on the solution.
 
-Some important notes regarding the summary line:
+    Some important notes regarding the summary line:
 
-* Describe what was done; not the result
-* Use the active voice
-* Use the present tense
-* Capitalize properly
-* Do not end in a period — this is a title/subject
-* Prefix the subject with its scope
-
-    see our .github/PULL_REQUEST_TEMPLATE.md for more examples.
--->
+    * Describe what was done; not the result
+    * Use the active voice
+    * Use the present tense
+    * Capitalize properly
+    * Do not end in a period — this is a title/subject
+    * Prefix the subject with its scope
 
 ## Code Review
 
@@ -150,12 +135,8 @@ authorship metadata will be preserved.
 
 ## Documentation
 
-<!---
-### TODO: Documentation Example
-
 We also welcome improvements to the project documentation or to the existing
-docs. Please file an [issue](https://github.com/cmsgov/cmsgov-example-repo/issues).
--->
+docs. Please file an [issue](https://github.com/DSACMS/repo-scaffolder/issues).
 
 ## Policies
 
