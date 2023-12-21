@@ -1,18 +1,17 @@
-## **{project_name}**
-**{project_description}**
+## **{Project Name}**
+**{project description}**
 
 ## About the Project
-**{project_statement}**
+**{project statement}**
 
 ## Core Team
 An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAINERS.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles.
 
+<!--
 ## Documentation Index 
-<!--#TODO This is a like a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.-->
 **{list of .md at top directory and descriptions}**
 
 ## Repository Structure
-<!--# TODO: Using the "tree" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.-->
 **{list directories and descriptions}**
 
 # Development and Software Delivery Lifecycle 
@@ -25,12 +24,10 @@ This project is monorepo with several apps. Please see the [api](./api/README.md
 -->
 
 ## Coding Style and Linters
-<!-- #TODO
 Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
--->
 
 
-
+<!--
 ## Branching Model
 <!--- # TODO - with example below:
 This project follows [trunk-based development](https://trunkbaseddevelopment.com/), which means:
@@ -54,7 +51,7 @@ Thank you for considering contributing to an Open Source project of the US Gover
 The contents of this repository are managed by **{responsible organization(s)}**. Those responsible for the code and documentation in this repository can be found in [CODEOWNERS.md](CODEOWNERS.md).
 
 ## Community
-The **{project_name}** team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
+The **{project name}** team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
 
 We know that we can learn from a wide variety of communities, including those who will use or will be impacted by the tool, who are experts in technology, or who have experience with similar technologies deployed in other spaces. We are dedicated to creating forums for continuous conversation and feedback to help shape the design and development of the tool.
 
@@ -65,17 +62,15 @@ Principles and guidelines for participating in our open source community are can
 
 <!--
 ## Governance
-<!--#TODO: Make a short statement about how the project is governed (formally, or informally) and link to the GOVERNANCE.md file.
--->
-
-## Feedback
-If you have ideas for how we can improve or add to our capacity building efforts and methods for welcoming people into our community, please let us know at **{contact_email}**. If you would like to comment on the tool itself, please let us know by filing an **issue on our GitHub repository.**
+Information about how the **{project_name}** community is governed may be found in [GOVERNANCE.md](GOVERNANCE.md).
 
 <!--
+## Feedback
+If you have ideas for how we can improve or add to our capacity building efforts and methods for welcoming people into our community, please let us know at **{contact email}**. If you would like to comment on the tool itself, please let us know by filing an **issue on our GitHub repository.**
+
 ## Glossary
 Information about terminology and acronyms used in this documentation may be found in [GLOSSARY.md](GLOSSARY.md).
 -->
-
 
 ## Policies
 
