@@ -107,10 +107,7 @@ columns (You can use `fmt -n -p -w 80` to accomplish this).
     * Do not end in a period — this is a title/subject
     * Prefix the subject with its scope
 
-## Code Review
-
-<!---
-### TODO: Code Review Example
+## Reviewing Pull Requests
 
 The repository on GitHub is kept in sync with an internal repository at
 github.cms.gov. For the most part this process should be transparent to the
@@ -130,8 +127,6 @@ request will be closed.
 
 The changes in the pull request will be collapsed into a single commit, but the
 authorship metadata will be preserved.
-
--->
 
 ## Documentation
 
