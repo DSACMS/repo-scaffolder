@@ -36,10 +36,6 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 7.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
 8.  Delete your feature branch
 
-### Testing Conventions
-
-<!--- TODO -->
-
 ### Coding Style and Linters
 
 <!--- TODO: Code Style Guide
