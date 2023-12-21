@@ -17,7 +17,8 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 ### Building dependencies
 
-<!--- ### TODO -->
+In the root directory of the project,
+`pip install -r requirements.txt`
 
 ### Building the Project
 
@@ -38,12 +39,7 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 
 ### Coding Style and Linters
 
-<!--- TODO: Code Style Guide
-
-1. Mention any style guides you adhere to (e.g. pep8, etc...)
-1. Mention any linters your project uses (e.g. flake8, jslint, etc...)
-1. Mention any naming conventions your project uses (e.g. Semantic Versioning, CamelCasing, etc...)
-1. Mention any other content guidelines the project adheres to (e.g. plainlanguage.gov, etc...)
+This project strives to adhere to the Python Style Guide (http://peps.python.org/pep-0008/). We would recommend using a linter such as pyflakes, flake8, black, or other plugin for your editor or IDE of choice.
 
 -->
 
