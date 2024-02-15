@@ -27,11 +27,10 @@ When participating in {Project Name} open source community conversations and spa
   - your related organization (if applicable)
   - your pronouns
   - disclosure of any current or potential financial interest in this work
-  - your superpower, and how you hope to use it for DeDupliFHIR
+  - your superpower, and how you hope to use it for {Project Name}
 - Embrace a culture of learning, and educate each other. We are all entering this conversation from different starting points and with different backgrounds. There are no dumb questions.
 - Take space and give space. We strive to create an equitable environment in which all are welcome and able to participate. We hope individuals feel comfortable voicing their opinions and providing contributions and will do our best to recognize and make space for individuals who may be struggling to find space here. Likewise, we expect individuals to recognize when they are taking up significant space and take a step back to allow room for others.
-<!-- TODO: Add if your repo has a community chat 
-- Be present when joining synchronous conversations such as our community chat. Why be here if you're not going to _be here_? -->
+<!-- TODO: Add if your repo has a community chat - Be present when joining synchronous conversations such as our community chat. Why be here if you're not going to _be here_? -->
 - Be respectful.
 - Default to positive. Assume others' contributions are legitimate and valuable and that they are made with good intention.
 
