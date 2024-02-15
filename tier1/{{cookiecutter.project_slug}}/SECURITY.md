@@ -16,4 +16,4 @@ policy, *how to send* us vulnerability reports, and *how long* we ask security
 researchers to wait before publicly disclosing vulnerabilities.
 
 If you have other cybersecurity related questions, please contact us at
-[csirc@hhs.gov.](mailto:csirc@hhs.gov).
+[csirc@hhs.gov](mailto:csirc@hhs.gov).
