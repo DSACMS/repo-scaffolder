@@ -87,7 +87,7 @@ email or via GitHub Issues. Please use our website to submit vulnerabilities at
 HHS maintains an acknowledgements page to recognize your efforts on behalf of
 the American public, but you are also welcome to submit anonymously.
 
-For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
+For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md) as indicated in [LICENSE](LICENSE).
 
 ## Public domain
 
