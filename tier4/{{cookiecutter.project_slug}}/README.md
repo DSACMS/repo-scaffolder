@@ -12,7 +12,7 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 **{list of .md at top directory and descriptions}**
 
 ## Repository Structure
-<!--# TODO: Using the "tree" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.-->
+<!--# TODO: Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.-->
 **{list directories and descriptions}**
 
 # Development and Software Delivery Lifecycle 
