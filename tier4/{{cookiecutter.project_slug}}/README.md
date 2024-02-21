@@ -4,7 +4,7 @@
 ## About the Project
 **{project_statement}**
 
-#### Project Vision
+### Project Vision
 **{project vision}**
 
 ## Core Team
