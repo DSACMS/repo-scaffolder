@@ -11,7 +11,7 @@
 <!--- # TODO: Good to include since this is a home-run project -->
 
 #### Team Mission
-<!--- # TODO: Good to have since this is a home-run project -->
+<!--- # TODO: Good to include since this is a home-run project -->
 
 
 <!--
