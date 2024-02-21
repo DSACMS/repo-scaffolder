@@ -1,10 +1,10 @@
-# CODEOWNERS
+# Code Owners
 
 [@decause-gov](https://github.com/decause-gov)
 [@natalialuzuriaga](https://github.com/natalialuzuriaga)
 [@IsaacMilarky](https://github.com/IsaacMilarky)
 
-# SHOUTOUTS
+# Shoutouts
 
 [@usdigitalresponse](https://github.com/usdigitalresponse)
 
@@ -14,6 +14,6 @@
 
 Thank you [US Digital Response](https://www.usdigitalresponse.org/) Team for your support creating this repository!
 
-# QUESTIONS?
+# Questions?
 
 Email opensource@cms.hhs.gov
