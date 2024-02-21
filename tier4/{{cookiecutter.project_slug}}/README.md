@@ -4,6 +4,9 @@
 ## About the Project
 **{project_statement}**
 
+#### Project Vision
+**{project vision}**
+
 ## Core Team
 An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAINERS.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles.
 

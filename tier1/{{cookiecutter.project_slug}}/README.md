@@ -1,10 +1,11 @@
 ## **{Project Name}**
-
 **{project description}**
 
 ## About the Project
-
 **{project statement}**
+
+#### Project Vision
+**{project vision}**
 
 ## Core Team
 

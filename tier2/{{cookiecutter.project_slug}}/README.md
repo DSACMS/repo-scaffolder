@@ -4,6 +4,16 @@
 ## About the Project
 **{project statement}**
 
+#### Project Vision
+**{project vision}**
+
+#### Agency Mission
+<!--- # TODO: Good to include since this is a home-run project -->
+
+#### Team Mission
+<!--- # TODO: Good to have since this is a home-run project -->
+
+
 <!--
 ## Documentation Index 
 **{list of .md at top directory and descriptions}**
