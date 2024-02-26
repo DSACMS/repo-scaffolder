@@ -1,5 +1,5 @@
 {
-    "$schema": "./schema.json",
+    "$schema": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/schema.json",
     "version": 2,
     "axioms": {
       "linguist": "language",
@@ -381,7 +381,7 @@
             "globsAll": [
               "{docs/,.github/,}CONTRIBUTING.md"
             ],
-            "content": "(?i)Team\\s+Specific\\s+Guidelines",
+            "content": "Team Specific Guidelines",
             "flags": "i"
           }
         }
@@ -459,7 +459,7 @@
             "globsAll": [
               "{docs/,.github/,}CONTRIBUTING.md"
             ],
-            "content": "ISSUE_TEMPLATE.md | Writing Issues",
+            "content": "ISSUE_TEMPLATE.md | Issues",
             "flags": "i"
           }
         }
