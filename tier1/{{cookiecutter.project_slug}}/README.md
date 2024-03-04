@@ -4,10 +4,17 @@
 ## About the Project
 **{project statement}**
 
-<!---
-### Project Vision
-**{project vision}**
--->
+<!-- 
+### Project Mission
+**{project mission}** -->
+
+<!-- 
+### Agency Mission
+# TODO: Must include since this is an agency-led project -->
+
+<!-- 
+### Team Mission
+# TODO: Must include since this is an agency-led project -->
 
 ## Core Team
 
