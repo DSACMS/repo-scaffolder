@@ -1,10 +1,20 @@
 ## **{Project Name}**
-
 **{project description}**
 
 ## About the Project
-
 **{project statement}**
+
+<!-- 
+### Project Mission
+**{project mission}** -->
+
+<!-- 
+### Agency Mission
+# TODO: Must include since this is an agency-led project -->
+
+<!-- 
+### Team Mission
+# TODO: Must include since this is an agency-led project -->
 
 ## Core Team
 
@@ -56,7 +66,7 @@ The **{project name}** team is taking a community-first and open source approach
 
 We know that we can learn from a wide variety of communities, including those who will use or will be impacted by the tool, who are experts in technology, or who have experience with similar technologies deployed in other spaces. We are dedicated to creating forums for continuous conversation and feedback to help shape the design and development of the tool.
 
-We also recognize capacity building as a key part of involving a diverse open source community. We are doing our best to use accessible language, provide technical and process documents in multiple languages, and offer support to community members with a wide variety of backgrounds and skillsets.
+We also recognize capacity building as a key part of involving a diverse open source community. We are doing our best to use accessible language, provide technical and process documents, and offer support to community members with a wide variety of backgrounds and skillsets.
 
 ### Community Guidelines
 
