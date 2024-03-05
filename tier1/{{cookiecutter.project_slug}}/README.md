@@ -10,11 +10,11 @@
 
 <!-- 
 ### Agency Mission
-# TODO: Must include since this is an agency-led project -->
+# TODO: Good to include since this is an agency-led project -->
 
 <!-- 
 ### Team Mission
-# TODO: Must include since this is an agency-led project -->
+# TODO: Good to include since this is an agency-led project -->
 
 ## Core Team
 
@@ -72,11 +72,6 @@ We also recognize capacity building as a key part of involving a diverse open so
 
 Principles and guidelines for participating in our open source community are can be found in [COMMUNITY_GUIDELINES.md](COMMUNITY_GUIDELINES.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events.
 
-<!--
-## Governance
-Information about how the **{project_name}** community is governed may be found in [GOVERNANCE.md](GOVERNANCE.md).
-
-<!--
 ## Feedback
 If you have ideas for how we can improve or add to our capacity building efforts and methods for welcoming people into our community, please let us know at **{contact email}**. If you would like to comment on the tool itself, please let us know by filing an **issue on our GitHub repository.**
 
