@@ -1,6 +1,9 @@
 <!--- # NOTE: Modify sections marked with `TODO`-->
 
 # How to Contribute
+
+<!-- Basic instructions about where to send patches, check out source code, and get development support.-->
+
 We're so thankful you're considering contributing to an [open source project of
 the U.S. government](https://code.gov/)! If you're unsure about anything, just
 ask -- or submit the issue or pull request anyway. The worst that can happen is
@@ -12,18 +15,25 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 -->
 
 ## Getting Started
-<!--- ### TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
 
-<!-- ### Team Specific Guidelines
-- ### TODO -->
+<!--- TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
+
+<!-- 
+### Team Specific Guidelines
+
+TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the MAINTAINERS.md file for further details. 
+-->
 
 ### Building dependencies
-<!--- ### TODO -->
+
+<!--- TODO: This step is often skipped, so don't forget to include the steps needed to install on your platform. If you project can be multi-platform, this is an excellent place for first time contributors to send patches!-->
 
 ### Building the Project
-<!--- ### TODO -->
+
+<!--- TODO: Be sure to include build scripts and instructions, not just the source code itself! -->
 
 ### Workflow and Branching
+
 <!--- TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
@@ -37,10 +47,14 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 8.  Delete your feature branch
 -->
 
-<!-- ### Testing Conventions
-- TODO -->
+<!-- 
+### Testing Conventions
+
+TODO: Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. 
+-->
 
 ### Coding Style and Linters
+
 <!--- TODO: Code Style Guide 
 
 1. Mention any style guides you adhere to (e.g. pep8, etc...)
@@ -51,29 +65,32 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 
 ### Writing Issues
 
-> Example Issue Guides
-> When creating an issue please try to adhere to the following format:
-> 
->     module-name: One line summary of the issue (less than 72 characters)
-> 
->     ### Expected behavior
-> 
->     As concisely as possible, describe the expected behavior.
-> 
->    ### Actual behavior
->
->    As concisely as possible, describe the observed behavior.
->
->    ### Steps to reproduce the behavior
->
->    List all relevant steps to reproduce the observed behavior.
->
->    see our .github/ISSUE_TEMPLATE.md for more examples.
+<!---
+TODO: Example Issue Guides
+
+When creating an issue please try to adhere to the following format:
+
+    module-name: One line summary of the issue (less than 72 characters)
+
+    ### Expected behavior
+
+    As concisely as possible, describe the expected behavior.
+
+    ### Actual behavior
+
+    As concisely as possible, describe the observed behavior.
+
+    ### Steps to reproduce the behavior
+
+    List all relevant steps to reproduce the observed behavior.
+
+    see our .github/ISSUE_TEMPLATE.md for more examples.
+-->
 
 <!--- 
 ### Writing Pull Requests
 
-### TODO: Pull request example
+TODO: Pull request example
 
 Comments should be formatted to a width no greater than 80 columns.
 
@@ -115,7 +132,7 @@ Some important notes regarding the summary line:
 <!--- 
 ## Code Review
 
-### TODO: Code Review Example
+TODO: Code Review Example
 
 The repository on GitHub is kept in sync with an internal repository at
 github.cms.gov. For the most part this process should be transparent to the
@@ -140,13 +157,13 @@ authorship metadata will be preserved.
 <!--
 ## Shipping Releases
 
-#TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so?
+TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so?
 -->
 
 <!--- 
 ## Documentation
 
-### TODO: Documentation Example
+TODO: Documentation Example
 
 We also welcome improvements to the project documentation or to the existing
 docs. Please file an [issue](https://github.com/cmsgov/cmsgov-example-repo/issues).
