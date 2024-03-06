@@ -1,4 +1,4 @@
-<!--- # NOTE: Modify sections marked with `TODO` and then rename the file.-->
+<!--- # NOTE: Modify sections marked with `TODO` -->
 
 # How to Contribute
 
@@ -23,47 +23,45 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 ### Building dependencies
 
-<!--- TODO This step is often skipped, so don't forget to include the steps needed to install on your platform. If you project can be multi-platform, this is an excellent place for first time contributors to send patches!-->
+<!--- TODO: This step is often skipped, so don't forget to include the steps needed to install on your platform. If you project can be multi-platform, this is an excellent place for first time contributors to send patches!-->
 
 ### Building the Project
 
-<!--- TODO Be sure to include build scripts and instructions, not just the source code itself! -->
+<!--- TODO: Be sure to include build scripts and instructions, not just the source code itself! -->
 
 ### Workflow and Branching
 
-<!---
-TODO: Workflow Example
+<!--- TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
 1.  Fork the project
-1.  Check out the `main` branch
-1.  Create a feature branch
-1.  Write code and tests for your change
-1.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main`
-1.  Work with repo maintainers to get your change reviewed
-1.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
-1.  Delete your feature branch
+2.  Check out the `main` branch
+3.  Create a feature branch
+4.  Write code and tests for your change
+5.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main`
+6.  Work with repo maintainers to get your change reviewed
+7.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
+8.  Delete your feature branch
 -->
 
 ### Testing Conventions
 
-<!--- TODO Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. -->
+<!--- TODO: Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. -->
 
 ### Coding Style and Linters
 
 <!--- TODO: HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for python, esliint for JavaScript, etc...)
 
 1. Mention any style guides you adhere to (e.g. pep8, etc...)
-1. Mention any linters your project uses (e.g. flake8, jslint, etc...)
-1. Mention any naming conventions your project uses (e.g. Semantic Versioning, CamelCasing, etc...)
-1. Mention any other content guidelines the project adheres to (e.g. plainlanguage.gov, etc...)
+2. Mention any linters your project uses (e.g. flake8, jslint, etc...)
+3. Mention any naming conventions your project uses (e.g. Semantic Versioning, CamelCasing, etc...)
+4. Mention any other content guidelines the project adheres to (e.g. plainlanguage.gov, etc...)
 
 -->
 
 ### Writing Issues
 
-<!---
-TODO: Example Issue Guides
+<!--- TODO: Example Issue Guides
 
 When creating an issue please try to adhere to the following format:
 
@@ -86,7 +84,7 @@ When creating an issue please try to adhere to the following format:
 
 ### Writing Pull Requests
 
-<!-- ### TODO: Make a brief statement about where to file pull/merge requests, and conventions for doing so. Link to PULL_REQUEST_TEMPLATE.md file.
+<!-- TODO: Make a brief statement about where to file pull/merge requests, and conventions for doing so. Link to PULL_REQUEST_TEMPLATE.md file.
 
 Comments should be formatted to a width no greater than 80 columns.
 
@@ -127,9 +125,7 @@ Some important notes regarding the summary line:
 
 ## Reviewing Pull Requests
 
-<!--- TODO:
-
-### TODO: Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to MAINTAINERS.md can help.
+<!--- TODO: Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to MAINTAINERS.md can help.
 
 Code Review Example
 
@@ -156,22 +152,19 @@ authorship metadata will be preserved.
 
 <!--
 ## Shipping Releases
-<!--#TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so?-->
+
+<!-- TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so? 
+-->
 
 ## Documentation
 
-<!--TODO: Documentation Example
+<!-- TODO: Documentation Example
 
 We also welcome improvements to the project documentation or to the existing
 docs. Please file an [issue](https://github.com/cmsgov/cmsgov-example-repo/issues).
 -->
 
 ## Policies
-
-<!-- TODO: This section is here to explicitly link to Federal policies and
-guidelines that are required or recommended for Federal projects to comply
-with, such as Accessibility (508) Interoperability, Anti-deficiency, Security,
-Licensing, and other policies that can vary between agencies and domains.-->
 
 ### Open Source Policy
 
