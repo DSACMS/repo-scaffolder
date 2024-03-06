@@ -1,4 +1,4 @@
-<!--- # NOTE: Modify sections marked with `TODO` and then rename the file.-->
+<!--- # NOTE: Modify sections marked with `TODO` -->
 
 <!--
 # How to Contribute
@@ -16,7 +16,6 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 ## Getting Started
 <!--- ### TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
 
-
 ### Building dependencies
 <!--- ### TODO -->
 
@@ -25,18 +24,19 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 <!--
 ### Workflow and Branching
+
 <!---
 TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
 1.  Fork the project 
-1.  Check out the `main` branch 
-1.  Create a feature branch
-1.  Write code and tests for your change 
-1.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main` 
-1.  Work with repo maintainers to get your change reviewed 
-1.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
-1.  Delete your feature branch
+2.  Check out the `main` branch 
+3.  Create a feature branch
+4.  Write code and tests for your change 
+5.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main` 
+6.  Work with repo maintainers to get your change reviewed 
+7.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
+8.  Delete your feature branch
 -->
 
 <!--
