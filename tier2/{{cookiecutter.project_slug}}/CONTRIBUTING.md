@@ -14,8 +14,8 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 ## Getting Started
 <!--- ### TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
 
-### Team Specific Guidelines
-<!--- ### TODO -->
+<!-- ### Team Specific Guidelines
+- ### TODO -->
 
 ### Building dependencies
 <!--- ### TODO -->
@@ -28,17 +28,17 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
 1.  Fork the project 
-1.  Check out the `main` branch 
-1.  Create a feature branch
-1.  Write code and tests for your change 
-1.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main` 
-1.  Work with repo maintainers to get your change reviewed 
-1.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
-1.  Delete your feature branch
+2.  Check out the `main` branch 
+3.  Create a feature branch
+4.  Write code and tests for your change 
+5.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main` 
+6.  Work with repo maintainers to get your change reviewed 
+7.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
+8.  Delete your feature branch
 -->
 
-### Testing Conventions
-<!--- TODO -->
+<!-- ### Testing Conventions
+- TODO -->
 
 ### Coding Style and Linters
 <!--- TODO: Code Style Guide 
@@ -70,8 +70,9 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 >
 >    see our .github/ISSUE_TEMPLATE.md for more examples.
 
-### Writing Pull Requests
 <!--- 
+### Writing Pull Requests
+
 ### TODO: Pull request example
 
 Comments should be formatted to a width no greater than 80 columns.
@@ -111,8 +112,9 @@ Some important notes regarding the summary line:
     see our .github/PULL_REQUEST_TEMPLATE.md for more examples.
 -->
 
-## Code Review
 <!--- 
+## Code Review
+
 ### TODO: Code Review Example
 
 The repository on GitHub is kept in sync with an internal repository at
@@ -135,9 +137,15 @@ The changes in the pull request will be collapsed into a single commit, but the
 authorship metadata will be preserved.
 -->
 
+<!--
+## Shipping Releases
 
-## Documentation
+#TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so?
+-->
+
 <!--- 
+## Documentation
+
 ### TODO: Documentation Example
 
 We also welcome improvements to the project documentation or to the existing
@@ -162,6 +170,6 @@ the American public, but you are also welcome to submit anonymously.
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
 
 ## Public domain
-This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/) as indicated in [LICENSE](LICENSE).
 
 All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
