@@ -39,6 +39,7 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that externabl contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contribributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Local Development
+
 <!--- TODO - with example below:
 This project is monorepo with several apps. Please see the [api](./api/README.md) and [frontend](./frontend/README.md) READMEs for information on spinning up those projects locally. Also see the project [documentation](./documentation) for more info.
 -->
@@ -48,6 +49,7 @@ Each application has its own linting and testing guidelines. Lint and code tests
 
 
 ## Branching Model
+
 <!--- TODO - with example below:
 This project follows [trunk-based development](https://trunkbaseddevelopment.com/), which means:
 
