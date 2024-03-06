@@ -13,7 +13,6 @@ These principles guide our data, product, and process decisions, architecture, a
 - Fostering community includes building capacity and making our software and processes accessible to participants with diverse backgrounds and skillsets.
 - Data (and data science) is as important as software and process. We build open data sets where possible.
 - We strive for transparency for algorithms and places we might be introducing bias.
-- We prioritize data sets that address community vulnerabilities for programs in Justice40.
 
 ## Community Guidelines
 
