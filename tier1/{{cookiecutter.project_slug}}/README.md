@@ -10,11 +10,11 @@
 
 <!-- 
 ### Agency Mission
-TODO: Good to include since this is an agency-led project -->
+TODO: Recommended to include since this is an agency-led project -->
 
 <!-- 
 ### Team Mission
-TODO: Good to include since this is an agency-led project -->
+TODO: Recommended to include since this is an agency-led project -->
 
 ## Core Team
 
