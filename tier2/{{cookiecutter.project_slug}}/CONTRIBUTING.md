@@ -1,6 +1,9 @@
 <!--- # NOTE: Modify sections marked with `TODO`-->
 
 # How to Contribute
+
+<!-- Basic instructions about where to send patches, check out source code, and get development support.-->
+
 We're so thankful you're considering contributing to an [open source project of
 the U.S. government](https://code.gov/)! If you're unsure about anything, just
 ask -- or submit the issue or pull request anyway. The worst that can happen is
@@ -12,35 +15,46 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 -->
 
 ## Getting Started
-<!--- ### TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
 
+<!--- TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
+
+<!-- 
 ### Team Specific Guidelines
-<!--- ### TODO -->
+
+TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the MAINTAINERS.md file for further details. 
+-->
 
 ### Building dependencies
-<!--- ### TODO -->
+
+<!--- TODO: This step is often skipped, so don't forget to include the steps needed to install on your platform. If you project can be multi-platform, this is an excellent place for first time contributors to send patches!-->
 
 ### Building the Project
-<!--- ### TODO -->
+
+<!--- TODO: Be sure to include build scripts and instructions, not just the source code itself! -->
 
 ### Workflow and Branching
+
 <!--- TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
 1.  Fork the project 
-1.  Check out the `main` branch 
-1.  Create a feature branch
-1.  Write code and tests for your change 
-1.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main` 
-1.  Work with repo maintainers to get your change reviewed 
-1.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
-1.  Delete your feature branch
+2.  Check out the `main` branch 
+3.  Create a feature branch
+4.  Write code and tests for your change 
+5.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main` 
+6.  Work with repo maintainers to get your change reviewed 
+7.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
+8.  Delete your feature branch
 -->
 
+<!-- 
 ### Testing Conventions
-<!--- TODO -->
+
+TODO: Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. 
+-->
 
 ### Coding Style and Linters
+
 <!--- TODO: Code Style Guide 
 
 1. Mention any style guides you adhere to (e.g. pep8, etc...)
@@ -51,28 +65,32 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 
 ### Writing Issues
 
-> Example Issue Guides
-> When creating an issue please try to adhere to the following format:
-> 
->     module-name: One line summary of the issue (less than 72 characters)
-> 
->     ### Expected behavior
-> 
->     As concisely as possible, describe the expected behavior.
-> 
->    ### Actual behavior
->
->    As concisely as possible, describe the observed behavior.
->
->    ### Steps to reproduce the behavior
->
->    List all relevant steps to reproduce the observed behavior.
->
->    see our .github/ISSUE_TEMPLATE.md for more examples.
+<!---
+TODO: Example Issue Guides
 
-### Writing Pull Requests
+When creating an issue please try to adhere to the following format:
+
+    module-name: One line summary of the issue (less than 72 characters)
+
+    ### Expected behavior
+
+    As concisely as possible, describe the expected behavior.
+
+    ### Actual behavior
+
+    As concisely as possible, describe the observed behavior.
+
+    ### Steps to reproduce the behavior
+
+    List all relevant steps to reproduce the observed behavior.
+
+    see our .github/ISSUE_TEMPLATE.md for more examples.
+-->
+
 <!--- 
-### TODO: Pull request example
+### Writing Pull Requests
+
+TODO: Pull request example
 
 Comments should be formatted to a width no greater than 80 columns.
 
@@ -111,9 +129,10 @@ Some important notes regarding the summary line:
     see our .github/PULL_REQUEST_TEMPLATE.md for more examples.
 -->
 
-## Code Review
 <!--- 
-### TODO: Code Review Example
+## Code Review
+
+TODO: Code Review Example
 
 The repository on GitHub is kept in sync with an internal repository at
 github.cms.gov. For the most part this process should be transparent to the
@@ -135,10 +154,16 @@ The changes in the pull request will be collapsed into a single commit, but the
 authorship metadata will be preserved.
 -->
 
+<!--
+## Shipping Releases
 
-## Documentation
+TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so?
+-->
+
 <!--- 
-### TODO: Documentation Example
+## Documentation
+
+TODO: Documentation Example
 
 We also welcome improvements to the project documentation or to the existing
 docs. Please file an [issue](https://github.com/cmsgov/cmsgov-example-repo/issues).
@@ -162,6 +187,6 @@ the American public, but you are also welcome to submit anonymously.
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
 
 ## Public domain
-This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/) as indicated in [LICENSE](LICENSE).
 
 All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
