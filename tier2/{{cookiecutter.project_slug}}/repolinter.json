@@ -83,7 +83,7 @@
       "maintainers-contains-maintainers-table": {
         "level": "warning"
       },
-      "code-owners-contains-code-owners": {
+      "code-owners-contains-list-of-users": {
         "level": "warning"
       },
       "code-owners-contains-repo-domains": {
