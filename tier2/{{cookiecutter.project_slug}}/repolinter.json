@@ -11,6 +11,9 @@
       "maintainers-file-exists": {
         "level": "warning"
       },
+      "codeowners-file-exists": {
+        "level": "warning"
+      },
       "community-guidelines-file-exists": {
         "level": "error"
       },
@@ -72,6 +75,7 @@
         "level": "warning"
       },
       "contributing-contains-shipping-releases": {
+        "level": "warning"
       },
       "maintainers-contains-maintainers": {
         "level": "warning"

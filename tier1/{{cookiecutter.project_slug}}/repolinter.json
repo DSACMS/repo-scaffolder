@@ -624,7 +624,7 @@
             "globsAll": [
               "{docs/,.github/,}MAINTAINERS.md"
             ],
-            "content": "Maintainers Table",
+            "content": "Roles | Responsibilities",
             "flags": "i"
           }
         }
@@ -642,7 +642,7 @@
           }
         }
       },
-      "code-owners-contains-code-owners": {
+      "code-owners-contains-list-of-users": {
         "level": "off",
         "rule": {
           "type": "file-contents",
@@ -650,7 +650,7 @@
             "globsAll": [
               "{docs/,.github/,}CODEOWNERS.md"
             ],
-            "content": "CODEOWNERS",
+            "content": "Code Owners",
             "flags": "i"
           }
         }
@@ -663,7 +663,7 @@
             "globsAll": [
               "{docs/,.github/,}CODEOWNERS.md"
             ],
-            "content": "documentation | frontend | backend",
+            "content": "documentation | frontend | backend | Repo Domains",
             "flags": "i"
           }
         }

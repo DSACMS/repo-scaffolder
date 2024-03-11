@@ -14,6 +14,9 @@
       "governance-file-exists": {
         "level": "warning"
       },
+      "codeowners-file-exists": {
+        "level": "error"
+      },
       "readme-contains-project-vision": {
         "level": "warning"
       },
@@ -63,10 +66,13 @@
       "governance-contains-governance": {
         "level": "warning"
       },
-      "code-owners-contains-code-owners": {
+      "code-owners-contains-list-of-users": {
         "level": "error"
       },
       "code-owners-contains-repo-domains": {
+        "level": "error"
+      },
+      "maintainers-contains-maintainers-table": {
         "level": "error"
       }
     }
