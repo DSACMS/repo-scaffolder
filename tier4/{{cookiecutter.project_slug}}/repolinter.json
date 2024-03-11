@@ -1,0 +1,33 @@
+{
+  "extends": "https://raw.githubusercontent.com/satwic007/repo-scaffolder/sat/lint_tier_1_repo/tier3/{{cookiecutter.project_slug}}/repolinter.json",
+  "$schema": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/schema.json",
+    "version": 2,
+    "axioms": {
+      "linguist": "language",
+      "licensee": "license",
+      "packagers": "packager"
+    },
+    "rules": {
+      "governance-file-exists": {
+        "level": "error"
+      },
+      "readme-contains-agency-mission": {
+        "level": "off"
+      },
+      "readme-contains-team-mission": {
+        "level": "off"
+      },
+      "readme-contains-governance": {
+        "level": "error"
+      },
+      "readme-contains-glossary": {
+        "level": "warning"
+      },
+      "contributing-contains-shipping-releases": {
+        "level": "error"
+      },
+      "governance-contains-governance": {
+        "level": "error"
+      }
+    }
+  }

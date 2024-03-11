@@ -1,0 +1,73 @@
+{
+  "extends": "https://raw.githubusercontent.com/satwic007/repo-scaffolder/sat/lint_tier_1_repo/tier2/{{cookiecutter.project_slug}}/repolinter.json",
+  "$schema": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/schema.json",
+    "version": 2,
+    "axioms": {
+      "linguist": "language",
+      "licensee": "license",
+      "packagers": "packager"
+    },
+    "rules": {
+      "maintainers-file-exists": {
+        "level": "error"
+      },
+      "governance-file-exists": {
+        "level": "warning"
+      },
+      "readme-contains-project-vision": {
+        "level": "warning"
+      },
+      "readme-contains-project-mission": {
+        "level": "warning"
+      },
+      "readme-contains-agency-mission": {
+        "level": "warning"
+      },
+      "readme-contains-team-mission": {
+        "level": "warning"
+      },
+      "readme-contains-documentation-index": {
+        "level": "error"
+      },
+      "readme-contains-repository-structure": {
+        "level": "error"
+      },
+      "readme-contains-development-and-software-delivery-lifecycle": {
+        "level": "error"
+      },
+      "readme-contains-branching-model": {
+        "level": "error"
+      },
+      "readme-contains-feedback": {
+        "level": "error"
+      },
+
+      "contributing-contains-team-specific-guidelines": {
+        "level": "error"
+      },
+      "contributing-contains-testing-conventions": {
+        "level": "error"
+      },
+      "contributing-contains-writing-pull-requests": {
+        "level": "error"
+      },
+      "contributing-contains-reviewing-pull-requests": {
+        "level": "error"
+      },
+      "maintainers-contains-maintainers": {
+        "level": "error"
+      },
+      "maintainers-contains-maintainers-table": {
+        "level": "error"
+      },
+      "governance-contains-governance": {
+        "level": "warning"
+      },
+      "code-owners-contains-code-owners": {
+        "level": "error"
+      },
+      "code-owners-contains-repo-domains": {
+        "level": "error"
+      }
+    }
+  }

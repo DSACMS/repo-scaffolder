@@ -1,0 +1,737 @@
+{
+    "$schema": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/schema.json",
+    "version": 2,
+    "axioms": {
+      "linguist": "language",
+      "licensee": "license",
+      "packagers": "packager"
+    },
+    "rules": {
+      "license-file-exists": {
+        "level": "error",
+        "rule": {
+          "type": "file-existence",
+          "options": {
+            "globsAny": [
+              "{docs/,.github/,}LICENSE*"
+            ],
+            "nocase": true
+          }
+        }
+      },
+      "security-file-exists": {
+        "level": "error",
+        "rule": {
+          "type": "file-existence",
+          "options": {
+            "globsAny": [
+              "{docs/,.github/,}SECURITY.md"
+            ]
+          }
+        }
+      },
+      "readme-file-exists": {
+        "level": "error",
+        "rule": {
+          "type": "file-existence",
+          "options": {
+            "globsAny": [
+              "README.md"
+            ],
+            "nocase": true
+          }
+        }
+      },
+      "contributing-file-exists": {
+        "level": "error",
+        "rule": {
+          "type": "file-existence",
+          "options": {
+            "globsAny": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "nocase": true
+          }
+        }
+      },
+      "maintainers-file-exists": {
+        "level": "off",
+        "rule": {
+          "type": "file-existence",
+          "options": {
+            "globsAny": [
+              "{docs/,.github/,}MAINTAINERS.md"
+            ]
+          }
+        }
+      },
+      "codeowners-file-exists": {
+        "level": "off",
+        "rule": {
+          "type": "file-existence",
+          "options": {
+            "globsAny": [
+              "{docs/,.github/,}CODEOWNERS.md"
+            ]
+          }
+        }
+      },
+      "governance-file-exists": {
+        "level": "off",
+        "rule": {
+          "type": "file-existence",
+          "options": {
+            "globsAny": [
+              "{docs/,.github/,}GOVERNANCE.md"
+            ]
+          }
+        }
+      },
+      "community-guidelines-file-exists": {
+        "level": "off",
+        "rule": {
+          "type": "file-existence",
+          "options": {
+            "globsAny": [
+              "{docs/,.github/,}COMMUNITY_GUIDELINES.md"
+            ]
+          }
+        }
+      },
+      "code-of-conduct-file-exists": {
+        "level": "off",
+        "rule": {
+          "type": "file-existence",
+          "options": {
+            "globsAny": [
+              "{docs/,.github/,}CODE_OF_CONDUCT.md"
+            ]
+          }
+        }
+      },
+      "license-contains-license": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+                "{docs/,.github/,}LICENSE*"
+            ],
+            "content": "license",
+            "flags": "i"
+          }
+        }
+      },
+      "security-contains-security-and-Responsible-Disclosure-Policy": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Security and Responsible Disclosure Policy",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-about-the-project": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "About the Project",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-project-vision": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Project Vision",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-project-mission": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Project Mission",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-agency-mission": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Agency Mission",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-team-mission": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Team Mission",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-core-team": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Core Team",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-documentation-index": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Documentation Index",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-repository-structure": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Repository Structure",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-development-and-software-delivery-lifecycle": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Development and Software Delivery Lifecycle",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-local-development": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Local Development",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-coding-style-and-linters": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Coding Style and Linters",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-branching-model": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Branching Model",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-contributing": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Contributing",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-codeowners": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Codeowners",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-community": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Community",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-community-guidelines": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Community Guidelines",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-governance": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Governance",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-feedback": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Feedback",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-glossary": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Glossary",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-policies": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Policies",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-public-domain": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Public domain",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-how-to-contribute": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "How to Contribute",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-getting-started": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Getting Started",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-team-specific-guidelines": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Team Specific Guidelines",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-building-dependencies": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Building dependencies",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-building-the-Project": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Building the Project",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-workflow-and-branching": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Workflow and Branching",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-testing-conventions": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Testing Conventions",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-coding-style-and-linters": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Coding Style and Linters",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-writing-issues": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "ISSUE_TEMPLATE.md | Issues",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-writing-pull-requests": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Writing Pull Requests",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-reviewing-pull-requests": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Reviewing Pull Requests",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-shipping-releases": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Shipping Releases",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-documentation": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Documentation",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-policies": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Policies",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-public-domain": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Public domain",
+            "flags": "i"
+          }
+        }
+      },
+      "maintainers-contains-maintainers": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}MAINTAINERS.md"
+            ],
+            "content": "Maintainers",
+            "flags": "i"
+          }
+        }
+      },
+      "maintainers-contains-maintainers-table": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}MAINTAINERS.md"
+            ],
+            "content": "Maintainers Table",
+            "flags": "i"
+          }
+        }
+      },
+      "governance-contains-governance": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}GOVERNANCE.md"
+            ],
+            "content": "Governance",
+            "flags": "i"
+          }
+        }
+      },
+      "code-owners-contains-code-owners": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CODEOWNERS.md"
+            ],
+            "content": "CODEOWNERS",
+            "flags": "i"
+          }
+        }
+      },
+      "code-owners-contains-repo-domains": {
+        "level": "warning",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CODEOWNERS.md"
+            ],
+            "content": "documentation | frontend | backend",
+            "flags": "i"
+          }
+        }
+      },
+      "community-guidelines-contains-principles": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}COMMUNITY_GUIDELINES.md"
+            ],
+            "content": "Principles",
+            "flags": "i"
+          }
+        }
+      },
+      "community-guidelines-contains-community-guidelines": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}COMMUNITY_GUIDELINES.md"
+            ],
+            "content": "Community Guidelines",
+            "flags": "i"
+          }
+        }
+      },
+      "community-guidelines-contains-acknowledgements": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}COMMUNITY_GUIDELINES.md"
+            ],
+            "content": "Acknowledgements",
+            "flags": "i"
+          }
+        }
+      },
+      "code-of-conduct-contains-contributor-code-of-conduct": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CODE_OF_CONDUCT.md"
+            ],
+            "content": "Contributor Code of Conduct",
+            "flags": "i"
+          }
+        }
+      },
+      "code-of-conduct-contains-acknowledgements": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CODE_OF_CONDUCT.md"
+            ],
+            "content": "Acknowledgements",
+            "flags": "i"
+          }
+        }
+      }
+    }
+  }
