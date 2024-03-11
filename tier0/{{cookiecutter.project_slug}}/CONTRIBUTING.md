@@ -1,6 +1,6 @@
 <!--- # NOTE: Modify sections marked with `TODO` -->
 
-<!--
+<!-- 
 # How to Contribute
 
 We're so thankful you're considering contributing to an [open source project of
@@ -10,25 +10,23 @@ you'll be politely asked to change something. We appreciate all friendly
 contributions.
 
 We encourage you to read this project's CONTRIBUTING policy (you are here), its
-[LICENSE](LICENSE.md), and its [README](README.md).
--->
+[LICENSE](LICENSE.md), and its [README](README.md). -->
 
+<!-- 
 ## Getting Started
+TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here. -->
 
-<!--- TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
+<!-- 
+### Building dependencies 
+TODO: This step is often skipped, so don't forget to include the steps needed to install on your platform. If you project can be multi-platform, this is an excellent place for first time contributors to send patches! -->
 
-### Building dependencies
-
-<!--- TODO: This step is often skipped, so don't forget to include the steps needed to install on your platform. If you project can be multi-platform, this is an excellent place for first time contributors to send patches!-->
-
-### Building the Project
-
-<!--- TODO: Be sure to include build scripts and instructions, not just the source code itself! -->
+<!-- 
+### Building the Project 
+TODO: Be sure to include build scripts and instructions, not just the source code itself! -->
 
 <!--
 ### Workflow and Branching
 
-<!---
 TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
@@ -59,28 +57,28 @@ TODO: Code Style Guide
 4. Mention any other content guidelines the project adheres to (e.g. plainlanguage.gov, etc...)
 -->
 
+<!-- 
 ### Issues
 
-<!---
 TODO: Example Issue Guides
 
-When creating an issue please try to adhere to the following format:
-
-    module-name: One line summary of the issue (less than 72 characters)
-
-    ### Expected behavior
-
-    As concisely as possible, describe the expected behavior.
-
-    ### Actual behavior
-
-    As concisely as possible, describe the observed behavior.
-
-    ### Steps to reproduce the behavior
-
-    List all relevant steps to reproduce the observed behavior.
-
-    see our .github/ISSUE_TEMPLATE.md for more examples.
+> When creating an issue please try to adhere to the following format:
+> 
+>     module-name: One line summary of the issue (less than 72 characters)
+> 
+>     ### Expected behavior
+> 
+>     As concisely as possible, describe the expected behavior.
+> 
+>    ### Actual behavior
+>
+>    As concisely as possible, describe the observed behavior.
+>
+>    ### Steps to reproduce the behavior
+>
+>    List all relevant steps to reproduce the observed behavior.
+>
+>    see our .github/ISSUE_TEMPLATE.md for more examples. 
 -->
 
 <!--
@@ -92,6 +90,7 @@ We also welcome improvements to the project documentation or to the existing
 docs. Please file an [issue](https://github.com/cmsgov/cmsgov-example-repo/issues).
 -->
 
+<!-- 
 ## Policies
 
 ### Open Source Policy
@@ -108,10 +107,13 @@ email or via GitHub Issues. Please use our website to submit vulnerabilities at
 HHS maintains an acknowledgements page to recognize your efforts on behalf of
 the American public, but you are also welcome to submit anonymously.
 
-For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
+For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md). 
+-->
 
+<!-- 
 ## Public domain
 
 This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/) as indicated in [LICENSE](LICENSE).
 
-All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
+All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest. 
+-->
