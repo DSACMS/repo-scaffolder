@@ -18,7 +18,7 @@ TODO: Recommended to include since this is an agency-led project -->
 
 ## Core Team
 
-An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAINERS.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles.
+A full list of contributors can be found on [https://github.cms.gov/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors](https://github.cms.gov/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors).
 
 <!--
 ## Documentation Index
