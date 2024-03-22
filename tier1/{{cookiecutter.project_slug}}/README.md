@@ -1,5 +1,5 @@
-## **{Project Name}**
-**{project description}**
+# **{{ cookiecutter.project_name }}**
+**{{ cookiecutter.project_description }}**
 
 ## About the Project
 **{project statement}**
