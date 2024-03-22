@@ -39,7 +39,9 @@ This project is monorepo with several apps. Please see the [api](./api/README.md
 
 ## Coding Style and Linters
 
-<!-- TODO: Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting. -->
+<!-- TODO - Add the repo's linting and code style guidelines -->
+
+Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
 
 ## Branching Model
 

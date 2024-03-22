@@ -74,6 +74,9 @@ TODO: Using the "tree -d" command can be a helpful way to generate this informat
 
 <!--
 ## Coding Style and Linters
+
+TODO - Add the repo's linting and code style guidelines
+
 Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
 -->
 
