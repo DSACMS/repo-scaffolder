@@ -94,21 +94,21 @@ This document outlines the maturity model tiers.
     <tr>
       <!-- <td>README.md</td> -->
       <td>Project Mission</td>
-      <td style="background-color: lightblue;">R</td>
-      <td style="background-color: lightblue;">R</td>
-      <td style="background-color: lightgreen;">M</td>
-      <td style="background-color: lightblue;">R</td>
-      <td style="background-color: lightblue;">R</td>
+      <td style="color: lightblue;">R</td>
+      <td style="color: lightblue;">R</td>
+      <td style="color: lightgreen;">M</td>
+      <td style="color: lightblue;">R</td>
+      <td style="color: lightblue;">R</td>
       <td>This should be a statement that defines the purpose, scope, and specific objectives of the project.</td>
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
       <td>Agency Mission</td>
-      <td style="background-color: lightblue;">R</td>
-      <td style="background-color: lightblue;">R</td>
-      <td style="background-color: lightgreen;">M</td>
-      <td style="background-color: lightblue;">R</td>
-      <td style="background-color: lightcoral;">N</td>
+      <td style="color: lightblue;">R</td>
+      <td style="color: lightblue;">R</td>
+      <td style="color: lightgreen;">M</td>
+      <td style="color: lightblue;">R</td>
+      <td style="color: lightcoral;">N</td>
       <td>Agency-led projects should include information about their agency mission. This should be taken directly from agency websites or wikis.</td>
     </tr>
     <tr>
