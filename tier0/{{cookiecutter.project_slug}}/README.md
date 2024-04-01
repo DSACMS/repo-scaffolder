@@ -21,7 +21,8 @@ TODO: Recommended to include since this is an agency-led project -->
 ### Team Mission
 TODO: Recommended to include since this is an agency-led project -->
 
-## Core Team
+## Author / Team
+
 A full list of contributors can be found on [https://github.cms.gov/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors](https://github.cms.gov/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors).
 
 <!--
@@ -73,6 +74,9 @@ TODO: Using the "tree -d" command can be a helpful way to generate this informat
 
 <!--
 ## Coding Style and Linters
+
+TODO - Add the repo's linting and code style guidelines
+
 Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
 -->
 
