@@ -80,7 +80,7 @@
       "maintainers-contains-maintainers": {
         "level": "warning"
       },
-      "maintainers-contains-maintainers-table": {
+      "maintainers-contains-maintainers-list": {
         "level": "warning"
       },
       "code-owners-contains-list-of-users": {

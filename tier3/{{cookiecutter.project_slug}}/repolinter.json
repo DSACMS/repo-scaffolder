@@ -60,7 +60,13 @@
       "maintainers-contains-maintainers": {
         "level": "error"
       },
-      "maintainers-contains-maintainers-table": {
+      "maintainers-contains-maintainers-list": {
+        "level": "error"
+      },
+      "maintainers-contains-approvers-list": {
+        "level": "error"
+      },
+      "maintainers-contains-reviewers-list": {
         "level": "error"
       },
       "governance-contains-governance": {

@@ -616,7 +616,7 @@
           }
         }
       },
-      "maintainers-contains-maintainers-table": {
+      "maintainers-contains-maintainers-list": {
         "level": "off",
         "rule": {
           "type": "file-contents",
@@ -624,7 +624,33 @@
             "globsAll": [
               "{docs/,.github/,}MAINTAINERS.md"
             ],
-            "content": "Roles | Responsibilities",
+            "content": "Maintainers:",
+            "flags": "i"
+          }
+        }
+      },
+      "maintainers-contains-approvers-list": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}MAINTAINERS.md"
+            ],
+            "content": "Approvers:",
+            "flags": "i"
+          }
+        }
+      },
+      "maintainers-contains-reviewers-list": {
+        "level": "off",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}MAINTAINERS.md"
+            ],
+            "content": "Reviewers:",
             "flags": "i"
           }
         }
