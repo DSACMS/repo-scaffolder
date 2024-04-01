@@ -1,5 +1,5 @@
 {
-  "extends": "https://raw.githubusercontent.com/satwic007/repo-scaffolder/sat/lint_tier_1_repo/tier1/{{cookiecutter.project_slug}}/repolinter.json",
+  "extends": "https://raw.githubusercontent.com/satwic007/repo-scaffolder/sat/lint_tier_1_repo/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json",
   "$schema": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/schema.json",
     "version": 2,
     "axioms": {

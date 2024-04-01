@@ -77,9 +77,6 @@
       },
       "code-owners-contains-repo-domains": {
         "level": "error"
-      },
-      "maintainers-contains-maintainers-table": {
-        "level": "error"
       }
     }
   }
