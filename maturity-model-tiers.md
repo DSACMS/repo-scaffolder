@@ -9,6 +9,7 @@ This document outlines the maturity model tiers.
     <tr>
       <th>Level</th>
       <th>Name</th>
+      <th>Purpose</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -16,27 +17,32 @@ This document outlines the maturity model tiers.
     <tr>
       <td>Tier 0</td>
       <td>Private Repository</td>
-      <td>License</td>
+      <td>Experimental/Historical</td>
+      <td>Working projects, Example Code, Early Prototypes</td>
     </tr>
     <tr>
       <td>Tier 1</td>
       <td>One-Time Release</td>
-      <td>License</td>
+      <td>Informational/Historical</td>
+      <td>Paper publishing, Historical Archival</td>
     </tr>
     <tr>
       <td>Tier 2</td>
       <td>Close Collaboration</td>
-      <td>License</td>
+      <td>Collaborate with smaller, mostly internal teams</td>
+      <td>Project repo within a team or opdiv, Internal Repo for Innersource-style work</td>
     </tr>
     <tr>
       <td>Tier 3</td>
       <td>Working in Public</td>
-      <td>License</td>
+      <td>Collaborate in the Open with smaller, semi-open teams</td>
+      <td>Project repo developed Open Source by CMS or a CMS Contractor, Public Website hosted on Github, Tool or Utility used in CMS official business by the public, limited external contribution.</td>
     </tr>
     <tr>
       <td>Tier 4</td>
       <td>Community Governance</td>
-      <td>License</td>
+      <td>Collaborate broadly in public</td>
+      <td>Open Source Tool donated to or stewarded by an external community, open standard that welcomes public input, mature open source project that purposefully develops an official governance structure and body.</td>
     </tr>
   </tbody>
 </table>
@@ -64,11 +70,6 @@ This document outlines the maturity model tiers.
 | CODE_OF_CONDUCT.md       | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  |
 
 ## Tier Ordinality
-
-<!-- <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css">
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"></script>
-</head> -->
 
 <table>
   <thead>
