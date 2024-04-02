@@ -65,6 +65,10 @@ This document outlines the maturity model tiers.
 
 ## Tier Ordinality
 
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"></script>
+</head>
 <table>
   <thead>
     <tr>
@@ -82,11 +86,11 @@ This document outlines the maturity model tiers.
     <tr>
       <td>LICENSE</td>
       <td>License</td>
-      <td style="background-color: lightgreen;">M</td>
-      <td style="background-color: lightgreen;">M</td>
-      <td style="background-color: lightgreen;">M</td>
-      <td style="background-color: lightgreen;">M</td>
-      <td style="background-color: lightgreen;">M</td>
+      <td style="background-color: lightgreen;">$\color{green}\large{\textsf{M}}$</td>
+      <td style="background-color: lightgreen;">\(\color{green}\large{\textsf{M}}\)</td>
+      <td style="background-color: lightgreen;">$\color{green}\large{\textsf{M}}$</td>
+      <td style="background-color: lightgreen;">$\color{green}\large{\textsf{M}}$</td>
+      <td style="background-color: lightgreen;">$\color{green}\large{\textsf{M}}$</td>
       <td>All repositories, whether private or public, must include authorship and copyright information. By default, work done by federal employees is not subject to copyright protections under Title 17 U.S. Code Sections 101 & 105, unless for security or contracting purposes.</td>
     </tr>
     <tr>
@@ -562,7 +566,7 @@ This document outlines the maturity model tiers.
     <tr>
       <!-- <td>CODE_OF_CONDUCT.md</td> -->
       <td>Acknowledgements</td>
-      <td style="background-color: lightcoral;">N</td>
+      <td style="color: lightcoral;">N</td>
       <td style="background-color: lightcoral;">N</td>
       <td style="background-color: lightgreen;">M</td>
       <td style="background-color: lightgreen;">M</td>
