@@ -537,7 +537,7 @@ This document outlines the maturity model tiers.
 </table>
 
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Level</th>
@@ -546,7 +546,7 @@ This document outlines the maturity model tiers.
   </thead>
   <tbody>
   </tbody>
-</table>
+</table> -->
 
 <!-- HTML table with Color
 <table>
