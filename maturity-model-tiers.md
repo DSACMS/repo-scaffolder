@@ -2,6 +2,45 @@
 
 This document outlines the maturity model tiers.
 
+## Maturity Model Tiers
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tier 0</td>
+      <td>Private Repository</td>
+      <td>License</td>
+    </tr>
+    <tr>
+      <td>Tier 1</td>
+      <td>One-Time Release</td>
+      <td>License</td>
+    </tr>
+    <tr>
+      <td>Tier 2</td>
+      <td>Close Collaboration</td>
+      <td>License</td>
+    </tr>
+    <tr>
+      <td>Tier 3</td>
+      <td>Working in Public</td>
+      <td>License</td>
+    </tr>
+    <tr>
+      <td>Tier 4</td>
+      <td>Community Governance</td>
+      <td>License</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Ordinality
 
 | Level   | Description         |
@@ -9,7 +48,6 @@ This document outlines the maturity model tiers.
 | M | Mandatory         |
 | R | Recommended       |
 | N | Not Recommended   |
-
 
 ## Simplified
 
@@ -535,18 +573,6 @@ This document outlines the maturity model tiers.
     </tr>
   </tbody>
 </table>
-
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Level</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table> -->
 
 <!-- HTML table with Color
 <table>
