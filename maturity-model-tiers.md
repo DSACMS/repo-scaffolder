@@ -65,10 +65,11 @@ This document outlines the maturity model tiers.
 
 ## Tier Ordinality
 
-<head>
+<!-- <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"></script>
-</head>
+</head> -->
+
 <table>
   <thead>
     <tr>
@@ -87,7 +88,7 @@ This document outlines the maturity model tiers.
       <td>LICENSE</td>
       <td>License</td>
       <td style="background-color: lightgreen;">$\color{green}\large{\textsf{M}}$</td>
-      <td style="background-color: lightgreen;">\(\color{green}\large{\textsf{M}}\)</td>
+      <td style="background-color: lightgreen;">$\color{green}\large{\textsf{M}}$</td>
       <td style="background-color: lightgreen;">$\color{green}\large{\textsf{M}}$</td>
       <td style="background-color: lightgreen;">$\color{green}\large{\textsf{M}}$</td>
       <td style="background-color: lightgreen;">$\color{green}\large{\textsf{M}}$</td>
