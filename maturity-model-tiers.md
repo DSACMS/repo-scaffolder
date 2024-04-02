@@ -2,7 +2,7 @@
 
 This document outlines the maturity model tiers.
 
-## Maturity Model Tiers
+## Tier Information
 
 <table>
   <thead>
@@ -43,15 +43,15 @@ This document outlines the maturity model tiers.
 
 ## Ordinality
 
-| Level   | Description         |
-|---------|---------------------|
-| M | Mandatory         |
-| R | Recommended       |
-| N | Not Recommended   |
+| Level                            | Description       |
+|----------------------------------|-------------------|
+| $\color{green}{\textsf{M}}$      | Mandatory         |
+| $\color{blue}{\textsf{R}}$       | Recommended       |
+| $\color{lightcoral}{\textsf{N}}$ | Not Recommended   |
 
 ## Simplified
 
-| File | Tier 0: Private Repository | Tier 1: One-Time Release | Tier 2: Close Collaboration | Tier 3: Working in Public | Tier 4: Community Governance |
+| File | Tier 0 | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
 |--------------------------|---|---|----|--|---|
 | LICENSE                  | M | M | M | M | M |
 | SECURITY.md              | N | M | M | M | M |
@@ -568,32 +568,6 @@ This document outlines the maturity model tiers.
       <td style="background-color: lightgreen;">M</td>
       <td style="background-color: lightgreen;">M</td>
       <td>This section recognizes previous work and best practices established by the other members of the federal open source community such as USDS, GSA, 18F, and the Justice40 Project.</td>
-    </tr>
-  </tbody>
-</table>
-
-### HTML table with Color
-<table>
-  <thead>
-    <tr>
-      <th>Level</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td ><svg> <text fill="#FF0000" color="#FF0000" font-size="20" font-family="Verdana" x="50" y="86">M</text>
-</svg>
-</td>
-      <td>Mandatory</td>
-    </tr>
-    <tr>
-      <td style="background-color: #FFFAFFF;">R</td>
-      <td>Recommended</td>
-    </tr>
-    <tr>
-      <td style="background-color: lightcoral;">N</td>
-      <td>Not Recommended</td>
     </tr>
   </tbody>
 </table>
