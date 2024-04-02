@@ -43,11 +43,11 @@ This document outlines the maturity model tiers.
 
 ## Ordinality
 
-| Level                            | Description       |
-|----------------------------------|-------------------|
-| $\color{green}{\textsf{M}}$      | Mandatory         |
-| $\color{blue}{\textsf{R}}$       | Recommended       |
-| $\color{lightcoral}{\textsf{N}}$ | Not Recommended   |
+| Level                                  | Description       |
+|----------------------------------------|-------------------|
+| $\color{green}\large{\textsf{M}}$      | Mandatory         |
+| $\color{blue}\large{\textsf{R}}$       | Recommended       |
+| $\color{lightcoral}\large{\textsf{N}}$ | Not Recommended   |
 
 ## Simplified
 
