@@ -27,16 +27,18 @@ This document outlines the maturity model tiers.
 
 ## Tier Ordinality
 
+<!-- : Private Repository : One-Time Release : Close Collaboration: Working in Public: Community Governance-->
+
 <table>
   <thead>
     <tr>
       <th>File</th>
       <th>Sections</th>
-      <th>Tier 0: Private Repository</th>
-      <th>Tier 1: One-Time Release</th>
-      <th>Tier 2: Close Collaboration</th>
-      <th>Tier 3: Working in Public</th>
-      <th>Tier 4: Community Governance</th>
+      <th>Tier 0</th>
+      <th>Tier 1</th>
+      <th>Tier 2</th>
+      <th>Tier 3</th>
+      <th>Tier 4</th>
       <th>Notes</th>
     </tr>
   </thead>
@@ -104,11 +106,11 @@ This document outlines the maturity model tiers.
     <tr>
       <!-- <td>README.md</td> -->
       <td>Agency Mission</td>
-      <td style="color: lightblue;">R</td>
-      <td style="color: lightblue;">R</td>
-      <td style="color: lightgreen;">M</td>
-      <td style="color: lightblue;">R</td>
-      <td style="color: lightcoral;">N</td>
+      <td style="font-weight: bold; color: lightblue;">R</td>
+      <td style="font-weight: bold; color: lightblue;">R</td>
+      <td style="font-weight: bold; color: lightgreen;">M</td>
+      <td style="font-weight: bold; color: lightblue;">R</td>
+      <td style="font-weight: bold; color: lightcoral;">N</td>
       <td>Agency-led projects should include information about their agency mission. This should be taken directly from agency websites or wikis.</td>
     </tr>
     <tr>
@@ -531,6 +533,18 @@ This document outlines the maturity model tiers.
       <td style="background-color: lightgreen;">M</td>
       <td>This section recognizes previous work and best practices established by the other members of the federal open source community such as USDS, GSA, 18F, and the Justice40 Project.</td>
     </tr>
+  </tbody>
+</table>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
   </tbody>
 </table>
 
