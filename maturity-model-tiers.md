@@ -582,7 +582,9 @@ This document outlines the maturity model tiers.
   </thead>
   <tbody>
     <tr>
-      <td ><span style="background-color: lightcoral;">  M  <span></td>
+      <td ><svg> <text fill="#FF0000" color="#FF0000" font-size="20" font-family="Verdana" x="50" y="86">M</text>
+</svg>
+</td>
       <td>Mandatory</td>
     </tr>
     <tr>
@@ -595,20 +597,3 @@ This document outlines the maturity model tiers.
     </tr>
   </tbody>
 </table>
-
-<!-- <table>
-  <colgroup>
-    <col span="1" style="background-color:red">
-    <col style="background-color:yellow">
-  </colgroup>
-  <tr>
-    <th>ISBN</th>
-    <th>Title</th>
-    <th>Price</th>
-  </tr>
-  <tr>
-    <td>3476896</td>
-    <td>My first HTML</td>
-    <td>$53</td>
-  </tr>
-</table> -->
