@@ -166,7 +166,7 @@ TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, 
 TODO: Documentation Example
 
 We also welcome improvements to the project documentation or to the existing
-docs. Please file an [issue]({{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/main).
+docs. Please file an [issue]({{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/issues).
 -->
 
 ## Policies
