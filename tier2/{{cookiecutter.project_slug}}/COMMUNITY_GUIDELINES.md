@@ -25,7 +25,6 @@ When participating in {{ cookiecutter.project_name }} open source community conv
 - When joining a conversation for the first time, please introduce yourself by providing a brief intro that includes:
   - your related organization (if applicable)
   - your pronouns
-  - disclosure of any current or potential financial interest in this work
   - your superpower, and how you hope to use it for {{ cookiecutter.project_name }}
 - Embrace a culture of learning, and educate each other. We are all entering this conversation from different starting points and with different backgrounds. There are no dumb questions.
 - Take space and give space. We strive to create an equitable environment in which all are welcome and able to participate. We hope individuals feel comfortable voicing their opinions and providing contributions and will do our best to recognize and make space for individuals who may be struggling to find space here. Likewise, we expect individuals to recognize when they are taking up significant space and take a step back to allow room for others.
