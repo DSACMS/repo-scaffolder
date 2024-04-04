@@ -476,7 +476,7 @@ This document outlines the maturity model tiers.
       <td>This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508) Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.</td>
     </tr>
     <tr>
-      <td rowspan="2">MAINTAINERS.md</td>
+      <td rowspan="4">MAINTAINERS.md</td>
       <td>Maintainers</td>
       <td>$\color{lightcoral}\large{\textsf{N}}$</td>
       <td>$\color{lightcoral}\large{\textsf{N}}$</td>
@@ -487,13 +487,33 @@ This document outlines the maturity model tiers.
     </tr>
     <tr>
       <!-- <td>MAINTAINERS.md</td> -->
-      <td>Maintainers Table</td>
+      <td>Maintainers List</td>
       <td>$\color{lightcoral}\large{\textsf{N}}$</td>
       <td>$\color{lightcoral}\large{\textsf{N}}$</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams.</td>
+    </tr>
+    <tr>
+      <!-- <td>MAINTAINERS.md</td> -->
+      <td>Approvers List</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the project approvers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
+    </tr>
+    <tr>
+      <!-- <td>MAINTAINERS.md</td> -->
+      <td>Reviewers List</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the project reviewers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
     </tr>
     <tr>
       <td>GOVERNANCE.md</td>
