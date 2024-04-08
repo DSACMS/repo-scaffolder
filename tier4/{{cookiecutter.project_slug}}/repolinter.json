@@ -21,7 +21,7 @@
         "level": "error"
       },
       "readme-contains-glossary": {
-        "level": "warning"
+        "level": "error"
       },
       "contributing-contains-shipping-releases": {
         "level": "error"

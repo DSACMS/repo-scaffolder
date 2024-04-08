@@ -53,9 +53,6 @@
       "readme-contains-governance": {
         "level": "warning"
       },
-      "readme-contains-glossary": {
-        "level": "warning"
-      },
       "contributing-contains-how-to-contribute": {
         "level": "error"
       },

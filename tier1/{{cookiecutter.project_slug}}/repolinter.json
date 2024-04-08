@@ -122,13 +122,13 @@
           }
         }
       },
-      "security-contains-security-and-Responsible-Disclosure-Policy": {
+      "security-contains-security-and-responsible-disclosure-policy": {
         "level": "error",
         "rule": {
           "type": "file-contents",
           "options": {
             "globsAll": [
-              "README.md"
+              "{docs/,.github/,}SECURITY.md"
             ],
             "content": "Security and Responsible Disclosure Policy",
             "flags": "i"
@@ -395,6 +395,32 @@
           }
         }
       },
+      "readme-contains-open-source-policy": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Open Source Policy",
+            "flags": "i"
+          }
+        }
+      },
+      "readme-contains-security-and-responsible-disclosure-policy": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "README.md"
+            ],
+            "content": "Security and Responsible Disclosure Policy",
+            "flags": "i"
+          }
+        }
+      },
       "readme-contains-public-domain": {
         "level": "error",
         "rule": {
@@ -460,7 +486,7 @@
           }
         }
       },
-      "contributing-contains-building-the-Project": {
+      "contributing-contains-building-the-project": {
         "level": "error",
         "rule": {
           "type": "file-contents",
@@ -586,6 +612,32 @@
               "{docs/,.github/,}CONTRIBUTING.md"
             ],
             "content": "Policies",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-open-source-policy": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Open Source Policy",
+            "flags": "i"
+          }
+        }
+      },
+      "contributing-contains-security-and-responsible-disclosure-policy": {
+        "level": "error",
+        "rule": {
+          "type": "file-contents",
+          "options": {
+            "globsAll": [
+              "{docs/,.github/,}CONTRIBUTING.md"
+            ],
+            "content": "Security and Responsible Disclosure Policy",
             "flags": "i"
           }
         }

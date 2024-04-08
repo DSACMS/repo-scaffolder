@@ -57,6 +57,9 @@
       "contributing-contains-reviewing-pull-requests": {
         "level": "error"
       },
+      "contributing-contains-documentation": {
+        "level": "error"
+      },
       "maintainers-contains-maintainers": {
         "level": "error"
       },
