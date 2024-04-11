@@ -734,7 +734,7 @@
         }
       },
       "code-owners-contains-repo-domains": {
-        "level": "warning",
+        "level": "off",
         "rule": {
           "type": "file-contents",
           "options": {
