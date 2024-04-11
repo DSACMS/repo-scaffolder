@@ -41,9 +41,9 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 2.  Check out the `main` branch 
 3.  Create a feature branch
 4.  Write code and tests for your change 
-5.  From your branch, make a pull request against `cmsgov/cmsgov-example-repo/main` 
+5.  From your branch, make a pull request against `{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/main`
 6.  Work with repo maintainers to get your change reviewed 
-7.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
+7.  Wait for your change to be pulled into `{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/main`
 8.  Delete your feature branch
 -->
 
@@ -166,7 +166,7 @@ TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, 
 TODO: Documentation Example
 
 We also welcome improvements to the project documentation or to the existing
-docs. Please file an [issue](https://github.com/cmsgov/cmsgov-example-repo/issues).
+docs. Please file an [issue]({{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/issues).
 -->
 
 ## Policies

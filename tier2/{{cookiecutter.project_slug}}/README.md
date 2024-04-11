@@ -1,5 +1,5 @@
-## **{Project Name}**
-**{project description}**
+# {{ cookiecutter.project_name }}
+{{ cookiecutter.project_description }}
 
 ## About the Project
 **{project statement}**
@@ -50,6 +50,8 @@ This project is monorepo with several apps. Please see the [api](./api/README.md
 
 ## Coding Style and Linters
 
+<!-- TODO - Add the repo's linting and code style guidelines -->
+
 Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
 
 <!--
@@ -79,7 +81,7 @@ The contents of this repository are managed by **{responsible organization(s)}**
 
 ## Community
 
-The **{project name}** team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
+The {{ cookiecutter.project_name }} team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
 
 We know that we can learn from a wide variety of communities, including those who will use or will be impacted by the tool, who are experts in technology, or who have experience with similar technologies deployed in other spaces. We are dedicated to creating forums for continuous conversation and feedback to help shape the design and development of the tool.
 

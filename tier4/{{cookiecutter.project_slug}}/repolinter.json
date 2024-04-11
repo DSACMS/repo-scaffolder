@@ -1,0 +1,33 @@
+{
+  "extends": "https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json",
+  "$schema": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/schema.json",
+    "version": 2,
+    "axioms": {
+      "linguist": "language",
+      "licensee": "license",
+      "packagers": "packager"
+    },
+    "rules": {
+      "governance-file-exists": {
+        "level": "error"
+      },
+      "readme-contains-agency-mission": {
+        "level": "off"
+      },
+      "readme-contains-team-mission": {
+        "level": "off"
+      },
+      "readme-contains-governance": {
+        "level": "error"
+      },
+      "readme-contains-glossary": {
+        "level": "error"
+      },
+      "contributing-contains-shipping-releases": {
+        "level": "error"
+      },
+      "governance-contains-governance": {
+        "level": "error"
+      }
+    }
+  }

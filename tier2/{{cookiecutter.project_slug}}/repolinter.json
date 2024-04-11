@@ -1,0 +1,105 @@
+{
+  "extends": "https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json",
+  "$schema": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/schema.json",
+    "version": 2,
+    "axioms": {
+      "linguist": "language",
+      "licensee": "license",
+      "packagers": "packager"
+    },
+    "rules": {
+      "maintainers-file-exists": {
+        "level": "warning"
+      },
+      "codeowners-file-exists": {
+        "level": "warning"
+      },
+      "community-guidelines-file-exists": {
+        "level": "error"
+      },
+      "code-of-conduct-file-exists": {
+        "level": "error"
+      },
+      "readme-contains-project-vision": {
+        "level": "error"
+      },
+      "readme-contains-project-mission": {
+        "level": "error"
+      },
+      "readme-contains-agency-mission": {
+        "level": "error"
+      },
+      "readme-contains-team-mission": {
+        "level": "error"
+      },
+      "readme-contains-local-development": {
+        "level": "error"
+      },
+      "readme-contains-coding-style-and-linters": {
+        "level": "error"
+      },
+      "readme-contains-contributing": {
+        "level": "error"
+      },
+      "readme-contains-codeowners": {
+        "level": "error"
+      },
+      "readme-contains-community": {
+        "level": "error"
+      },
+      "readme-contains-community-guidelines": {
+        "level": "error"
+      },
+      "readme-contains-governance": {
+        "level": "warning"
+      },
+      "contributing-contains-how-to-contribute": {
+        "level": "error"
+      },
+      "contributing-contains-team-specific-guidelines": {
+        "level": "warning"
+      },
+      "contributing-contains-workflow-and-branching": {
+        "level": "error"
+      },
+      "contributing-contains-coding-style-and-linters": {
+        "level": "error"
+      },
+      "contributing-contains-writing-pull-requests": {
+        "level": "warning"
+      },
+      "contributing-contains-reviewing-pull-requests": {
+        "level": "warning"
+      },
+      "contributing-contains-shipping-releases": {
+        "level": "warning"
+      },
+      "maintainers-contains-maintainers": {
+        "level": "warning"
+      },
+      "maintainers-contains-maintainers-list": {
+        "level": "warning"
+      },
+      "code-owners-contains-list-of-users": {
+        "level": "warning"
+      },
+      "code-owners-contains-repo-domains": {
+        "level": "warning"
+      },
+      "community-guidelines-contains-principles": {
+        "level": "error"
+      },
+      "community-guidelines-contains-community-guidelines": {
+        "level": "error"
+      },
+      "community-guidelines-contains-acknowledgements": {
+        "level": "error"
+      },
+      "code-of-conduct-contains-contributor-code-of-conduct": {
+        "level": "error"
+      },
+      "code-of-conduct-contains-acknowledgements": {
+        "level": "error"
+      }
+    }
+  }

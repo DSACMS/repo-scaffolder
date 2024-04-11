@@ -1,5 +1,5 @@
-## **{project_name}**
-**{project_description}**
+# {{ cookiecutter.project_name }}
+{{ cookiecutter.project_description }}
 
 ## About the Project
 **{project_statement}**
@@ -39,7 +39,9 @@ This project is monorepo with several apps. Please see the [api](./api/README.md
 
 ## Coding Style and Linters
 
-<!-- TODO: Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting. -->
+<!-- TODO - Add the repo's linting and code style guidelines -->
+
+Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
 
 ## Branching Model
 
@@ -67,7 +69,7 @@ The contents of this repository are managed by **{responsible organization(s)}**
 
 ## Community
 
-The **{project_name}** team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
+The {{ cookiecutter.project_name }} team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
 
 We know that we can learn from a wide variety of communities, including those who will use or will be impacted by the tool, who are experts in technology, or who have experience with similar technologies deployed in other spaces. We are dedicated to creating forums for continuous conversation and feedback to help shape the design and development of the tool.
 
@@ -78,8 +80,9 @@ We also recognize capacity building as a key part of involving a diverse open so
 Principles and guidelines for participating in our open source community are can be found in [COMMUNITY_GUIDELINES.md](COMMUNITY_GUIDELINES.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events. 
 
 ## Governance
-
 <!-- TODO: Make a short statement about how the project is governed (formally, or informally) and link to the GOVERNANCE.md file.-->
+
+Information about how the {{ cookiecutter.project_name }} community is governed may be found in [GOVERNANCE.md](GOVERNANCE.md).
 
 ## Feedback
 
