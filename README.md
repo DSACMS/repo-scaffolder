@@ -5,6 +5,7 @@ Templates and commandline tools for creating repositories for US Federal open so
 - python
 - github cli
 - cookiecutter
+- [repolinter](https://github.com/todogroup/repolinter)
 
 ## Need help picking a tier?
 If you do not know what tier your project is, the cookiecutter will walk you through questions to figure out what tier you need.  Run:
@@ -36,6 +37,17 @@ containing the files to be added can include slugged out variables such as `{{ c
 be filled in by the answers to `cookiecutter.json`.  For example, `{{ cookiecutter.project_name }}` will be filled in by 
 this question - `"project_name": "My Project",`.  See the [cookiecutter docs](https://cookiecutter.readthedocs.io/en/stable/) 
 for more information.
+
+## Repolinter
+Tiers of level 1 thru 4 have repolinter.json file in their projects. Tier1 has detailed configuration of all the rules. All the other tiers extends their previuos tiers and has only the `rule` and the `level` configuration.
+
+Sample commands to run with the given repolinter.json path:
+
+```
+repolinter lint .
+
+repolinter lint tier4/\{\{cookiecutter.project_slug\}\}
+```
 
 ## Maturity Models
 See our Maturity Model Tiers Document for reference: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.pdf
