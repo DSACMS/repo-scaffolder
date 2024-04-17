@@ -18,31 +18,31 @@ This document outlines the maturity model tiers.
       <td>Tier 0</td>
       <td>Private Repository</td>
       <td>Experimental/Historical</td>
-      <td>Working projects, Example Code, Early Prototypes</td>
+      <td>Project is private, usually with a single developer. Typically working projects, example code, and early prototypes.</td>
     </tr>
     <tr>
       <td>Tier 1</td>
       <td>One-Time Release</td>
       <td>Informational/Historical</td>
-      <td>Paper publishing, Historical Archival</td>
+      <td>Project released publicly, but without planned future activity or maintenance from original author(s).</td>
     </tr>
     <tr>
       <td>Tier 2</td>
       <td>Close Collaboration</td>
       <td>Collaborate with smaller, mostly internal teams</td>
-      <td>Project repo within a team or opdiv, Internal Repo for Innersource-style work</td>
+      <td>Project within a team or Operational Division (OpDiv), Internal Repo for Innersource-style work.</td>
     </tr>
     <tr>
       <td>Tier 3</td>
       <td>Working in Public</td>
       <td>Collaborate in the Open with smaller, semi-open teams</td>
-      <td>Project repo developed Open Source by CMS or a CMS Contractor, Public Website hosted on Github, Tool or Utility used in CMS official business by the public, limited external contribution.</td>
+      <td>Project developed Open Source by CMS or a CMS contractor, public website hosted on GitHub, tool or utility used in CMS official business by the public. Limited external contribution, CMS-led (by choice or by statute).</td>
     </tr>
     <tr>
       <td>Tier 4</td>
       <td>Community Governance</td>
       <td>Collaborate broadly in public</td>
-      <td>Open Source Tool donated to or stewarded by an external community, open standard that welcomes public input, mature open source project that purposefully develops an official governance structure and body.</td>
+      <td>Project donated to or stewarded by an external community, open standard that welcomes public input, mature open source project that purposefully develops an open governance structure.</td>
     </tr>
   </tbody>
 </table>
