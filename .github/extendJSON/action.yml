@@ -1,0 +1,27 @@
+name: 'extendJSONRepolinter'
+
+description: 'Returns raw JSON given a file that uses the extends key'
+
+
+inputs:
+    path_to_json:
+      description: 'Path to JSON file'
+      default: './repolinter.json'
+      required: true
+      type: string
+  
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout Action
+      uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+    - name: Extend JSON and write to env
+      run: |
+        extended=$(python3 resolve.py ${{ inputs.path_to_json }})
+        echo $extended
+        echo "extended_json="$extended"" >> $GITHUB_ENV
+      shell: bash

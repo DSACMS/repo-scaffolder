@@ -36,8 +36,6 @@ def resolve_extended_json_file(file_data_dict):
 
     resolve['rules'].update(file_data_dict)
 
-
-    #tail recurse
     return resolve
 
 

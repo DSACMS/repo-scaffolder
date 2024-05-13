@@ -1,21 +1,20 @@
 name: Extend JSON
 
 on:
-    workflow_dispatch:
-        inputs:
-            path_to_json:
-                description: 'Path to JSON file'
-                default: './repolinter.json'
-                required: true
-                type: string
+  workflow_dispatch:
+    inputs:
+      path_to_json:
+        description: 'Path to JSON file'
+        default: './repolinter.json'
+        required: true
+        type: string
 
 jobs:
   extend-json:
     runs-on: ubuntu-latest
     name: Extend JSON file with extends property
     steps:
-      - name: Checkout Action
-        uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - name: Extend JSON
+        uses: ./.github/extendJSON
         with:
-          python-version: '3.9'
+          path_to_json: 'tier4/{{cookiecutter.project_slug}}/repolinter.json'
