@@ -11,3 +11,5 @@ The [updateStringInRepos](https://github.com/DSACMS/repo-scaffolder/blob/main/.g
 
 ## Adding Files
 The [addFilesToRepos](https://github.com/DSACMS/repo-scaffolder/blob/main/.github/workflows/addFilesToRepos.yml) workflow takes a github topic, github org, and a file to add to the repo.  It then raises a pull request in the repos it finds with the file to add.  It can be triggered from this repo using the [workflow dispatch](https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow#running-a-workflow).  This workflow can be used as a reusable workflow.
+
+## Resolve Extended JSON Files 
