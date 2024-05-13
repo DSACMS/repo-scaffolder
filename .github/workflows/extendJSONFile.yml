@@ -3,9 +3,9 @@ name: Extend JSON
 on:
   workflow_dispatch:
     inputs:
-      path_to_json:
-        description: 'Path to JSON file'
-        default: './repolinter.json'
+      url_to_json:
+        description: 'URL to JSON file'
+        default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
         required: true
         type: string
 
@@ -17,4 +17,4 @@ jobs:
       - name: Extend JSON
         uses: ./.github/extendJSON
         with:
-          path_to_json: 'tier4/{{cookiecutter.project_slug}}/repolinter.json'
+          url_to_json: ${{ github.event.inputs.url_to_json }
