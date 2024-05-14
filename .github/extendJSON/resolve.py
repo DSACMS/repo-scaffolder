@@ -2,11 +2,6 @@ import sys
 import json
 from urllib.request import urlopen, Request
 
-
-#Grab base file 
-baseFile = sys.argv[1]
-
-
 def get_json_dict_from_url(url):
 
     r = Request(url,headers={"Accept":"application/json"})
@@ -16,7 +11,6 @@ def get_json_dict_from_url(url):
         #print(response.read().decode())
         text = response.read().decode()
         return json.loads(text)
-
 
 #recursively resolve json file data.
 def resolve_extended_json_file(file_data_dict):
@@ -38,8 +32,7 @@ def resolve_extended_json_file(file_data_dict):
 
     return resolve
 
+#Grab base url 
+baseUrl = sys.argv[1]
 
-with open(baseFile, "r", encoding="utf-8") as f:
-    baseDict = json.load(f)
-
-print(resolve_extended_json_file(baseDict))
+print(resolve_extended_json_file(get_json_dict_from_url(baseUrl)))
