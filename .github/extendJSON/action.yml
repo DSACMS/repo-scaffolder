@@ -23,5 +23,5 @@ runs:
       run: |
         extended=$(python3 ${{ github.action_path }}/resolve.py ${{ inputs.url_to_json }})
         echo $extended
-        echo "extended_json="$extended"" >> $GITHUB_ENV
+        echo "RAW_JSON="$extended"" >> $GITHUB_OUTPUT
       shell: bash

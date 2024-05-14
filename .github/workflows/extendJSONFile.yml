@@ -13,8 +13,11 @@ jobs:
   extend-json:
     runs-on: ubuntu-latest
     name: Extend JSON file with extends property
+    outputs: 
+      raw-json: ${{ steps.extend-json.outputs.RAW_JSON }}
     steps:
       - name: Extend JSON
+        id: extend-json
         uses: ./.github/extendJSON
         with:
           url_to_json: ${{ github.event.inputs.url_to_json }
