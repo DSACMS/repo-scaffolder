@@ -8,7 +8,7 @@ jobs:
   resolve-repolinter-json:
     uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@add-repolinter-workflows
     with: 
-      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier3s/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
   
   repolinter-checks:
     name: Tier 3 Checks
