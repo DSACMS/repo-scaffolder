@@ -67,13 +67,3 @@ jobs:
           #
           # Default: "fbca04"
           label_color: 'ff69b4'
-
-          # Personal access token (PAT) used to create an issue on this repository.
-          # This token is optional and only required if this actions is configured to
-          # output an issue (see `output_type`). This token must have the `public_repo`
-          # scope for the current repository in order to work properly.
-          #
-          # [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
-          #
-          # Default: ${{ github.token }}
-          token: ${{ secrets.METRICS_GITHUB_TOKEN }}

@@ -48,7 +48,7 @@ jobs:
           # This option will be ignored if output_type != "issue".
           #
           # Default: "[Repolinter] Open Source Policy Issues"
-          output_name: '[Repolinter] Tier 3 OSS Policy Issues'
+          output_name: '[Repolinter] Tier 2 OSS Policy Issues'
 
           # The name to use for the issue label created by repolinter-action. This name
           # should be unique to repolinter-action (i.e. not used by any other issue) to
@@ -57,7 +57,7 @@ jobs:
           # This option will be ignored if output_type != "issue".
           #
           # Default: "repolinter"
-          label_name: 'Tier 3 Remediation'
+          label_name: 'Tier 2 Remediation'
 
           # The color to use for the issue label created by repolinter-action. The value
           # for this option should be an unprefixed RRGGBB hex string (ex. ff568a).
@@ -67,13 +67,3 @@ jobs:
           #
           # Default: "fbca04"
           label_color: 'ff69b4'
-
-          # Personal access token (PAT) used to create an issue on this repository.
-          # This token is optional and only required if this actions is configured to
-          # output an issue (see `output_type`). This token must have the `public_repo`
-          # scope for the current repository in order to work properly.
-          #
-          # [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
-          #
-          # Default: ${{ github.token }}
-          token: ${{ secrets.METRICS_GITHUB_TOKEN }}
