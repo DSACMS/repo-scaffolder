@@ -1,0 +1,69 @@
+name: "run-linting-checks"
+on:
+  pull_request:
+    branches: [main, dev]
+
+
+jobs:
+  resolve-repolinter-json:
+    uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@add-repolinter-workflows
+    with: 
+      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+  
+  repolinter-checks:
+    name: Tier 2 Checks
+    needs: resolve-repolinter-json
+    runs-on: ubuntu-latest
+    env:
+      RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json}}
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo $RAW_JSON > repolinter.json
+      - uses: newrelic/repolinter-action@v1
+        with:
+          # A path to the JSON/YAML Repolinter ruleset to use, relative to the workflow
+          # working directory (i.e. under `$GITHUB_WORKSPACE`).
+          #
+          # This option is mutually exclusive with config_url. If this option and
+          # config_url are not specified, Repolinter's default ruleset will be used.
+          config_file: 'repolinter.json'
+
+          # Where repolinter-action should put the linting results. There are two
+          # options available:
+          # * "exit-code": repolinter-action will print the lint output to the console
+          #   and set the exit code to result.passed. This output type is most useful for
+          #   PR status checks.
+          # * "issue": repolinter-action will create a GitHub issue on the current
+          #   repository with the repolinter output and always exit 0. See the README for
+          #   more details on issue outputting behavior. This output type is ideal for
+          #   non-intrusive notification.
+          #
+          # Default: "exit-code"
+          output_type: 'issue'
+
+          # The title to use for the issue created by repolinter-action. This title
+          # should indicate the purpose of the issue, as well as that it was created by
+          # a bot.
+          #
+          # This option will be ignored if output_type != "issue".
+          #
+          # Default: "[Repolinter] Open Source Policy Issues"
+          output_name: '[Repolinter] Tier 2 Repository Hygiene Issue'
+
+          # The name to use for the issue label created by repolinter-action. This name
+          # should be unique to repolinter-action (i.e. not used by any other issue) to
+          # prevent repolinter-action from getting confused.
+          #
+          # This option will be ignored if output_type != "issue".
+          #
+          # Default: "repolinter"
+          label_name: 'cms-oss-tier2'
+
+          # The color to use for the issue label created by repolinter-action. The value
+          # for this option should be an unprefixed RRGGBB hex string (ex. ff568a).
+          # The default value is a shade of yellow.
+          #
+          # This option will be ignored if output_type != "issue".
+          #
+          # Default: "fbca04"
+          label_color: 'ff69b4'
