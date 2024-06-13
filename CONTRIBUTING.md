@@ -101,24 +101,13 @@ columns (You can use `fmt -n -p -w 80` to accomplish this).
 
 ## Reviewing Pull Requests
 
-The repository on GitHub is kept in sync with an internal repository at
-github.cms.gov. For the most part this process should be transparent to the
-project users, but it does have some implications for how pull requests are
-merged into the codebase.
-
 When you submit a pull request on GitHub, it will be reviewed by the project
-community (both inside and outside of github.cms.gov), and once the changes are
-approved, your commits will be brought into github.cms.gov's internal system for
-additional testing. Once the changes are merged internally, they will be pushed
-back to GitHub with the next sync.
+community, and once the changes are approved, your commits will be brought into
+a development branch for additional testing. Once the changes are merged, they will
+be pushed back to the main branch.
 
-This process means that the pull request will not be merged in the usual way.
-Instead a member of the project team will post a message in the pull request
-thread when your changes have made their way back to GitHub, and the pull
-request will be closed.
-
-The changes in the pull request will be collapsed into a single commit, but the
-authorship metadata will be preserved.
+If the issue the pull request is addressing is particularly urgent, the pull request
+will be merged directly into the main branch. 
 
 ## Documentation
 
