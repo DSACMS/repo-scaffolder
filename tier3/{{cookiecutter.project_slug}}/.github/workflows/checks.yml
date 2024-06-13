@@ -48,7 +48,7 @@ jobs:
           # This option will be ignored if output_type != "issue".
           #
           # Default: "[Repolinter] Open Source Policy Issues"
-          output_name: '[Repolinter] Tier 3 OSS Policy Issues'
+          output_name: '[Repolinter] Tier 3 Repository Hygiene Issue'
 
           # The name to use for the issue label created by repolinter-action. This name
           # should be unique to repolinter-action (i.e. not used by any other issue) to
@@ -57,7 +57,7 @@ jobs:
           # This option will be ignored if output_type != "issue".
           #
           # Default: "repolinter"
-          label_name: 'Tier 3 Remediation'
+          label_name: 'cms-oss-tier3'
 
           # The color to use for the issue label created by repolinter-action. The value
           # for this option should be an unprefixed RRGGBB hex string (ex. ff568a).
