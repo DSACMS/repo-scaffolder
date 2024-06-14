@@ -15,7 +15,9 @@ jobs:
     needs: resolve-repolinter-json
     runs-on: ubuntu-latest
     env:
-      RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json}}
+      {% raw %}
+      RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json }}
+      {% endraw %}
     steps:
       - uses: actions/checkout@v4
       - run: echo $RAW_JSON > repolinter.json
