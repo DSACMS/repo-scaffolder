@@ -7,11 +7,5 @@
 ## Repo Domains
 
 <!-- TODO: List out the various domains of the project or teams of owners for that domain (e.g. Frontend, Backend, Documentation)-->
-### documentation/*
-{% set doc_owners = cookiecutter.doc_owners.split(',') %}
-{% for item in doc_owners %}- {{ item }}
-{% endfor %}
-### frontend/*
-{% set frontend_owners = cookiecutter.frontend_owners.split(',') %}
-{% for item in frontend_owners %}- {{ item }}
-{% endfor %}
+documentation/* {usernames of documentation owners}  
+frontend/* {usernames of frontend owners}
