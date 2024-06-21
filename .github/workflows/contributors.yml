@@ -13,6 +13,9 @@ jobs:
             contents: write
             pull-requests: write
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
             # Update contributor list
             - name: Contribute List
               uses: akhilmhdh/contributors-readme-action@v2.3.10
