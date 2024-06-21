@@ -2,7 +2,6 @@ on:
     push:
         branches:
             - main
-            - 4-proj-automatically-generate-a-contributors-list-in-maintainersmd-file
     workflow_dispatch:
 
 jobs:
@@ -27,6 +26,10 @@ jobs:
             # Update contributor count
             - name: Checkout repository
               uses: actions/checkout@v4
+
+            - name: Pull changes from contributors-readme-action
+              run: |
+                  git pull
 
             - name: Get repository contributors count
               id: get_contributors
