@@ -2,6 +2,7 @@ on:
     push:
         branches:
             - main
+            - 4-proj-automatically-generate-a-contributors-list-in-maintainersmd-file
     workflow_dispatch:
 
 jobs:
