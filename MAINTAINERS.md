@@ -21,7 +21,7 @@ Reviewers:
 
 ## Contributors
 
-Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COUNT END-->
+Total number of contributors: <!--CONTRIBUTOR COUNT START--> 7 <!--CONTRIBUTOR COUNT END-->
 
 <!-- readme: contributors -start -->
 <table>
