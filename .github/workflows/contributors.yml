@@ -28,6 +28,10 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
 
+            - name: Pull changes from contributors-readme-action
+              run: |
+                  git pull
+
             - name: Get repository contributors count
               id: get_contributors
               run: |
@@ -47,7 +51,6 @@ jobs:
               run: |
                   git config user.name 'github-actions[bot]'
                   git config user.email 'github-actions[bot]@users.noreply.github.com'
-                  git pull
                   git add MAINTAINERS.md
                   git commit -m "BOT: Update contributors info in MAINTAINERS.md" || exit 0
                   git push
