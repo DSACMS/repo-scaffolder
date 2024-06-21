@@ -9,3 +9,9 @@ This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS
 |:-----|:-----|:-----|:-----|
 | {role} | {names} | {github usernames} | {affiliations}|
 
+## Contributors
+
+Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COUNT END-->
+
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
