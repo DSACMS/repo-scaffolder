@@ -20,5 +20,8 @@ Reviewers:
 | lead         | set direction and priorities for a subproject | demonstrated responsibility and excellent technical judgement for the subproject |  MAINTAINERS file owner entry and GitHub Org Admin Team|
 
 ## Contributors
+
+Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COUNT END-->
+
 <!-- readme: contributors -start -->
 <!-- readme: contributors -end -->
