@@ -12,5 +12,13 @@
     "MAINTAIN": "Do you plan on having other individuals/teams outside the agency maintain the project with you?",
     "ROADMAP": "Do you plan on having other individuals/teams outside the agency plan the development roadmap with you?",
     "template": "We suggest using this template:"
-  }
+  },
+  "maintainers": [
+    {
+      "name": "Name",
+      "github_username": "GitHub username",
+      "role": "Choose One: reviewer, approver, maintainer"
+      "affiliation": "Affiliation"
+    }
+  ]
 }
