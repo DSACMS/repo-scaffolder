@@ -33,19 +33,27 @@ jobs:
 
             - name: Get repository contributors count
               id: get_contributors
+              # https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#list-repository-contributors
+              # https://docs.github.com/en/graphql/reference/objects#repositorycollaboratorconnection
+              # https://docs.github.com/en/graphql/guides/forming-calls-with-graphql#communicating-with-graphql
+              # CANNOT have newlines!
               run: |
-                  REPO_OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
-                  REPO_NAME=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
-                  CONTRIBUTORS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contributors?per_page=100" | jq '. | length')
+                  TEMPLATE_QUERY='query { repository(owner: \"OWNER\", name: \"REPO\") { collaborators { totalCount } } }'
+                  OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
+                  REPO=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
+                  QUERY=$(echo $TEMPLATE_QUERY | sed "s/OWNER/$OWNER/" | sed "s/REPO/$REPO/")
+                  CONTRIBUTORS=$(curl -s -X POST -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: application/json" -d "{\"query\": \"$QUERY\"}" https://api.github.com/graphql | jq -r '.data.repository.collaborators.totalCount')
                   echo "Total contributors: $CONTRIBUTORS"
                   echo "contributors=$CONTRIBUTORS" >> $GITHUB_OUTPUT
 
             - name: Replace slug in MAINTAINERS.md with number of contributors
+              # https://stackoverflow.com/questions/10613643/replace-a-unknown-string-between-two-known-strings-with-sed
               run: |
                   CONTRIBUTORS=${{ steps.get_contributors.outputs.contributors }}
                   sed -i 's/<!--CONTRIBUTOR COUNT START-->.*<!--CONTRIBUTOR COUNT END-->/<!--CONTRIBUTOR COUNT START--> '"$CONTRIBUTORS"' <!--CONTRIBUTOR COUNT END-->/g' MAINTAINERS.md
 
             - name: Commit and push changes
+              # https://github.com/orgs/community/discussions/26560#discussioncomment-3531273
               # commit changes, but if no changes exist, then exit cleanly
               run: |
                   git config user.name 'github-actions[bot]'
