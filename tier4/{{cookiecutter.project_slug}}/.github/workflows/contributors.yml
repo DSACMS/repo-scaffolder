@@ -38,10 +38,9 @@ jobs:
               # https://docs.github.com/en/graphql/guides/forming-calls-with-graphql#communicating-with-graphql
               # CANNOT have newlines!
               run: |
-                  TEMPLATE_QUERY='query { repository(owner: \"OWNER\", name: \"REPO\") { collaborators { totalCount } } }'
                   OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
                   REPO=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
-                  QUERY=$(echo $TEMPLATE_QUERY | sed "s/OWNER/$OWNER/" | sed "s/REPO/$REPO/")
+                  QUERY='query { repository(owner: \"'"$OWNER"'\", name: \"'"$REPO"'\") { collaborators { totalCount } } }'
                   CONTRIBUTORS=$(curl -s -X POST -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: application/json" -d "{\"query\": \"$QUERY\"}" https://api.github.com/graphql | jq -r '.data.repository.collaborators.totalCount')
                   echo "Total contributors: $CONTRIBUTORS"
                   echo "contributors=$CONTRIBUTORS" >> $GITHUB_OUTPUT
