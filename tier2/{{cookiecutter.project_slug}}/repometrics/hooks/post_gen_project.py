@@ -32,7 +32,7 @@ try:
     # Check if the directory exists
     if os.path.exists(dir_name):
         # Attempt to remove the directory
-        print(f"Directory '{dir_name}' has been removed.")
+        shutil.rmtree(dir_name)
     else:
         print(f"Directory '{dir_name}' does not exist.")
 except FileNotFoundError:
