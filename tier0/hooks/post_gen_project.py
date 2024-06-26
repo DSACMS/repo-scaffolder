@@ -30,8 +30,8 @@ def addTopic():
     ]
     subprocess.call(gh_cli_command)
 
-if CREATE_REPO:
+if CREATE_REPO == "True":
     createGithubRepo()
 
-if RECEIVE_UPDATES:
+if RECEIVE_UPDATES == "True":
     addTopic()
