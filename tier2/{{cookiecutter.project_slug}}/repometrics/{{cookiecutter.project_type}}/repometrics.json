@@ -5,5 +5,6 @@
     "group": "{{cookiecutter.group}}",
     "subset_in_healthcare": "{{cookiecutter.subset_in_healthcare}}",
     "user_type": "{{cookiecutter.user_type}}",
-    "repository_host": "{{cookiecutter.repository_host}}"
+    "repository_host": "{{cookiecutter.repository_host}}",
+    "maturity_model_tier": "{{cookiecutter.maturity_model_tier}}"
 }
