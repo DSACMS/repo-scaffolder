@@ -8,7 +8,7 @@ repometrics_file = "repometrics.json"
 source_file = os.path.join(current_dir, repometrics_file)
 
 # Get parent directory, one level up from the current directory
-parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+parent_dir = os.path.abspath(os.path.join(current_dir, '../..'))
 
 # Construct the destination path in the parent directory
 destination_file = os.path.join(parent_dir, repometrics_file)
@@ -25,12 +25,12 @@ except Exception as e:
 
 
 # Remove directory once repometrics file was successfully moved
-os.chdir("..")
-dir_name = "{{cookiecutter.project_type}}"
+os.chdir("../..")
+dir_name = "repometrics"
 
 try:
     # Check if the directory exists
-    if os.path.exists(dir_name):
+    if os.path.exists(dir_name) and os.path.isdir(dir_name):
         # Attempt to remove the directory
         shutil.rmtree(dir_name)
     else:
