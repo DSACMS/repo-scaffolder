@@ -34,7 +34,7 @@ try:
         # Attempt to remove the directory
         shutil.rmtree(dir_name)
     else:
-        print(f"Directory '{dir_name}' does not exist.")
+        pass
 except FileNotFoundError:
     print(f"File not found: The directory '{dir_name}' does not exist.")
 except Exception as e:
