@@ -15,8 +15,8 @@
         {
             "name": "Name",
             "github_username": "GitHub username",
-            "role": "Choose One: reviewer, approver, maintainer"
-            "affiliation": "Affiliation"
+            "role": "Choose One: reviewer, approver, maintainer",
+            "affiliation": "DSAC, CCSQ, CMMI, etc..."
         }
     ]
 }
