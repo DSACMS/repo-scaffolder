@@ -1,19 +1,18 @@
 import os
 import shutil
-import time 
 
-# Get working directory and repometrics file
+# Get working directory and code.json file
+project_type = '{{cookiecutter.project_type}}'
 current_dir = os.getcwd()
-repometrics_file = "repometrics.json"
+repometrics_file = "code.json"
 source_file = os.path.join(current_dir, repometrics_file)
 
 # Get parent directory, one level up from the current directory
-parent_dir = os.path.abspath(os.path.join(current_dir, '../..'))
-
+parent_dir = os.path.normpath(os.path.join(current_dir, '..'))
 # Construct the destination path in the parent directory
 destination_file = os.path.join(parent_dir, repometrics_file)
 
-# Attempt to move repometrics to parent directory
+# Attempt to move code.json to parent directory
 try:
     shutil.move(source_file, destination_file)
 except FileNotFoundError:
@@ -24,18 +23,16 @@ except Exception as e:
     print(f"An error occurred: {e}")
 
 
-# Remove directory once repometrics file was successfully moved
-os.chdir("../..")
+# Remove directories once code.json file was successfully moved
 dir_name = "repometrics"
+repometrics_dir = os.path.join(parent_dir, dir_name)
+project_type_dir = os.path.join(parent_dir, project_type)
 
 try:
-    # Check if the directory exists
-    if os.path.exists(dir_name) and os.path.isdir(dir_name):
-        # Attempt to remove the directory
-        shutil.rmtree(dir_name)
-    else:
-        pass
-except FileNotFoundError:
-    print(f"File not found: The directory '{dir_name}' does not exist.")
+    if os.path.isdir(repometrics_dir):
+        shutil.rmtree(repometrics_dir)
+
+    if os.path.isdir(project_type_dir):
+        shutil.rmtree(project_type_dir)
 except Exception as e:
     print(f"An error occurred: {e}")
