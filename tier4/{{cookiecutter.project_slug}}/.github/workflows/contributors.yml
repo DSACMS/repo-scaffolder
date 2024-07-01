@@ -16,7 +16,9 @@ jobs:
             - name: Contribute List
               uses: akhilmhdh/contributors-readme-action@v2.3.10
               env:
+                  {% raw %}
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  {% endraw %}
               with:
                   # https://github.com/marketplace/actions/contribute-list#optional-parameters
                   readme_path: MAINTAINERS.md
@@ -41,14 +43,18 @@ jobs:
                   OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
                   REPO=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
                   QUERY='query { repository(owner: \"'"$OWNER"'\", name: \"'"$REPO"'\") { collaborators { totalCount } } }'
+                  {% raw %}
                   CONTRIBUTORS=$(curl -s -X POST -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: application/json" -d "{\"query\": \"$QUERY\"}" https://api.github.com/graphql | jq -r '.data.repository.collaborators.totalCount')
+                  {% endraw %}
                   echo "Total contributors: $CONTRIBUTORS"
                   echo "contributors=$CONTRIBUTORS" >> $GITHUB_OUTPUT
 
             - name: Replace slug in MAINTAINERS.md with number of contributors
               # https://stackoverflow.com/questions/10613643/replace-a-unknown-string-between-two-known-strings-with-sed
               run: |
+                  {% raw %}
                   CONTRIBUTORS=${{ steps.get_contributors.outputs.contributors }}
+                  {% endraw %}
                   sed -i 's/<!--CONTRIBUTOR COUNT START-->.*<!--CONTRIBUTOR COUNT END-->/<!--CONTRIBUTOR COUNT START--> '"$CONTRIBUTORS"' <!--CONTRIBUTOR COUNT END-->/g' MAINTAINERS.md
 
             - name: Commit and push changes
