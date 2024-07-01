@@ -1,0 +1,10 @@
+{
+    "project_type": "{{ cookiecutter.project_type }}",
+    "user_input": "{{ cookiecutter.user_input }}",
+    "project_fisma_level": "{{ cookiecutter.project_fisma_level }}",
+    "group": "{{ cookiecutter.group }}",
+    "subset_in_healthcare": "{{ cookiecutter.subset_in_healthcare }}",
+    "user_type": "{{ cookiecutter.user_type }}",
+    "repository_host": "{{ cookiecutter.repository_host }}",
+    "maturity_model_tier": "{{ cookiecutter.maturity_model_tier }}"
+}
