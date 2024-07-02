@@ -37,21 +37,22 @@ def addMaintainer():
     while add_maintainer:
         maintainer = {}
         maintainer["role"] = input("Maintainer's Role (Reviewer, Approver, Maintainer): ").strip()
-        maintainer["name"] = input("Maintainer's Name: ").strip()
+        github_username = input("Maintainer's GitHub Username: ").strip()
+        maintainer["github_username"] = github_username if github_username.startswith('@') else f'@{github_username}'
         maintainer["github_username"] = input("Maintainer's GitHub Username: ").strip()
         maintainer["affiliation"] = input("Maintainer's Affiliation (DSAC, CCSQ, CMMI, etc...): ").strip()
         maintainers.append(maintainer)
 
         while True:
             add_maintainer_input = input("Would you like to add another maintainer? [Y/n]: ").strip().lower()
-            if add_maintainer_input in ("y", ""):  # Empty string for just pressing Enter
+            if add_maintainer_input in ("y", "yes", ""):  # Empty string for just pressing Enter
                 add_maintainer = True
                 break
-            elif add_maintainer_input == "n":
+            elif add_maintainer_input in ("n", "no"):
                 add_maintainer = False
                 break
             else:
-                print("\nInvalid response, please respond with: 'y', 'n', or just press Enter for yes")
+                print("\nInvalid response, please respond with: 'y', 'yes', 'n', 'no', or just press Enter for yes")
 
     maintainers_table = ""
     for maintainer in maintainers:
