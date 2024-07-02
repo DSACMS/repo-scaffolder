@@ -27,7 +27,7 @@ def addTopic():
     gh_cli_command = [
         "gh", "repo", "edit",
         f"{ORG_NAME}/{REPO_NAME}",
-        "--add-topic=dsacms-tier0",
+        "--add-topic=dsacms-tier3",
     ]
     subprocess.call(gh_cli_command)
 
@@ -53,23 +53,14 @@ def addMaintainer():
     with open(maintainers_file_path, "r") as f:
         lines = f.readlines()
 
-    in_maintainers, in_approvers, in_reviewers = False, False, False
     for i, line in enumerate(lines):
-        if line.strip() == "## Maintainers:":
-            in_maintainers = True
-        elif line.strip() == "## Approvers:":
-            in_approvers = True
-        elif line.strip() == "## Reviewers:":
-            in_reviewers = True
-        elif in_maintainers and line.strip() == "-":
-            lines[i] = format_usernames(maintainers)
-            in_maintainers = False
-        elif in_approvers and line.strip() == "-":
-            lines[i] = format_usernames(approvers)
-            in_approvers = False
-        elif in_reviewers and line.strip() == "-":
-            lines[i] = format_usernames(reviewers)
-            in_reviewers = False
+        if i + 1 < len(lines):
+            if line.strip() == "## Maintainers:" and lines[i+1].strip() == "-":
+                lines[i+1] = format_usernames(maintainers)
+            elif line.strip() == "## Approvers:" and lines[i+1].strip() == "-":
+                lines[i+1] = format_usernames(approvers)
+            elif line.strip() == "## Reviewers:" and lines[i+1].strip() == "-":
+                lines[i+1] = format_usernames(reviewers)
 
     with open(maintainers_file_path, "w") as f:
         f.writelines(lines)

@@ -27,7 +27,7 @@ def addTopic():
     gh_cli_command = [
         "gh", "repo", "edit",
         f"{ORG_NAME}/{REPO_NAME}",
-        "--add-topic=dsacms-tier0",
+        "--add-topic=dsacms-tier2",
     ]
     subprocess.call(gh_cli_command)
 
@@ -43,13 +43,15 @@ def addMaintainer():
         maintainers.append(maintainer)
 
         while True:
-            add_maintainer_input = input("Would you like to add another maintainer? (yes/no): ").strip().lower()
-            if add_maintainer_input in ("yes", "y", "no", "n"):
-                # If input is "yes" or "y", then add_maintainer is True and main loop continues, vise versa
-                add_maintainer = add_maintainer_input in ("yes", "y")
+            add_maintainer_input = input("Would you like to add another maintainer? [Y/n]: ").strip().lower()
+            if add_maintainer_input in ("y", ""):  # Empty string for just pressing Enter
+                add_maintainer = True
+                break
+            elif add_maintainer_input == "n":
+                add_maintainer = False
                 break
             else:
-                print("\nInvalid response, please respond with: 'yes', 'y', 'no', or 'n'")
+                print("\nInvalid response, please respond with: 'y', 'n', or just press Enter for yes")
 
     maintainers_table = ""
     for maintainer in maintainers:
@@ -62,14 +64,10 @@ def addMaintainer():
         lines = f.readlines()
 
     with open(maintainers_file_path, "w") as f:
-        in_table = False
         for line in lines:
             if "| {role} | {names} | {github usernames} | {affiliations}|" in line:
-                in_table = True
                 f.write(maintainers_table)  # Replace placeholder line with new table of maintainers
-            elif in_table and line.strip() == "":
-                in_table = False
-            if not in_table:
+            else:
                 f.write(line)
 
 if CREATE_REPO == "True":
