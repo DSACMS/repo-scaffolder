@@ -32,7 +32,7 @@ def addTopic():
     subprocess.call(gh_cli_command)
 
 # Helper function for addMaintainer() to get user input of usernames for Maintainer, Approver, and Reviewer
-def get_usernames(role):
+def getUsernames(role):
     while True:
         usernames = input(f"Enter the GitHub usernames of {role} (comma-separated): ").strip()
         if usernames:
@@ -40,13 +40,13 @@ def get_usernames(role):
         print("Please enter at least one username.")
 
 # Helper function for addMaintainer() to format list of usernames
-def format_usernames(usernames):
-    return "".join(f"- @{username}\n" for username in usernames)
+def formatUsernames(usernames):
+    return "".join(f"- @{username.lstrip('@')}\n" for username in usernames)
 
 def addMaintainer():
-    maintainers = get_usernames("MAINTAINERS")
-    approvers = get_usernames("APPROVERS")
-    reviewers = get_usernames("REVIEWERS")
+    maintainers = getUsernames("MAINTAINERS")
+    approvers = getUsernames("APPROVERS")
+    reviewers = getUsernames("REVIEWERS")
 
     maintainers_file_path = "MAINTAINERS.md"
 
@@ -62,13 +62,13 @@ def addMaintainer():
         elif line.strip() == "## Reviewers:":
             in_reviewers = True
         elif in_maintainers and line.strip() == "-":
-            lines[i] = format_usernames(maintainers)
+            lines[i] = formatUsernames(maintainers)
             in_maintainers = False
         elif in_approvers and line.strip() == "-":
-            lines[i] = format_usernames(approvers)
+            lines[i] = formatUsernames(approvers)
             in_approvers = False
         elif in_reviewers and line.strip() == "-":
-            lines[i] = format_usernames(reviewers)
+            lines[i] = formatUsernames(reviewers)
             in_reviewers = False
 
     with open(maintainers_file_path, "w") as f:
