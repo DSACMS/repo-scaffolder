@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: JosephGasiorekUSDS/repo-scaffolder
-          ref: main
+          ref: jgasiorek-fix-brace
           path: workflows
       - name: Extend JSON
         id: extend-json
