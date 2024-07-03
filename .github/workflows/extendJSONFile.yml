@@ -23,6 +23,8 @@ jobs:
     outputs: 
       raw-json: ${{ steps.extend-json.outputs.RAW_JSON }}
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Extend JSON
         id: extend-json
         uses: ./.github/extendJSON
