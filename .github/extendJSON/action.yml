@@ -13,12 +13,15 @@ on:
   
 runs:
   using: 'composite'
+  outputs:
+    raw-json: ${{ steps.resolve-step.outputs.RAW_JSON }}
   steps:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.9'
 
     - name: Extend JSON and write to env
+      id: resolve-step
       run: |
         extended=$(python3 ${{ github.action_path }}/resolve.py ${{ inputs.url_to_json }})
         echo $extended
