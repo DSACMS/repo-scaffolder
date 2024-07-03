@@ -2,17 +2,17 @@ name: 'extendJSONRepolinter'
 
 description: 'Returns raw JSON given a file that uses the extends key'
 
-on:
-  workflow_call:
-    inputs:
-      url_to_json:
-        description: 'URL to JSON file'
-        default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
-        required: true
-        type: string
-    outputs:
-      raw-json: ${{ steps.resolve-step.outputs.RAW_JSON }}
-  
+inputs:
+  url_to_json:
+    description: 'URL to JSON file'
+    default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+    required: true
+    type: string
+outputs:
+  raw-json: 
+  description: 'JSON of the file'
+  value: ${{ steps.resolve-step.outputs.RAW_JSON }}
+
 runs:
   using: 'composite'
   steps:
