@@ -2,15 +2,15 @@ name: 'extendJSONRepolinter'
 
 description: 'Returns raw JSON given a file that uses the extends key'
 
-
-inputs:
-  url_to_json:
-    description: 'URL to JSON file'
-    default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
-    required: true
-    type: string
+on:
+  workflow_call:
+    inputs:
+      url_to_json:
+        description: 'URL to JSON file'
+        default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+        required: true
+        type: string
   
-
 runs:
   using: 'composite'
   steps:
@@ -20,7 +20,7 @@ runs:
 
     - name: Extend JSON and write to env
       run: |
-        extended=$(python3 ${{ github.action_path }}/resolve.py ${{ github.event.inputs.url_to_json }})
+        extended=$(python3 ${{ github.action_path }}/resolve.py ${{ inputs.url_to_json }})
         echo $extended
         echo "RAW_JSON="$extended"" >> $GITHUB_OUTPUT
       shell: bash
