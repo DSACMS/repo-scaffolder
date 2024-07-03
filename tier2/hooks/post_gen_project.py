@@ -37,9 +37,9 @@ def addMaintainer():
     while add_maintainer:
         maintainer = {}
         maintainer["role"] = input("Maintainer's Role (Reviewer, Approver, Maintainer): ").strip()
+        maintainer["name"] = input("Maintainer's Name: ").strip()
         github_username = input("Maintainer's GitHub Username: ").strip()
         maintainer["github_username"] = github_username if github_username.startswith('@') else f'@{github_username}'
-        maintainer["github_username"] = input("Maintainer's GitHub Username: ").strip()
         maintainer["affiliation"] = input("Maintainer's Affiliation (DSAC, CCSQ, CMMI, etc...): ").strip()
         maintainers.append(maintainer)
 
