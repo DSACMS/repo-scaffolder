@@ -64,8 +64,6 @@ def addMaintainer():
     with open(maintainers_file_path, "w") as f:
         f.writelines(lines)
 
-    print("Maintainers, Approvers, and Reviewers have been added to MAINTAINERS.md")
-
 if CREATE_REPO == "True":
     createGithubRepo()
 
