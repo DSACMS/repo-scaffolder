@@ -53,23 +53,13 @@ def addMaintainer():
     with open(maintainers_file_path, "r") as f:
         lines = f.readlines()
 
-    in_maintainers, in_approvers, in_reviewers = False, False, False
     for i, line in enumerate(lines):
-        if line.strip() == "## Maintainers:":
-            in_maintainers = True
-        elif line.strip() == "## Approvers:":
-            in_approvers = True
-        elif line.strip() == "## Reviewers:":
-            in_reviewers = True
-        elif in_maintainers and line.strip() == "-":
-            lines[i] = formatUsernames(maintainers)
-            in_maintainers = False
-        elif in_approvers and line.strip() == "-":
-            lines[i] = formatUsernames(approvers)
-            in_approvers = False
-        elif in_reviewers and line.strip() == "-":
-            lines[i] = formatUsernames(reviewers)
-            in_reviewers = False
+        if line.strip() == "## Maintainers:" and i + 2 < len(lines) and lines[i + 2].strip() == "-":
+            lines[i + 2] = formatUsernames(maintainers)
+        elif line.strip() == "## Approvers:" and i + 1 < len(lines) and lines[i + 1].strip() == "-":
+            lines[i + 1] = formatUsernames(approvers)
+        elif line.strip() == "## Reviewers:" and i + 1 < len(lines) and lines[i + 1].strip() == "-":
+            lines[i + 1] = formatUsernames(reviewers)
 
     with open(maintainers_file_path, "w") as f:
         f.writelines(lines)

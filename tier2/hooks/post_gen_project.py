@@ -45,7 +45,7 @@ def addMaintainer():
 
         while True:
             add_maintainer_input = input("Would you like to add another maintainer? [Y/n]: ").strip().lower()
-            if add_maintainer_input in ("y", "yes", ""):  # Empty string for just pressing Enter
+            if add_maintainer_input in ("y", "yes", ""):
                 add_maintainer = True
                 break
             elif add_maintainer_input in ("n", "no"):
