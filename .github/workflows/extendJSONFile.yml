@@ -25,8 +25,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          repository: JosephGasiorekUSDS/repo-scaffolder
+          ref: main
+          path: workflows
       - name: Extend JSON
         id: extend-json
-        uses: ./.github/extendJSON
+        uses: ./workflows/.github/extendJSON
         with:
           url_to_json: ${{ github.event.inputs.url_to_json }}
