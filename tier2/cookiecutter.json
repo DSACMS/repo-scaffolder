@@ -1,5 +1,4 @@
 {
-<<<<<<< nick/maintainers-slugify
   "project_name": "My Project",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
   "project_org": "DSACMS",
@@ -14,21 +13,6 @@
     "create_repo": "Would you like to create a repo on github.com?",
     "receive_updates": "Would you like to receive updates from the DSACMS team via pull requests?",
     "add_maintainer": "Would you like to add a maintainer?"
-  }
-=======
-    "project_name": "My Project",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-    "project_org": "DSACMS",
-    "project_repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "project_description": "This is the project description, could match github.com repo description.",
-    "code_owners": "Git usernames of code owners; separated by commas.",
-    "project_visibility": ["public", "internal", "private"],
-    "create_repo": [true, false],
-    "receive_updates": [true, false],
-    "__prompts__": {
-      "create_repo": "Would you like to create a repo on github.com?",
-      "receive_updates": "Would you like to receive updates from the DSACMS team via pull requests?"
-    },
-    "_copy_without_render": ["repometrics"]
->>>>>>> dev
+  },
+  "_copy_without_render": ["repometrics"]
 }
