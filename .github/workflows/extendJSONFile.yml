@@ -33,4 +33,4 @@ jobs:
         id: extend-json
         uses: ./workflows/.github/extendJSON
         with:
-          url_to_json: ${{ github.event.inputs.url_to_json }}
+          url_to_json: ${{ inputs.url_to_json }}
