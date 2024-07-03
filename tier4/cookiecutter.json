@@ -13,5 +13,6 @@
     "create_repo": "Would you like to create a repo on github.com?",
     "receive_updates": "Would you like to receive updates from the DSACMS team via pull requests?",
     "add_maintainer": "Would you like to add maintainers, approvers, and/or reviewers?"
-  }
+  },
+  "_copy_without_render": ["repometrics"]
 }
