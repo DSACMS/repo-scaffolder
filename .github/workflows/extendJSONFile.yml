@@ -8,6 +8,13 @@ on:
         default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
         required: true
         type: string
+  workflow_call:
+    inputs:
+      url_to_json:
+        description: 'URL to JSON file'
+        default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+        required: true
+        type: string
 
 jobs:
   extend-json:
