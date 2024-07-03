@@ -1,0 +1,18 @@
+{
+    "project_type" : ["Package", "Website", "Standards", "Libraries", "Data", "Apps", "Tools", "APIs"],
+    "user_input": ["Yes", "No"],
+    "project_fisma_level": ["Low", "Moderate", "High"],
+    "group": "CMS/OA/DSAC",
+    "subset_in_healthcare": "Policy, Operational",
+    "user_type": "Providers, Patients, Government",
+    "repository_host": ["Github.com", "GitHub ENT", "GitHub Cloud", "GitLab.com", "GitLab ENT", "GitLab ENT CCSQ"],
+    "maturity_model_tier": ["1", "2", "3", "4"],
+    "__prompts__": {
+        "group": "Which group is the project part of?",
+        "subset_in_healthcare": "Which subset of healthcare does the project belong to?",
+        "user_type": "Who are the intended users?",
+        "user_input": "Does the project accept user input? (e.g. allows user to query a database, allows login by users, etc.)",
+        "repository_host": "Where is the repository hosted?",
+        "maturity_model_tier": "What maturity model tier is your project classified as?"
+    }
+}
