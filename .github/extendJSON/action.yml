@@ -10,8 +10,8 @@ inputs:
     type: string
 outputs:
   raw-json: 
-  description: 'JSON of the file'
-  value: ${{ steps.resolve-step.outputs.RAW_JSON }}
+    description: 'JSON of the file'
+    value: ${{ steps.resolve-step.outputs.RAW_JSON }}
 
 runs:
   using: 'composite'
