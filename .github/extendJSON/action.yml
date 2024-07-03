@@ -10,11 +10,11 @@ on:
         default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
         required: true
         type: string
+    outputs:
+      raw-json: ${{ steps.resolve-step.outputs.RAW_JSON }}
   
 runs:
   using: 'composite'
-  outputs:
-    raw-json: ${{ steps.resolve-step.outputs.RAW_JSON }}
   steps:
     - uses: actions/setup-python@v4
       with:
