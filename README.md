@@ -19,6 +19,12 @@ If you know what tier you need, you can run the cookiecutter for an individual t
 cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
 ```
 
+## Add Repometrics to your Project
+To integrate repometrics into your new project, navigate to your project's directory and run the following cookiecutter command:
+```
+cookiecutter . --directory=repometrics
+```
+
 ## Existing Projects
 You can update existing projects with the repo scaffolder.  Using the `-s` flag on cookiecutter will not overwrite existing files.  Follow these steps:
 1. Create a new branch in your repo
