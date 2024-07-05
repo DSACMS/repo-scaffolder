@@ -29,9 +29,9 @@ def resolve_extended_json_file(file_data_dict):
     resolve = resolve_extended_json_file(superJsonDict)
 
     resolve['rules'].update(file_data_dict)
-    del resolve['rules']['axioms']
-    del resolve['rules']['$schmea']
-    del resolve['rules']['version']
+    resolve['rules'].pop('axioms')
+    resolve['rules'].pop('$schema')
+    resolve['rules'].pop('version')
 
     return resolve
 
