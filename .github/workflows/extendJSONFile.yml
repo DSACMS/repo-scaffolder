@@ -30,8 +30,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          repository: JosephGasiorekUSDS/repo-scaffolder
-          ref: jgasiorek-fix-brace
+          repository: DSACMS/repo-scaffolder
+          ref: main
           path: workflows
       - name: Extend JSON
         id: extend-json
