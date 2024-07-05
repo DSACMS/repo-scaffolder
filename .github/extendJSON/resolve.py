@@ -32,6 +32,7 @@ def resolve_extended_json_file(file_data_dict):
     resolve['rules'].pop('axioms')
     resolve['rules'].pop('$schema')
     resolve['rules'].pop('version')
+    resolve['rules'].pop('rules')
 
     return resolve
 
