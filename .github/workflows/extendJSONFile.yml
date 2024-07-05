@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Extend JSON file with extends property
     outputs: 
-      raw-json: ${{ steps.extend-json.outputs.RAW_JSON }}
+      raw-json: ${{ steps.extend-json.outputs.raw-json }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
