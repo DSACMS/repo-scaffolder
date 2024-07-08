@@ -8,16 +8,33 @@ on:
         default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
         required: true
         type: string
+  workflow_call:
+    inputs:
+      url_to_json:
+        description: 'URL to JSON file'
+        default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+        required: true
+        type: string
+    outputs:
+      raw-json: 
+        description: 'JSON of the file'
+        value: ${{ jobs.extend-json.outputs.raw-json }}
 
 jobs:
   extend-json:
     runs-on: ubuntu-latest
     name: Extend JSON file with extends property
     outputs: 
-      raw-json: ${{ steps.extend-json.outputs.RAW_JSON }}
+      raw-json: ${{ steps.extend-json.outputs.raw-json }}
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          repository: DSACMS/repo-scaffolder
+          ref: main
+          path: workflows
       - name: Extend JSON
         id: extend-json
-        uses: ./.github/extendJSON
+        uses: ./workflows/.github/extendJSON
         with:
-          url_to_json: ${{ github.event.inputs.url_to_json }
+          url_to_json: ${{ inputs.url_to_json }}

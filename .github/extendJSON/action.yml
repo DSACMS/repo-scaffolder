@@ -2,24 +2,26 @@ name: 'extendJSONRepolinter'
 
 description: 'Returns raw JSON given a file that uses the extends key'
 
-
 inputs:
-    url_to_json:
-      description: 'URL to JSON file'
-      default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
-      required: true
-      type: string
-  
+  url_to_json:
+    description: 'URL to JSON file'
+    default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+    required: true
+    type: string
+outputs:
+  raw-json: 
+    description: 'JSON of the file'
+    value: ${{ steps.resolve-step.outputs.RAW_JSON }}
 
 runs:
   using: 'composite'
   steps:
-    - name: Checkout Action
-      uses: actions/checkout@v4
     - uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
+      with:
+        python-version: '3.9'
+
     - name: Extend JSON and write to env
+      id: resolve-step
       run: |
         extended=$(python3 ${{ github.action_path }}/resolve.py ${{ inputs.url_to_json }})
         echo $extended
