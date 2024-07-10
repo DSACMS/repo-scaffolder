@@ -29,10 +29,14 @@ def resolve_extended_json_file(file_data_dict):
     resolve = resolve_extended_json_file(superJsonDict)
 
     resolve['rules'].update(file_data_dict)
+    resolve['rules'].pop('axioms')
+    resolve['rules'].pop('$schema')
+    resolve['rules'].pop('version')
+    resolve['rules'].pop('rules')
 
     return resolve
 
 #Grab base url 
 baseUrl = sys.argv[1]
 
-print(resolve_extended_json_file(get_json_dict_from_url(baseUrl)))
+print(json.dumps(resolve_extended_json_file(get_json_dict_from_url(baseUrl))))
