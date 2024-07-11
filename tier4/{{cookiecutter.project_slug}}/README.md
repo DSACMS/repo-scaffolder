@@ -30,7 +30,7 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 
 # Development and Software Delivery Lifecycle 
 
-The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that external contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contribributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
+The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that external contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Local Development
 
@@ -54,7 +54,7 @@ This project follows [trunk-based development](https://trunkbaseddevelopment.com
 * Ticket any unfinished or partially finished work.
 * Tests should be written for changes introduced, and adhere to the text percentage threshold determined by the project.
 
-This project uses **continuous deployment** using [Github Actions](https://github.com/features/actions) which is configured in the [./github/worfklows](.github/workflows) directory.
+This project uses **continuous deployment** using [Github Actions](https://github.com/features/actions) which is configured in the [./github/workflows](.github/workflows) directory.
 
 Pull-requests are merged to `main` and the changes are immediately deployed to the development environment. Releases are created to push changes to production.
 -->

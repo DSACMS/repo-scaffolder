@@ -55,7 +55,7 @@ TODO: Discuss where tests can be found, how they are run, and what kind of tests
 
 ### Coding Style and Linters
 
-<!--- TODO: HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for python, esliint for JavaScript, etc...)
+<!--- TODO: HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for python, eslint for JavaScript, etc...)
 
 1. Mention any style guides you adhere to (e.g. pep8, etc...)
 2. Mention any linters your project uses (e.g. flake8, jslint, etc...) 
