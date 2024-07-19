@@ -38,7 +38,7 @@ TODO: Using the "tree -d" command can be a helpful way to generate this informat
 
 <!--
 # Development and Software Delivery Lifecycle
-The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that externabl contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contribributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
+The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that external contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
 -->
 
 <!--
@@ -53,7 +53,7 @@ This project is monorepo with several apps. Please see the [api](./api/README.md
 
 TODO - Add the repo's linting and code style guidelines
 
-Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
+Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before committing.
 -->
 
 <!--
@@ -68,7 +68,7 @@ This project follows [trunk-based development](https://trunkbaseddevelopment.com
 * Ticket any unfinished or partially finished work.
 * Tests should be written for changes introduced, and adhere to the text percentage threshold determined by the project.
 
-This project uses **continuous deployment** using [Github Actions](https://github.com/features/actions) which is configured in the [./github/worfklows](.github/workflows) directory.
+This project uses **continuous deployment** using [Github Actions](https://github.com/features/actions) which is configured in the [./github/workflows](.github/workflows) directory.
 
 Pull-requests are merged to `main` and the changes are immediately deployed to the development environment. Releases are created to push changes to production.
 -->
