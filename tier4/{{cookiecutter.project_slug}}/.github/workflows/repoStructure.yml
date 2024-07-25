@@ -1,0 +1,37 @@
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    populate-repo-structure:
+        runs-on: ubuntu-latest
+        name: Update repo structure in README.md
+        permissions:
+            contents: write
+            pull-requests: write
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Populate repository structure with tree command
+              # https://stackoverflow.com/questions/29613304/is-it-possible-to-escape-regex-metacharacters-reliably-with-sed
+              # https://stackoverflow.com/questions/407523/escape-a-string-for-a-sed-replace-pattern
+              run: |
+                  quoteSubst() {
+                    IFS= read -d '' -r < <(sed -e ':a' -e '$!{N;ba' -e '}' -e 's/[&/\]/\\&/g; s/\n/\\&/g' <<<"$1")
+                    printf %s "${REPLY%$'\n'}"
+                  }
+                  TREE_OUTPUT=$(tree -d)
+                  sed -i 's/<!--TREE START--><!--TREE END-->/\n```plaintext\n'"$(quoteSubst $TREE_OUTPUT)"'\n```\n/g' README.md
+
+            - name: Commit and push changes
+              # https://github.com/orgs/community/discussions/26560#discussioncomment-3531273
+              # commit changes, but if no changes exist, then exit cleanly
+              run: |
+                  git config user.name 'github-actions[bot]'
+                  git config user.email 'github-actions[bot]@users.noreply.github.com'
+                  git add README.md
+                  git commit -m "BOT: Update repo structure in README.md" || exit 0
+                  git push
