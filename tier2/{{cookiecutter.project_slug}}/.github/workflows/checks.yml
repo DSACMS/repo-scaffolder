@@ -1,12 +1,12 @@
 name: "run-linting-checks"
 on:
-  pull_request:
-    branches: [main, dev]
-
+  push:
+    branches:
+      - 'main'
 
 jobs:
   resolve-repolinter-json:
-    uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@add-repolinter-workflows
+    uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@main
     with: 
       url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
   
@@ -52,20 +52,6 @@ jobs:
           # Default: "[Repolinter] Open Source Policy Issues"
           output_name: '[Repolinter] Tier 2 Repository Hygiene Issue'
 
-          # The name to use for the issue label created by repolinter-action. This name
-          # should be unique to repolinter-action (i.e. not used by any other issue) to
-          # prevent repolinter-action from getting confused.
-          #
-          # This option will be ignored if output_type != "issue".
-          #
-          # Default: "repolinter"
-          label_name: 'cms-oss-tier2'
-
-          # The color to use for the issue label created by repolinter-action. The value
-          # for this option should be an unprefixed RRGGBB hex string (ex. ff568a).
-          # The default value is a shade of yellow.
-          #
-          # This option will be ignored if output_type != "issue".
-          #
-          # Default: "fbca04"
-          label_color: 'ff69b4'
+          # The default token is the repolinter token for the DSACMS org
+          # You can change it if needed.
+          token: ${{ secrets.REPOLINTER_AUTO_TOKEN }}
