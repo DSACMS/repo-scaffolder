@@ -10,6 +10,3 @@ Review the HHS Disclosure Policy and websites in scope:
 This policy describes *what systems and types of research* are covered under this
 policy, *how to send* us vulnerability reports, and *how long* we ask security
 researchers to wait before publicly disclosing vulnerabilities.
-
-If you have other cybersecurity related questions, please contact us at
-[csirc@hhs.gov](mailto:csirc@hhs.gov).
