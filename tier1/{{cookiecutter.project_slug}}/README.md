@@ -117,11 +117,7 @@ questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
-*Submit a vulnerability:* Unfortunately, we cannot accept secure submissions via
-email or via GitHub Issues. Please use our website to submit vulnerabilities at
-[https://hhs.responsibledisclosure.com](https://hhs.responsibledisclosure.com).
-HHS maintains an acknowledgements page to recognize your efforts on behalf of
-the American public, but you are also welcome to submit anonymously.
+*Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
 
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
 
