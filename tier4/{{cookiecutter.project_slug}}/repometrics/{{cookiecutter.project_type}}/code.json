@@ -1,10 +1,10 @@
 {
-    "project_type": "{{ cookiecutter.project_type }}",
-    "user_input": "{{ cookiecutter.user_input }}",
-    "project_fisma_level": "{{ cookiecutter.project_fisma_level }}",
+    "projectType": "{{ cookiecutter.projectType }}",
+    "userInput": "{{ cookiecutter.userInput }}",
+    "projectFismaLevel": "{{ cookiecutter.projectFismaLevel }}",
     "group": "{{ cookiecutter.group }}",
-    "subset_in_healthcare": "{{ cookiecutter.subset_in_healthcare }}",
-    "user_type": "{{ cookiecutter.user_type }}",
-    "repository_host": "{{ cookiecutter.repository_host }}",
-    "maturity_model_tier": "4"
+    "subsetInHealthcare": "{{ cookiecutter.subsetInHealthcare }}",
+    "userType": "{{ cookiecutter.userType }}",
+    "repositoryHost": "{{ cookiecutter.repositoryHost }}",
+    "maturityModelTier": "4"
 }

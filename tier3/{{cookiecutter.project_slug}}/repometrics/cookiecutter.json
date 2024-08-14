@@ -1,5 +1,5 @@
 {
-    "projectType" : ["Package", "Website", "Standards", "Libraries", "Data", "Apps", "Tools", "APIs"],
+    "projectType" : ["Package", "Website", "Standards", "Libraries", "Data", "Apps", "Tools", "APIs", "Docs"],
     "userInput": ["Yes", "No"],
     "projectFismaLevel": ["Low", "Moderate", "High"],
     "group": "CMS/OA/DSAC",
