@@ -1,7 +1,7 @@
 {
     "projectType": "Tools",
     "userInput": "No",
-    "projectFismaLevel": "Low",
+    "fismaLevel": "Low",
     "group": "CMS/OA/DSAC",
     "subsetInHealthcare": "Operational",
     "userType": "Government",
