@@ -4,7 +4,7 @@
 cd ..
 
 # Define the repometrics directory to remove
-dir_name="repometrics"
+dir_name=".github/repometrics"
 
 # Check if repometrics directory exists and remove it
 if [ -d "$dir_name" ]; then
