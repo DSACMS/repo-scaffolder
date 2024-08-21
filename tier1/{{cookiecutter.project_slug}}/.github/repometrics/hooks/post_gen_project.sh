@@ -4,7 +4,7 @@
 cd ..
 
 # Define the repometrics directory to remove
-dir_name=".github/repometrics"
+dir_name="repometrics"
 
 # Check if repometrics directory exists and remove it
 if [ -d "$dir_name" ]; then
@@ -14,11 +14,11 @@ fi
 project_type="{{cookiecutter.project_type}}"
 sub_project_dir="${project_type}"
 repometrics_file="code.json"
-parent_dir="./"
+project_root_dir="../"
 
 if [ -f "${sub_project_dir}/${repometrics_file}" ]; then  
   # Move code.json file to parent directory
-  mv "${sub_project_dir}/${repometrics_file}" "${parent_dir}"
+  mv "${sub_project_dir}/${repometrics_file}" "${project_root_dir}"
   
   # Check if the move was successful
   if [ $? -eq 0 ]; then    
