@@ -20,7 +20,7 @@ cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
 ```
 
 ## Add Repometrics to your Project
-To integrate repometrics into your new project, navigate to your project's directory and run the following cookiecutter command:
+To integrate repometrics into your new project, navigate to your project's `.github` directory and run the following cookiecutter command:
 ```
 cookiecutter . --directory=repometrics
 ```
