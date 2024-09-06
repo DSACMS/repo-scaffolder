@@ -1,4 +1,19 @@
 {
+    "project_name": "", //TODO: retrieve from previous
+    "short_description": "A short description of the project.",
+    "long_description": "A longer description of the project.",
+    "status": ["ideation", "development", "alpha", "beta", "release candidate", "production", "archival"],
+    "license": ["CC0-1.0", "Apache-2.0", "MIT", "MPL-2.0", "GPL-2.0-only", "GPL-3.0-only", "GPL-3.0-or-later", "LGPL-2.1-only", "LGPL-3.0-only", "BSD-2-Clause", "BSD-3-Clause", "EPL-2.0", "Other"],
+    "vcs": ["git", "hg", "svn", "rcs", "bzr"],
+    "platforms": ["web", "windows", "mac", "linux", "ios", "android"],
+    "categories": "healthcare",
+    "software_type":["standalone/mobile", "standalone/iot", "standalone/desktop", "standalone/web", "standalone/backend", "standalone/other", "addon", "library", "configurationFiles"],
+    "languages": "None", //TODO: free response
+    "maintenance": ["internal", "contract", "community", "none"],
+    "tags": "healthcare",
+    "contact_email": "opensource@cms.hhs.gov",
+    "contact_name": "CMS Open Source Program Office",
+    "localisation": ["false", "true"],
     "project_type" : ["Package", "Website", "Standards", "Libraries", "Data", "Apps", "Tools", "APIs", "Docs"],
     "user_input": ["Yes", "No"],
     "fisma_level": ["Low", "Moderate", "High"],
@@ -7,6 +22,21 @@
     "user_type": "Providers, Patients, Government",
     "repository_host": ["Github.com", "GitHub ENT", "GitHub Cloud", "GitLab.com", "GitLab ENT", "GitLab ENT CCSQ"],
     "__prompts__": {
+        "short_description:": "Provide a short description of the software. It should be a single line containing a single sentence. Maximum 150 characters are allowed.",
+        "long_description:": "This key contains a longer description of the software, between 150 and 10000 chars. It is meant to provide an overview of the capabilities of the software for a potential user. The audience for this text should be that of users of the software, not developers. You can think of this text as the description of the software that would be in its website (if the software had one).",
+        "status": "What is the status of the project?",
+        "license": "What license is the project under?",
+        "vcs": "What version control system is used?",
+        "labor_hours": "Provide the number of", // TODO: obtain inputs needed to calculate scc
+        "platforms": "What platform does the software runs on?",
+        "categories": "What categories best describes the project?",
+        "software_type": "What type is this software?", // TODO: lol how do i english this
+        "languages": "What language(s) is the software written in?",
+        "maintenance": "What is the maintenance status of the software?",
+        "tags": "Provide a list of tags to describe the software",
+        "contact_name": "A point of contact is needed for the What is the name of the point of contact?",
+        "contact_email": "What is email address of the point of contact?",
+        "localisation": "Does the software support multiple languages?",
         "group": "Which group is the project part of?",
         "subset_in_healthcare": "Which subset of healthcare does the project belong to?",
         "user_type": "Who are the intended users?",
