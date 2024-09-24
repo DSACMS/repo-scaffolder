@@ -11,8 +11,8 @@ if [ -d "$dir_name" ]; then
   rm -rf "$dir_name"
 fi
 
-project_type="{{cookiecutter.project_type}}"
-sub_project_dir="${project_type}"
+project_name="{{cookiecutter.project_name}}"
+sub_project_dir="${project_name}"
 repometrics_file="code.json"
 project_root_dir="../"
 
