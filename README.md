@@ -45,7 +45,7 @@ this question - `"project_name": "My Project",`.  See the [cookiecutter docs](ht
 for more information.
 
 ## Repolinter
-Tiers of level 1 thru 4 have repolinter.json file in their projects. Tier1 has detailed configuration of all the rules. All the other tiers extends their previuos tiers and has only the `rule` and the `level` configuration.
+Tiers of level 1 thru 4 have repolinter.json file in their projects. Tier1 has detailed configuration of all the rules. All the other tiers extends their previous tiers and has only the `rule` and the `level` configuration.
 
 Sample commands to run with the given repolinter.json path:
 
