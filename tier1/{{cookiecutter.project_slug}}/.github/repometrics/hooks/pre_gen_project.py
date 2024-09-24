@@ -7,7 +7,8 @@ from cookiecutter.main import cookiecutter
 if shutil.which('scc') is not None:
     try:
         #Run scc and load results into a dictionary
-        d = json.loads(subprocess.run(["scc", "--format","json2"],check=True, capture_output=True).stdout)
+        #assuming we are in the .git directory of the repo
+        d = json.loads(subprocess.run(["scc","..", "--format","json2"],check=True, capture_output=True).stdout)
         
         #inject a default value for labor hours calculated from scc
         cookiecutter(
