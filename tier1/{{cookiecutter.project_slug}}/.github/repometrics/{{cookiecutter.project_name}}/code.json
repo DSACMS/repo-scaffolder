@@ -30,7 +30,7 @@
     "name": "{{ cookiecutter.contact_name }}"
   },
   "localisation": "{{ cookiecutter.localisation }}",
-  "projectType": "{{ cookiecutter.project_type }}",
+  "repoType": "{{ cookiecutter.repo_type }}",
   "userInput": "{{ cookiecutter.user_input }}",
   "fismaLevel": "{{ cookiecutter.fisma_level }}",
   "group": "{{ cookiecutter.group }}",
