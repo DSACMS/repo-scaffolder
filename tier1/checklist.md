@@ -9,7 +9,7 @@ This is a review process to approve CMS-developed software to be released open s
 
 [State the Benefits of Open Sourcing the Project](#state-the-benefits-of-open-sourcing-the-project)
 
-[Risk Section](#state-the-risks-of-open-sourcing-the-project)
+[State the Risks of Open Sourcing the Project](#state-the-risks-of-open-sourcing-the-project)
 
 [Questions](#questions)
 
