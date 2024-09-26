@@ -15,7 +15,7 @@ if shutil.which('scc') is not None:
             '.',
             extra_context={'labor_hours': d['estimatedScheduleMonths'] * 730.001}
         )
-    except subprocess.CalledProcessError as e:
+    except (subprocess.CalledProcessError, KeyError) as e:
         print(e)
 else:
     print("scc (https://github.com/boyter/scc) not found on system")
