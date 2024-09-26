@@ -5,19 +5,17 @@
 
 This is a review process to approve CMS-developed software to be released open source. If you would like your repository to be released, please complete the following steps.
 
-[Instructions](#Instructions)
+[Instructions](#instructions)
 
-[State the Benefit(s) of Open Sourcing the Project
-](#State-the-Benefit(s)-of-Open-Sourcing-the-Project
-)
+[State the Benefits of Open Sourcing the Project](#state-the-benefits-of-open-sourcing-the-project)
 
-[Questions](#Questions)
+[Risk Section](#state-the-risks-of-open-sourcing-the-project)
+
+[Questions](#questions)
 
 [Code Review](#code-review)
 
 [Code Analysis](#code-analysis)
-
-[Toolkits](#toolkit)
 
 [Review Licensing](#review-licensing)
 
@@ -33,7 +31,7 @@ This is a review process to approve CMS-developed software to be released open s
 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
 
-### State the Benefit(s) of Open Sourcing the Project
+### State the Benefits of Open Sourcing the Project
 
 - [ ] **Cost Savings** 
 by making the project freely available, this reduces licensing and acquisition costs.
@@ -50,7 +48,7 @@ Planning in the open enables future compatibility and interoperability between d
 - [ ] **Facilitate Experimentation/Early Adoption**
 Working in the open encourages experimentation and early adoption of cutting-edge technologies,leading to faster innovation and improvemnet in software capabilities.
 
-### State the Risk(s) of Open Sourcing the Project, if any
+### State the Risks of Open Sourcing the Project
 
 - [ ] **Security Risks**
 Vulnerabilities may be exposed if the code is not thoroughly reviewed, potentially leading to security breaches or exploitation.(See: [Security.md](https://github.com/DSACMS/repo-scaffolder/blob/main/SECURITY.md))Does this project connect to any CMS-internal only systems? Does this project require authorization or authentication to operate? Does this project detail any non-public directories of CMS/HHS systems or people?
@@ -72,9 +70,8 @@ Does this project require access to non-public, non synthetic PII, PHI, or other
 
    If you answered "yes" to any of the above questions, your project may be 'sensitive' in nature, and requires a more thorough review before sharing publicly. Please reach out to opensource@cms.hhs.gov for guidance. If you answer yes to any of these questions above, it is best to seek quidance **before** releasing open source.
 
-   **Results** 
-
-   *Insert Review Here*
+ **Results** 
+ *Insert Review Here*
 
 
 
@@ -228,12 +225,12 @@ repolinter lint .
 | Public Domain       | A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International(world-wide public domain.)                                                                        |              |
 
 
-- [ ] **License**
+- [ ] **LICENSE**
 
-License of your project, whether public domain (CC0) or other OSI-approved License. Using 'vanilla' license text will allow for GitHub to auto-label the license information on the repository landing page.
+*License of your project, whether public domain (CC0) or other OSI-approved License. Using 'vanilla' license text will allow for GitHub to auto-label the license information on the repository landing page.*
 
 - [ ] **CONTRIBUTING.md**
-Provide guidance on how users can run your project and make contributions to it.
+*Provide guidance on how users can run your project and make contributions to it.*
 
 | **Section**           | **Description**                                                                                                                                                                                                                                                                                     | **Included** |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
@@ -257,13 +254,13 @@ _Lints repository for missing files and sections above_
 The GitHub repository homepage features a concise description of the project, a list of relevant topic tags, and general information about the repository to provide a comprehensive overview for users and contributors.
 
 _About Section_
-- [ ] *Description*
+- [ ] **Description**
 1-2 sentences describing the project
 
-- [ ] *Website*
+- [ ] **Website**
 Link to project's website
 
-- [ ] *Topics*
+- [ ] **Topics**
 Tags for project discoverability. Helpful topics to classify a repository include the repository's intended purpose, subject area, community, or language.
 
 _Include in Home Page_:
@@ -281,7 +278,7 @@ _Include in Home Page_:
 
 ### Additional Notes & Questions
 
-"*Insert any notes or questions here*"
+*Insert any notes or questions here*
 
 
 ### Sign off on risk acceptance of open-sourcing the software product
@@ -302,7 +299,7 @@ Requesting sign off from key people on this request.
 
 ### Flipping the Switch: Making the Repository Public
 
-Once the repository has passed outbound review, we are ready. 
+Once the repository has passed outbound review, we are ready “flip the switch” and officially make it public. Once made public, there are a couple of actions that need to be taken: 
 
 *Repository Actions* 
 
@@ -325,7 +322,7 @@ After making the repository public, make sure there is a coherent git branching 
 - [ ] **Add Repolinter GH Action to CI**
 For ongoing adherence to repository hygiene standards, integrate the [repolinter Github Action](https://github.com/DSACMS/metrics/blob/main/.github/workflows/checks.yml) into your CI pipeline. This addition enhances your workflow by automatically enforcing repository cleanliness standards.
 
-- [ ] **Optional:DCO (Developer Certificate of Origin)**
+- [ ] **Optional: DCO (Developer Certificate of Origin)**
 Requires all commit messages to contain the <span style="color:green"><i>Signed-off-by</i></span> line with an email address that matches the commit author. The Developer Certificate of Origin (DCO) is a lightweight way for contributors to certify that they wrote or otherwise have the right to submit the code they are contributing to the project. The GitHub app to enforce DCO can be found [here](https://github.com/apps/dco) 
 
 _Communications & Rollout :mega:_
@@ -338,19 +335,19 @@ Share the good news with communities both inside and outside CMS!
 Be sure to include the following information:
 
 - Repo Description
-- Repo URL
-- Authoring Team Email Contact
-- Authoring Team URL
-- Authoring Team Slack Channel
-- Call to action (File issues, contribute PRs)
+  - Repo URL
+  - Authoring Team Email Contact
+  - Authoring Team URL
+  - Authoring Team Slack Channel
+  - Call to action (File issues, contribute PRs)
 
 - [ ] **Post launch announcement to CMS slack channel**
 
-- #cms-opensource
-- #cms-api-community
-- #cms-data-community
-- #cms-engineering-community
-- #ai-community
+  - #cms-opensource
+  - #cms-api-community
+  - #cms-data-community
+  - #cms-engineering-community
+  - #ai-community
 
 - [ ] **Send a launch announcement email**
 
@@ -358,7 +355,7 @@ Be sure to include the following information:
 
 *Tracking* :chart_with_upwards_trend:
 
-_Add your project to our inventories._
+Add your project to our inventories.
 
 - [ ] **Add to https://github.com/dsacms/open projects inventory**
 
