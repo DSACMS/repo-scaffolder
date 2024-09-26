@@ -79,20 +79,20 @@ Does this project require access to non-public, non synthetic PII, PHI, or other
 
 
 
-   ---
+   
 
 
 
 
-   ### Code Review
+### Code Review
 
-   The existing codebase should be given a one time, top-to-bottom code quality and security vulnerability review by two (or more) engineers who have written production code within the past two years, in the languages used in the project Engineers should review credential management practices with the development team to ensure that any keys, passwords, or other sensitive configurations are not checked into source code or in the git history.
+The existing codebase should be given a one time, top-to-bottom code quality and security vulnerability review by two (or more) engineers who have written production code within the past two years, in the languages used in the project Engineers should review credential management practices with the development team to ensure that any keys, passwords, or other sensitive configurations are not checked into source code or in the git history.
 
-   The engineers can be federal government employees or trusted partners from outside the agency from other contracts, or from independent testing contracts. Their names, organizations, comments and approval/disapproval on the overall codebase should be tracked in this document.
+The engineers can be federal government employees or trusted partners from outside the agency from other contracts, or from independent testing contracts. Their names, organizations, comments and approval/disapproval on the overall codebase should be tracked in this document.
 
-   To provide independent review, ideally the engineers should not have been involved in the development of the software product. This includes engineers who wrote part of the software or who directly provided technical direction and oversight in the creation of the software.
+To provide independent review, ideally the engineers should not have been involved in the development of the software product. This includes engineers who wrote part of the software or who directly provided technical direction and oversight in the creation of the software.
 
-   As part of the code review, engineers should reference modern listings of the most significant software security vulnerabilities. For instance, an acceptable description would be that the engineers showed how they used automated tools and manual review to check each item in __OWASP's current 10 Most Critical Web Application Security Risks.__
+As part of the code review, engineers should reference modern listings of the most significant software security vulnerabilities. For instance, an acceptable description would be that the engineers showed how they used automated tools and manual review to check each item in __OWASP's current 10 Most Critical Web Application Security Risks.__
 
 
 
@@ -102,17 +102,17 @@ Does this project require access to non-public, non synthetic PII, PHI, or other
    *Insert Review Here*
 
 
-   ---
+   
 
 
-   ### Code Analysis 
+### Code Analysis 
 
-   A best practice and a requirement for releasing a repository open source at many parts of CMS is to run at least one automated tool for code analysis (such as static code analysis, repolinters, secret scanners) on the codebase to detect for security vulnerabilities or sensitive information, and results have been appropriately addressed. Even if all findings are eventually fixed, if the initial scans revealed significant, severe vulnerabilities(such as SQL injection vulnerabilities), this may indicate that the software development team was not adhering to the best practices required for open source public release, and should be given additional review.
+A best practice and a requirement for releasing a repository open source at many parts of CMS is to run at least one automated tool for code analysis (such as static code analysis, repolinters, secret scanners) on the codebase to detect for security vulnerabilities or sensitive information, and results have been appropriately addressed. Even if all findings are eventually fixed, if the initial scans revealed significant, severe vulnerabilities(such as SQL injection vulnerabilities), this may indicate that the software development team was not adhering to the best practices required for open source public release, and should be given additional review.
 
-   Ideally, automated tooling for code analysis should be incorporated as a regularly scheduled part of the software development lifecycle. The development team should briefly document how frequently they commit to running these automated scanning tools, and how they will be running these tests, and who will be monitoring, interpreting, and acting upon the results.
+Ideally, automated tooling for code analysis should be incorporated as a regularly scheduled part of the software development lifecycle. The development team should briefly document how frequently they commit to running these automated scanning tools, and how they will be running these tests, and who will be monitoring, interpreting, and acting upon the results.
 
 
-   #### Toolkit
+#### Toolkit
    Below is a list of suggested tools to run for code analysis:
 
 | **Tool** |  **Description** |  **Link**   |
@@ -126,7 +126,7 @@ Does this project require access to non-public, non synthetic PII, PHI, or other
 
 *Insert Review Here*
 
-----
+
 
 ### Review Licensing
 
@@ -144,9 +144,8 @@ If your project is not being dedicated to the public domain under CC0, due to be
 
 **Results**
 
-*Insert review here*
+*Insert Review Here*
 
----
 
 
 ### Review Commit History 
@@ -155,11 +154,11 @@ Review the history of commits to the version control system used, and whether th
 
 If not rebasing, verify that:
 
-1. there are no obscene or impolite remarks in comments or commit history
+1. There are no obscene or impolite remarks in comments or commit history
 
-2. thee are no sensitive internal URLs/IP Addresses in comments or commit history 
+2. There are no sensitive internal URLs/IP addresses in comments or commit history 
 
-3. there are no credential files such as passwords, API/SSH/GPG keys checked into the repo.
+3. There are no credential files such as passwords, API/SSH/GPG keys checked into the repo
 
 Consider using the following tools to perform the tasks above:
 
@@ -170,9 +169,11 @@ Consider using the following tools to perform the tasks above:
 | gitleaks | Open source tool that detects and prevents secrets (passwords/api/ssh keys) checked-in to your git repo | https://github.com/gitleaks/gitleaks   https://akachandwani.medium.com/what-is-gitleaks-and-how-to-use-it-a05f2fb5b034 |
 | git filter-repo    | Entirely remove unwanted files / files with sensitive data from a repository's history                     |    https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository                   |
 
+**Results**
+
+*Insert Review Here*
 
 
----
 
 
 ### Review Repository Hygiene
@@ -195,17 +196,17 @@ repolinter lint .
 ```
 3. The result produces a list of files section existence checks, indicating whether each requirement was met or not.
 
-Which will look something like this:
+
 
 ![repolinter results](../assets/repolinter-results.png)
 
 **Running repolinter on your repository via GitHub Actions**
 
-1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
+1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the github directory of your project. The file includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13)
 
 2. Manually trigger the workflow
 
-3. The results produces an issue on the repository with a list of file and section existence checks, indicating whether each requirement was met or not.
+3. The results produces an issue on the repository with a list of file and section existence checks, indicating whether each requirement was met or not
 
 
  **Review Content**
@@ -215,13 +216,13 @@ Which will look something like this:
  - [ ] **README.md**
     _An essential guide that gives viewers a detailed description of your project_
 
-    ---
+
 
 
 | **Section**         | **Description**                                                                                                                                                                                                                                                                                | **Included** |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| Project Description | 1-3 sentences short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on GitHUb repo landing page.                                                                                  |              |
-| About the Project   | Longer-form description of the project. It can include history, background, details,problem statements,links to design documents or other supporting materials,or any other information/context that a user or contributor might be interested in.                                             |              |
+| Project Description | 1-3 sentences short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on GitHub repo landing page.                                                                                  |    :white_check_mark: :x:          |
+| About the Project   | Longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in.                                             |              |
 | Core Team           | This information helps with succession planning and provenance for security compliances and remediation. It helps future users and contributors understand where the code originated.                                                                                                          |              |
 | Policies            | This section is to explicitly link to Federal policies and guidelines that are required or rocommended for Federal projects to comply with, such as Accessibility (508) Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |              |
 | Public Domain       | A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International(world-wide public domain.)                                                                        |              |
@@ -232,12 +233,12 @@ Which will look something like this:
 License of your project, whether public domain (CC0) or other OSI-approved License. Using 'vanilla' license text will allow for GitHub to auto-label the license information on the repository landing page.
 
 - [ ] **CONTRIBUTING.md**
-Provide guidance on how users can run your project and make contributions to it
+Provide guidance on how users can run your project and make contributions to it.
 
 | **Section**           | **Description**                                                                                                                                                                                                                                                                                     | **Included** |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| Getting started       | Included installations steps, prerequisites for installation, and instructions for working with the source code                                                                                                                                                                                     |              |
-| Building dependencies | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches!                                                                                 |              |
+| Getting Started       | Included installations steps, prerequisites for installation, and instructions for working with the source code                                                                                                                                                                                     |              |
+| Building Dependencies | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches!                                                                                 |              |
 | Building the Project  | Be sure to include build scripts and instructions, not just the source code itself!                                                                                                                                                                                                                 |              |
 | Writing Issues        | Make a brief statement about where to file issues, and conventions for doing so.                                                                                                                                                                                                                    |              |
 | Policies              | This section is here to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508) Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |              |
@@ -247,20 +248,17 @@ Provide guidance on how users can run your project and make contributions to it
 _Lints repository for missing files and sections above_
 
 **Results**
-*Insert review here*
 
-
-----
+*Insert Review Here*
 
 
 ### Review Repository Details
 
 The GitHub repository homepage features a concise description of the project, a list of relevant topic tags, and general information about the repository to provide a comprehensive overview for users and contributors.
 
-_About Section_:
-
+_About Section_
 - [ ] *Description*
-  1-2 sentences describing the project
+1-2 sentences describing the project
 
 - [ ] *Website*
 Link to project's website
@@ -278,20 +276,12 @@ _Include in Home Page_:
 
 **Results**
 
-*Insert review here*
-
-
-
-----
-
+*Insert Review Here*
 
 
 ### Additional Notes & Questions
 
 "*Insert any notes or questions here*"
-
-
-
 
 
 ### Sign off on risk acceptance of open-sourcing the software product
@@ -302,7 +292,7 @@ After reviewing the materials prepared by the team that is working to open sourc
 Requesting sign off from key people on this request.
 
 
-| **Reviewer Organization**      | **Reviewer Name**                                  | Reviewer's Recommandation**                                                     |
+| **Reviewer Organization**      | **Reviewer Name**                                  | Reviewer's Recommendation**                                                     |
 |--------------------------------|----------------------------------------------------|---------------------------------------------------------------------------------|
 | Code Reviewer's Recommendation | CODE REVIEWER 1  CODE REVIEWER 2   CODE REVIEWER 3 | [Approved/Needs Approval]  [Approved/Needs Approval]  [Approved/Needs Approval] |
 | ISSO                           | ISSO REVIEWER                                      | [Approved/Needs Approval]                                                       |
@@ -310,18 +300,13 @@ Requesting sign off from key people on this request.
 | Business Owner(s)              | BUSINESS OWNER 1  BUSINESS OWNER 2                 | [Approved/Needs Approval]  [Approved/Needs Approval]                            |
 
 
-
----
-
-
-
 ### Flipping the Switch: Making the Repository Public
 
-Once the repository has passed outbound review, we are ready 
+Once the repository has passed outbound review, we are ready. 
 
 *Repository Actions* 
 
-Please enable the following  features to enhane repository security and maintain code quality:
+Please enable the following features to enhance repository security and maintain code quality:
 
 - [ ] **Dependabot Alerts**
 A GitHub Feature. Get notified when one of your dependencies has a vulnerability
@@ -352,7 +337,6 @@ Share the good news with communities both inside and outside CMS!
 
 Be sure to include the following information:
 
-
 - Repo Description
 - Repo URL
 - Authoring Team Email Contact
@@ -374,7 +358,7 @@ Be sure to include the following information:
 
 *Tracking* :chart_with_upwards_trend:
 
-_Ad your project to our inventories.
+_Add your project to our inventories._
 
 - [ ] **Add to https://github.com/dsacms/open projects inventory**
 
