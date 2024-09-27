@@ -11,7 +11,7 @@ def get_date_fields():
     date =  output.stdout.strip()
 
     # Create a dictionary for date information to be pushed to JSON
-    date_information = {"date_created": f"{date}", 
+    date_information = {"created": f"{date}", 
     "lastModified": "{% now 'utc', '%Y-%m-%dT%H:%M:%S%z' %}",
     "metadataLastUpdated": "{% now 'utc', '%Y-%m-%dT%H:%M:%S%z' %}"}
 
@@ -30,44 +30,43 @@ def update_code_json(json_file_path):
         json.dump(data, file, indent = 2)
 
 def main():
-    # Change to the parent directory
-    os.chdir('..')
+    try:
+        # Change to the parent directory
+        os.chdir('..')
 
-    # Define the repometrics directory to remove
-    dir_name = "repometrics"
+        # Define the repometrics directory to remove
+        dir_name = "repometrics"
 
-    # Check if repometrics directory exists and remove it
-    if os.path.exists(dir_name):
-        shutil.rmtree(dir_name)
+        # Check if repometrics directory exists and remove it
+        if os.path.exists(dir_name):
+            shutil.rmtree(dir_name)
 
-    # Get the project name from cookiecutter
-    sub_project_dir = "{{cookiecutter.project_name}}"
-    repometrics_file = "code.json"
-    project_root_dir = os.path.abspath('..')
+        # Get the project name from cookiecutter
+        sub_project_dir = "{{cookiecutter.project_name}}"
+        repometrics_file = "code.json"
+        project_root_dir = os.path.abspath('..')
 
-    json_file_path = os.path.join(sub_project_dir, repometrics_file)
+        json_file_path = os.path.join(sub_project_dir, repometrics_file)
     
-    if os.path.exists(json_file_path):
-        # Move code.json file to parent directory
-        new_json_path = os.path.join(project_root_dir, repometrics_file)
-        shutil.move(json_file_path, new_json_path)
+        if os.path.exists(json_file_path):
+            # Move code.json file to parent directory
+            new_json_path = os.path.join(project_root_dir, repometrics_file)
+            shutil.move(json_file_path, new_json_path)
         
-        # Remove the source directory
-        if os.WEXITSTATUS(os.system("echo $?")) == 0:
+            # Remove the source directory
             shutil.rmtree(sub_project_dir)
 
-            if os.WEXITSTATUS(os.system("echo $?")) == 0:
-                print("Successfully generated code.json file.")
-        
-                # Update the JSON file with the date information
-                update_code_json(new_json_path)
+            # Update the json with date_information
+            update_code_json(new_json_path)
+            print("Succesfully generated code.json file!")
 
-            else:
-                print("Failed to remove sub project directory.")
         else:
-            print("Failed to move code.json to new path.")
-    else:
-        print(f"Error: {repometrics_file} not found in {sub_project_dir}")
+            print(f"Error: {repometrics_file} not found in {sub_project_dir}")
+
+    except OSError as error:
+        print(f"Error during OS operations: {error}")
+    except shutil.Error as error:
+        print(f"Error during shutil operations: {error}")
 
 if __name__ == "__main__":
     main()
