@@ -15,7 +15,7 @@ The main purpose of a Tier 1 project is to share knowledge and provide informati
 
 ## Files for a Tier 1 Project
 
-In a Tier 1 project, there are specific files that are required, recommended, or not recommended as part of the CMS Open Source Program Office's repository hygiene guidelines and standards.
+There are specific files that are required and recommended to include in the repository as part of the CMS Open Source Program Office's repository hygiene guidelines and standards.
 
 
 | **File**              | **Requirement** | **Description**                                                                                             |

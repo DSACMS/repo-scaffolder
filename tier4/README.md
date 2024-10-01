@@ -13,7 +13,7 @@ A **Tier 4** project is a fully **open and collaborative** project that operates
 
 ## Files for a Tier 4 Project
 
-In a Tier 4 project, there are specific files that are required, recommended, or not recommended as part of the CMS Open Source Program Office's repository hygiene guidelines and standards.
+There are specific files that are required to include in the repository as part of the CMS Open Source Program Office's repository hygiene guidelines and standards.
 
 | **File**              | **Requirement** | **Description**                                                                                             |
 |-----------------------|-----------------|-------------------------------------------------------------------------------------------------------------|

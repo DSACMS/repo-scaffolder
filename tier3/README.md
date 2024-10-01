@@ -15,7 +15,7 @@ A **Tier 3** project is an **open collaboration** effort where the work is condu
 
 ## Files for a Tier 3 Project
 
-In a Tier 3 project, there are specific files that are required, recommended, or not recommended as part of the CMS Open Source Program Office's repository hygiene guidelines and standards.
+There are specific files that are required and recommended to include in the repository as part of the CMS Open Source Program Office's repository hygiene guidelines and standards.
 
 | **File**              | **Requirement** | **Description**                                                                                             |
 |-----------------------|-----------------|-------------------------------------------------------------------------------------------------------------|
