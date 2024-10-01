@@ -10,7 +10,7 @@ Innersource projects often allow different teams within the same organization to
 - Focuses on **collaborating within a smaller team** or internal group.
 - Utilizes **innersource practices**, where internal teams work collaboratively on code, borrowing from open source workflows but keeping the work within the organization.
 - Projects may be shared among internal stakeholders or divisions.
-- **Not publicly open** to the broader community for contributions.
+- **Not necessarily accepting contributions** from the broader community.
 
 ---
 

@@ -6,7 +6,7 @@ A **Tier 3** project is an **open collaboration** effort where the work is condu
 
 ### Key Characteristics of a Tier 3 Project:
 - **Collaborative in public**, where the work is open to external stakeholders.
-- Led by a **semi-open team** (often organizational or tool-specific).
+- Led by a **CMS team** (often organizational or tool-specific).
 - Accepts **limited contributions from external sources**, typically following specific guidelines.
 - Publicly accessible code and documentation.
 - Maintenance and decision-making are generally led by CMS.
