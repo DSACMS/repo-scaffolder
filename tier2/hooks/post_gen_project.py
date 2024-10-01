@@ -1,4 +1,6 @@
 import subprocess
+import shutil
+import os
 
 REPO_NAME = '{{ cookiecutter.project_repo_name }}'
 ORG_NAME = '{{ cookiecutter.project_org }}'
@@ -71,11 +73,27 @@ def addMaintainer():
             else:
                 f.write(line)
 
-if CREATE_REPO == "True":
-    createGithubRepo()
+def moveCookiecutterFile(): 
+    github_dir = os.path.join(os.getcwd(), ".github")
+    os.chdir(github_dir)
 
-if RECEIVE_UPDATES == "True":
-    addTopic()
+    source_path = "cookiecutter.json"
+    destination_dir = "repometrics"
+    destination_path = os.path.join(destination_dir, "cookiecutter.json")
 
-if ADD_MAINTAINER == "True":
-    addMaintainer()
+    shutil.move(source_path, destination_path)
+
+def main():
+    if CREATE_REPO == "True":
+        createGithubRepo()
+
+    if RECEIVE_UPDATES == "True":
+        addTopic()
+    
+    if ADD_MAINTAINER == "True":
+        addMaintainer()
+    
+    moveCookiecutterFile()
+    
+if __name__ == "__main__":
+    main()
