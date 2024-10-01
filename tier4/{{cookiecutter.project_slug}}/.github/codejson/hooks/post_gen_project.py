@@ -18,19 +18,6 @@ def get_date_fields():
 
     return date_information
 
-def update_code_json(json_file_path):
-    # Read the JSON 
-    with open(json_file_path, 'r') as file:
-        data = json.load(file)
-
-    # Add date_information and labor hours to the JSON
-    data['date'] = get_date_fields()
-    data['laborHours'] = get_scc_labor_hours()
-
-    # Update the JSON 
-    with open(json_file_path, 'w') as file:
-        json.dump(data, file, indent = 2)
-
 def get_scc_labor_hours():
     if shutil.which('scc') is not None:
         try:
@@ -38,16 +25,36 @@ def get_scc_labor_hours():
             #assuming we are in the .git directory of the repo
             d = json.loads(subprocess.run(["scc","..", "--format","json2"],check=True, capture_output=True).stdout)
             
+            l_hours = d['estimatedScheduleMonths'] * 730.001
 
-            return d['estimatedScheduleMonths'] * 730.001
+            return round(l_hours,2)
             
         except (subprocess.CalledProcessError, KeyError) as e:
             print(e)
+            return None
     else:
         print("scc (https://github.com/boyter/scc) not found on system")
 
         #Otherwise just use previous value as a default value.
-        return 0
+        return None
+
+def update_code_json(json_file_path):
+    # Read the JSON 
+    with open(json_file_path, 'r') as file:
+        data = json.load(file)
+
+    # Add date_information and labor hours to the JSON
+    data['date'] = get_date_fields()
+
+    hours = get_scc_labor_hours()
+    if hours:
+        data['laborHours'] = hours
+    else:
+        data['laborHours'] = None
+
+    # Update the JSON 
+    with open(json_file_path, 'w') as file:
+        json.dump(data, file, indent = 2)
 
 def main():
     try:
@@ -55,7 +62,7 @@ def main():
         os.chdir('..')
 
         # Define the repometrics directory to remove
-        dir_name = "repometrics"
+        dir_name = "codejson"
 
         # Check if repometrics directory exists and remove it
         if os.path.exists(dir_name):
@@ -76,7 +83,7 @@ def main():
             # Remove the source directory
             shutil.rmtree(sub_project_dir)
 
-            # Update the json with date_information
+            # Update the json with date and scc information
             update_code_json(new_json_path)
             print("Succesfully generated code.json file!")
 
