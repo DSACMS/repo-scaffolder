@@ -12,7 +12,7 @@ if shutil.which('scc') is not None:
         
         #inject a default value for labor hours calculated from scc
         cookiecutter(
-            '.',
+            '..',
             extra_context={'labor_hours': d['estimatedScheduleMonths'] * 730.001}
         )
     except (subprocess.CalledProcessError, KeyError) as e:
@@ -22,6 +22,6 @@ else:
 
     #Otherwise just use previous value as a default value.
     cookiecutter(
-        '.',
+        '..',
         extra_context={'labor_hours': 0}
     )
