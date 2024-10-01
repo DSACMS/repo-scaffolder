@@ -11,5 +11,5 @@
     "create_repo": "Would you like to create a repo on github.com?",
     "receive_updates": "Would you like to receive updates from the DSACMS team via pull requests?"
   },
-  "_copy_without_render": [".github/repometrics"]
+  "_copy_without_render": [".github/codejson"]
 }

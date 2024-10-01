@@ -22,7 +22,7 @@ cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
 ## Add code.json to your project
 To add code.json into your project, navigate to your project's `.github` directory and run the following cookiecutter command. You will be asked questions about the project (see cookiecutter.json) in order to collect and store this metadata in code.json.
 ```
-cookiecutter . --directory=repometrics
+cookiecutter . --directory=codejson
 ```
 
 ## Existing Projects
