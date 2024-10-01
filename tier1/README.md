@@ -1,4 +1,4 @@
-# Tier 1 Project: One-Time Release
+# Tier 1: One-Time Release
 
 ## What is a Tier 1 Project?
 
@@ -22,7 +22,7 @@ In a Tier 1 project, there are specific files that are required, recommended, or
 |-----------------------|-----------------|-------------------------------------------------------------------------------------------------------------|
 | `LICENSE`             | Mandatory       | Defines the licensing terms under which the project is distributed. |
 | `SECURITY.md`         | Mandatory       | Outlines the agency's security policies, including how to report security issues or vulnerabilities in the code. |
-| `README.md`           | Mandatory       | Provides an overview of the project, including its purpose, how to install or use it, and any relevant information for users or developers. |
+| `README.md`           | Mandatory       | Provides a comprehensive overview of the project, including its purpose, how to install or use it, and any relevant information for users or developers. |
 | `CONTRIBUTING.md`     | Recommended     | Offers guidelines for contributing to the project, including code standards, how to submit issues, and creating pull requests. |
 
 For more information about required sections and content within the files above, please visit (maturity-model-tiers.md)[https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md].
