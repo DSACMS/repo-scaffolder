@@ -29,4 +29,4 @@ There are specific files that are required and recommended to include in the rep
 | `COMMUNITY_GUIDELINES.md` | Mandatory   | Outlines how team members should engage with each other while working on the project, including behavior expectations for internal contributors. |
 | `CODE_OF_CONDUCT.md`  | Mandatory       | Establishes guidelines for professional and respectful behavior to foster a collaborative environment. |
 
-For more information about required sections and content within the files above, please visit (maturity-model-tiers.md)[https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md].
+For more information about required sections and content within the files above, please visit [maturity-model-tiers.md](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).

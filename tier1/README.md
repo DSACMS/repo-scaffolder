@@ -25,4 +25,4 @@ There are specific files that are required and recommended to include in the rep
 | `README.md`           | Mandatory       | Provides a comprehensive overview of the project, including its purpose, how to install or use it, and any relevant information for users or developers. |
 | `CONTRIBUTING.md`     | Recommended     | Offers guidelines for contributing to the project, including code standards, how to submit issues, and creating pull requests. |
 
-For more information about required sections and content within the files above, please visit (maturity-model-tiers.md)[https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md].
+For more information about required sections and content within the files above, please visit [maturity-model-tiers.md](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
