@@ -23,7 +23,7 @@ def update_code_json(json_file_path):
     with open(json_file_path, 'r') as file:
         data = json.load(file)
 
-    # Add date_information to the JSON
+    # Add date_information and labor hours to the JSON
     data['date'] = get_date_fields()
     data['labor_hours'] = get_scc_labor_hours()
 
