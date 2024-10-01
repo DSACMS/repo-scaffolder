@@ -1,4 +1,5 @@
 import subprocess
+import shutil
 import json
 import os
 import shutil
@@ -24,10 +25,29 @@ def update_code_json(json_file_path):
 
     # Add date_information to the JSON
     data['date'] = get_date_fields()
+    data['labor_hours'] = get_scc_labor_hours()
 
     # Update the JSON 
     with open(json_file_path, 'w') as file:
         json.dump(data, file, indent = 2)
+
+def get_scc_labor_hours():
+    if shutil.which('scc') is not None:
+        try:
+            #Run scc and load results into a dictionary
+            #assuming we are in the .git directory of the repo
+            d = json.loads(subprocess.run(["scc","..", "--format","json2"],check=True, capture_output=True).stdout)
+            
+
+            return d['estimatedScheduleMonths'] * 730.001
+            
+        except (subprocess.CalledProcessError, KeyError) as e:
+            print(e)
+    else:
+        print("scc (https://github.com/boyter/scc) not found on system")
+
+        #Otherwise just use previous value as a default value.
+        return 0
 
 def main():
     try:
