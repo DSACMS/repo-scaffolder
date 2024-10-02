@@ -40,11 +40,13 @@ If you would like your repository to be released, please complete the following 
 
 [Repository Actions](#repository-actions)
 
-[Communications & Rollout 📣](#communications--rollout-)
+[Communications & Rollout 📣](#communications--rollout-📣)
 
-[Tracking 📈](#tracking-)
+[Tracking 📈](#tracking-📈)
 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
+
+
 
 
 
@@ -394,7 +396,7 @@ quality:
     *Requires all commit messages to contain the Signed-off-by line with an email address that matches the commit author. The Developer Certificate of Origin (DCO) is a lightweight way for contributors to certify that they wrote or otherwise have the right to submit the code they are contributing to the project. The GitHub app to enforce DCO can be found [here](https://github.com/apps/dco) .*
 
 
-#### Communications & Rollout 📣**
+#### Communications & Rollout 📣
 
 Share the good news with communities both inside and outside CMS!
 
