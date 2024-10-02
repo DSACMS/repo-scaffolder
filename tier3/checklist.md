@@ -54,37 +54,36 @@ If you would like your repository to be released, please complete the following 
 
 - [ ] Cost Savings
 
-By making the project freely available, this reduces licensing and acquisition costs.
+    By making the project freely available, this reduces licensing and acquisition costs.
 
 - [ ] Ease of Repurposing
 
-The open nature of the code allows users to modify and adapt the software to suit their
-specific needs, fostering customization and flexibility.
+    The open nature of the code allows users to modify and adapt the software to suit their
+    specific needs, fostering customization and flexibility.
 
 - [ ] Minimization of Vendor Lock-in/Flexibility of Vendor Choice
 
-Users are not tied to a single vendor, providing the freedom to choose between different
-vendors.
+    Users are not tied to a single vendor, providing the freedom to choose between different vendors.
 
 - [ ] Enable Transparency
 
-The source code is accessible and visible to anyone, promoting transparency in how the
-software functions, which helps build trust.
+    The source code is accessible and visible to anyone, promoting transparency in how the
+    software functions, which helps build trust.
 
 - [ ] Enable extension/extensibility
 
-Users can extend and enhance the functionality of the software by adding their own
-features.
+    Users can extend and enhance the functionality of the software by adding their own
+    features.
 
 - [ ] Increase Interoperability
 
-Planning in the open enables future compatibility and interoperability between different
-systems and software applications.
+    Planning in the open enables future compatibility and interoperability between different
+    systems and software applications.
 
 - [ ] Facilitate Experimentation/Early Adoption
 
-Working in the open encourages experimentation and early adoption of cutting-edge
-technologies, leading to faster innovation and improvement in software capabilities.
+    Working in the open encourages experimentation and early adoption of cutting-edge
+    technologies, leading to faster innovation and improvement in software capabilities.
 
 
 ### State the Risks of Open Sourcing the Project, if any
@@ -240,8 +239,10 @@ existence checks, indicating whether each requirement was met or not.
 #### Review Content
 
 The project should include the following files and sections [(link to templates)](https://github.com/DSACMS/repo-scaffolder/tree/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D):
+
 - [ ] README.md
-*An essential guide that gives viewers a detailed description of your project*
+
+    *An essential guide that gives viewers a detailed description of your project*
 
 | Section                        | Description                                                                                                                                                                                                                                                                                       | Included |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
@@ -269,6 +270,7 @@ The project should include the following files and sections [(link to templates)
     repository landing page.*
 
 - [ ] CONTRIBUTING.md
+
     *Provides guidance on how users can run your project and make contributions to it*
 
 | Section                     | Description                                                                                                          | Included |
@@ -290,18 +292,31 @@ The project should include the following files and sections [(link to templates)
 
 
 - [ ] CODEOWNERS.md
+
     *Specifies code ownership and reviewers*
+
 - [ ] MAINTAINERS.md
+
     *Lists project maintainers and their responsibilities*
+
 - [ ] GOVERNANCE.md
+
     *Outlines project governance structure and processes*
+
 - [ ] CODE_OF_CONDUCT.md
+
     *Defines the code of conduct for contributors*
+
 - [ ] COMMUNITY_GUIDELINES.md
+
     *Provides guidelines for community participation*
+
 - [ ] SECURITY.md
+
     *Details security policies and procedures*
+
 - [ ] repolinter.json
+
     *Lints repository for missing files and sections above*
 
 #### Results
@@ -373,7 +388,7 @@ quality:
 
 - [ ] Dependabot Alerts
 
-    * A GitHub Feature. Get notified when one of your dependencies has a vulnerability*
+    *A GitHub Feature. Get notified when one of your dependencies has a vulnerability*
 
 - [ ] Secret Scanning Alerts
 
