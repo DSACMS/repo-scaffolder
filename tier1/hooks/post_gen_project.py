@@ -37,7 +37,7 @@ def moveCookiecutterFile():
     os.chdir(github_dir)
 
     source_path = "cookiecutter.json"
-    destination_dir = "repometrics"
+    destination_dir = "codejson"
     destination_path = os.path.join(destination_dir, "cookiecutter.json")
 
     shutil.move(source_path, destination_path)
