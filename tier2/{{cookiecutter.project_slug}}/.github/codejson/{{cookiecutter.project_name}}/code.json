@@ -18,7 +18,7 @@
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_name }}",
   "vcs": "{{ cookiecutter.vcs }}",
-  "laborHours": "{{ cookiecutter.labor_hours }}",
+  "laborHours": [""],
   "platforms": [ "{{ cookiecutter.platforms }}" ],
   "categories": [ "{{ cookiecutter.categories }}" ],
   "softwareType": "{{ cookiecutter.software_type }}",
