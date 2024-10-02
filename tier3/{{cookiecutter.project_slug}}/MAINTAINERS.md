@@ -164,7 +164,7 @@ The following steps outline the process to prepare a Release Candidate of {{ coo
 
 The review process may result in changes being necessary to the release candidate.
 
-For example, if the second Release Candidate for `0.5.0` is being prepared, after committing necessary changes, create a tag on the tip of the release branch like `0.5.0-rc2` and make a new [GitHub pre-Release][proj-releases-new] from there:
+For example, if the second Release Candidate for `0.5.0` is being prepared, after committing necessary changes, create a tag on the tip of the release branch like `0.5.0-rc2` and make a new [GitHub pre-Release](proj-releases-new) from there:
 
 ```bash
 git fetch
@@ -178,7 +178,7 @@ Repeat as-needed for subsequent Release Candidates.  Note the release branch wil
 
 ## Making a Release
 
-The following steps describe how to make an approved [Release Candidate][#preparing-a-release-candidate] an official release of {{ cookiecutter.project_repo_name }}:
+The following steps describe how to make an approved [Release Candidate](#preparing-a-release-candidate) an official release of {{ cookiecutter.project_repo_name }}:
 
 1. **Approved**. Ensure review has been completed and approval granted.
 
@@ -186,7 +186,7 @@ The following steps describe how to make an approved [Release Candidate][#prepar
 
 3. **Dev**. Open a Pull Request from the release branch to `dev`. Merge this PR to ensure any changes to the Release Candidate during the review process make their way back into `dev`.
 
-4. **Release**. Publish a [Release in GitHub][proj-releases-new] with the following information
+4. **Release**. Publish a [Release in GitHub](proj-releases-new) with the following information
 
    - Tag version: [X.Y.Z] (note this will create the tag for the `main` branch code when you publish the release)
    - Target: main
