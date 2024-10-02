@@ -49,7 +49,7 @@ Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COU
 
 ## Versioning
 
-{{ cookiecutter.project_repo_name }} uses [Semantic Versioning][https://semver.org/]. Each release is associated with a [`git tag`][github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/tags] of the form `X.Y.Z`.
+{{ cookiecutter.project_repo_name }} uses [Semantic Versioning](https://semver.org/). Each release is associated with a [`git tag`](github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/tags) of the form `X.Y.Z`.
 
 Given a version number in the `MAJOR.MINOR.PATCH` (eg., `X.Y.Z`) format, here are the differences in these terms:
 
