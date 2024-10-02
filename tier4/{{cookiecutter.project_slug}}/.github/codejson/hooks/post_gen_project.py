@@ -61,23 +61,23 @@ def main():
         # Change to the parent directory
         os.chdir('..')
 
-        # Define the repometrics directory to remove
+        # Define the codejson directory to remove
         dir_name = "codejson"
 
-        # Check if repometrics directory exists and remove it
+        # Check if codejson directory exists and remove it
         if os.path.exists(dir_name):
             shutil.rmtree(dir_name)
 
         # Get the project name from cookiecutter
         sub_project_dir = "{{cookiecutter.project_name}}"
-        repometrics_file = "code.json"
+        codejson_file = "code.json"
         project_root_dir = os.path.abspath('..')
 
-        json_file_path = os.path.join(sub_project_dir, repometrics_file)
+        json_file_path = os.path.join(sub_project_dir, codejson_file)
     
         if os.path.exists(json_file_path):
             # Move code.json file to parent directory
-            new_json_path = os.path.join(project_root_dir, repometrics_file)
+            new_json_path = os.path.join(project_root_dir, codejson_file)
             shutil.move(json_file_path, new_json_path)
         
             # Remove the source directory
@@ -88,7 +88,7 @@ def main():
             print("Succesfully generated code.json file!")
 
         else:
-            print(f"Error: {repometrics_file} not found in {sub_project_dir}")
+            print(f"Error: {codejson_file} not found in {sub_project_dir}")
 
     except OSError as error:
         print(f"Error during OS operations: {error}")
