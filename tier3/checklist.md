@@ -143,7 +143,7 @@ As part of the code review, engineers should reference modern listings of the mo
 significant software security vulnerabilities. For instance, an acceptable description
 would be that the engineers showed how they used automated tools and manual
 review to check each item in [OWASP's current 10 Most Critical Web Application
-Security Risks].
+Security Risks](https://owasp.org/www-project-top-ten/).
 
 #### Results
 *Insert Review Here*
