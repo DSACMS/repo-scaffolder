@@ -15,9 +15,7 @@ jobs:
     needs: resolve-repolinter-json
     runs-on: ubuntu-latest
     env:
-      {% raw %}
       RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json }}
-      {% endraw %}
     steps:
       - uses: actions/checkout@v4
       - run: echo $RAW_JSON > repolinter.json
@@ -54,6 +52,4 @@ jobs:
 
           # The default token is the repolinter token for the DSACMS org
           # You can change it if needed.
-          {% raw %}
           token: ${{ secrets.REPOLINTER_AUTO_TOKEN }}
-          {% endraw %}
