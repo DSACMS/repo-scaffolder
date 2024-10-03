@@ -40,9 +40,9 @@ If you would like your repository to be released, please complete the following 
 
 [Repository Actions](#repository-actions)
 
-[Communications & Rollout 📣](#communications--rollout-📣)
+[Communications & Rollout 📣](#communications--rollout-)
 
-[Tracking 📈](#tracking-📈)
+[Tracking 📈](#tracking-)
 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
 
