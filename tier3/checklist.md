@@ -6,9 +6,9 @@ If you would like your repository to be released, please complete the following 
 
 [Instructions](#instructions)
 
-[State the Benefit(s) of Open Sourcing the Project](#state-the-benefits-of-open-sourcing-the-project)
+[State the Benefits of Open Sourcing the Project](#state-the-benefits-of-open-sourcing-the-project)
 
-[State the Risk(s) of Open Sourcing the Project, if any](#state-the-risks-of-open-sourcing-the-project-if-any)
+[State the Risks of Open Sourcing the Project](#state-the-risks-of-open-sourcing-the-project)
 
 [Questions](#questions)
 
@@ -24,12 +24,6 @@ If you would like your repository to be released, please complete the following 
 
 [Review Repository Hygiene](#review-repository-hygiene)
 
-[Running repolinter on your repository locally](#running-repolinter-on-your-repository-locally)
-
-[Running repolinter on your repository via GitHub Actions](#running-repolinter-on-your-repository-via-github-actions)
-
-[Review Content](#review-content)
-
 [Review Repository Details](#review-repository-details)
 
 [Additional Notes & Questions](#additional-notes--questoins)
@@ -38,71 +32,64 @@ If you would like your repository to be released, please complete the following 
 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
 
-[Repository Actions](#repository-actions)
-
-[Communications & Rollout 📣](#communications--rollout-📣)
-
-[Tracking 📈](#tracking-📈)
-
-[Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
 
 
 
 
+### State the Benefits of Open Sourcing the Project
 
-### State the Benefit(s) of Open Sourcing the Project
-
-- [ ] Cost Savings
+- [ ] **Cost Savings**
 
     By making the project freely available, this reduces licensing and acquisition costs.
 
-- [ ] Ease of Repurposing
+- [ ] **Ease of RepurposinG**
 
     The open nature of the code allows users to modify and adapt the software to suit their
     specific needs, fostering customization and flexibility.
 
-- [ ] Minimization of Vendor Lock-in/Flexibility of Vendor Choice
+- [ ] **Minimization of Vendor Lock-in/Flexibility of Vendor Choice**
 
     Users are not tied to a single vendor, providing the freedom to choose between different vendors.
 
-- [ ] Enable Transparency
+- [ ] **Enable Transparency**
 
     The source code is accessible and visible to anyone, promoting transparency in how the
     software functions, which helps build trust.
 
-- [ ] Enable extension/extensibility
+- [ ] **Enable extension/extensibility**
 
     Users can extend and enhance the functionality of the software by adding their own
     features.
 
-- [ ] Increase Interoperability
+- [ ] **Increase Interoperability**
 
     Planning in the open enables future compatibility and interoperability between different
     systems and software applications.
 
-- [ ] Facilitate Experimentation/Early Adoption
+- [ ] **Facilitate Experimentation/Early Adoption**
 
     Working in the open encourages experimentation and early adoption of cutting-edge
     technologies, leading to faster innovation and improvement in software capabilities.
 
 
-### State the Risks of Open Sourcing the Project, if any
 
-- [ ] Security Risks
- - Vulnerabilities may be exposed if the code is not thoroughly reviewed, potentially leading to security breaches or exploitation.  
-  (See: [Security.md](Security.md))
-  - Does this project connect to any CMS-internal only systems?
-  - Does this project require authorization or authentication to operate?
-  - Does this project detail any non-public directories of CMS/HHS systems or people?
 
-- [ ] Financial Risks
- - Costs may arise from:
-  - Maintaining code, community engagement, addressing security concerns, subscription costs, hardware costs, specialized tooling or infrastructure costs
- - Does this project require any ongoing financial costs or subscription fees? 
-    (e.g., Cloud Hosting, Specialized build systems, paid maintainers, paid libraries or dependencies.)
+### State the Risks of Open Sourcing the Project
 
-- [ ] Privacy Risks
- - Does this project require access to non-public, non-synthetic PII, PHI, or other internal-only CMS systems containing such data or information?
+- [ ] **Security Risks**
+
+    Vulnerabilities may be exposed if the code is not thoroughly reviewed, potentially leading to security breaches or exploitation. (See: [SECURITY.md](https://github.com/DSACMS/repo-scaffolder/blob/main/SECURITY.md)) Does this project connect to any CMS-internal only systems? Does this project require authorization or authentication to operate? Does this project detail any non-public directories of CMS/HHS systems or people?
+
+- [ ] **Financial Risks**
+
+    Costs may arise from: 
+    Maintaining code, community engagement, addressing security concerns, subscription costs hardware costs, specialized tooling or infrastructure costs. Does this project require any ongoing financial costs or subscription fees? (e.g., Cloud Hosting, Specialized build systems, paid maintainers, paid libraries or dependencies.)
+
+- [ ] **Privacy Risks**
+
+    Does this project require access to non-public, non-synthetic PII, PHI, or other internal-only CMS systems containing such data or information?
+
+
 
 
 ### Questions
@@ -119,6 +106,8 @@ If you answered “yes” to any of the above questions, your project may be ‘
 
 #### Results
 *Insert Review Here*
+
+
 
 
 ### Code Review
@@ -149,6 +138,8 @@ Security Risks](https://owasp.org/www-project-top-ten/).
 *Insert Review Here*
 
 
+
+
 ### Code Analysis
 
 At least one automated tool for code analysis (such as static code analysis tools) has been
@@ -162,6 +153,8 @@ Automated tooling for code analysis should be incorporated as a regularly schedu
 of the application development process. The development team should briefly document
 how frequently they commit to running these automated scanning tools, and who will be
 running the tests, interpreting, and acting upon the results.
+
+
 
 
 ### Toolkit
@@ -178,6 +171,8 @@ Below is a list of suggested tools to run for code analysis:
 *Insert Review Here*
 
 
+
+
 ### Review Licensing
 
 Ensure that acceptable licensing is decided for the project. Most often, software released
@@ -188,12 +183,14 @@ Suggested licensing:
 
  **Public Domain**
 
- This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the CC0 1.0 Universal public domain dedication.
+ - This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the CC0 1.0 Universal public domain dedication.
 
- All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
+ - All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
 
 #### Results
 *Insert Review Here*
+
+
 
 
 ### Review Commit History
@@ -202,9 +199,9 @@ Review the history of commits to the version control system used, and whether th
 prefers to clean (e.g., rebase) this history before releasing to the public.
 
 If not rebasing, verify that:
-1. there are no obscene or impolite remarks in comments or commit history
-2. there are no sensitive internal URLs/IP Addresses in comments or commit history
-3. there are no credential files such as Passwords, API/SSH/GPG keys checked into
+1. There are no obscene or impolite remarks in comments or commit history
+2. There are no sensitive internal URLs/IP Addresses in comments or commit history
+3. There are no credential files such as Passwords, API/SSH/GPG keys checked into
 the repo.
 
 Consider using the following tools to perform the tasks above:
@@ -218,6 +215,8 @@ Consider using the following tools to perform the tasks above:
 *Insert Review Here*
 
 
+
+
 ### Review Repository Hygiene
 As part of our repository hygiene requirements, the project must include certain files and
 sections. Using repolinter will help you identify missing files and content that will need to
@@ -225,9 +224,15 @@ be added to your repository before outbounding.
 
 #### Running repolinter on your repository locally
 1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
-2. Run command: repolinter lint .
+2. Run command: 
+```
+repolinter lint
+
+```
 3. The result produces a list of file and section existence checks, indicating whether
 each requirement was met or not.
+
+![repolinter results](../assets/repolinter-results.png)
 
 #### Running repolinter on your repository via GitHub Actions**
 1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file
@@ -246,8 +251,8 @@ The project should include the following files and sections [(link to templates)
 
 | Section                        | Description                                                                                                                                                                                                                                                                                       | Included |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Project Description            | 1-3 sentence short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on a GitHub repo landing page.                                                                                 | ✅       |
-| About the Project              | Longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in.                                          | ❌       |
+| Project Description            | 1-3 sentence short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on a GitHub repo landing page.                                                                                 | ✅ ❌    |
+| About the Project              | Longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in.                                          |       |
 | Core Team                     | This information helps with succession planning and provenance for security compliance and remediation. It helps future users and contributors understand where the code originated.                                                                                                         |          |
 | Documentation Index            | This is like a 'table of contents' for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels. |          |
 | Repository Structure           | Using the "tree" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.                                                                                                                                              |          |
@@ -275,7 +280,7 @@ The project should include the following files and sections [(link to templates)
 
 | Section                     | Description                                                                                                          | Included |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------|----------|
-| How to Contribute           | Basic instructions about where to send patches, check out source code, and get development support.                  | ✅❌        |
+| How to Contribute           | Basic instructions about where to send patches, check out source code, and get development support.                  | ✅ ❌        |
 | Getting Started             | Includes installation steps, prerequisites for installation, and instructions for working with the source code.      |      |
 | Team Specific Guidelines     | This section helps contributors understand any team structure in the project (formal or informal). Encouraged to point towards the MAINTAINERS.md file for further details. |          |
 | Building dependencies        | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches. |          |
@@ -291,36 +296,37 @@ The project should include the following files and sections [(link to templates)
 | Public Domain               | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |          |
 
 
-- [ ] CODEOWNERS.md
+- [ ] **CODEOWNERS.md**
 
     *Specifies code ownership and reviewers*
 
-- [ ] MAINTAINERS.md
+- [ ] **MAINTAINERS.md**
 
     *Lists project maintainers and their responsibilities*
 
-- [ ] GOVERNANCE.md
+- [ ] **GOVERNANCE.md**
 
     *Outlines project governance structure and processes*
 
-- [ ] CODE_OF_CONDUCT.md
+- [ ] **CODE_OF_CONDUCT.md**
 
     *Defines the code of conduct for contributors*
 
-- [ ] COMMUNITY_GUIDELINES.md
+- [ ] **COMMUNITY_GUIDELINES.md**
 
     *Provides guidelines for community participation*
 
-- [ ] SECURITY.md
+- [ ] **SECURITY.md**
 
     *Details security policies and procedures*
 
-- [ ] repolinter.json
+- [ ] **repolinter.json**
 
     *Lints repository for missing files and sections above*
 
 #### Results
 *Insert Review Here*
+
 
 
 
@@ -356,8 +362,10 @@ comprehensive overview for users and contributors.
 
 
 
+
 ### Additional Notes & Questoins
 *Insert any notes or questions here*
+
 
 
 
@@ -373,6 +381,7 @@ Requesting sign off from key people on this request.
 | ISSO                     | ISSO REVIEWER                        | [Approved/Needs Approval]       |
 | ISG Technical Approval    | ISG REVIEWER                         | [Approved/Needs Approval]       |
 | Business Owner(s)       | BUSINESS OWNER 1 </n> BUSINESS OWNER 2   | [Approved/Needs Approval] </n> [Approved/Needs Approval]     |
+
 
 
 
