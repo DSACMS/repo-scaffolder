@@ -24,6 +24,7 @@
   "softwareType": "{{ cookiecutter.software_type }}",
   "languages": [ "{{ cookiecutter.languages }}" ],
   "maintenance": "{{ cookiecutter.maintenance }}",
+  "date": [""],
   "tags": [ "{{ cookiecutter.tags }}" ],
   "contact": {
     "email": "{{ cookiecutter.contact_email }}",
