@@ -42,7 +42,7 @@ If you would like your repository to be released, please complete the following 
 
     By making the project freely available, this reduces licensing and acquisition costs.
 
-- [ ] **Ease of RepurposinG**
+- [ ] **Ease of Repurposing**
 
     The open nature of the code allows users to modify and adapt the software to suit their
     specific needs, fostering customization and flexibility.
@@ -78,7 +78,7 @@ If you would like your repository to be released, please complete the following 
 
 - [ ] **Security Risks**
 
-    Vulnerabilities may be exposed if the code is not thoroughly reviewed, potentially leading to security breaches or exploitation. (See: [SECURITY.md](https://github.com/DSACMS/repo-scaffolder/blob/main/SECURITY.md)) Does this project connect to any CMS-internal only systems? Does this project require authorization or authentication to operate? Does this project detail any non-public directories of CMS/HHS systems or people?
+    Vulnerabilities may be exposed if the code is not thoroughly reviewed, potentially leading to security breaches or exploitation. (See: [SECURITY.md]({{cookiecutter.project_slug}}/SECURITY.md)) Does this project connect to any CMS-internal only systems? Does this project require authorization or authentication to operate? Does this project detail any non-public directories of CMS/HHS systems or people?
 
 - [ ] **Financial Risks**
 
@@ -249,9 +249,9 @@ The project should include the following files and sections [(link to templates)
 
     *An essential guide that gives viewers a detailed description of your project*
 
-| Section                        | Description                                                                                                                                                                                                                                                                                       | Included |
+| Section                        | Description                                                                                                                                                                                                                                                                                       | Included               |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Project Description            | 1-3 sentence short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on a GitHub repo landing page.                                                                                 | ✅ ❌    |
+| Project Description            | 1-3 sentence short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on a GitHub repo landing page.                                                                                 | ✅  ❌    |
 | About the Project              | Longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in.                                          |       |
 | Core Team                     | This information helps with succession planning and provenance for security compliance and remediation. It helps future users and contributors understand where the code originated.                                                                                                         |          |
 | Documentation Index            | This is like a 'table of contents' for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels. |          |
@@ -280,7 +280,7 @@ The project should include the following files and sections [(link to templates)
 
 | Section                     | Description                                                                                                          | Included |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------|----------|
-| How to Contribute           | Basic instructions about where to send patches, check out source code, and get development support.                  | ✅ ❌        |
+| How to Contribute           | Basic instructions about where to send patches, check out source code, and get development support.                  | ✅  ❌        |
 | Getting Started             | Includes installation steps, prerequisites for installation, and instructions for working with the source code.      |      |
 | Team Specific Guidelines     | This section helps contributors understand any team structure in the project (formal or informal). Encouraged to point towards the MAINTAINERS.md file for further details. |          |
 | Building dependencies        | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches. |          |
