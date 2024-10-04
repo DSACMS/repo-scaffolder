@@ -19,10 +19,10 @@ If you know what tier you need, you can run the cookiecutter for an individual t
 cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
 ```
 
-## Add Repometrics to your Project
-To integrate repometrics into your new project, navigate to your project's `.github` directory and run the following cookiecutter command:
+## Add code.json to your project
+To add code.json into your project, navigate to your project's `.github` directory and run the following cookiecutter command. You will be asked questions about the project (see cookiecutter.json) in order to collect and store this metadata in code.json.
 ```
-cookiecutter . --directory=repometrics
+cookiecutter . --directory=codejson
 ```
 
 ## Existing Projects
@@ -37,7 +37,7 @@ You can update existing projects with the repo scaffolder.  Using the `-s` flag 
 When creating projects, if you want to receive updates then add `dsacms-tierX` as a github topic to the repo.  The scaffolder repo includes github workflows that will find all repos with that tag and can raise a pull request with an updated string or adding a file.  See [actions.md](https://github.com/DSACMS/repo-scaffolder/blob/main/.github/actions.md) for more information.
 
 ## Editing or Adding Tiers
-At a top level, each tier consisters of a folder for `hooks`, a folder containing the files to be added (`{{cookiecutter.project_slug}}`), and a `cookiecutter.json` defining the questions cookiecutter asks.  These naming conventions must be 
+At a top level, each tier consists of a folder for `hooks`, a folder containing the files to be added (`{{cookiecutter.project_slug}}`), and a `cookiecutter.json` defining the questions cookiecutter asks.  These naming conventions must be 
 followed as that is what cookiecutter picks up.  The `hooks` folder needs to be duplicated in each tier.  The folder 
 containing the files to be added can include slugged out variables such as `{{ cookiecutter.project_name }}` that can 
 be filled in by the answers to `cookiecutter.json`.  For example, `{{ cookiecutter.project_name }}` will be filled in by 
@@ -45,7 +45,7 @@ this question - `"project_name": "My Project",`.  See the [cookiecutter docs](ht
 for more information.
 
 ## Repolinter
-Tiers of level 1 thru 4 have repolinter.json file in their projects. Tier1 has detailed configuration of all the rules. All the other tiers extends their previuos tiers and has only the `rule` and the `level` configuration.
+Tiers of level 1 thru 4 have repolinter.json file in their projects. Tier1 has detailed configuration of all the rules. All the other tiers extends their previous tiers and has only the `rule` and the `level` configuration.
 
 Sample commands to run with the given repolinter.json path:
 
@@ -97,3 +97,4 @@ dedication](https://creativecommons.org/publicdomain/zero/1.0/) as indicated in 
 All contributions to this project will be released under the CC0 dedication. By
 submitting a pull request or issue, you are agreeing to comply with this waiver
 of copyright interest.
+
