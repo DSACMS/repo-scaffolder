@@ -236,5 +236,7 @@ In rare cases, a hotfix for a prior release may be required out-of-phase with th
 
 [proj-releases-new]: https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/releases/new
 
+[Inspiration for this document](https://github.com/openmobilityfoundation/governance/blob/main/technical/ReleaseGuidelines.md)
+
 
 
