@@ -37,6 +37,8 @@
   "group": "{{ cookiecutter.group }}",
   "subsetInHealthcare": "{{ cookiecutter.subset_in_healthcare }}",
   "userType": "{{ cookiecutter.user_type }}",
+  "usageType": "{{ cookiecutter.usage_type }}",
+  "exemption": "{{ cookiecutter.exemption }}",
   "repositoryHost": "{{ cookiecutter.repository_host }}",
   "maturityModelTier": "1"
 }
