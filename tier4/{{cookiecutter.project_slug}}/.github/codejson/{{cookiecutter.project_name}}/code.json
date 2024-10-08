@@ -34,7 +34,7 @@
   "repoType": "{{ cookiecutter.repo_type }}",
   "userInput": "{{ cookiecutter.user_input }}",
   "usageType": "{{ cookiecutter.usage_type }}",
-  "exemption": "{{ cookiecutter.exemption }}",
+  "exemptionText": "",
   "fismaLevel": "{{ cookiecutter.fisma_level }}",
   "group": "{{ cookiecutter.group }}",
   "subsetInHealthcare": "{{ cookiecutter.subset_in_healthcare }}",
