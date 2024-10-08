@@ -205,7 +205,9 @@ jobs:
       - name: "Auto Generate changelog"
         uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
+          {% raw %}
           token: ${{{{ secrets.GITHUB_TOKEN }}}}
+          {% endraw %}
 ```
 This provided workflow will automatically populate the CHANGELOG.md with all of the associated changes created since the last release that are included in the current release. 
 
