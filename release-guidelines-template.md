@@ -118,7 +118,7 @@ The following steps outline the process to prepare a Release Candidate of {{ coo
 	git push --tags
 	```
 
-3. Publish a [pre-Release in GitHub][proj-releases-new]:
+3. Publish a [pre-Release in GitHub](proj-releases-new):
 
 	```md
 	Tag version: [tag you just pushed]
