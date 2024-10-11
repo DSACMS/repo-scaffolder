@@ -410,4 +410,4 @@ Share the good news with communities both inside and outside CMS!
 Add your project to our inventories.
 
 - [ ] Add to https://github.com/dsacms/open projects inventory
-- [ ] Add code.json to repository and sent over a pull request to code.gov
+- [ ] Add code.json to repository and sent over a pull request to [code.gov](code.gov)
