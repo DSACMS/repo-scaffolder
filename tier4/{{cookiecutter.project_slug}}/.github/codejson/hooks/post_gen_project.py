@@ -38,8 +38,8 @@ def get_scc_labor_hours():
         #Otherwise just use previous value as a default value.
         return None
     
-def prompt_exemption_text():
-    print("You have selected an exemption for your Usage Type.")
+def prompt_exemption_text(exemptionType):
+    print(f"You have selected {exemptionType} for your Usage Type.")
     return input("Please provide a one or two sentence justification for the exemption used: ")
 
 def update_code_json(json_file_path):
@@ -56,11 +56,11 @@ def update_code_json(json_file_path):
     else:
         data['laborHours'] = None
 
-    if data['usageType'].startswith('exempt'):
-        exemption_text = prompt_exemption_text()
-        data['exemptionText'] = exemption_text
+    if data['permissions']['usageType'].startswith('exempt'):
+        exemption_text = prompt_exemption_text(data['permissions']['usageType'])
+        data['permissions']['exemptionText'] = exemption_text
     else:
-        del data['exemptionText']
+        del data['permissions']['exemptionText']
 
     # Update the JSON 
     with open(json_file_path, 'w') as file:
