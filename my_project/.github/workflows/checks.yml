@@ -1,0 +1,59 @@
+name: "run-linting-checks"
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  resolve-repolinter-json:
+    uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@main
+    with: 
+      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+  
+  repolinter-checks:
+    name: Tier 4 Checks
+    needs: resolve-repolinter-json
+    runs-on: ubuntu-latest
+    env:
+      
+      RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json }}
+      
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo $RAW_JSON > repolinter.json
+      - uses: newrelic/repolinter-action@v1
+        with:
+          # A path to the JSON/YAML Repolinter ruleset to use, relative to the workflow
+          # working directory (i.e. under `$GITHUB_WORKSPACE`).
+          #
+          # This option is mutually exclusive with config_url. If this option and
+          # config_url are not specified, Repolinter's default ruleset will be used.
+          config_file: 'repolinter.json'
+
+          # Where repolinter-action should put the linting results. There are two
+          # options available:
+          # * "exit-code": repolinter-action will print the lint output to the console
+          #   and set the exit code to result.passed. This output type is most useful for
+          #   PR status checks.
+          # * "issue": repolinter-action will create a GitHub issue on the current
+          #   repository with the repolinter output and always exit 0. See the README for
+          #   more details on issue outputting behavior. This output type is ideal for
+          #   non-intrusive notification.
+          #
+          # Default: "exit-code"
+          output_type: 'issue'
+
+          # The title to use for the issue created by repolinter-action. This title
+          # should indicate the purpose of the issue, as well as that it was created by
+          # a bot.
+          #
+          # This option will be ignored if output_type != "issue".
+          #
+          # Default: "[Repolinter] Open Source Policy Issues"
+          output_name: '[Repolinter] Tier 4 Repository Hygiene Issue'
+
+          # The default token is the repolinter token for the DSACMS org
+          # You can change it if needed.
+          
+          token: ${{ secrets.REPOLINTER_AUTO_TOKEN }}
+          
