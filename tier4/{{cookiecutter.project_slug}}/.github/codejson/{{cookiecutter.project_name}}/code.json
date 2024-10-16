@@ -13,7 +13,9 @@
         "URL": "LICENSE",
         "name": "{{ cookiecutter.license }}"
       }
-    ]
+    ],
+    "usageType": "{{ cookiecutter.usage_type }}",
+    "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_name }}",
