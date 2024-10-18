@@ -1,7 +1,7 @@
 # DSAC OSPO Outbound Review Checklist
 ## Tier 2: Close Collaboration
 ### Instructions
-This is a review process to approve CMS-developed software to be released open source at [github.cms.gov](github.cms.org).
+This is a review process to approve CMS-developed software to be released open source at [github.cms.gov](https://github.cms.gov/).
 If you would like your repository to be released, please complete the following steps.
 
 [Instructions](#instructions)
@@ -410,4 +410,4 @@ Share the good news with communities both inside and outside CMS!
 Add your project to our inventories.
 
 - [ ] Add to https://github.com/dsacms/open projects inventory
-- [ ] Add code.json to repository and sent over a pull request to [code.gov](code.gov)
+- [ ] Add code.json to repository and sent over a pull request to [code.gov](https://code.gov)
