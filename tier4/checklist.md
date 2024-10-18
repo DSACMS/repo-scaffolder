@@ -26,7 +26,7 @@ If you would like your repository to be released, please complete the following 
 
 [Review Repository Details](#review-repository-details)
 
-[Review OpenSSF Scorecard]
+[Review OpenSSF Scorecard](#review-openssf-scorecard)
 
 [Additional Notes & Questions](#additional-notes--questoins)
 
