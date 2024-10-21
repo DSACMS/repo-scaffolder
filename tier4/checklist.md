@@ -165,7 +165,7 @@ Below is a list of suggested tools to run for code analysis:
 | Tool | Description | Link |
 |------|-------------|------|
 |Repo Linter| Lint repositories for common issues such as missing files,etc...| https://github.com/todogroup/repolinter|
-| Gitleaks | Protect and discover secrets using Gitleaks🔑 | https://github.com/gitleaks/gitleaks |
+| Gitleaks | Protect and discover secrets using Gitleaks 🔑 | https://github.com/gitleaks/gitleaks |
 | git filter-repo    | Entirely remove unwanted files / files with sensitive data from a repository's history | https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository |
 
 #### Results
@@ -224,7 +224,7 @@ sections. Using repolinter will help you identify missing files and content that
 be added to your repository before outbounding.
 
 #### Running repolinter on your repository locally
-1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
+1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
 2. Run command: 
 ```
 repolinter lint
@@ -236,8 +236,8 @@ each requirement was met or not.
 ![repolinter results](../assets/repolinter-results.png)
 
 #### Running repolinter on your repository via GitHub Actions**
-1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file
-includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
+1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file
+includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
 2. Manually trigger the workflow.
 3. The result produces an issue on the repository with a list of file and section
 existence checks, indicating whether each requirement was met or not.
@@ -375,7 +375,7 @@ comprehensive overview for users and contributors.
 | [Binary-Artifacts](https://github.com/ossf/scorecard/blob/main/docs/checks.md#binary-artifacts)         | Is the project free of checked-in binaries?                                                                     | High   | 10  |       |
 | [Maintained](https://github.com/ossf/scorecard/blob/main/docs/checks.md#maintained)               | Is the project maintained?                                                                                      | High   | 10  |       |
 | [Vulnerabilities](https://github.com/ossf/scorecard/blob/main/docs/checks.md#vulnerabilities)          | Does the project have unfixed vulnerabilities? Uses the [OSV service](https://osv.dev/).                                           | High   | 8   |       |
-| [Fuzzing](https://github.com/ossf/scorecard/blob/main/docs/checks.md#fuzzing)               project use fuzzing tools, e.g. OSS-Fuzz? (For projects that accept user input)                 | Does the          | Medium | 10  |       |
+| [Fuzzing](https://github.com/ossf/scorecard/blob/main/docs/checks.md#fuzzing)           | Does the project use fuzzing tools, e.g. OSS-Fuzz? (For projects that accept user input)                | Medium | 10  |       |
 | Static Code Analysis Tools| Does the project use static code analysis tools, e.g. CodeQL, LGTM, SonarCloud?                                 | Medium | 10  |       |
 | [Pinned-Dependencies](https://github.com/ossf/scorecard/blob/main/docs/checks.md#pinned-dependencies)      | Does the project declare and pin dependencies? (For stadiums + federations)                                     | Medium | 8   |       |
 | [Security Policy](https://github.com/ossf/scorecard/blob/main/docs/checks.md#security-policy)          | Does the project contain a security policy?                                                                      | Medium | 10  |       |
