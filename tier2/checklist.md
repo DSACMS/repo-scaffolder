@@ -137,7 +137,7 @@ Below is a list of suggested tools to run for code analysis:
 | Tool |              Description |                   Link                    |
 |------|--------------------------|-------------------------------------------|
 |Repo Linter| Lint repositories for common issues such as missing files,etc...| https://github.com/todogroup/repolinter|
-| Gitleaks | Protect and discover secrets using Gitleaks🔑 | https://github.com/gitleaks/gitleaks |
+| Gitleaks | Protect and discover secrets using Gitleaks 🔑 | https://github.com/gitleaks/gitleaks |
 | git filter-repo    | Entirely remove unwanted files / files with sensitive data from a repository's history | https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository |
 
 #### Results
@@ -192,7 +192,7 @@ Consider using the following tools to perform the tasks above:
 As part of our repository hygiene requirements, the project must include certain files and sections. Using repolinter will help you identify missing files and content that will need to be added to your repository before outbounding.
 
 #### Running repolinter on your repository locally
-1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
+1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
 2. Run command: 
 ```
 repolinter lint
@@ -204,7 +204,7 @@ each requirement was met or not.
 ![repolinter results](../assets/repolinter-results.png)
 
 #### Running repolinter on your repository via GitHub Actions**
-1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
+1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
 2. Manually trigger the workflow.
 3. The result produces an issue on the repository with a list of file and section
 existence checks, indicating whether each requirement was met or not.
