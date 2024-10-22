@@ -232,7 +232,7 @@ repolinter lint .
 *License of your project, whether public domain (CC0) or other OSI-approved License. Using 'vanilla' license text will allow for GitHub to auto-label the license information on the repository landing page.*
 
 - [ ] **CONTRIBUTING.md**
-*Provide guidance on how users can run your project and make contributions to it.*
+*Provides guidance on how users can run your project and make contributions to it.*
 
 | **Section**           | **Description**                                                                                                                                                                                                                                                                                     | **Included** |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
@@ -245,6 +245,9 @@ repolinter lint .
 
 - [ ] **repolinter.json**
 _Lints repository for missing files and sections above_
+
+- [ ] **code.json**
+_Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)_
 
 **Results**
 
