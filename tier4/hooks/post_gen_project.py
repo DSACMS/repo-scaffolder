@@ -76,7 +76,7 @@ def moveCookiecutterFile():
 def main():
     subprocess.call(["git", "init", "-b", "main"])
     subprocess.call(["git", "add", "."])
-    subprocess.call(["git", "commit", "-m", "inital commit"])
+    subprocess.call(["git", "commit", "-m", "initial commit"])
 
     if CREATE_REPO == "True":
         createGithubRepo()
