@@ -10,9 +10,6 @@ CREATE_REPO = '{{cookiecutter.create_repo}}'
 RECEIVE_UPDATES = '{{cookiecutter.receive_updates}}'
 
 def createGithubRepo():
-    subprocess.call(["git", "init", "-b", "main"])
-    subprocess.call(["git", "add", "."])
-    subprocess.call(["git", "commit", "-m", "first commit"])
     gh_cli_command = [
         "gh", "repo", "create",
         f"{ORG_NAME}/{REPO_NAME}",
@@ -43,6 +40,10 @@ def moveCookiecutterFile():
     shutil.move(source_path, destination_path)
 
 def main():
+    subprocess.call(["git", "init", "-b", "main"])
+    subprocess.call(["git", "add", "."])
+    subprocess.call(["git", "commit", "-m", "initial commit"])
+    
     if CREATE_REPO == "True":
         createGithubRepo()
 
