@@ -1,4 +1,4 @@
-# DSAC OSPO Outbound Review Checklist
+# CMS OSPO Outbound Review Checklist
 ## Tier 1: One-Time Release
 
 ### Instructions
