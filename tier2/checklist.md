@@ -282,7 +282,7 @@ The project should include the following files and sections [(link to templates)
     *Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)*
 
 
-**Recomended Files:**
+**Recommended Files:**
 - [ ] **CODEOWNERS.md**
 
     *Specifies code ownership and reviewers*
@@ -297,7 +297,7 @@ The project should include the following files and sections [(link to templates)
 
 
 
-## Review Project Metadata
+### Review Project Metadata
 As part of the [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the agency’s software inventory tracking initiatives, each repository must contain a code.json file, storing metadata on your project.
 
 **Creating code.json on your repository**
