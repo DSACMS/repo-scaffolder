@@ -1,4 +1,4 @@
-# DSAC OSPO Outbound Review Checklist
+# CMS OSPO Outbound Review Checklist
 ## Tier 4: Community Governance
 ### Instructions
 This is a review process to approve CMS-developed software to be released open source.
@@ -24,11 +24,13 @@ If you would like your repository to be released, please complete the following 
 
 [Review Repository Hygiene](#review-repository-hygiene)
 
+[Review Project Metadata](#review-project-metadata)
+
 [Review Repository Details](#review-repository-details)
 
 [Review OpenSSF Scorecard](#review-openssf-scorecard)
 
-[Additional Notes & Questions](#additional-notes--questoins)
+[Additional Notes & Questions](#additional-notes--questions)
 
 [Sign off on risk acceptance of open-sourcing the software product](#sign-off-on-risk-acceptance-of-open-sourcing-the-software-product)
 
@@ -325,9 +327,32 @@ The project should include the following files and sections [(link to templates)
 
     *Lints repository for missing files and sections above*
 
+- [ ] **code.json**
+
+    *Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)*
+
 #### Results
 *Insert Review Here*
 
+
+
+## Review Project Metadata
+As part of the [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the agency’s software inventory tracking initiatives, each repository must contain a code.json file, storing metadata on your project.
+
+**Creating code.json on your repository**
+1. In the `.github` directory, run the command: 
+  ```
+  cookiecutter . –directory=codejson
+  ```
+
+2. Answer various questions about your project.
+
+3. A code.json file will be generated with your responses.
+
+Please keep this file up-to-date as you continue development in this repository. The OSPO is currently developing workflows to help assist with this work.
+
+**Results**
+*Insert Review Here*
 
 
 
@@ -395,7 +420,7 @@ Overall Score:
 
 
 
-### Additional Notes & Questoins
+### Additional Notes & Questions
 *Insert any notes or questions here*
 
 
