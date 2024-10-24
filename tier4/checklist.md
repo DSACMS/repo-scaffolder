@@ -16,8 +16,6 @@ If you would like your repository to be released, please complete the following 
 
 [Code Analysis](#code-analysis)
 
-[Toolkit](#toolkit)
-
 [Review Licensing](#review-licensing)
 
 [Review Commit History](#review-commit-history)
@@ -160,7 +158,7 @@ running the tests, interpreting, and acting upon the results.
 
 
 
-### Toolkit
+#### Toolkit
 
 Below is a list of suggested tools to run for code analysis:
 
@@ -351,7 +349,7 @@ As part of the [Federal Source Code Policy](https://obamawhitehouse.archives.gov
 
 Please keep this file up-to-date as you continue development in this repository. The OSPO is currently developing workflows to help assist with this work.
 
-**Results**
+#### Results
 *Insert Review Here*
 
 
