@@ -118,7 +118,7 @@ The following steps outline the process to prepare a Release Candidate of {{ coo
 	git push --tags
 	```
 
-3. Publish a [pre-Release in GitHub][proj-releases-new]:
+3. Publish a [pre-Release in GitHub](proj-releases-new):
 
 	```md
 	Tag version: [tag you just pushed]
@@ -235,6 +235,8 @@ In rare cases, a hotfix for a prior release may be required out-of-phase with th
 
 
 [proj-releases-new]: https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/releases/new
+
+[Inspiration for this document](https://github.com/openmobilityfoundation/governance/blob/main/technical/ReleaseGuidelines.md)
 
 
 
