@@ -23,6 +23,8 @@ This is a review process to approve CMS-developed software to be released open s
 
 [Review Repository Hygiene](#review-repository-hygiene)
 
+[Review Project Metadata](#review-project-metadata)
+
 [Review Repository Details](#review-repository-details)
 
 [Additional Notes & Questions](#additional-notes--questions)
@@ -230,7 +232,7 @@ repolinter lint .
 *License of your project, whether public domain (CC0) or other OSI-approved License. Using 'vanilla' license text will allow for GitHub to auto-label the license information on the repository landing page.*
 
 - [ ] **CONTRIBUTING.md**
-*Provide guidance on how users can run your project and make contributions to it.*
+*Provides guidance on how users can run your project and make contributions to it.*
 
 | **Section**           | **Description**                                                                                                                                                                                                                                                                                     | **Included** |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
@@ -244,9 +246,35 @@ repolinter lint .
 - [ ] **repolinter.json**
 _Lints repository for missing files and sections above_
 
+- [ ] **code.json**
+_Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)_
+
 **Results**
 
 *Insert Review Here*
+
+
+
+## Review Project Metadata
+As part of the [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the agency’s software inventory tracking initiatives, each repository must contain a code.json file, storing metadata on your project.
+
+**Creating code.json on your repository**
+1. In the `.github` directory, run the command: 
+  ```
+  cookiecutter . –directory=codejson
+  ```
+
+2. Answer various questions about your project.
+
+3. A code.json file will be generated with your responses.
+
+Please keep this file up-to-date as you continue development in this repository. The OSPO is currently developing workflows to help assist with this work.
+
+**Results**
+
+*Insert Review Here*
+
+
 
 
 ### Review Repository Details
