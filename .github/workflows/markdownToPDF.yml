@@ -11,6 +11,8 @@ jobs:
   converttopdf:
     name: Build PDF
     runs-on: ubuntu-latest
+    permissions:
+        contents: write  # Set permissions to allow writes to the repository
     steps:
       - uses: actions/checkout@v4
       - uses: baileyjm02/markdown-to-pdf@v1
