@@ -88,12 +88,12 @@ If you would like your repository to be released, please complete the following 
 
 ### Questions
 
-- **Does the code contain or touch any private information such as Personal Identifiable Information (PII) or Protected Health Information (PHI)?**
+- Does the code contain or touch any private information such as Personal Identifiable Information (PII) or Protected Health Information (PHI)?
   - Can it be removed? Is it absolutely needed to function? Can it be shipped with synthetic data instead?
 
-- **Does the code interface with any of CMS’ internal-only systems (e.g. mainframes, JIRA instances, databases, etc…)?**
+- Does the code interface with any of CMS’ internal-only systems (e.g. mainframes, JIRA instances, databases, etc…)?
 
-- **Does the repository contain any keys or credentials to access or authenticate with CMS’ systems?**
+- Does the repository contain any keys or credentials to access or authenticate with CMS’ systems?
   - Can it be removed or is it needed?
 
 If you answered “yes” to any of the above questions, your project may be ‘sensitive’ in nature and require a more thorough review before sharing publicly. Please reach out to [opensource@cms.hhs.gov](mailto:opensource@cms.hhs.gov) for guidance. If you answer yes to any of these questions above, it is best to NOT open source the product due to security reasons.

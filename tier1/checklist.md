@@ -82,16 +82,14 @@ This is a review process to approve CMS-developed software to be released open s
 ### Questions
 
 - Does the code contain or touch any private information such as Personal Identifiable Information (PII) or Protected Health Information (PHI)?
-  - What PII or PHI does this project contain?
+  - Can it be removed? Is it absolutely needed to function? Can it be shipped with synthetic data instead?
 
 - Does the code interface with any of CMS’ internal-only systems (e.g. mainframes, JIRA instances, databases, etc…)?
-  - What processes do you go through internally to get access to the systems?
 
 - Does the repository contain any keys or credentials to access or authenticate with CMS’ systems?
+  - Can it be removed or is it needed?
 
-- Does this repository require any job codes to run?
-
-If you answered “yes” to any of the above questions, your project may be ‘sensitive’ in nature and require a more thorough review before sharing publicly. Please reach out to [opensource@cms.hhs.gov](mailto:opensource@cms.hhs.gov) for guidance. If you answer yes to any of these questions above, it is best to NOT open source the product due to security reasons.
+If you answered “yes” to any of the above questions, your project may be ‘sensitive’ in nature, and require a more thorough review before sharing publicly. Please reach out to opensource@cms.hhs.gov for guidance. If you answer yes to any of these questions above, it is best to seek guidance _before_ releasing open source.
 
 #### Results
 *Insert Review Here*
