@@ -9,6 +9,29 @@ on:
         - 'assets/**'
 
 jobs:
+  detect-tier:
+    runs-on: ubuntu-latest
+    outputs:
+      tier: ${{ steps.extract-tier.outputs.tier }}
+    steps:
+      - name: Extract tier from changed files
+        id: extract-tier
+        run: |
+          # Get the list of modified files
+          files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+
+          cat files
+
+          # Extract tier number from paths that match tier*/checklist.md
+          for file in $files; do
+            if [[ "$file" =~ ^(tier[0-9]+)/checklist.md$ ]]; then
+              echo "Tier matched: ${BASH_REMATCH[1]}"
+              echo "tier=${BASH_REMATCH[1]}" >> $GITHUB_ENV
+              echo "::set-output name=tier::${BASH_REMATCH[1]}"
+              break
+            fi
+          done
+
   converttopdf:
     name: Build PDF
     runs-on: ubuntu-latest
