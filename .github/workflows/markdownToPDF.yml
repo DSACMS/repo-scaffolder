@@ -25,8 +25,6 @@ jobs:
         run: ls -a
       - name: List files in tier 1
         run: ls -a tier1
-      - name: cat built
-        run: cat built
       - uses: actions/upload-artifact@v4
         with:
           name: checklist-generated
