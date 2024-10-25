@@ -13,26 +13,25 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
         contents: write  # Set permissions to allow writes to the repository
+    strategy:
+        matrix:
+            tier: [tier1, tier2, tier3, tier4]  # List of directories
     steps:
       - uses: actions/checkout@v4
         with:
             ref: ${{ github.head_ref }}
-      - name: Generate PDFs
+      - name: Generate PDF for ${{ matrix.tier }}
         uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input_path: tier1/checklist.md
+          input_path: ${{ matrix.tier }}/checklist.md
           images_dir: assets
           image_import: ../assets
-          output_dir: tier1/
+          output_dir: ${{ matrix.tier }}/
           # Default is true, can set to false to only get PDF files
           build_html: false
-      - name: List files in root
-        run: ls -a
-      - name: List files in tier 1
-        run: ls -a tier1
-      - name: Commit and push PDFs
+      - name: Commit and push ${{ matrix.tier }} PDF
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Updated checklist pdf"
+          commit_message: "Updated ${{ matrix.tier }} checklist pdf"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Required for authentication
