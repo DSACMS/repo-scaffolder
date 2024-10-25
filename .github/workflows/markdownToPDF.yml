@@ -1,0 +1,36 @@
+name: Converting outbound checklists from .md to .pdf
+on:
+    pull_request:
+        types: [opened, synchronize]
+    # Paths can be used to only trigger actions when you have edited checklist files
+        paths:
+        - 'tier*/checklist.md'
+        - 'assets/**'
+
+jobs:
+  converttopdf:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: baileyjm02/markdown-to-pdf@v1
+        with:
+          input_path: tier1/checklist.md
+          images_dir: assets
+          image_import: ../assets
+          output_dir: tier1/
+          # Default is true, can set to false to only get PDF files
+          build_html: false
+      - name: List files in root
+        run: ls -a
+      - name: List files in tier 1
+        run: ls -a tier1
+      - name: Commit and push PDF
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add tier1/checklist.pdf
+          git commit -m "Add PDF for tier1"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
