@@ -183,7 +183,7 @@ repolinter lint .
 
 3. The result produces a list of files section existence checks, indicating whether each requirement was met or not.
 
-![repolinter results](../assets/repolinter-results.png)
+<img src="../assets/repolinter-results.png" alt="repolinter results">
 
 #### Running repolinter on your repository via GitHub Actions
 1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the github directory of your project. The file includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13)
