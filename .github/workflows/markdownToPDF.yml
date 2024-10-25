@@ -11,10 +11,10 @@ jobs:
   converttopdf:
     name: Build PDF
     runs-on: ubuntu-latest
-    permissions:
-        contents: write  # Set permissions to allow writes to the repository
     steps:
       - uses: actions/checkout@v4
+        with:
+            ref: ${{ github.head_ref }}
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_path: tier1/checklist.md
@@ -27,12 +27,14 @@ jobs:
         run: ls -a
       - name: List files in tier 1
         run: ls -a tier1
-      - name: Commit and push PDF
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add tier1/checklist.pdf
-          git commit -m "Add PDF for tier1"
-          git push origin "HEAD:${{ github.ref_name }}"
+  addtorepo:
+    runs-on: ubuntu-latest
+    permissions:
+        contents: write  # Set permissions to allow writes to the repository
+    steps:
+      - name: Commit and push PDFs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+            commit_message: "Add PDF for all checklists"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Required for authentication
