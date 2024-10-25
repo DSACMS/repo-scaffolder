@@ -27,14 +27,20 @@ jobs:
         run: ls -a
       - name: List files in tier 1
         run: ls -a tier1
-  addtorepo:
+  commit_all:
+    name: Commit all PDFs
     runs-on: ubuntu-latest
+    needs: converttopdf  # Ensure this job runs after the PDFs are built
     permissions:
         contents: write  # Set permissions to allow writes to the repository
     steps:
-      - name: Commit and push PDFs
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-            commit_message: "Add PDF for all checklists"
-        env:
+        - uses: actions/checkout@v4
+          with:
+            ref: ${{ github.head_ref }}
+        
+        - name: Commit and push PDFs
+          uses: stefanzweifel/git-auto-commit-action@v5
+          with:
+            commit_message: "Updated all checklists PDFs"
+          env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Required for authentication
