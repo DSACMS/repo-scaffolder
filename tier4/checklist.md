@@ -1,5 +1,6 @@
-# DSAC OSPO Outbound Review Checklist
+# CMS OSPO Outbound Review Checklist
 ## Tier 4: Community Governance
+
 ### Instructions
 This is a review process to approve CMS-developed software to be released open source.
 If you would like your repository to be released, please complete the following steps.
@@ -16,25 +17,23 @@ If you would like your repository to be released, please complete the following 
 
 [Code Analysis](#code-analysis)
 
-[Toolkit](#toolkit)
-
 [Review Licensing](#review-licensing)
 
 [Review Commit History](#review-commit-history)
 
 [Review Repository Hygiene](#review-repository-hygiene)
 
+[Review Project Metadata](#review-project-metadata)
+
 [Review Repository Details](#review-repository-details)
 
 [Review OpenSSF Scorecard](#review-openssf-scorecard)
 
-[Additional Notes & Questions](#additional-notes--questoins)
+[Additional Notes & Questions](#additional-notes--questions)
 
 [Sign off on risk acceptance of open-sourcing the software product](#sign-off-on-risk-acceptance-of-open-sourcing-the-software-product)
 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
-
-
 
 
 
@@ -73,9 +72,6 @@ If you would like your repository to be released, please complete the following 
     Working in the open encourages experimentation and early adoption of cutting-edge
     technologies, leading to faster innovation and improvement in software capabilities.
 
-
-
-
 ### State the Risks of Open Sourcing the Project
 
 - [ ] **Security Risks**
@@ -90,17 +86,14 @@ If you would like your repository to be released, please complete the following 
 
     Does this project require access to non-public, non-synthetic PII, PHI, or other internal-only CMS systems containing such data or information?
 
-
-
-
 ### Questions
 
-- **Does the code contain or touch any private information such as Personal Identifiable Information (PII) or Protected Health Information (PHI)?**
+- Does the code contain or touch any private information such as Personal Identifiable Information (PII) or Protected Health Information (PHI)?
   - Can it be removed? Is it absolutely needed to function? Can it be shipped with synthetic data instead?
 
-- **Does the code interface with any of CMS’ internal-only systems (e.g. mainframes, JIRA instances, databases, etc…)?**
+- Does the code interface with any of CMS’ internal-only systems (e.g. mainframes, JIRA instances, databases, etc…)?
 
-- **Does the repository contain any keys or credentials to access or authenticate with CMS’ systems?**
+- Does the repository contain any keys or credentials to access or authenticate with CMS’ systems?
   - Can it be removed or is it needed?
 
 If you answered “yes” to any of the above questions, your project may be ‘sensitive’ in nature and require a more thorough review before sharing publicly. Please reach out to [opensource@cms.hhs.gov](mailto:opensource@cms.hhs.gov) for guidance. If you answer yes to any of these questions above, it is best to NOT open source the product due to security reasons.
@@ -112,6 +105,7 @@ If you answered “yes” to any of the above questions, your project may be ‘
 
 
 ### Code Review
+
 The existing codebase should be given a one time, top-to-bottom code quality and
 security vulnerability review by two (or more) engineers who have written
 production code within the past two years, in the languages used in the project.
@@ -155,10 +149,7 @@ of the application development process. The development team should briefly docu
 how frequently they commit to running these automated scanning tools, and who will be
 running the tests, interpreting, and acting upon the results.
 
-
-
-
-### Toolkit
+#### Toolkit
 
 Below is a list of suggested tools to run for code analysis:
 
@@ -173,24 +164,23 @@ Below is a list of suggested tools to run for code analysis:
 
 
 
-
 ### Review Licensing
 
-Ensure that acceptable licensing is decided for the project. Most often, software released
-as open source by the federal government does so under the Creative Commons Zero 1.0
+Ensure that acceptable licensing is decided for the project. Most often, software released as open source by the federal government does so under the Creative Commons Zero 1.0
 license.
 
 Suggested licensing:
 
  **Public Domain**
 
- - This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+  This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the CC0 1.0 Universal public domain dedication.
 
- - All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
+  All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
+
+If your project is not being dedicated to the public domain under CC0, due to being work for hire, or some other documented reason, then choosing another [OSI approved license](https://opensource.org/license) is the next best thing.
 
 #### Results
 *Insert Review Here*
-
 
 
 
@@ -217,36 +207,40 @@ Consider using the following tools to perform the tasks above:
 
 
 
-
 ### Review Repository Hygiene
+
 As part of our repository hygiene requirements, the project must include certain files and
 sections. Using repolinter will help you identify missing files and content that will need to
 be added to your repository before outbounding.
 
 #### Running repolinter on your repository locally
+
 1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
+
 2. Run command: 
 ```
 repolinter lint
 
 ```
-3. The result produces a list of file and section existence checks, indicating whether
-each requirement was met or not.
+
+3. The result produces a list of file and section existence checks, indicating whether each requirement was met or not.
 
 ![repolinter results](../assets/repolinter-results.png)
 
-#### Running repolinter on your repository via GitHub Actions**
+#### Running repolinter on your repository via GitHub Actions
+
 1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file
 includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
+
 2. Manually trigger the workflow.
-3. The result produces an issue on the repository with a list of file and section
-existence checks, indicating whether each requirement was met or not.
+
+3. The result produces an issue on the repository with a list of file and section existence checks, indicating whether each requirement was met or not.
 
 #### Review Content
 
 The project should include the following files and sections [(link to templates)]({{cookiecutter.project_slug}}):
 
-- [ ] README.md
+- [ ] **README.md**
 
     *An essential guide that gives viewers a detailed description of your project*
 
@@ -269,13 +263,13 @@ The project should include the following files and sections [(link to templates)
 | Policies               | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |                  |
 | Public Domain          | A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International (world-wide public domain). |                  |
 
-- [ ] LICENSE
+- [ ] **LICENSE**
 
     *License of your project, whether public domain (CC0) or other OSI-approved License. Using
     ‘vanilla’ license text will allow for GitHub to auto-label the license information on the
     repository landing page.*
 
-- [ ] CONTRIBUTING.md
+- [ ] **CONTRIBUTING.md**
 
     *Provides guidance on how users can run your project and make contributions to it*
 
@@ -325,13 +319,39 @@ The project should include the following files and sections [(link to templates)
 
     *Lints repository for missing files and sections above*
 
+- [ ] **code.json**
+
+    *Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)*
+
 #### Results
 *Insert Review Here*
 
 
 
 
+### Review Project Metadata
+
+As part of the [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the agency’s software inventory tracking initiatives, each repository must contain a code.json file, storing metadata on your project.
+
+**Creating code.json on your repository**
+1. In the `.github` directory, run the command: 
+  ```
+  cookiecutter . –directory=codejson
+  ```
+
+2. Answer various questions about your project.
+
+3. A code.json file will be generated with your responses.
+
+Please keep this file up-to-date as you continue development in this repository. The OSPO is currently developing workflows to help assist with this work.
+
+#### Results
+*Insert Review Here*
+
+
+
 ### Review Repository Details
+
 The GitHub repository homepage features a concise description of the project, a list of
 relevant topic tags, and general information about the repository to provide a
 comprehensive overview for users and contributors.
@@ -363,7 +383,6 @@ comprehensive overview for users and contributors.
 
 
 
-
 ### Review OpenSSF Scorecard 
 | Checks                   | Description & Condition                                                                                          | Risk   | Min | Score |
 |--------------------------|------------------------------------------------------------------------------------------------------------------|--------|-----|-------|
@@ -390,20 +409,18 @@ comprehensive overview for users and contributors.
  
 Overall Score: 
 
- *Insert review here* 
+*Insert review here*
 
 
 
-
-### Additional Notes & Questoins
+### Additional Notes & Questions
 *Insert any notes or questions here*
 
 
 
-
 ### Sign off on risk acceptance of open-sourcing the software product
-After reviewing the materials prepared by the team that is working to open source the product,
-the business owner signs off on a risk acceptance for open-sourcing the software product.
+
+After reviewing the materials prepared by the team that is working to open source the product, the business owner signs off on a risk acceptance for open-sourcing the software product.
 
 Requesting sign off from key people on this request.
 
@@ -418,6 +435,7 @@ Requesting sign off from key people on this request.
 
 
 ### Flipping the Switch: Making the Repository Public
+
 Once the repository has passed outbound review, we are ready to “flip the switch” and
 officially make it public. Once made public, there are a couple of actions that need to be
 taken:
@@ -427,56 +445,60 @@ taken:
 Please enable the following features to enhance repository security and maintain code
 quality:
 
-- [ ] Dependabot Alerts
+- [ ] **Dependabot Alerts**
 
     *A GitHub Feature. Get notified when one of your dependencies has a vulnerability*
 
-- [ ] Secret Scanning Alerts
+- [ ] **Secret Scanning Alerts**
 
     *A GitHub Feature. Get notified when a secret is pushed to this repository. Ideally set this up to run after each new commit is pushed to the Repository.*
 
-- [ ] Branch Protections
+- [ ] **Branch Protections**
 
     *Ensures the integrity of important branches by preventing unauthorized actions like force pushes and requiring pull request reviews with specific checks before merging. Dev and main should be protected branches in the repository.*
 
-- [ ] Git Branching
+- [ ] **Git Branching**
 
     *After making the repository public, make sure there is a coherent git branching plan in place. For example: agree to merge feature related pull requests into dev but merge bug fixes into main instead of dev first.*
 
-- [ ] Add Repolinter GH Action to CI
+- [ ] **Add Repolinter GH Action to CI**
 
     *For ongoing adherence to repository hygiene standards, integrate the [repolinter GitHub Action](https://github.com/DSACMS/metrics/blob/main/.github/workflows/checks.yml) into your CI pipeline. This addition enhances your workflow by automatically enforcing repository cleanliness standards.*
 
-- [ ] Optional: DCO (Developer Certificate of Origin)
+- [ ] **Optional: DCO (Developer Certificate of Origin)**
 
     *Requires all commit messages to contain the Signed-off-by line with an email address that matches the commit author. The Developer Certificate of Origin (DCO) is a lightweight way for contributors to certify that they wrote or otherwise have the right to submit the code they are contributing to the project. The GitHub app to enforce DCO can be found [here](https://github.com/apps/dco) .*
-
 
 #### Communications & Rollout 📣
 
 Share the good news with communities both inside and outside CMS!
 
-- [ ] Draft a launch announcement
+- [ ] **Draft a launch announcement**
+  Be sure to include the following information:
 
-    *Be sure to include the following information:*
- - Repo Description
- - Repo URL
- - Authoring Team Email Contact
- - Authoring Team URL
- - Authorting Team Slack Channel
- - Call to action (file issues, contribute PRs)
-- [ ] Post launch announcement to CMS slack channels
- - #cms-opensource
- - #cms-api-community
- - #cms-data-community
- - #cms-engineering-community
- - #ai-community
-- [ ] Send a launch announcement email
-- [ ] Add launch announcement to a Confluence Wiki Page
+- Repo Description
+  - Repo URL
+  - Authoring Team Email Contact
+  - Authoring Team URL
+  - Authoring Team Slack Channel
+  - Call to action (File issues, contribute PRs)
+
+- [ ] **Post launch announcement to CMS slack channel**
+
+  - #cms-opensource
+  - #cms-api-community
+  - #cms-data-community
+  - #cms-engineering-community
+  - #ai-community
+
+- [ ] **Send a launch announcement email**
+
+- [ ] **Add launch announcement to a Confluence Wiki Page**
 
 #### Tracking 📈
 
 Add your project to our inventories.
 
-- [ ] Add to https://github.com/dsacms/open projects inventory
-- [ ] Add code.json to repository and sent over a pull request to code.gov
+- [ ] **Add to https://github.com/dsacms/open projects inventory**
+
+- [ ] **Add code.json to repository and sent over a pull request to [code.gov](https://code.gov/)**
