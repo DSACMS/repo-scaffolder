@@ -18,9 +18,12 @@ jobs:
         with:
           input_path: tier1/checklist.md
           images_dir: assets
-          output_dir: tier1
           # Default is true, can set to false to only get PDF files
           build_html: false
+      - name: List files in root
+        run: ls -a
+      - name: List files in tier 1
+        run: ls -a tier1
       - uses: actions/upload-artifact@v4
         with:
           name: checklist-generated
