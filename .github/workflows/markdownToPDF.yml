@@ -2,20 +2,47 @@ name: Converting outbound checklists from .md to .pdf
 on:
     pull_request:
         types: [opened, synchronize]
-    # Paths can be used to only trigger actions when you have edited checklist files
+    # Paths can be used to only trigger actions when you have edited checklist files or assets directory
         paths:
         - 'tier*/checklist.md'
         - 'assets/**'
 
 jobs:
+  get-updated-files:
+    name: Get changed directories
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Get changed directories
+        id: get_dirs
+        run: |
+          # Get the list of changed tier directories
+          git diff --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq | grep '^tier' > changed_dirs.txt
+
+          # Read the contents into an array called dirs
+          readarray -t dirs < changed_dirs.txt
+
+          # Print the array for debugging
+          echo "Changed tier directories:"
+          for dir in "${dirs[@]}"; do
+            echo "$dir"
+          done
+
+          # Set the array as a comma-separated string in an output variable
+          dirs_string=$(IFS=','; echo "${dirs[*]}")
+          echo "tiers=$dirs_string" >> $GITHUB_ENV  # Set the environment variable
+
   converttopdf:
     name: Build PDF
     runs-on: ubuntu-latest
+    needs: get-updated-files
     permissions:
         contents: write  # Set permissions to allow writes to the repository
     strategy:
         matrix:
-            tier: [tier1, tier2, tier3, tier4]  # List of directories
+            tier: ${{ env.tiers }}  # List of directories
     steps:
       - uses: actions/checkout@v4
         with:
