@@ -28,7 +28,7 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
           TIER_FILES=$(echo "${ALL_CHANGED_FILES}" | grep "tier")
-          for file in ${ALL_CHANGED_FILES}; do
+          for file in ${TIER_FILES}; do
             echo "$file was changed"
           done
           echo "tiers=$TIER_FILES" >> $GITHUB_OUTPUT 
