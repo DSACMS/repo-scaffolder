@@ -8,36 +8,25 @@ on:
         - 'assets/**'
 
 jobs:
-  get-updated-files:
+  get-changed-directories:
     name: Get changed directories
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          fetch-depth: 2
-      
       - name: Get changed directories
         id: get-dirs
+        uses: tj-actions/changed-files@v45
+        with:
+          dir_names: "true"
+    
+      - name: List all changed directories
+        env:
+          ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
-          # Get the list of changed tier directories
-          git diff --name-only HEAD~1 | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq | grep '^tier' > changed_dirs.txt
-
-          # Read the contents into an array called dirs
-          readarray -t dirs < changed_dirs.txt
-
-          # Print the array for debugging
-          echo "Changed tier directories:"
-          for dir in "${dirs[@]}"; do
-            echo "$dir"
+          for file in ${ALL_CHANGED_FILES}; do
+            echo "$file was changed"
           done
-
-          # Set the array as a comma-separated string in an output variable
-          dirs_string=$(IFS=','; echo "${dirs[*]}")
-          echo "tiers=$dirs_string" >> $GITHUB_ENV  # Set the environment variable
     outputs:
-      tiers: ${{ steps.get-dirs.outputs.tiers }}
+      tiers: ${{ steps.get-dirs.outputs.all_changed_files }}
 
   converttopdf:
     name: Build PDF
