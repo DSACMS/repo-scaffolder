@@ -28,13 +28,13 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
           # Use sed to format the string
-          TIER_DIRS=$(echo "$ALL_CHANGED_FILES" | sed 's/ /", "/g; s/^/"&/; s/$/&"/')
+          TIER_DIRS=$(echo "$ALL_CHANGED_FILES" | grep 'tier' | sed 's/ /", "/g; s/^/"&/; s/$/&"/')
 
           # Output the formatted array
           TIER_DIRS="[$TIER_DIRS]"
           echo "$TIER_DIRS"
 
-          echo "tiers=$TIER_FILES" >> $GITHUB_OUTPUT 
+          echo "tiers=$TIER_DIRS" >> $GITHUB_OUTPUT 
 
   convert-to-pdf:
     name: Build PDF
