@@ -35,7 +35,6 @@ If you would like your repository to be released, please complete the following 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
 
 
-
 ### State the Benefits of Open Sourcing the Project
 
 - [ ] **Cost Savings**
