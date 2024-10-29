@@ -31,8 +31,8 @@ jobs:
           DIRS=$(echo "$ALL_CHANGED_FILES" | grep -oE 'tier[^ ]*' | sed 's/^/"/; s/$/"/' | paste -sd, -)
 
           # Output the array
-          DIRS="[$DIRS]"
-          echo "$DIRS"
+          TIER_DIRS="[$DIRS]"
+          echo "$TIER_DIRS"
 
           echo "tiers=$TIER_DIRS" >> $GITHUB_OUTPUT 
 
