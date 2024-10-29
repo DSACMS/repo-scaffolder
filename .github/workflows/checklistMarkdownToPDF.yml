@@ -2,7 +2,7 @@ name: Converting outbound checklists from .md to .pdf
 on:
     pull_request:
         types: [opened, synchronize]
-    # Paths can be used to only trigger actions when you have edited checklist files or assets directory
+    # Paths can be used to only trigger actions when you have edited checklist files
         paths:
         - 'tier*/checklist.md'
 
@@ -22,12 +22,12 @@ jobs:
         uses: tj-actions/changed-files@v45
         with:
           dir_names: "true"
-      - name: List all changed directories
+      - name: List all changed tier directories
         id: list-dirs
         env:
           ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
-          # Format the changed file output into array
+          # Obtain changed tier directories and format into array
           DIRS=$(echo "$ALL_CHANGED_FILES" | grep -oE 'tier[^ ]*' | sed 's/^/"/; s/$/"/' | paste -sd, -)
 
           # Output the array
@@ -41,10 +41,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: get-changed-directories
     permissions:
-        contents: write  # Set permissions to allow writes to the repository
+        contents: write
     strategy:
         matrix:
-            tier: ${{ fromJSON(needs.get-changed-directories.outputs.tiers) }}  # List of directories
+            tier: ${{ fromJSON(needs.get-changed-directories.outputs.tiers) }}  # List of changed tier directories
     steps:
       - uses: actions/checkout@v4
         with:
