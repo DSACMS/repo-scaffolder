@@ -34,7 +34,7 @@ jobs:
           TIER_DIRS="[$DIRS]"
           echo "$TIER_DIRS"
 
-          echo "tiers=$TIER_DIRS" >> $GITHUB_OUTPUT 
+          echo "tiers=$TIER_DIRS" >> "$GITHUB_OUTPUT" 
 
   convert-to-pdf:
     name: Build PDF
