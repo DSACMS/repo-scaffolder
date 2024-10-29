@@ -27,12 +27,12 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
-          # Use sed to format the string
-          TIER_DIRS=$(echo "$ALL_CHANGED_FILES" | grep 'tier' | sed 's/ /", "/g; s/^/"&/; s/$/&"/')
+          # Format the changed file output into array
+          DIRS=$(echo "$ALL_CHANGED_FILES" | grep -oE 'tier[^ ]*' | sed 's/^/"/; s/$/"/' | paste -sd, -)
 
-          # Output the formatted array
-          TIER_DIRS="[$TIER_DIRS]"
-          echo "$TIER_DIRS"
+          # Output the array
+          DIRS="[$DIRS]"
+          echo "$DIRS"
 
           echo "tiers=$TIER_DIRS" >> $GITHUB_OUTPUT 
 
