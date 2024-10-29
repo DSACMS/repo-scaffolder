@@ -28,7 +28,7 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
           # Use sed to format the string
-          TIER_DIRS=$(echo "$ALL_CHANGED_FILES" | sed 's/ /", "/g; s/^/"&/; s/$/&"/' | grep )
+          TIER_DIRS=$(echo "$ALL_CHANGED_FILES" | sed 's/ /", "/g; s/^/"&/; s/$/&"/')
 
           # Output the formatted array
           TIER_DIRS="[$TIER_DIRS]"
