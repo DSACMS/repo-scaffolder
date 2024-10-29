@@ -27,7 +27,7 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
-          TIER_FILES=$(echo "${ALL_CHANGED_FILES}" | grep "tier")
+          TIER_FILES=$(echo "${ALL_CHANGED_FILES}" | awk -F "/*[^/]*/*$" '{ print ($1 == "" ? "." : $1); }' | sort | uniq | grep '^tier')
           for file in ${TIER_FILES}; do
             echo "$file was changed"
           done
