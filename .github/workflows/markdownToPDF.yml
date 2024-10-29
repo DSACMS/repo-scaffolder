@@ -27,8 +27,18 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
-          TIER_FILES=$(echo "${ALL_CHANGED_FILES[*]}" | grep "tier" | sed 's/.*/"&"/')
-          echo "[${TIER_FILES[*]}]"
+          #Convert the string to an array
+          IFS=' ' read -r -a TIER_DIRS <<< "$ALL_CHANGED_FILES"
+
+          TIER_DIRS=$(echo "${TIER_DIRS}" | grep "tier")
+          echo "${TIER_DIRS}"
+
+          # Wrap each element with quotes
+          for i in "${!TIER_DIRS[@]}"; do
+              TIER_DIRS[$i]="\"${TIER_DIRS[$i]}\""
+          done
+
+          TIER_FILES=$(echo "${ALL_CHANGED_FILES}")
           for file in ${TIER_FILES}; do
             echo "$file was changed"
           done
