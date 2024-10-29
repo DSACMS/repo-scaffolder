@@ -1,0 +1,65 @@
+name: Converting outbound checklists from .md to .pdf
+on:
+    pull_request:
+        types: [opened, synchronize]
+    # Paths can be used to only trigger actions when you have edited checklist files or assets directory
+        paths:
+        - 'tier*/checklist.md'
+
+jobs:
+  get-changed-directories:
+    name: Get changed directories
+    runs-on: ubuntu-latest
+    outputs:
+      tiers: ${{ steps.list-dirs.outputs.tiers }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Get changed directories
+        id: get-dirs
+        uses: tj-actions/changed-files@v45
+        with:
+          dir_names: "true"
+      - name: List all changed directories
+        id: list-dirs
+        env:
+          ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
+        run: |
+          # Format the changed file output into array
+          DIRS=$(echo "$ALL_CHANGED_FILES" | grep -oE 'tier[^ ]*' | sed 's/^/"/; s/$/"/' | paste -sd, -)
+
+          # Output the array
+          TIER_DIRS="[$DIRS]"
+          echo "$TIER_DIRS"
+
+          echo "tiers=$TIER_DIRS" >> "$GITHUB_OUTPUT" 
+
+  convert-to-pdf:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    needs: get-changed-directories
+    permissions:
+        contents: write  # Set permissions to allow writes to the repository
+    strategy:
+        matrix:
+            tier: ${{ fromJSON(needs.get-changed-directories.outputs.tiers) }}  # List of directories
+    steps:
+      - uses: actions/checkout@v4
+        with:
+            ref: ${{ github.head_ref }}
+      - name: Generate PDF for ${{ matrix.tier }}
+        uses: baileyjm02/markdown-to-pdf@v1
+        with:
+          input_path: ${{ matrix.tier }}/checklist.md
+          images_dir: assets
+          image_import: ../assets
+          output_dir: ${{ matrix.tier }}/
+          build_html: false
+      - name: Commit and push ${{ matrix.tier }} PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Updated ${{ matrix.tier }} checklist pdf"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
