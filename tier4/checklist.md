@@ -1,8 +1,7 @@
 # CMS OSPO Outbound Review Checklist
-## Tier 3: Public Repository
+## Tier 4: Community Governance
 
 ### Instructions
-
 This is a review process to approve CMS-developed software to be released open source.
 If you would like your repository to be released, please complete the following steps.
 
@@ -27,6 +26,8 @@ If you would like your repository to be released, please complete the following 
 [Review Project Metadata](#review-project-metadata)
 
 [Review Repository Details](#review-repository-details)
+
+[Review OpenSSF Scorecard](#review-openssf-scorecard)
 
 [Additional Notes & Questions](#additional-notes--questions)
 
@@ -79,8 +80,7 @@ If you would like your repository to be released, please complete the following 
 
 - [ ] **Financial Risks**
 
-    Costs may arise from: 
-    Maintaining code, community engagement, addressing security concerns, subscription costs hardware costs, specialized tooling or infrastructure costs. Does this project require any ongoing financial costs or subscription fees? (e.g., Cloud Hosting, Specialized build systems, paid maintainers, paid libraries or dependencies.)
+    Costs may arise from maintaining code, community engagement, addressing security concerns, subscription costs hardware costs, specialized tooling or infrastructure costs. Does this project require any ongoing financial costs or subscription fees? (e.g., Cloud Hosting, Specialized build systems, paid maintainers, paid libraries or dependencies.)
 
 - [ ] **Privacy Risks**
 
@@ -100,6 +100,7 @@ If you answered “yes” to any of the above questions, your project may be ‘
 
 #### Results
 *Insert Review Here*
+
 
 
 
@@ -133,6 +134,7 @@ Security Risks](https://owasp.org/www-project-top-ten/).
 
 
 
+
 ### Code Analysis
 
 At least one automated tool for code analysis (such as static code analysis tools) has been
@@ -154,7 +156,7 @@ Below is a list of suggested tools to run for code analysis:
 | Tool | Description | Link |
 |------|-------------|------|
 |Repo Linter| Lint repositories for common issues such as missing files,etc...| https://github.com/todogroup/repolinter|
-| Gitleaks | Protect and discover secrets using Gitleaks🔑 | https://github.com/gitleaks/gitleaks |
+| Gitleaks | Protect and discover secrets using Gitleaks 🔑 | https://github.com/gitleaks/gitleaks |
 | git filter-repo    | Entirely remove unwanted files / files with sensitive data from a repository's history | https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository |
 
 #### Results
@@ -190,7 +192,8 @@ prefers to clean (e.g., rebase) this history before releasing to the public.
 If not rebasing, verify that:
 1. There are no obscene or impolite remarks in comments or commit history
 2. There are no sensitive internal URLs/IP Addresses in comments or commit history
-3. There are no credential files such as Passwords, API/SSH/GPG keys checked into the repo.
+3. There are no credential files such as Passwords, API/SSH/GPG keys checked into
+the repo.
 
 Consider using the following tools to perform the tasks above:
 
@@ -204,7 +207,6 @@ Consider using the following tools to perform the tasks above:
 
 
 
-
 ### Review Repository Hygiene
 
 As part of our repository hygiene requirements, the project must include certain files and
@@ -213,7 +215,7 @@ be added to your repository before outbounding.
 
 #### Running repolinter on your repository locally
 
-1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
+1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
 
 2. Run command: 
 ```
@@ -221,15 +223,14 @@ repolinter lint
 
 ```
 
-3. The result produces a list of file and section existence checks, indicating whether
-each requirement was met or not.
+3. The result produces a list of file and section existence checks, indicating whether each requirement was met or not.
 
 ![repolinter results](../assets/repolinter-results.png)
 
 #### Running repolinter on your repository via GitHub Actions
 
-1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file
-includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
+1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file
+includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
 
 2. Manually trigger the workflow.
 
@@ -237,7 +238,7 @@ includes a job that runs a repolinter called [repolinter-checks](https://github.
 
 #### Review Content
 
-The project should include the following files and sections [(link to templates)](https://github.com/DSACMS/repo-scaffolder/tree/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D):
+The project should include the following files and sections [(link to templates)]({{cookiecutter.project_slug}}):
 
 - [ ] **README.md**
 
@@ -382,14 +383,43 @@ comprehensive overview for users and contributors.
 
 
 
+### Review OpenSSF Scorecard 
+| Checks                   | Description & Condition                                                                                          | Risk   | Min | Score |
+|--------------------------|------------------------------------------------------------------------------------------------------------------|--------|-----|-------|
+| [Dangerous-Workflow](https://github.com/ossf/scorecard/blob/main/docs/checks.md#dangerous-workflow)       | Does the project avoid dangerous coding patterns in GitHub Actions? (e.g. Untrusted Code Checkout, Script Injection with Untrusted Context Variables) | Critical | 10  | ✅ ❌  |
+| [Dependency-Update-Tool](https://github.com/ossf/scorecard/blob/main/docs/checks.md#dependency-update-tool)   | Does the project use tools to help update its dependencies e.g. Dependabot, RenovateBot?                        | High   | 10  |       |
+| [Token-Permissions](https://github.com/ossf/scorecard/blob/main/docs/checks.md#token-permissions)        | Does the project declare GitHub workflow tokens as read only?                                                   | High   | 9   |       |
+| [Branch-Protection](https://github.com/ossf/scorecard/blob/main/docs/checks.md#branch-protection)        | Does the project use Branch Protection?                                                                          | High   | 6   |       |
+| [Code-Review](https://github.com/ossf/scorecard/blob/main/docs/checks.md#code-review)              | Does the project require code review before code is merged?                                                    | High   | 10  |       |
+| [Binary-Artifacts](https://github.com/ossf/scorecard/blob/main/docs/checks.md#binary-artifacts)         | Is the project free of checked-in binaries?                                                                     | High   | 10  |       |
+| [Maintained](https://github.com/ossf/scorecard/blob/main/docs/checks.md#maintained)               | Is the project maintained?                                                                                      | High   | 10  |       |
+| [Vulnerabilities](https://github.com/ossf/scorecard/blob/main/docs/checks.md#vulnerabilities)          | Does the project have unfixed vulnerabilities? Uses the [OSV service](https://osv.dev/).                                           | High   | 8   |       |
+| [Fuzzing](https://github.com/ossf/scorecard/blob/main/docs/checks.md#fuzzing)           | Does the project use fuzzing tools, e.g. OSS-Fuzz? (For projects that accept user input)                | Medium | 10  |       |
+| [Static Code Analysis Tools](https://github.com/ossf/scorecard/blob/main/docs/checks.md#sast)| Does the project use static code analysis tools, e.g. CodeQL, LGTM, SonarCloud?                                 | Medium | 10  |       |
+| [Pinned-Dependencies](https://github.com/ossf/scorecard/blob/main/docs/checks.md#pinned-dependencies)      | Does the project declare and pin dependencies? (For stadiums + federations)                                     | Medium | 8   |       |
+| [Security Policy](https://github.com/ossf/scorecard/blob/main/docs/checks.md#security-policy)          | Does the project contain a security policy?                                                                      | Medium | 10  |       |
+| [CII-Best-Practices](https://github.com/ossf/scorecard/blob/main/docs/checks.md#cii-best-practices)      | Does the project have a [CII Best Practices Badge](https://www.bestpractices.dev/en)? Project has an OpenSSF Best Practices Badge (For stadiums + federations) | Low    | 5   |       |
+| [Contributors](https://github.com/ossf/scorecard/blob/main/docs/checks.md#contributors)             | Does the project have contributors from multiple organizations?                                                  | Low    | 6   |       |
+| [License](https://github.com/ossf/scorecard/blob/main/docs/checks.md#license)                  | Does the project declare a license?                                                                              | Low    | 9   |       |
+| [CI-Tests](https://github.com/ossf/scorecard/blob/main/docs/checks.md#ci-tests)                 | Does the project run tests in CI, e.g. GitHub Actions, Prow?                                                   | Low    | 10  |       |
+| [Packaging](https://github.com/ossf/scorecard/blob/main/docs/checks.md#packaging)                | Does the project build and publish official packages from CI/CD, e.g. GitHub Publishing? (For projects that are packages) | Medium | 10  |       |
+| [Signed-Releases](https://github.com/ossf/scorecard/blob/main/docs/checks.md#signed-releases)          | Does the project [cryptographically sign releases](https://wiki.debian.org/Creating%20signed%20GitHub%20releases)? | High   | 8   If under TLD: 10|  |
+
+#### Results 
+ 
+Overall Score: 
+
+*Insert review here*
+
+
 
 ### Additional Notes & Questions
 *Insert any notes or questions here*
 
 
 
-
 ### Sign off on risk acceptance of open-sourcing the software product
+
 After reviewing the materials prepared by the team that is working to open source the product, the business owner signs off on a risk acceptance for open-sourcing the software product.
 
 Requesting sign off from key people on this request.
@@ -400,6 +430,7 @@ Requesting sign off from key people on this request.
 | ISSO                     | ISSO REVIEWER                        | [Approved/Needs Approval]       |
 | ISG Technical Approval    | ISG REVIEWER                         | [Approved/Needs Approval]       |
 | Business Owner(s)       | BUSINESS OWNER 1 </n> BUSINESS OWNER 2   | [Approved/Needs Approval] </n> [Approved/Needs Approval]     |
+
 
 
 

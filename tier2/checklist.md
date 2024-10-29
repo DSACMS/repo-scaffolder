@@ -1,9 +1,9 @@
 # CMS OSPO Outbound Review Checklist
-## Tier 3: Public Repository
+## Tier 2: Close Collaboration
 
 ### Instructions
 
-This is a review process to approve CMS-developed software to be released open source.
+This is a review process to approve CMS-developed software to be released open source at [github.cms.gov](https://github.cms.gov/).
 If you would like your repository to be released, please complete the following steps.
 
 [Instructions](#instructions)
@@ -44,8 +44,7 @@ If you would like your repository to be released, please complete the following 
 
 - [ ] **Ease of Repurposing**
 
-    The open nature of the code allows users to modify and adapt the software to suit their
-    specific needs, fostering customization and flexibility.
+    The open nature of the code allows users to modify and adapt the software to suit their specific needs, fostering customization and flexibility.
 
 - [ ] **Minimization of Vendor Lock-in/Flexibility of Vendor Choice**
 
@@ -53,23 +52,19 @@ If you would like your repository to be released, please complete the following 
 
 - [ ] **Enable Transparency**
 
-    The source code is accessible and visible to anyone, promoting transparency in how the
-    software functions, which helps build trust.
+    The source code is accessible and visible to anyone, promoting transparency in how the software functions, which helps build trust.
 
 - [ ] **Enable extension/extensibility**
 
-    Users can extend and enhance the functionality of the software by adding their own
-    features.
+    Users can extend and enhance the functionality of the software by adding their own features.
 
 - [ ] **Increase Interoperability**
 
-    Planning in the open enables future compatibility and interoperability between different
-    systems and software applications.
+    Planning in the open enables future compatibility and interoperability between different systems and software applications.
 
 - [ ] **Facilitate Experimentation/Early Adoption**
 
-    Working in the open encourages experimentation and early adoption of cutting-edge
-    technologies, leading to faster innovation and improvement in software capabilities.
+    Working in the open encourages experimentation and early adoption of cutting-edge technologies, leading to faster innovation and improvement in software capabilities.
 
 ### State the Risks of Open Sourcing the Project
 
@@ -79,8 +74,7 @@ If you would like your repository to be released, please complete the following 
 
 - [ ] **Financial Risks**
 
-    Costs may arise from: 
-    Maintaining code, community engagement, addressing security concerns, subscription costs hardware costs, specialized tooling or infrastructure costs. Does this project require any ongoing financial costs or subscription fees? (e.g., Cloud Hosting, Specialized build systems, paid maintainers, paid libraries or dependencies.)
+    Costs may arise from maintaining code, community engagement, addressing security concerns, subscription costs, hardware costs, specialized tooling or infrastructure costs among others. Does this project require any ongoing financial costs or subscription fees? (e.g., Cloud Hosting, Specialized build systems, paid maintainers, paid libraries or dependencies.)
 
 - [ ] **Privacy Risks**
 
@@ -89,12 +83,14 @@ If you would like your repository to be released, please complete the following 
 ### Questions
 
 - Does the code contain or touch any private information such as Personal Identifiable Information (PII) or Protected Health Information (PHI)?
-  - Can it be removed? Is it absolutely needed to function? Can it be shipped with synthetic data instead?
+  - What PII or PHI does this project contain?
 
 - Does the code interface with any of CMS’ internal-only systems (e.g. mainframes, JIRA instances, databases, etc…)?
+  - What processes do you go through internally to get access to the systems?
 
 - Does the repository contain any keys or credentials to access or authenticate with CMS’ systems?
-  - Can it be removed or is it needed?
+
+- Does this repository require any job codes to run?
 
 If you answered “yes” to any of the above questions, your project may be ‘sensitive’ in nature and require a more thorough review before sharing publicly. Please reach out to [opensource@cms.hhs.gov](mailto:opensource@cms.hhs.gov) for guidance. If you answer yes to any of these questions above, it is best to NOT open source the product due to security reasons.
 
@@ -105,28 +101,13 @@ If you answered “yes” to any of the above questions, your project may be ‘
 
 ### Code Review
 
-The existing codebase should be given a one time, top-to-bottom code quality and
-security vulnerability review by two (or more) engineers who have written
-production code within the past two years, in the languages used in the project.
-Engineers should review credential management practices with the development
-team to ensure that any keys, passwords, or other sensitive configurations are not
-checked into source code or in the git history. 
+The existing codebase should be given a one time, top-to-bottom code quality and security vulnerability review by two (or more) engineers who have written production code within the past two years, in the languages used in the project. Engineers should review credential management practices with the development team to ensure that any keys, passwords, or other sensitive configurations are not checked into source code or in the git history. 
 
-The engineers can be federal government employees or trusted partners from
-outside the agency from other contracts, or from independent testing contracts.
-Their names, organizations, comments and approval/disapproval on the overall
-codebase should be tracked in this document.
+The engineers can be federal government employees or trusted partners from outside the agency from other contracts, or from independent testing contracts. Their names, organizations, comments and approval/disapproval on the overall codebase should be tracked in this document.
 
-To provide independent review, the engineers should not have been involved in the
-development of the software product. This includes engineers who wrote part of
-the software or who directly provided technical direction and oversight in the
-creation of the software.
+To provide independent review, the engineers should not have been involved in the development of the software product. This includes engineers who wrote part of the software or who directly provided technical direction and oversight in the creation of the software.
 
-As part of the code review, engineers should reference modern listings of the most
-significant software security vulnerabilities. For instance, an acceptable description
-would be that the engineers showed how they used automated tools and manual
-review to check each item in [OWASP's current 10 Most Critical Web Application
-Security Risks](https://owasp.org/www-project-top-ten/).
+As part of the code review, engineers should reference modern listings of the most significant software security vulnerabilities. For instance, an acceptable description would be that the engineers showed how they used automated tools and manual review to check each item in [OWASP's current 10 Most Critical Web Application Security Risks](https://owasp.org/www-project-top-ten/).
 
 #### Results
 *Insert Review Here*
@@ -135,26 +116,18 @@ Security Risks](https://owasp.org/www-project-top-ten/).
 
 ### Code Analysis
 
-At least one automated tool for code analysis (such as static code analysis tools) has been
-run on the codebase to look for security vulnerabilities, and results have been
-appropriately acted upon. Even if all findings are eventually fixed, if the initial scans
-revealed significant, severe vulnerabilities (such as SQL injection vulnerabilities), this
-indicates that the software development team may not be adhering to the best practices
-required for open source public release.
+At least one automated tool for code analysis (such as static code analysis tools) has been run on the codebase to look for security vulnerabilities, and results have been appropriately acted upon. Even if all findings are eventually fixed, if the initial scans revealed significant, severe vulnerabilities (such as SQL injection vulnerabilities), this indicates that the software development team may not be adhering to the best practices required for open source public release.
 
-Automated tooling for code analysis should be incorporated as a regularly scheduled part
-of the application development process. The development team should briefly document
-how frequently they commit to running these automated scanning tools, and who will be
-running the tests, interpreting, and acting upon the results.
+Automated tooling for code analysis should be incorporated as a regularly scheduled part of the application development process. The development team should briefly document how frequently they commit to running these automated scanning tools, and who will be running the tests, interpreting, and acting upon the results.
 
 #### Toolkit
 
 Below is a list of suggested tools to run for code analysis:
 
-| Tool | Description | Link |
-|------|-------------|------|
+| Tool |              Description |                   Link                    |
+|------|--------------------------|-------------------------------------------|
 |Repo Linter| Lint repositories for common issues such as missing files,etc...| https://github.com/todogroup/repolinter|
-| Gitleaks | Protect and discover secrets using Gitleaks🔑 | https://github.com/gitleaks/gitleaks |
+| Gitleaks | Protect and discover secrets using Gitleaks 🔑 | https://github.com/gitleaks/gitleaks |
 | git filter-repo    | Entirely remove unwanted files / files with sensitive data from a repository's history | https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository |
 
 #### Results
@@ -184,8 +157,7 @@ If your project is not being dedicated to the public domain under CC0, due to be
 
 ### Review Commit History
 
-Review the history of commits to the version control system used, and whether the team
-prefers to clean (e.g., rebase) this history before releasing to the public.
+Review the history of commits to the version control system used, and whether the team prefers to clean (e.g., rebase) this history before releasing to the public.
 
 If not rebasing, verify that:
 1. There are no obscene or impolite remarks in comments or commit history
@@ -204,16 +176,13 @@ Consider using the following tools to perform the tasks above:
 
 
 
-
 ### Review Repository Hygiene
 
-As part of our repository hygiene requirements, the project must include certain files and
-sections. Using repolinter will help you identify missing files and content that will need to
-be added to your repository before outbounding.
+As part of our repository hygiene requirements, the project must include certain files and sections. Using repolinter will help you identify missing files and content that will need to be added to your repository before outbounding.
 
 #### Running repolinter on your repository locally
 
-1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
+1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
 
 2. Run command: 
 ```
@@ -221,23 +190,22 @@ repolinter lint
 
 ```
 
-3. The result produces a list of file and section existence checks, indicating whether
-each requirement was met or not.
+3. The result produces a list of file and section existence checks, indicating whether each requirement was met or not.
 
 ![repolinter results](../assets/repolinter-results.png)
 
 #### Running repolinter on your repository via GitHub Actions
 
-1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file
-includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
+1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
 
 2. Manually trigger the workflow.
 
-3. The result produces an issue on the repository with a list of file and section existence checks, indicating whether each requirement was met or not.
+3. The result produces an issue on the repository with a list of file and section
+existence checks, indicating whether each requirement was met or not.
 
 #### Review Content
 
-The project should include the following files and sections [(link to templates)](https://github.com/DSACMS/repo-scaffolder/tree/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D):
+The project should include the following files and sections [(link to templates)]({{cookiecutter.project_slug}}):
 
 - [ ] **README.md**
 
@@ -247,13 +215,13 @@ The project should include the following files and sections [(link to templates)
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | Project Description            | 1-3 sentence short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on a GitHub repo landing page.                                                                                 | ✅  ❌    |
 | About the Project              | Longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in.                                          |       |
-| Core Team                     | This information helps with succession planning and provenance for security compliance and remediation. It helps future users and contributors understand where the code originated.                                                                                                         |          |
-| Documentation Index            | This is like a 'table of contents' for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels. |          |
-| Repository Structure           | Using the "tree" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.                                                                                                                                              |          |
-| Development and Software Delivery Lifecycle | | |
-| Local Development| Use step by step instructions to get from 'zero' to 'running code.' Should include any system libraries or packages that are a 'pre-requisite' to installation of your project. When possible, including install instructions for multiple Operating Systems (or being explicit about which operating system the project was developed on) is a recommended practice. |          |
+| Project Vision | This should be a forward-looking statement that outlines the desired future state or long-term goals of the project.             |           |
+| Project Mission          | This should be a statement that defines the purpose, scope, and specific objectives of the project.                      |           |
+| Agency Mission | Agency-led projects should include information about their agency mission. This should be taken directly from agency websites or wikis.|   |
+| Team Mission   | Agency-led projects should include information about the team executing on the mission. This should be taken directly from internal team charters and functional statements |          |
+| Core Team                     | This information helps with succession planning and provenance for security compliance and remediation. It helps future users and contributors understand where the code originated.         |          |
+| Local Development | Use step by step instructions to get from 'zero' to 'running code.' Should include any system libraries or packages that are a 'pre-requisite' to installation of your project. When possible, including install  instructions for multiple Operation Systems (or being explicit about which operating system the project was developed on) is a recommended practice.       |          |
 | Code Style & Linters | This section outlines best practices contributors should follow to reduce friction and improve readability, functionality, and quality of contributions to a project. Oftentimes, these checks can be automated and run as part of a continuous integration and deployment pipeline. | |
-| Branching Model        | Branching models (such as git flow) are recommended as a best practice for keeping feature development history clear, and to help reinforce development best practices.                             |                  |
 | Contributing           | For projects that accept contributions, point towards the CONTRIBUTING.md file.   |                  |
 | Codeowners             | Though all tiers have an 'implied' code-owner, since there is at least one author of the repo, explicit is better than implicit. In the case that a project may outlive the original author, a shared inbox or alias is recommended for longer-lived projects (e.g. opensource@cms.hhs.gov). |                  |
 | Community              | Point your contributors towards wherever your community exists (e.g. email lists, online discussion boards or channels, project backlogs and documentation, etc.).                                 |                  |
@@ -276,31 +244,14 @@ The project should include the following files and sections [(link to templates)
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------|----------|
 | How to Contribute           | Basic instructions about where to send patches, check out source code, and get development support.                  | ✅  ❌        |
 | Getting Started             | Includes installation steps, prerequisites for installation, and instructions for working with the source code.      |      |
-| Team Specific Guidelines     | This section helps contributors understand any team structure in the project (formal or informal). Encouraged to point towards the MAINTAINERS.md file for further details. |          |
 | Building dependencies        | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches. |          |
 | Building the Project        | Be sure to include build scripts and instructions, not just the source code itself!                                 |          |
 | Workflow & Branching        | If your project has a preferred workflow or branching structure, mention it here. We recommend 'git flow' as a good default. |          |
-| Testing Conventions         | Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. |          |
 | Coding Style + Linters      | HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for Python, eslint for JavaScript, etc.). |          |
 | Writing Issues              | Make a brief statement about where to file issues, and conventions for doing so. Link to ISSUE_TEMPLATE.md file.    |          |
-| Writing Pull Requests       | Make a brief statement about where to file pull/merge requests, and conventions for doing so. Link to PULL_REQUEST_TEMPLATE.md file. |          |
-| Code Review                 | Make a brief statement about how pull requests are reviewed, and who is doing the reviewing. Linking to MAINTAINERS.md can help. |          |
-| Documentation Updates       | Where is the documentation hosted? How is it updated? Who updates it?                                               |          |
 | Policies                    | This section is here to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |          |
 | Public Domain               | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |          |
 
-
-- [ ] **CODEOWNERS.md**
-
-    *Specifies code ownership and reviewers*
-
-- [ ] **MAINTAINERS.md**
-
-    *Lists project maintainers and their responsibilities*
-
-- [ ] **GOVERNANCE.md**
-
-    *Outlines project governance structure and processes*
 
 - [ ] **CODE_OF_CONDUCT.md**
 
@@ -322,9 +273,19 @@ The project should include the following files and sections [(link to templates)
 
     *Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)*
 
+
+**Recommended Files:**
+- [ ] **CODEOWNERS.md**
+
+    *Specifies code ownership and reviewers*
+
+- [ ] **MAINTAINERS.md**
+
+    *Lists project maintainers and their responsibilities*
+
+
 #### Results
 *Insert Review Here*
-
 
 
 
@@ -382,14 +343,13 @@ comprehensive overview for users and contributors.
 
 
 
-
 ### Additional Notes & Questions
 *Insert any notes or questions here*
 
 
 
-
 ### Sign off on risk acceptance of open-sourcing the software product
+
 After reviewing the materials prepared by the team that is working to open source the product, the business owner signs off on a risk acceptance for open-sourcing the software product.
 
 Requesting sign off from key people on this request.
@@ -404,10 +364,7 @@ Requesting sign off from key people on this request.
 
 
 ### Flipping the Switch: Making the Repository Public
-
-Once the repository has passed outbound review, we are ready to “flip the switch” and
-officially make it public. Once made public, there are a couple of actions that need to be
-taken:
+Once the repository has passed outbound review, we are ready to “flip the switch” and officially make it public. Once made public, there are a couple of actions that need to be taken:
 
 #### Repository Actions
 
