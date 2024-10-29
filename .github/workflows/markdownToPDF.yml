@@ -44,7 +44,7 @@ jobs:
         contents: write  # Set permissions to allow writes to the repository
     strategy:
         matrix:
-            tier: ${{ needs.get-changed-directories.outputs.tiers }}  # List of directories
+            tier: ${{ fromJSON(needs.get-changed-directories.outputs.tiers) }}  # List of directories
     steps:
       - uses: actions/checkout@v4
         with:
