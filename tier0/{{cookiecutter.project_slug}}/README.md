@@ -22,7 +22,7 @@ TODO: Recommended to include since this is an agency-led project -->
 
 ## Author / Team
 
-A full list of contributors can be found on [https://github.cms.gov/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors](https://github.cms.gov/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors).
+A full list of contributors can be found on [https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors](https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors).
 
 <!--
 ## Documentation Index
