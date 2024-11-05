@@ -20,9 +20,9 @@ TODO: Recommended to include since this is an agency-led project -->
 ### Team Mission
 TODO: Recommended to include since this is an agency-led project -->
 
-## Author / Team
+<!-- ## Core Team
 
-A full list of contributors can be found on [https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors](https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors).
+A full list of contributors can be found on [https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors](https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors). -->
 
 <!--
 ## Documentation Index
@@ -40,11 +40,11 @@ TODO: Using the "tree -d" command can be a helpful way to generate this informat
 **{list directories and descriptions}**
 -->
 
-## Running Locally
+<!--- 
+## Local Development
 
 ### Installation
-
-<!--- Example Install Instructions
+Example Install Instructions
 
 1. Clone the repo
 
