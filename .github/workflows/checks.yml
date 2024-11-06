@@ -49,6 +49,8 @@ jobs:
           #
           # Default: "[Repolinter] Open Source Policy Issues"
           output_name: '[Repolinter] Tier 3 Repository Hygiene Issue'
+          label_name: 'Tier 3 Remediation'
+          label_color: 'ff69b4'
 
           # The default token is the repolinter token for the DSACMS org
           # You can change it if needed.
