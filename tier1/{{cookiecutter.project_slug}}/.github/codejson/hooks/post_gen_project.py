@@ -23,8 +23,10 @@ def get_scc_labor_hours():
         try:
             #Run scc and load results into a dictionary
             #assuming we are in the .git directory of the repo
-            d = json.loads(subprocess.run(["scc","..", "--format","json2"],check=True, capture_output=True).stdout)
-            
+            cmd = ['scc', '..', '--format', 'json2', '--exclude-ext', "md",]
+
+            d = json.loads(subprocess.run(cmd,check=True, capture_output=True).stdout) 
+                       
             l_hours = d['estimatedScheduleMonths'] * 730.001
 
             return round(l_hours,2)
