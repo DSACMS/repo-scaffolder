@@ -34,7 +34,6 @@ This is a review process to approve CMS-developed software to be released open s
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
 
 
-
 ### State the Benefits of Open Sourcing the Project
 
 - [ ] **Cost Savings**
