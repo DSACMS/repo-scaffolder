@@ -21,6 +21,8 @@ This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS
 
 ## Contributors
 
+_In order to automatically update the MAINTAINERS.md, you must enter a secret into your Secrets and Variables under Actions within your repository settings. The name of the secret must be PUSH_TO_PROTECTED_BRANCH and the value must be a Personal Access Token with specific permissions. Please follow [this link](https://github.com/CasperWA/push-protected?tab=readme-ov-file#notes-on-token-and-user-permissions) for more information._
+
 Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COUNT END-->
 
 <!-- readme: contributors -start -->
