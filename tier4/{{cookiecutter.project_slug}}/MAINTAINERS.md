@@ -21,6 +21,8 @@ This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS
 
 ## Contributors
 
+<!-- In order to automatically update the MAINTAINERS.md, you must enter a secret into your Secrets and Variables under Actions within your repository settings. The name of the secret must be PUSH_TO_PROTECTED_BRANCH and the value must be a Personal Access Token with specific permissions. Please follow [this link](https://github.com/CasperWA/push-protected?tab=readme-ov-file#notes-on-token-and-user-permissions) for more information. -->
+
 Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COUNT END-->
 
 <!-- readme: contributors -start -->
@@ -33,13 +35,25 @@ Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COU
 
 ## Table of Contents
 
-* [Versioning](#versioning)
-  * [Breaking vs. non-breaking changes](#breaking-vs-non-breaking-changes) 
-  * [Ongoing version support](#ongoing-version-support)
-* [Release Process](#release-process)
-  * [Goals](#goals)
-  * [Schedule](#schedule)
-  * [Communication and Workflow](#communication-and-workflow)
+- [Maintainers](#maintainers)
+  - [Maintainers:](#maintainers-1)
+  - [Approvers:](#approvers)
+  - [Reviewers:](#reviewers)
+  - [Contributors](#contributors)
+- [Tier 4 Release Guidelines](#tier-4-release-guidelines)
+  - [Table of Contents](#table-of-contents)
+  - [Versioning](#versioning)
+    - [Breaking vs. non-breaking changes](#breaking-vs-non-breaking-changes)
+    - [Ongoing version support](#ongoing-version-support)
+  - [Release Process](#release-process)
+    - [Goals](#goals)
+    - [Schedule](#schedule)
+    - [Communication and Workflow](#communication-and-workflow)
+  - [Preparing a Release Candidate](#preparing-a-release-candidate)
+    - [Incorporating feedback from review](#incorporating-feedback-from-review)
+  - [Making a Release](#making-a-release)
+  - [Auto Changelog](#auto-changelog)
+  - [Hotfix Releases](#hotfix-releases)
 <!-- * [Beta Features](#beta-features) -->
 * [Preparing a Release Candidate](#preparing-a-release-candidate)
   * [Incorporating feedback from review](#incorporating-feedback-from-review)
