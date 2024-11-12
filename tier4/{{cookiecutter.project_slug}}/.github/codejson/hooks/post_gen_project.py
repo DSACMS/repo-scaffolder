@@ -23,7 +23,14 @@ def get_scc_labor_hours():
         try:
             #Run scc and load results into a dictionary
             #assuming we are in the .git directory of the repo
-            cmd = ['scc', '..', '--format', 'json2', '--exclude-ext', "md",]
+            cmd = ['scc', '..', '--format', 'json2', '--exclude-ext']
+
+            # Currently only supports specific extensions
+            extensions_to_exclude = [
+                "md"
+            ]
+
+            cmd.extend(extensions_to_exclude)
 
             d = json.loads(subprocess.run(cmd,check=True, capture_output=True).stdout)
                         
