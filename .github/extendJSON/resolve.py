@@ -1,5 +1,6 @@
 import sys
 import json
+import pydash
 from urllib.request import urlopen, Request
 
 def get_json_dict_from_url(url):
@@ -27,6 +28,8 @@ def resolve_extended_json_file(file_data_dict):
     del file_data_dict['extends']
 
     resolve = resolve_extended_json_file(superJsonDict)
+
+    pydash.merge(resolve, file_data_dict)
 
     resolve['rules'].update(file_data_dict)
     resolve['rules'].pop('axioms')
