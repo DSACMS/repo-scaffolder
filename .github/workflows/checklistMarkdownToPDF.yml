@@ -3,6 +3,8 @@ on:
     pull_request:
         types: [opened, synchronize]
     # Paths can be used to only trigger actions when you have edited checklist files
+        branches:
+        - 'checklists/**'
         paths:
         - 'tier*/checklist.md'
 
