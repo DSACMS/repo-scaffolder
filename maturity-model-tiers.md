@@ -60,7 +60,7 @@ This document outlines the maturity model tiers.
 | File                     | Tier 0 | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
 |--------------------------|--------|--------|--------|--------|--------|
 | LICENSE                  | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| SECURITY.md              | $\color{lightcoral}\large{\textsf{N}}$  | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| SECURITY.md              | $\color{blue}\large{\textsf{R}}$  | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
 | README.md                | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
 | CONTRIBUTING.md          | $\color{blue}\large{\textsf{R}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
 | MAINTAINERS.md           | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$  |
@@ -98,7 +98,7 @@ This document outlines the maturity model tiers.
     <tr>
       <td>SECURITY.md</td>
       <td>Security & Responsible Disclosure Policy</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>

@@ -23,8 +23,17 @@ def get_scc_labor_hours():
         try:
             #Run scc and load results into a dictionary
             #assuming we are in the .git directory of the repo
-            d = json.loads(subprocess.run(["scc","..", "--format","json2"],check=True, capture_output=True).stdout)
-            
+            cmd = ['scc', '..', '--format', 'json2', '--exclude-file']
+
+            # Currently only supports specific files
+            files_to_exclude = [
+                "checks.yml,auto-changelog.yml,contributors.yml,repoStructure.yml,code.json,checklist.md,checklist.pdf,README.md,CONTIRBUTING.md,LICENSE,MAINTAINERS.md,repolinter.json,SECURITY.md,CODE_OF_CONDUCT.md,CODEOWNERS.md,COMMUNITY_GUIDELINES.md,GOVERANCE.md"
+            ]
+
+            cmd.extend(files_to_exclude)
+
+            d = json.loads(subprocess.run(cmd,check=True, capture_output=True).stdout)
+                        
             l_hours = d['estimatedScheduleMonths'] * 730.001
 
             return round(l_hours,2)
@@ -37,10 +46,17 @@ def get_scc_labor_hours():
 
         #Otherwise just use previous value as a default value.
         return None
-    
+
 def prompt_exemption_text(exemptionType):
     print(f"You have selected {exemptionType} for your Usage Type.")
     return input("Please provide a one or two sentence justification for the exemption used: ")
+
+def format_multi_select_fields(text):
+    new_text = text.split(",")
+
+    new_text = [text.strip() for text in new_text]
+
+    return new_text
 
 def update_code_json(json_file_path):
     # Read the JSON 
@@ -50,17 +66,24 @@ def update_code_json(json_file_path):
     # Add date_information and labor hours to the JSON
     data['date'] = get_date_fields()
 
+    # Calculate labor hours
     hours = get_scc_labor_hours()
     if hours:
         data['laborHours'] = hours
     else:
         data['laborHours'] = None
 
+    # Check if usageType is an exemption
     if data['permissions']['usageType'].startswith('exempt'):
         exemption_text = prompt_exemption_text(data['permissions']['usageType'])
         data['permissions']['exemptionText'] = exemption_text
     else:
         del data['permissions']['exemptionText']
+
+    # Format multi-select options
+    data['categories'] = format_multi_select_fields(data['categories'][0])
+    data['languages'] = format_multi_select_fields(data['languages'][0])
+    data['tags'] = format_multi_select_fields(data['tags'][0])
 
     # Update the JSON 
     with open(json_file_path, 'w') as file:

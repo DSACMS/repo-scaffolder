@@ -3,8 +3,7 @@
 
 ### Instructions
 
-This is a review process to approve CMS-developed software to be released open source at [github.cms.gov](https://github.cms.gov/).
-If you would like your repository to be released, please complete the following steps.
+This is a review process to approve CMS-developed software to be released open source at [github.cms.gov](https://github.cms.gov/). If you would like your repository to be released, please complete the following steps.
 
 [Instructions](#instructions)
 
@@ -33,7 +32,6 @@ If you would like your repository to be released, please complete the following 
 [Sign off on risk acceptance of open-sourcing the software product](#sign-off-on-risk-acceptance-of-open-sourcing-the-software-product)
 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
-
 
 
 ### State the Benefits of Open Sourcing the Project
