@@ -322,6 +322,30 @@ The project should include the following files and sections [(link to templates)
 
     *Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)*
 
+#### Communications Style Guide
+
+As you are writing content about the repository, consider the following when describing the project, the agency, and how work is done:
+
+-   **Focus on solutions, not problems**
+_Rather than describing the negatives and shortcomings of an existing project, process, or group, focus on highlighting the benefits, outcomes, and positive impacts of the solution. Be constructive and accentuate the positive._
+    
+-   **Use Plain Language**
+_Be clear and concise when explaining concepts. Avoid jargon unless it is necessary and well-defined. Use active voice to be clearer and more engaging._
+    
+-   **Focus on the audience**
+_Write for a broad audience, ensuring that developers, stakeholders, end-users, and viewers of all skill levels can understand and engage with the content._
+    
+Please refer to the style guides below for additional tips and guidance:
+
+-   CMS Resources
+    -   [Guidelines for Effective Writing](https://www.cms.gov/training-education/learn/find-tools-to-help-you-help-others/guidelines-for-effective-writing)
+    -   [Tone of Voice section in Branding Guide](https://www.cms.gov/About-CMS/Agency-Information/CMS-Brand-Identity/Downloads/Branding-Guide.pdf)
+    -   [2020 Plain Writing Report](https://www.medicare.gov/media/2020-Annual-Plain-Writing-Report.pdf)
+        
+-   [18F Style Guide](https://guides.18f.gov/content-guide/our-style/) 
+    
+-   [UK Content Style Guide](https://design.homeoffice.gov.uk/content-style-guide/designing-for-limited-english)
+
 #### Results
 *Insert Review Here*
 
