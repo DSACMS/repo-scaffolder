@@ -4,7 +4,7 @@ on:
         types: [opened, synchronize]
     # Paths can be used to only trigger actions when you have edited checklist files
         branches:
-        - 'checklists/**'
+        - 'dev'
         paths:
         - 'tier*/checklist.md'
 
