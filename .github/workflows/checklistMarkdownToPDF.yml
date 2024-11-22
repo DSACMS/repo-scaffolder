@@ -6,7 +6,7 @@ on:
         branches:
         - 'dev'
         paths:
-        - 'tier*/*/checklist.md'
+        - 'tier*/*checklist.md'
 
 jobs:
   get-changed-directories:
