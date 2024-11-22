@@ -31,7 +31,8 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
           # Obtain changed tier directories and format into array
-          DIRS=$(echo "$ALL_CHANGED_FILES" | grep -oE 'tier[^ /]*' | sed 's/^/"/; s/$/"/' | paste -sd, -)
+          DIRS=$(echo "$ALL_CHANGED_FILES" | grep -oE 'tier[1-4]'| grep -oE 'tier[^ /]*' | sed 's/^/"/; s/$/"/' | paste -sd, -)
+          echo "$DIRS"
 
           # Output the array
           TIER_DIRS="[$DIRS]"
