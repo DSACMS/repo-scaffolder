@@ -45,6 +45,15 @@ this question - `"project_name": "My Project",`.  See the [cookiecutter docs](ht
 for more information.
 
 ## Repolinter
+
+Repolinter is a tool maintained by the [TODOGroup](https://todogroup.org/) for checking repositories for common open source issues, using pre-defined rulesets. This can be run stand-alone as a script, pre-commit in your IDE, or post-commit or within CI/CD systems!
+
+✔    =  Pass
+
+✖    =  Fail
+
+⚠  =  Warn
+
 Tiers of level 1 thru 4 have repolinter.json file in their projects. Tier1 has detailed configuration of all the rules. All the other tiers extends their previous tiers and has only the `rule` and the `level` configuration.
 
 Sample commands to run with the given repolinter.json path:

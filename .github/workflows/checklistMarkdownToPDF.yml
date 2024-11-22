@@ -4,7 +4,7 @@ on:
         types: [opened, synchronize]
     # Paths can be used to only trigger actions when you have edited checklist files
         branches:
-        - 'checklists/**'
+        - 'dev'
         paths:
         - 'tier*/checklist.md'
 
@@ -24,13 +24,15 @@ jobs:
         uses: tj-actions/changed-files@v45
         with:
           dir_names: "true"
+          dir_names_include_files: 'checklist.md'
       - name: List all changed tier directories
         id: list-dirs
         env:
           ALL_CHANGED_FILES: ${{ steps.get-dirs.outputs.all_changed_files }}
         run: |
           # Obtain changed tier directories and format into array
-          DIRS=$(echo "$ALL_CHANGED_FILES" | grep -oE 'tier[^ ]*' | sed 's/^/"/; s/$/"/' | paste -sd, -)
+          DIRS=$(echo "$ALL_CHANGED_FILES" | grep -oE 'tier[1-4]'| grep -oE 'tier[^ /]*' | sort -u | sed 's/^/"/; s/$/"/' | paste -sd, -)
+          echo "$DIRS"
 
           # Output the array
           TIER_DIRS="[$DIRS]"
