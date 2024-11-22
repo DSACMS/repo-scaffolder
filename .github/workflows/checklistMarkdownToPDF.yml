@@ -24,7 +24,7 @@ jobs:
         uses: tj-actions/changed-files@v45
         with:
           dir_names: "true"
-          dir_names_include_files: 'tier*/checklist.md'
+          dir_names_include_files: 'checklist.md'
       - name: List all changed tier directories
         id: list-dirs
         env:
