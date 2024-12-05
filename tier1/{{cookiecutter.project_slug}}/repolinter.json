@@ -15,7 +15,7 @@
             "globsAny": ["{docs/,.github/,}LICENSE*"],
             "nocase": true,
             "file-name": "LICENSE",
-            "file-content": "This project is licensed under..."
+            "file-content": "#License \n Remove this line and attach the license that is being used for this project. For helping choosing a license, visit this website: https://choosealicense.com/ \n"
           }
         }
       },
@@ -26,7 +26,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}SECURITY.md"],
             "file-name": "SECURITY.md",
-            "file-content": "Security policy and procedures..."
+            "file-content": "#Security and Responsible Disclosure Policy \n"
           }
         }
       },
@@ -38,7 +38,7 @@
               "globsAny": ["README.md"],
               "nocase": true,
               "file-name": "README.md",
-              "file-content": "Project documentation and overview..."
+              "file-content": "#Replace with Project Name \n"
           }
         }
       },
@@ -50,7 +50,7 @@
             "globsAny": ["{docs/,.github/,}CONTRIBUTING.md"],
             "nocase": true,
             "file-name": "CONTRIBUTING.md",
-            "file-content": "Guidelines for contributing..."
+            "file-content": "#How to Contribute \n <!-- Basic instructions about where to send patches, check out source code, and get development support.--> \n We're so thankful you're considering contributing to an [open source project of the U.S. government](https://code.gov/)! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We appreciate all friendly contributions. \n We encourage you to read this project's CONTRIBUTING policy (you are here), its [LICENSE](LICENSE.md), and its [README](README.md). \n"
           }
         }
       },
@@ -61,7 +61,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}MAINTAINERS.md"],
             "file-name": "MAINTAINERS.md",
-            "file-content": "List of project maintainers..."
+            "file-content": "#Maintainers \n <!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.--> \n This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS.md) for list of reviewers for different parts of the codebase. Team members include: \n"
           }
         }
       },
@@ -72,7 +72,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}CODEOWNERS.md"],
             "file-name": "CODEOWNERS.md",
-            "file-content": "Code ownership assignments..."
+            "file-content": "#Code Owners \n <!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. List them by GitHub Username--> \n"
           }
         }
       },
@@ -83,7 +83,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}GOVERNANCE.md"],
             "file-name": "GOVERNANCE.md",
-            "file-content": "Project governance structure..."
+            "file-content": "#Governance \n <!-- TODO: Starting at Tier 3 GOVERNANCE.md has basic language about early community governance, how the project make decisions, and how contributors are elevated through the leadership process if any (e.g. joining teams, getting maintainer status, etc...)--> \n This project is governed by our [Community Guidelines](COMMUNITY_GUIDELINES.md) and [Code of Conduct](CODE_OF_CONDUCT.md). \n"
           }
         }
       },
@@ -94,7 +94,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}COMMUNITY_GUIDELINES.md"],
             "file-name": "COMMUNITY_GUIDELINES.md",
-            "file-content": "Community participation guidelines..."
+            "file-content": "#Open Source Community Guidelines \n This document contains principles and guidelines for participating in the {name_of_project_here} open source community. \n"
           }
         }
       },
@@ -105,7 +105,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}CODE_OF_CONDUCT.md"],
             "file-name": "CODE_OF_CONDUCT.md",
-            "file-content": "Expected conduct guidelines..."
+            "file-content": "#Code of Conduct \n"
           }
         }
       },
@@ -118,7 +118,7 @@
             "content": "license",
             "flags": "i",
             "file-name": "LICENSE",
-            "file-content": "MIT License\n\nCopyright (c) [year] [fullname]\n\nPermission is hereby granted..."
+            "file-content": "Attach the license that is being used for this project. For helping choosing a license, visit this website: https://choosealicense.com/ \n"
           }
         }
       },
@@ -131,7 +131,7 @@
             "content": "Security and Responsible Disclosure Policy",
             "flags": "i",
             "file-name": "SECURITY.md",
-            "file-content": "\n## Security and Responsible Disclosure Policy\nDetails about security vulnerabilities and how to report them..."
+            "file-content": "The Centers for Medicare & Medicaid Services is committed to ensuring the security of the American public by protecting their information from unwarranted disclosure. We want security researchers to feel comfortable reporting vulnerabilities they have discovered so we can fix them and keep our users safe. We developed our disclosure policy to reflect our values and uphold our sense of responsibility to security researchers who share their expertise with us in good faith. \n *Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days. \n Review the HHS Disclosure Policy and websites in scope: \n [https://www.hhs.gov/vulnerability-disclosure-policy/index.html](https://www.hhs.gov/vulnerability-disclosure-policy/index.html). \n This policy describes *what systems and types of research* are covered under this policy, *how to send* us vulnerability reports, and *how long* we ask security researchers to wait before publicly disclosing vulnerabilities. \n"
           }
         }
       },
@@ -144,7 +144,7 @@
             "content": "About the Project",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## About the Project\nA description of the project's purpose and functionality..."
+            "file-content": "## About the Project\n <!-- Provide a description of the project's purpose and functionality. --> \n"
           }
         }
       },
@@ -157,7 +157,7 @@
             "content": "Project Vision",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Project Vision\nThe long-term goals and aspirations for this project..."
+            "file-content": "## Project Vision\n <!-- Provide the long-term goals and aspirations for this project. --> \n"
           }
         }
       },
@@ -170,7 +170,7 @@
             "content": "Project Mission",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Project Mission\nThe core mission and objectives driving this project..."
+            "file-content": "## Project Mission\n <!-- Provide the core mission and objectives driving this project. --> \n"
           }
         }
       },
@@ -183,7 +183,7 @@
                   "content": "Agency Mission",
                   "flags": "i",
                   "file-name": "README.md",
-                  "file-content": "\n## Agency Mission\nThe mission of our agency and how this project aligns..."
+                  "file-content": "## Agency Mission\n <!-- Provide the mission of the agency and how this project aligns. --> \n"
               }
           }
       },
@@ -196,7 +196,7 @@
             "content": "Team Mission",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Team Mission\nOur team's goals and how we work together..."
+            "file-content": "## Team Mission\n <!-- Provide the team's mission and how they work together. --> \n"
           }
         }
       },
@@ -209,7 +209,7 @@
             "content": "Core Team",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Core Team\nKey members and contributors of the project..."
+            "file-content": "## Core Team\n An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAINERS.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles. \n"
           }
         }
       },
@@ -222,7 +222,7 @@
             "content": "Documentation Index",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Documentation Index\nLinks to all project documentation..."
+            "file-content": "## Documentation Index\n <!-- TODO: This is a like a 'table of contents' for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide 'bookmark' or 'anchor' links to specific sections of your file to be referenced in tickets, docs, or other communication channels. --> \n **{list of .md at top directory and descriptions}** \n"
           }
         }
       },
@@ -235,7 +235,7 @@
             "content": "Repository Structure",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Repository Structure\nOverview of key directories and files..."
+            "file-content": "## Repository Structure\n <!-- TODO: Using the 'tree -d' command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time. --> \n <!--TREE START--><!--TREE END--> \n **{list directories and descriptions}** \n"
           }
         }
       },
@@ -248,7 +248,7 @@
             "content": "Development and Software Delivery Lifecycle",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Development and Software Delivery Lifecycle\nStages from development to deployment..."
+            "file-content": "## Development and Software Delivery Lifecycle\n The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that external contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md). \n"
           }
         }
       },
@@ -261,7 +261,7 @@
             "content": "Local Development",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Local Development\nSteps to set up and run the project locally..."
+            "file-content": "## Local Development\n <!--- TODO - with example below: \n This project is monorepo with several apps. Please see the [api](./api/README.md) and [frontend](./frontend/README.md) READMEs for information on spinning up those projects locally. Also see the project [documentation](./documentation) for more info. --> \n"
           }
         }
       },
@@ -274,7 +274,7 @@
             "content": "Coding Style and Linters",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Coding Style and Linters\nCoding standards and tools for maintaining code quality..."
+            "file-content": "## Coding Style and Linters\n <!-- TODO - Add the repo's linting and code style guidelines --> \n Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting. \n"
           }
         }
       },
@@ -287,7 +287,7 @@
             "content": "Branching Model",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Branching Model\nGit workflow and branch naming conventions..."
+            "file-content": "## Branching Model\n <!-- TODO - with example below:\n This project follows [trunk-based development](https://trunkbaseddevelopment.com/), which means:\n\n* Make small changes in [short-lived feature branches](https://trunkbaseddevelopment.com/short-lived-feature-branches/) and merge to `main` frequently.\n* Be open to submitting multiple small pull requests for a single ticket (i.e. reference the same ticket across multiple pull requests).\n* Treat each change you merge to `main` as immediately deployable to production. Do not merge changes that depend on subsequent changes you plan to make, even if you plan to make those changes shortly.\n* Ticket any unfinished or partially finished work.\n* Tests should be written for changes introduced, and adhere to the text percentage threshold determined by the project.\n\nThis project uses **continuous deployment** using [Github Actions](https://github.com/features/actions) which is configured in the [./github/workflows](.github/workflows) directory.\n\nPull-requests are merged to `main` and the changes are immediately deployed to the development environment. Releases are created to push changes to production.--> \n"
           }
         }
       },
@@ -300,7 +300,7 @@
             "content": "Contributing",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Contributing\nGuidelines for contributing to the project..."
+            "file-content": "## Contributing\n Thank you for considering contributing to an Open Source project of the US Government! For more information about our contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md). \n"
           }
         }
       },
@@ -313,7 +313,7 @@
             "content": "Codeowners",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Codeowners\nList of maintainers responsible for different parts..."
+            "file-content": "## Codeowners\n The contents of this repository are managed by **{responsible organization(s)}**. Those responsible for the code and documentation in this repository can be found in [CODEOWNERS.md](CODEOWNERS.md). \n"
           }
         }
       },
@@ -326,7 +326,7 @@
             "content": "Community",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Community\nInformation about our community and how to get involved..."
+            "file-content": "## Community\n The {name_of_project_here} team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.\n\nWe know that we can learn from a wide variety of communities, including those who will use or will be impacted by the tool, who are experts in technology, or who have experience with similar technologies deployed in other spaces. We are dedicated to creating forums for continuous conversation and feedback to help shape the design and development of the tool.\n\nWe also recognize capacity building as a key part of involving a diverse open source community. We are doing our best to use accessible language, provide technical and process documents, and offer support to community members with a wide variety of backgrounds and skillsets. \n"
           }
         }
       },
@@ -339,7 +339,7 @@
             "content": "Community Guidelines",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Community Guidelines\nStandards for community interaction and behavior..."
+            "file-content": "## Community Guidelines\n Principles and guidelines for participating in our open source community are can be found in [COMMUNITY_GUIDELINES.md](COMMUNITY_GUIDELINES.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events. \n"
           }
         }
       },
@@ -352,7 +352,7 @@
             "content": "Governance",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Governance\nProject governance structure and decision-making process..."
+            "file-content": "## Governance\n <!-- TODO: Make a short statement about how the project is governed (formally, or informally) and link to the GOVERNANCE.md file.-->\nInformation about how the {{ cookiecutter.project_name }} community is governed may be found in [GOVERNANCE.md](GOVERNANCE.md). \n"
           }
         }
       },
@@ -365,7 +365,7 @@
             "content": "Feedback",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Feedback\nHow to provide feedback and suggestions..."
+            "file-content": "## Feedback\n If you have ideas for how we can improve or add to our capacity building efforts and methods for welcoming people into our community, please let us know at **{contact_email}**. If you would like to comment on the tool itself, please let us know by filing an **issue on our GitHub repository.** \n"
           }
         }
       },
@@ -378,7 +378,7 @@
             "content": "Glossary",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Glossary\nDefinitions of key terms and concepts..."
+            "file-content": "## Glossary\n Information about terminology and acronyms used in this documentation may be found in [GLOSSARY.md](GLOSSARY.md). \n"
           }
         }
       },
@@ -391,7 +391,7 @@
             "content": "Policies",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Policies\nProject policies and guidelines..."
+            "file-content": "## Policies\n"
           }
         }
       },
@@ -404,7 +404,7 @@
             "content": "Open Source Policy",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Open Source Policy\nGuidelines for open source contributions..."
+            "file-content": "### Open Source Policy\n We adhere to the [CMS Open Source Policy](https://github.com/CMSGov/cms-open-source-policy). If you have any questions, just [shoot us an email](mailto:opensource@cms.hhs.gov). \n"
           }
         }
       },
@@ -417,7 +417,7 @@
             "content": "Security and Responsible Disclosure Policy",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Security and Responsible Disclosure Policy\nHow to report..."
+            "file-content": "### Security and Responsible Disclosure Policy\n *Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.\nFor more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md). \n"
           }
         }
       },
@@ -430,7 +430,20 @@
             "content": "Public domain",
             "flags": "i",
             "file-name": "README.md",
-            "file-content": "\n## Public Domain\nInformation about public domain status..."
+            "file-content": "## Public Domain\n This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/) as indicated in [LICENSE](LICENSE).\nAll contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.\n"
+          }
+        }
+      },
+      "readme-contains-sbom": {
+        "level": "error",
+        "rule": {
+        "type": "file-contents",
+        "options": {
+          "globsAll": ["README.md"],
+          "content": "Software Bill of Materials",
+          "flags": "i",
+          "file-name": "README.md",
+          "file-content": "### Software Bill of Materials (SBOM)\nA Software Bill of Materials (SBOM) is a formal record containing the details and supply chain relationships of various components used in building software.\nIn the spirit of [Executive Order 14028 - Improving the Nation's Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/network/dependencies.\nFor more information and resources about SBOMs, visit: https://www.cisa.gov/sbom."
           }
         }
       },
@@ -443,7 +456,7 @@
             "content": "How to Contribute",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## How to Contribute\nSteps for making contributions to the project..."
+            "file-content": "# How to Contribute\n <!-- Basic instructions about where to send patches, check out source code, and get development support.-->\nWe're so thankful you're considering contributing to an [open source project of the U.S. government](https://code.gov/)! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We appreciate all friendly contributions.\n \n We encourage you to read this project's CONTRIBUTING policy (you are here), its [LICENSE](LICENSE.md), and its [README](README.md). \n"
           }
         }
       },
@@ -456,7 +469,7 @@
             "content": "Getting Started",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Getting Started\nInitial setup steps for contributors..."
+            "file-content": "## Getting Started\n <!--- TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.--> \n"
           }
         }
       },
@@ -469,7 +482,7 @@
             "content": "Team Specific Guidelines",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Team Specific Guidelines\nTeam-specific contribution requirements..."
+            "file-content": "### Team Specific Guidelines\n <!-- TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the MAINTAINERS.md file for further details.--> \n"
           }
         }
       },
@@ -482,7 +495,7 @@
             "content": "Building dependencies",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Building Dependencies\nSteps to build project dependencies..."
+            "file-content": "### Building Dependencies\n <!--- TODO: This step is often skipped, so don't forget to include the steps needed to install on your platform. If you project can be multi-platform, this is an excellent place for first time contributors to send patches!--> \n"
           }
         }
       },
@@ -495,7 +508,7 @@
             "content": "Building the Project",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Building the Project\nSteps to build and test the project..."
+            "file-content": "### Building the Project\n <!--- TODO: Be sure to include build scripts and instructions, not just the source code itself! -->\n"
           }
         }
       },
@@ -508,7 +521,7 @@
             "content": "Workflow and Branching",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Workflow and Branching\nGit workflow guidelines and branch conventions..."
+            "file-content": "### Workflow and Branching\n <!--- TODO: Workflow Example\nWe follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)\n1.  Fork the project\n2.  Check out the `main` branch\n3.  Create a feature branch\n4.  Write code and tests for your change\n5.  From your branch, make a pull request against `{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/main`\n6.  Work with repo maintainers to get your change reviewed\n7.  Wait for your change to be pulled into `{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/main`\n8.  Delete your feature branch\n-->\n"
           }
         }
       },
@@ -521,7 +534,7 @@
             "content": "Testing Conventions",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Testing Conventions\nTesting requirements and guidelines..."
+            "file-content": "### Testing Conventions\n <!--- TODO: Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. --> \n"
           }
         }
       },
@@ -534,7 +547,7 @@
             "content": "Coding Style and Linters",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Coding Style and Linters\nCode formatting and linting requirements..."
+            "file-content": "### Coding Style and Linters\n <!--- TODO: HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for python, eslint for JavaScript, etc...)\n1. Mention any style guides you adhere to (e.g. pep8, etc...)\n2. Mention any linters your project uses (e.g. flake8, jslint, etc...)\n3. Mention any naming conventions your project uses (e.g. Semantic Versioning, CamelCasing, etc...)\n4. Mention any other content guidelines the project adheres to (e.g. plainlanguage.gov, etc...)\n--> \n"
           }
         }
       },
@@ -547,7 +560,7 @@
             "content": "ISSUE_TEMPLATE.md | Issues",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Writing Issues\nGuidelines for creating effective issue reports..."
+            "file-content": "### Writing Issues\n <!--- TODO: Example Issue Guides\n When creating an issue please try to adhere to the following format:\n module-name: One line summary of the issue (less than 72 characters)\n ### Expected behavior\n As concisely as possible, describe the expected behavior.\n ### Actual behavior\n As concisely as possible, describe the observed behavior.\n ### Steps to reproduce the behavior\n List all relevant steps to reproduce the observed behavior.\n see our .github/ISSUE_TEMPLATE.md for more examples.\n -->\n"
           }
         }
       },
@@ -560,7 +573,7 @@
             "content": "Writing Pull Requests",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Writing Pull Requests\nGuidelines for submitting pull requests..."
+            "file-content": "### Writing Pull Requests\n <!-- TODO: Make a brief statement about where to file pull/merge requests, and conventions for doing so. Link to PULL_REQUEST_TEMPLATE.md file.\n Comments should be formatted to a width no greater than 80 columns.\n Files should be exempt of trailing spaces.\n We adhere to a specific format for commit messages. Please write your commit messages along these guidelines. Please keep the line width no greater than 80 columns (You can use `fmt -n -p -w 80` to accomplish this).\n module-name: One line description of your change (less than 72 characters)\n Problem\n Explain the context and why you're making that change. What is the problem you're trying to solve? In some cases there is not a problem and this can be thought of being the motivation for your change.\n Solution\n Describe the modifications you've done.\n Result\n What will change as a result of your pull request? Note that sometimes this section is unnecessary because it is self-explanatory based on the solution.\n Some important notes regarding the summary line:\n * Describe what was done; not the result\n * Use the active voice\n * Use the present tense\n * Capitalize properly\n * Do not end in a period — this is a title/subject\n * Prefix the subject with its scope\n see our .github/PULL_REQUEST_TEMPLATE.md for more examples.\n -->\n"
           }
         }
       },
@@ -573,7 +586,7 @@
             "content": "Reviewing Pull Requests",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Reviewing Pull Requests\nGuidelines for reviewing contributions..."
+            "file-content": "### Reviewing Pull Requests\n <!--- TODO: Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to MAINTAINERS.md can help.\n Code Review Example\n The repository on GitHub is kept in sync with an internal repository at github.cms.gov. For the most part this process should be transparent to the project users, but it does have some implications for how pull requests are merged into the codebase.\n When you submit a pull request on GitHub, it will be reviewed by the project community (both inside and outside of github.cms.gov), and once the changes are approved, your commits will be brought into github.cms.gov's internal system for additional testing. Once the changes are merged internally, they will be pushed back to GitHub with the next sync.\n This process means that the pull request will not be merged in the usual way. Instead a member of the project team will post a message in the pull request thread when your changes have made their way back to GitHub, and the pull request will be closed.\n The changes in the pull request will be collapsed into a single commit, but the authorship metadata will be preserved.\n -->\n"
           }
         }
       },
@@ -586,7 +599,7 @@
             "content": "Shipping Releases",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Shipping Releases\nProcess for creating and publishing releases..."
+            "file-content": "## Shipping Releases\n <!-- TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so? --> \n"
           }
         }
       },
@@ -599,7 +612,7 @@
             "content": "Documentation",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Documentation\nGuidelines for writing and updating documentation..."
+            "file-content": "## Documentation\n <!-- TODO: Documentation Example\n We also welcome improvements to the project documentation or to the existing docs. Please file an [issue](https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/issues).\n --> \n"
             }
         }
       },
@@ -612,7 +625,7 @@
             "content": "Policies",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Policies\nProject policies for contributors..."
+            "file-content": "## Policies\n"
           }
         }
       },
@@ -625,7 +638,7 @@
             "content": "Open Source Policy",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Open Source Policy\nOpen source guidelines and requirements..."
+            "file-content": "### Open Source Policy\n We adhere to the [CMS Open Source Policy](https://github.com/CMSGov/cms-open-source-policy). If you have any questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).\n"
           }
         }
       },
@@ -638,7 +651,7 @@
             "content": "Security and Responsible Disclosure Policy",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Security and Responsible Disclosure Policy\nGuidelines for reporting security issues..."
+            "file-content": "### Security and Responsible Disclosure Policy\n *Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.\n For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).\n"
           }
         }
       },
@@ -651,7 +664,7 @@
             "content": "Public domain",
             "flags": "i",
             "file-name": "CONTRIBUTING.md",
-            "file-content": "\n## Public Domain\nInformation about public domain status..."
+            "file-content": "## Public Domain\n This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/) as indicated in [LICENSE](LICENSE).\n All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.\n"
           }
         }
       },
@@ -664,7 +677,7 @@
             "content": "Maintainers",
             "flags": "i",
             "file-name": "MAINTAINERS.md",
-            "file-content": "\n## Maintainers\nList of project maintainers and responsibilities..."
+            "file-content": "## Maintainers\n <!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. -->\n This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS.md) for list of reviewers for different parts of the codebase. Team members include:\n"
           }
         }
       },
@@ -677,7 +690,7 @@
             "content": "Maintainers:",
             "flags": "i",
             "file-name": "MAINTAINERS.md",
-            "file-content": "\n## Maintainers:\nCurrent project maintainers and their roles..."
+            "file-content": "## Maintainers:\n<!-- TODO: What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams. -->\n - \n"
           }
         }
       },
@@ -690,7 +703,7 @@
             "content": "Approvers:",
             "flags": "i",
             "file-name": "MAINTAINERS.md",
-            "file-content": "\n## Approvers:\nList of people who can approve changes..."
+            "file-content": "## Approvers:\n - \n"
           }
         }
       },
@@ -703,7 +716,7 @@
             "content": "Reviewers:",
             "flags": "i",
             "file-name": "MAINTAINERS.md",
-            "file-content": "\n## Reviewers:\nList of designated code reviewers..."
+            "file-content": "## Reviewers:\n - \n\n| Roles        | Responsibilities                          | Requirements                                     | Defined by                              |\n| -------------|:-----------------------------------------|:-----------------------------------------------|:---------------------------------------|\n| member       | active contributor in the community       | multiple contributions to the project.         | PROJECT GitHub org Committer Team      |\n| reviewer     | review contributions from other members   | history of review and authorship in a sub-project | MAINTAINERS file reviewer entry, and GitHub Org Triage Team |\n| approver     | approve accepting contributions           | highly experienced and active reviewer + contributor to a sub-project | MAINTAINERS file approver entry and GitHub Triage Team |\n| lead         | set direction and priorities for a sub-project | demonstrated responsibility and excellent technical judgement for the sub-project | MAINTAINERS file owner entry and GitHub Org Admin Team |\n"
           }
         }
       },
@@ -716,7 +729,7 @@
             "content": "Governance",
             "flags": "i",
             "file-name": "GOVERNANCE.md",
-            "file-content": "\n## Governance\nProject governance structure and processes..."
+            "file-content": "#Governance \n <!-- TODO: Starting at Tier 3 GOVERNANCE.md has basic language about early community governance, how the project make decisions, and how contributors are elevated through the leadership process if any (e.g. joining teams, getting maintainer status, etc...)--> \n This project is governed by our [Community Guidelines](COMMUNITY_GUIDELINES.md) and [Code of Conduct](CODE_OF_CONDUCT.md). \n"
           }
         }
       },
@@ -729,7 +742,7 @@
             "content": "Code Owners",
             "flags": "i",
             "file-name": "CODEOWNERS.md",
-            "file-content": "\n## Code Owners\nList of code owners and their areas..."
+            "file-content": "#Code Owners \n <!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. List them by GitHub Username--> \n"
           }
         }
       },
@@ -742,7 +755,7 @@
             "content": "documentation | frontend | backend | Repo Domains",
             "flags": "i",
             "file-name": "CODEOWNERS.md",
-            "file-content": "\n## Repository Domains\nBreakdown of different project areas..."
+            "file-content": "## Repository Domains\n <!--\nThe Repo Domains section of your CODEOWNERS.md file helps manage code review responsibilities efficiently. Each domain represents a different aspect of the repository, such as documentation, frontend, backend, DevOps, testing, etc. In this section, list each domain and assign the appropriate GitHub usernames or teams responsible for that domain. This ensures that pull requests (PRs) are reviewed by the right experts, maintaining high code quality and relevance.\nFor example:\n/docs/ @doc-team @johnsmith @janedoe\n/frontend/ @frontend-team @alice @bob\n/backend/ @backend-team @charlie @dana\nFurthermore, GitHub teams are a good feature for managing groups of contributors who need to be notified about specific domains within a repository. By creating and using GitHub teams, you can allow contributors to ping multiple relevant experts simultaneously.\nTo set up GitHub teams:\n- Navigate to your organization's settings and select 'Teams'.\n- Create a new team for each domain, such as @frontend-team, @backend-team, or @doc-team.\n- Add the relevant members to each team. Ensure that the team includes all the individuals who should be notified about PRs in their domain.\n- When filling out the Repo Domains section in your CODEOWNERS.md file, use the team handles instead of or alongside individual usernames. This way, when a contributor opens a PR affecting a specific domain, they can simply tag the team, and every member of that team will be notified.\n--> \n"
           }
         }
       },
@@ -755,7 +768,7 @@
             "content": "Principles",
             "flags": "i",
             "file-name": "COMMUNITY_GUIDELINES.md",
-            "file-content": "\n## Principles\nCore principles guiding our community..."
+            "file-content": "## Principles\n These principles guide our data, product, and process decisions, architecture, and approach.\n- Open means transparent and participatory.\n- We take a modular and modern approach to software development.\n- We build open-source software and open-source process.\n- We value ease of implementation.\n- Fostering community includes building capacity and making our software and processes accessible to participants with diverse backgrounds and skillsets.\n- Data (and data science) is as important as software and process. We build open data sets where possible.\n- We strive for transparency for algorithms and places we might be introducing bias. \n"
           }
         }
       },
@@ -768,7 +781,7 @@
             "content": "Community Guidelines",
             "flags": "i",
             "file-name": "COMMUNITY_GUIDELINES.md",
-            "file-content": "\n## Community Guidelines\nRules and expectations for community members..."
+            "file-content": "## Community Guidelines\n All community members are expected to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md).\nInformation on contributing to this repository is available in our [Contributing file](CONTRIBUTING.md).\nWhen participating in {{ cookiecutter.project_name }} open source community conversations and spaces, we ask individuals to follow the following guidelines:\n- When joining a conversation for the first time, please introduce yourself by providing a brief intro that includes:\n  - your related organization (if applicable)\n  - your pronouns\n  - your superpower, and how you hope to use it for {{ cookiecutter.project_name }}\n- Embrace a culture of learning, and educate each other. We are all entering this conversation from different starting points and with different backgrounds. There are no dumb questions.\n- Take space and give space. We strive to create an equitable environment in which all are welcome and able to participate. We hope individuals feel comfortable voicing their opinions and providing contributions and will do our best to recognize and make space for individuals who may be struggling to find space here. Likewise, we expect individuals to recognize when they are taking up significant space and take a step back to allow room for others.\n<!-- TODO: Add if your repo has a community chat - Be present when joining synchronous conversations such as our community chat. Why be here if you're not going to *be here*? -->\n- Be respectful.\n- Default to positive. Assume others' contributions are legitimate and valuable and that they are made with good intention.\n"
           }
         }
       },
@@ -781,7 +794,7 @@
             "content": "Acknowledgements",
             "flags": "i",
             "file-name": "COMMUNITY_GUIDELINES.md",
-            "file-content": "\n## Acknowledgements\nRecognition of community contributors..."
+            "file-content": "## Acknowledgements\n This COMMUNITY_GUIDELINES.md was originally forked from the [United States Digital Service](https://usds.gov) [Justice40](https://thejustice40.com) open source [repository](https://github.com/usds/justice40-tool), and we would like to acknowledge and thank the community for their contributions.\n"
           }
         }
       },
@@ -794,7 +807,7 @@
             "content": "Contributor Code of Conduct",
             "flags": "i",
             "file-name": "CODE_OF_CONDUCT.md",
-            "file-content": "\n## Contributor Code of Conduct\nExpectations for contributor behavior..."
+            "file-content": "\n## Contributor Code of Conduct\n As contributors and maintainers of this project, we pledge to respect all people who contribute through reporting issues, posting feature requests, updating documentation, submitting pull requests or patches, and other activities. \n We are committed to making participation in this project a harassment-free experience for everyone, regardless of the level of experience, gender, gender identity, expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. \n Examples of unacceptable behavior by participants include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct. \n Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this Code of Conduct. \n Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an issue or contacting one or more of the project maintainers at opensource@cms.hhs.gov. \n This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org), version 1.0.0, available at [http://contributor-covenant.org/version/1/0/0/](http://contributor-covenant.org/version/1/0/0/)"
           }
         }
       },
@@ -807,7 +820,7 @@
             "content": "Acknowledgements",
             "flags": "i",
             "file-name": "CODE_OF_CONDUCT.md",
-            "file-content": "\n## Acknowledgements\nRecognition of code of conduct sources..."
+            "file-content": "\n## Acknowledgements\n This CODE_OF_CONDUCT.md was originally forked from the [United States Digital Service](https://usds.gov) [Justice40](https://thejustice40.com) open source [repository](https://github.com/usds/justice40-tool), and we would like to acknowledge and thank the community for their contributions."
           }
         }
       }
