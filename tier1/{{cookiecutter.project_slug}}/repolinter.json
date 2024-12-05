@@ -15,7 +15,7 @@
             "globsAny": ["{docs/,.github/,}LICENSE*"],
             "nocase": true,
             "file-name": "LICENSE",
-            "file-content": "#License \n Remove this line and attach the license that is being used for this project. For helping choosing a license, visit this website: https://choosealicense.com/ \n"
+            "file-content": "# License \n Remove this line and attach the license that is being used for this project. For helping choosing a license, visit this website: https://choosealicense.com/ \n"
           }
         }
       },
@@ -26,7 +26,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}SECURITY.md"],
             "file-name": "SECURITY.md",
-            "file-content": "#Security and Responsible Disclosure Policy \n"
+            "file-content": "# Security and Responsible Disclosure Policy \n"
           }
         }
       },
@@ -38,7 +38,7 @@
               "globsAny": ["README.md"],
               "nocase": true,
               "file-name": "README.md",
-              "file-content": "#Replace with Project Name \n"
+              "file-content": "# Replace with Project Name \n"
           }
         }
       },
@@ -50,7 +50,7 @@
             "globsAny": ["{docs/,.github/,}CONTRIBUTING.md"],
             "nocase": true,
             "file-name": "CONTRIBUTING.md",
-            "file-content": "#How to Contribute \n <!-- Basic instructions about where to send patches, check out source code, and get development support.--> \n We're so thankful you're considering contributing to an [open source project of the U.S. government](https://code.gov/)! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We appreciate all friendly contributions. \n We encourage you to read this project's CONTRIBUTING policy (you are here), its [LICENSE](LICENSE.md), and its [README](README.md). \n"
+            "file-content": "# How to Contribute \n <!-- Basic instructions about where to send patches, check out source code, and get development support.--> \n We're so thankful you're considering contributing to an [open source project of the U.S. government](https://code.gov/)! If you're unsure about anything, just ask -- or submit the issue or pull request anyway. The worst that can happen is you'll be politely asked to change something. We appreciate all friendly contributions. \n We encourage you to read this project's CONTRIBUTING policy (you are here), its [LICENSE](LICENSE.md), and its [README](README.md). \n"
           }
         }
       },
@@ -61,7 +61,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}MAINTAINERS.md"],
             "file-name": "MAINTAINERS.md",
-            "file-content": "#Maintainers \n <!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.--> \n This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS.md) for list of reviewers for different parts of the codebase. Team members include: \n"
+            "file-content": "# Maintainers \n <!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.--> \n This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS.md) for list of reviewers for different parts of the codebase. Team members include: \n"
           }
         }
       },
@@ -83,7 +83,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}GOVERNANCE.md"],
             "file-name": "GOVERNANCE.md",
-            "file-content": "#Governance \n <!-- TODO: Starting at Tier 3 GOVERNANCE.md has basic language about early community governance, how the project make decisions, and how contributors are elevated through the leadership process if any (e.g. joining teams, getting maintainer status, etc...)--> \n This project is governed by our [Community Guidelines](COMMUNITY_GUIDELINES.md) and [Code of Conduct](CODE_OF_CONDUCT.md). \n"
+            "file-content": "# Governance \n <!-- TODO: Starting at Tier 3 GOVERNANCE.md has basic language about early community governance, how the project make decisions, and how contributors are elevated through the leadership process if any (e.g. joining teams, getting maintainer status, etc...)--> \n This project is governed by our [Community Guidelines](COMMUNITY_GUIDELINES.md) and [Code of Conduct](CODE_OF_CONDUCT.md). \n"
           }
         }
       },
@@ -94,7 +94,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}COMMUNITY_GUIDELINES.md"],
             "file-name": "COMMUNITY_GUIDELINES.md",
-            "file-content": "#Open Source Community Guidelines \n This document contains principles and guidelines for participating in the {name_of_project_here} open source community. \n"
+            "file-content": "# Open Source Community Guidelines \n This document contains principles and guidelines for participating in the {name_of_project_here} open source community. \n"
           }
         }
       },
@@ -105,7 +105,7 @@
           "options": {
             "globsAny": ["{docs/,.github/,}CODE_OF_CONDUCT.md"],
             "file-name": "CODE_OF_CONDUCT.md",
-            "file-content": "#Code of Conduct \n"
+            "file-content": "# Code of Conduct \n"
           }
         }
       },
@@ -131,7 +131,7 @@
             "content": "Security and Responsible Disclosure Policy",
             "flags": "i",
             "file-name": "SECURITY.md",
-            "file-content": "The Centers for Medicare & Medicaid Services is committed to ensuring the security of the American public by protecting their information from unwarranted disclosure. We want security researchers to feel comfortable reporting vulnerabilities they have discovered so we can fix them and keep our users safe. We developed our disclosure policy to reflect our values and uphold our sense of responsibility to security researchers who share their expertise with us in good faith. \n *Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days. \n Review the HHS Disclosure Policy and websites in scope: \n [https://www.hhs.gov/vulnerability-disclosure-policy/index.html](https://www.hhs.gov/vulnerability-disclosure-policy/index.html). \n This policy describes *what systems and types of research* are covered under this policy, *how to send* us vulnerability reports, and *how long* we ask security researchers to wait before publicly disclosing vulnerabilities. \n"
+            "file-content": "The Centers for Medicare & Medicaid Services is committed to ensuring the security of the American public by protecting their information from unwarranted disclosure. We want security researchers to feel comfortable reporting vulnerabilities they have discovered so we can fix them and keep our users safe. We developed our disclosure policy to reflect our values and uphold our sense of responsibility to security researchers who share their expertise with us in good faith. \n \n *Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days. \n \n Review the HHS Disclosure Policy and websites in scope: \n [https://www.hhs.gov/vulnerability-disclosure-policy/index.html](https://www.hhs.gov/vulnerability-disclosure-policy/index.html). \n \n This policy describes *what systems and types of research* are covered under this policy, *how to send* us vulnerability reports, and *how long* we ask security researchers to wait before publicly disclosing vulnerabilities. \n"
           }
         }
       },
@@ -443,7 +443,7 @@
           "content": "Software Bill of Materials",
           "flags": "i",
           "file-name": "README.md",
-          "file-content": "### Software Bill of Materials (SBOM)\nA Software Bill of Materials (SBOM) is a formal record containing the details and supply chain relationships of various components used in building software.\nIn the spirit of [Executive Order 14028 - Improving the Nation's Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/network/dependencies.\nFor more information and resources about SBOMs, visit: https://www.cisa.gov/sbom."
+          "file-content": "### Software Bill of Materials (SBOM)\nA Software Bill of Materials (SBOM) is a formal record containing the details and supply chain relationships of various components used in building software.\nIn the spirit of [Executive Order 14028 - Improving the Nation's Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/{repo_org}/{repo_name}/network/dependencies.\nFor more information and resources about SBOMs, visit: https://www.cisa.gov/sbom."
           }
         }
       },
