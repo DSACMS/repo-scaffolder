@@ -12,10 +12,10 @@
         "rule": {
           "type": "file-existence",
           "options": {
-            "globsAny": [
-              "{docs/,.github/,}LICENSE*"
-            ],
-            "nocase": true
+            "globsAny": ["{docs/,.github/,}LICENSE*"],
+            "nocase": true,
+            "file-name": "LICENSE",
+            "file-content": "This project is licensed under..."
           }
         }
       },
@@ -24,9 +24,9 @@
         "rule": {
           "type": "file-existence",
           "options": {
-            "globsAny": [
-              "{docs/,.github/,}SECURITY.md"
-            ]
+            "globsAny": ["{docs/,.github/,}SECURITY.md"],
+            "file-name": "SECURITY.md",
+            "file-content": "Security policy and procedures..."
           }
         }
       },
@@ -35,10 +35,10 @@
         "rule": {
           "type": "file-existence",
           "options": {
-            "globsAny": [
-              "README.md"
-            ],
-            "nocase": true
+              "globsAny": ["README.md"],
+              "nocase": true,
+              "file-name": "README.md",
+              "file-content": "Project documentation and overview..."
           }
         }
       },
@@ -47,10 +47,10 @@
         "rule": {
           "type": "file-existence",
           "options": {
-            "globsAny": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
-            "nocase": true
+            "globsAny": ["{docs/,.github/,}CONTRIBUTING.md"],
+            "nocase": true,
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "Guidelines for contributing..."
           }
         }
       },
@@ -59,9 +59,9 @@
         "rule": {
           "type": "file-existence",
           "options": {
-            "globsAny": [
-              "{docs/,.github/,}MAINTAINERS.md"
-            ]
+            "globsAny": ["{docs/,.github/,}MAINTAINERS.md"],
+            "file-name": "MAINTAINERS.md",
+            "file-content": "List of project maintainers..."
           }
         }
       },
@@ -70,9 +70,9 @@
         "rule": {
           "type": "file-existence",
           "options": {
-            "globsAny": [
-              "{docs/,.github/,}CODEOWNERS.md"
-            ]
+            "globsAny": ["{docs/,.github/,}CODEOWNERS.md"],
+            "file-name": "CODEOWNERS.md",
+            "file-content": "Code ownership assignments..."
           }
         }
       },
@@ -81,9 +81,9 @@
         "rule": {
           "type": "file-existence",
           "options": {
-            "globsAny": [
-              "{docs/,.github/,}GOVERNANCE.md"
-            ]
+            "globsAny": ["{docs/,.github/,}GOVERNANCE.md"],
+            "file-name": "GOVERNANCE.md",
+            "file-content": "Project governance structure..."
           }
         }
       },
@@ -92,9 +92,9 @@
         "rule": {
           "type": "file-existence",
           "options": {
-            "globsAny": [
-              "{docs/,.github/,}COMMUNITY_GUIDELINES.md"
-            ]
+            "globsAny": ["{docs/,.github/,}COMMUNITY_GUIDELINES.md"],
+            "file-name": "COMMUNITY_GUIDELINES.md",
+            "file-content": "Community participation guidelines..."
           }
         }
       },
@@ -103,9 +103,9 @@
         "rule": {
           "type": "file-existence",
           "options": {
-            "globsAny": [
-              "{docs/,.github/,}CODE_OF_CONDUCT.md"
-            ]
+            "globsAny": ["{docs/,.github/,}CODE_OF_CONDUCT.md"],
+            "file-name": "CODE_OF_CONDUCT.md",
+            "file-content": "Expected conduct guidelines..."
           }
         }
       },
@@ -114,11 +114,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-                "{docs/,.github/,}LICENSE*"
-            ],
+            "globsAll": ["{docs/,.github/,}LICENSE*"],
             "content": "license",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "LICENSE",
+            "file-content": "MIT License\n\nCopyright (c) [year] [fullname]\n\nPermission is hereby granted..."
           }
         }
       },
@@ -127,11 +127,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}SECURITY.md"
-            ],
+            "globsAll": ["{docs/,.github/,}SECURITY.md"],
             "content": "Security and Responsible Disclosure Policy",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "SECURITY.md",
+            "file-content": "\n## Security and Responsible Disclosure Policy\nDetails about security vulnerabilities and how to report them..."
           }
         }
       },
@@ -140,11 +140,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "About the Project",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## About the Project\nA description of the project's purpose and functionality..."
           }
         }
       },
@@ -153,11 +153,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Project Vision",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Project Vision\nThe long-term goals and aspirations for this project..."
           }
         }
       },
@@ -166,37 +166,37 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Project Mission",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Project Mission\nThe core mission and objectives driving this project..."
           }
         }
       },
       "readme-contains-agency-mission": {
-        "level": "warning",
-        "rule": {
-          "type": "file-contents",
-          "options": {
-            "globsAll": [
-              "README.md"
-            ],
-            "content": "Agency Mission",
-            "flags": "i"
+          "level": "warning",
+          "rule": {
+              "type": "file-contents",
+              "options": {
+                  "globsAll": ["README.md"],
+                  "content": "Agency Mission",
+                  "flags": "i",
+                  "file-name": "README.md",
+                  "file-content": "\n## Agency Mission\nThe mission of our agency and how this project aligns..."
+              }
           }
-        }
       },
       "readme-contains-team-mission": {
         "level": "warning",
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Team Mission",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Team Mission\nOur team's goals and how we work together..."
           }
         }
       },
@@ -205,11 +205,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Core Team",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Core Team\nKey members and contributors of the project..."
           }
         }
       },
@@ -218,11 +218,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Documentation Index",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Documentation Index\nLinks to all project documentation..."
           }
         }
       },
@@ -231,11 +231,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Repository Structure",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Repository Structure\nOverview of key directories and files..."
           }
         }
       },
@@ -244,11 +244,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Development and Software Delivery Lifecycle",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Development and Software Delivery Lifecycle\nStages from development to deployment..."
           }
         }
       },
@@ -257,11 +257,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Local Development",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Local Development\nSteps to set up and run the project locally..."
           }
         }
       },
@@ -270,11 +270,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Coding Style and Linters",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Coding Style and Linters\nCoding standards and tools for maintaining code quality..."
           }
         }
       },
@@ -283,11 +283,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Branching Model",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Branching Model\nGit workflow and branch naming conventions..."
           }
         }
       },
@@ -296,11 +296,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Contributing",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Contributing\nGuidelines for contributing to the project..."
           }
         }
       },
@@ -309,11 +309,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Codeowners",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Codeowners\nList of maintainers responsible for different parts..."
           }
         }
       },
@@ -322,11 +322,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Community",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Community\nInformation about our community and how to get involved..."
           }
         }
       },
@@ -335,11 +335,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Community Guidelines",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Community Guidelines\nStandards for community interaction and behavior..."
           }
         }
       },
@@ -348,11 +348,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Governance",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Governance\nProject governance structure and decision-making process..."
           }
         }
       },
@@ -361,11 +361,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Feedback",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Feedback\nHow to provide feedback and suggestions..."
           }
         }
       },
@@ -374,11 +374,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Glossary",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Glossary\nDefinitions of key terms and concepts..."
           }
         }
       },
@@ -387,11 +387,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Policies",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Policies\nProject policies and guidelines..."
           }
         }
       },
@@ -400,11 +400,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Open Source Policy",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Open Source Policy\nGuidelines for open source contributions..."
           }
         }
       },
@@ -413,11 +413,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Security and Responsible Disclosure Policy",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Security and Responsible Disclosure Policy\nHow to report..."
           }
         }
       },
@@ -426,11 +426,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "README.md"
-            ],
+            "globsAll": ["README.md"],
             "content": "Public domain",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "README.md",
+            "file-content": "\n## Public Domain\nInformation about public domain status..."
           }
         }
       },
@@ -439,11 +439,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "How to Contribute",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## How to Contribute\nSteps for making contributions to the project..."
           }
         }
       },
@@ -452,11 +452,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Getting Started",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Getting Started\nInitial setup steps for contributors..."
           }
         }
       },
@@ -465,11 +465,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Team Specific Guidelines",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Team Specific Guidelines\nTeam-specific contribution requirements..."
           }
         }
       },
@@ -478,11 +478,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Building dependencies",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Building Dependencies\nSteps to build project dependencies..."
           }
         }
       },
@@ -491,11 +491,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Building the Project",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Building the Project\nSteps to build and test the project..."
           }
         }
       },
@@ -504,11 +504,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Workflow and Branching",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Workflow and Branching\nGit workflow guidelines and branch conventions..."
           }
         }
       },
@@ -517,11 +517,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Testing Conventions",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Testing Conventions\nTesting requirements and guidelines..."
           }
         }
       },
@@ -530,11 +530,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Coding Style and Linters",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Coding Style and Linters\nCode formatting and linting requirements..."
           }
         }
       },
@@ -543,11 +543,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "ISSUE_TEMPLATE.md | Issues",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Writing Issues\nGuidelines for creating effective issue reports..."
           }
         }
       },
@@ -556,11 +556,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Writing Pull Requests",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Writing Pull Requests\nGuidelines for submitting pull requests..."
           }
         }
       },
@@ -569,11 +569,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Reviewing Pull Requests",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Reviewing Pull Requests\nGuidelines for reviewing contributions..."
           }
         }
       },
@@ -582,11 +582,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Shipping Releases",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Shipping Releases\nProcess for creating and publishing releases..."
           }
         }
       },
@@ -595,12 +595,12 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Documentation",
-            "flags": "i"
-          }
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Documentation\nGuidelines for writing and updating documentation..."
+            }
         }
       },
       "contributing-contains-policies": {
@@ -608,11 +608,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Policies",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Policies\nProject policies for contributors..."
           }
         }
       },
@@ -621,11 +621,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Open Source Policy",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Open Source Policy\nOpen source guidelines and requirements..."
           }
         }
       },
@@ -634,11 +634,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Security and Responsible Disclosure Policy",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Security and Responsible Disclosure Policy\nGuidelines for reporting security issues..."
           }
         }
       },
@@ -647,11 +647,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CONTRIBUTING.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CONTRIBUTING.md"],
             "content": "Public domain",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CONTRIBUTING.md",
+            "file-content": "\n## Public Domain\nInformation about public domain status..."
           }
         }
       },
@@ -660,11 +660,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}MAINTAINERS.md"
-            ],
+            "globsAll": ["{docs/,.github/,}MAINTAINERS.md"],
             "content": "Maintainers",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "MAINTAINERS.md",
+            "file-content": "\n## Maintainers\nList of project maintainers and responsibilities..."
           }
         }
       },
@@ -673,11 +673,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}MAINTAINERS.md"
-            ],
+            "globsAll": ["{docs/,.github/,}MAINTAINERS.md"],
             "content": "Maintainers:",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "MAINTAINERS.md",
+            "file-content": "\n## Maintainers:\nCurrent project maintainers and their roles..."
           }
         }
       },
@@ -686,11 +686,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}MAINTAINERS.md"
-            ],
+            "globsAll": ["{docs/,.github/,}MAINTAINERS.md"],
             "content": "Approvers:",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "MAINTAINERS.md",
+            "file-content": "\n## Approvers:\nList of people who can approve changes..."
           }
         }
       },
@@ -699,11 +699,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}MAINTAINERS.md"
-            ],
+            "globsAll": ["{docs/,.github/,}MAINTAINERS.md"],
             "content": "Reviewers:",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "MAINTAINERS.md",
+            "file-content": "\n## Reviewers:\nList of designated code reviewers..."
           }
         }
       },
@@ -712,11 +712,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}GOVERNANCE.md"
-            ],
+            "globsAll": ["{docs/,.github/,}GOVERNANCE.md"],
             "content": "Governance",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "GOVERNANCE.md",
+            "file-content": "\n## Governance\nProject governance structure and processes..."
           }
         }
       },
@@ -725,11 +725,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CODEOWNERS.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CODEOWNERS.md"],
             "content": "Code Owners",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CODEOWNERS.md",
+            "file-content": "\n## Code Owners\nList of code owners and their areas..."
           }
         }
       },
@@ -738,11 +738,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CODEOWNERS.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CODEOWNERS.md"],
             "content": "documentation | frontend | backend | Repo Domains",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CODEOWNERS.md",
+            "file-content": "\n## Repository Domains\nBreakdown of different project areas..."
           }
         }
       },
@@ -751,11 +751,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}COMMUNITY_GUIDELINES.md"
-            ],
+            "globsAll": ["{docs/,.github/,}COMMUNITY_GUIDELINES.md"],
             "content": "Principles",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "COMMUNITY_GUIDELINES.md",
+            "file-content": "\n## Principles\nCore principles guiding our community..."
           }
         }
       },
@@ -764,11 +764,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}COMMUNITY_GUIDELINES.md"
-            ],
+            "globsAll": ["{docs/,.github/,}COMMUNITY_GUIDELINES.md"],
             "content": "Community Guidelines",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "COMMUNITY_GUIDELINES.md",
+            "file-content": "\n## Community Guidelines\nRules and expectations for community members..."
           }
         }
       },
@@ -777,11 +777,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}COMMUNITY_GUIDELINES.md"
-            ],
+            "globsAll": ["{docs/,.github/,}COMMUNITY_GUIDELINES.md"],
             "content": "Acknowledgements",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "COMMUNITY_GUIDELINES.md",
+            "file-content": "\n## Acknowledgements\nRecognition of community contributors..."
           }
         }
       },
@@ -790,11 +790,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CODE_OF_CONDUCT.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CODE_OF_CONDUCT.md"],
             "content": "Contributor Code of Conduct",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CODE_OF_CONDUCT.md",
+            "file-content": "\n## Contributor Code of Conduct\nExpectations for contributor behavior..."
           }
         }
       },
@@ -803,11 +803,11 @@
         "rule": {
           "type": "file-contents",
           "options": {
-            "globsAll": [
-              "{docs/,.github/,}CODE_OF_CONDUCT.md"
-            ],
+            "globsAll": ["{docs/,.github/,}CODE_OF_CONDUCT.md"],
             "content": "Acknowledgements",
-            "flags": "i"
+            "flags": "i",
+            "file-name": "CODE_OF_CONDUCT.md",
+            "file-content": "\n## Acknowledgements\nRecognition of code of conduct sources..."
           }
         }
       }
