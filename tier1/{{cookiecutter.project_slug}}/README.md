@@ -2,19 +2,23 @@
 {{ cookiecutter.project_description }}
 
 ## About the Project
+<!-- This should be a longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in. --> 
 **{project statement}**
 
 <!-- 
 ### Project Mission
-**{project mission}** -->
+**{project mission}** 
+Provide the core mission and objectives driving this project.-->
 
 <!-- 
 ### Agency Mission
-TODO: Recommended to include since this is an agency-led project -->
+TODO: Recommended to include since this is an agency-led project 
+Provide the mission of the agency and how this project aligns. -->
 
 <!-- 
 ### Team Mission
-TODO: Recommended to include since this is an agency-led project -->
+TODO: Recommended to include since this is an agency-led project 
+Provide the team's mission and how they work together. -->
 
 ## Core Team
 
