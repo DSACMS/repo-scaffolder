@@ -8,11 +8,8 @@ jobs:
     name: Run gitleaks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: gitleaks/gitleaks-action@v2
-        env:
-          {% raw %}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          {% endraw %}
+      - uses: actions/checkout@v3
+        with: {fetch-depth: 0}
+
+      - name: Check for GitLeaks
+        uses: gacts/gitleaks@v1
