@@ -8,7 +8,7 @@
 
 ## Repository Domains
 
-- Repository Templates in /tier\* [@natalialuzuriaga](https://github.com/natalialuzuriaga) [@sachin-panayil](https://github.com/sachin-panayil)
+- Repository Templates in /tier\*/ [@natalialuzuriaga](https://github.com/natalialuzuriaga) [@sachin-panayil](https://github.com/sachin-panayil)
 - Outbound Checklists in /tier\*/checklist.md [@natalialuzuriaga](https://github.com/natalialuzuriaga)
 
 ## Shoutouts
