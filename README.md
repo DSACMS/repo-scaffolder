@@ -6,7 +6,11 @@ Templates and commandline tools for creating repositories for US Federal open so
 
 The CMS Open Source Program Office developed a [maturity model framework](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md) to classify federal open source projects based on their maturity level. Each tier outlines specific files and content that are required or recommended to be included in the repository.
 
-repo-scaffolder assists project teams with creating repositories that adhere to repository hygiene standards. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, which teams can easily fill out and customize. In turn, this provides the project sufficient structure and foundation to promote a healthy open source ecosystem.
+repo-scaffolder assists project teams with creating repositories that adhere to repository hygiene standards. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. Using [cookiecutter](https://github.com/cookiecutter/cookiecutter), repo-scaffolder helps teams identify what tier their project is classified as and fill in project information to be inputted into the file templates. In turn, this provides the project sufficient structure and foundation to promote a healthy open source ecosystem
+
+This repository also includes [outbound checklists](#Outbound-Checklists) for each tier outlining the review process for releasing repositories as open source.
+
+For existing repositories, repolinter via GitHub Actions is used to identify any files and information missing from the repository according to their maturity tier.
 
 <!-- TODO: Include more information on outbound checklists -->
 
@@ -89,7 +93,7 @@ There are 4 tiers in the maturity model framework. The `/tier*` directory consis
 
 - python
 - github cli
-- cookiecutter
+- [cookiecutter](https://github.com/cookiecutter/cookiecutter)
 - [repolinter](https://github.com/todogroup/repolinter)
 
 #### Need help picking a maturity tier?
