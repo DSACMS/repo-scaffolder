@@ -20,13 +20,13 @@
 - [@vantuyls](https://github.com/vantuyls)
 - [@sgarciahelguera](https://github.com/sgarciahelguera)
 
+Thank you [US Digital Response](https://www.usdigitalresponse.org/) Team for your support creating this repository!
+
 [Coding It Forward Fellows](https://codingitforward.com/fellowship)
 
 - [@Firebird1029](https://github.com/Firebird1029)
 - [@CreativeNick](https://github.com/CreativeNick)
 - [@RicardoZamora01](https://github.com/RicardoZamora01)
-
-Thank you [US Digital Response](https://www.usdigitalresponse.org/) Team for your support creating this repository!
 
 # Questions?
 
