@@ -54,7 +54,7 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 
 The Open Source Program Office follows a maturity model framework to classify federal repositories according to their level of maturity: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md.
 
-There are 4 tiers in the maturity model framework. The `/tier\*` directory consists of templates, files, and scripts for each respective tier:
+There are 4 tiers in the maturity model framework. The `/tier*` directory consists of templates, files, and scripts for each respective tier:
 
 - `{{cookiecutter.project_slug}}` is the directory containing templates and files to be generated upon repository creation. This serves as your repository starting point.
 - `cookiecutter.json` defining the questions cookiecutter asks.
@@ -145,8 +145,8 @@ The following guide is for members of the project team who have access to the re
 
 This project contains several different features.
 
-- `/tier\*` contains file templates for repository creation and metadata collection using cookiecutter. Refer to the README.mds to learn more about the file contents.
-- `.github` contains GitHub actions to update repositories contents across the ecosystem.
+- `/tier*` contains file templates for repository creation and metadata collection using cookiecutter. Refer to the README.mds to learn more about the file contents.
+- `/.github` contains GitHub actions to update repositories contents across the ecosystem.
 - `checklist.md` & `checklist.pdf` is the outbound review checklist with guidelines on releasing the repository as open source.
 - `maturity-model-tiers.md` & `maturity-model-tiers.pdf` contain information about our maturity model framework.
 
