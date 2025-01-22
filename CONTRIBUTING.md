@@ -133,3 +133,31 @@ For more information about our Security, Vulnerability, and Responsible Disclosu
 This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
 
 All contributions to this project will be released under the CC0 dedication. By submitting a pull request or issue, you are agreeing to comply with this waiver of copyright interest.
+ 
+ ### Team Specific Guidelines 
+<!-- TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the MAINTAINERS.md file for further details.--> 
+ 
+ ### Testing Conventions 
+<!--- TODO: Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. --> 
+ 
+ ### Writing Pull Requests 
+<!-- TODO: Make a brief statement about where to file pull/merge requests, and conventions for doing so. Link to PULL_REQUEST_TEMPLATE.md file.
+ Comments should be formatted to a width no greater than 80 columns.
+ Files should be exempt of trailing spaces.
+ We adhere to a specific format for commit messages. Please write your commit messages along these guidelines. Please keep the line width no greater than 80 columns (You can use `fmt -n -p -w 80` to accomplish this).
+ module-name: One line description of your change (less than 72 characters)
+ Problem
+ Explain the context and why you're making that change. What is the problem you're trying to solve? In some cases there is not a problem and this can be thought of being the motivation for your change.
+ Solution
+ Describe the modifications you've done.
+ Result
+ What will change as a result of your pull request? Note that sometimes this section is unnecessary because it is self-explanatory based on the solution.
+ Some important notes regarding the summary line:
+ workflows Describe what was done; not the result
+ workflows Use the active voice
+ workflows Use the present tense
+ workflows Capitalize properly
+ workflows Do not end in a period — this is a title/subject
+ workflows Prefix the subject with its scope
+ see our .github/PULL_REQUEST_TEMPLATE.md for more examples.
+ -->
