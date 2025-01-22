@@ -61,7 +61,9 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 
 ### Coding Style and Linters
 
-This project strives to adhere to the Python Style Guide (http://peps.python.org/pep-0008/). We would recommend using a linter such as pyflakes, flake8, black, or other plugin for your editor or IDE of choice.
+<!-- TODO - Add the repo's linting and code style guidelines -->
+
+Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
 
 ### Writing Issues
 
