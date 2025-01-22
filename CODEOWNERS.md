@@ -8,8 +8,9 @@
 
 ## Repository Domains
 
-- Repository Templates in /tier\*/ [@natalialuzuriaga](https://github.com/natalialuzuriaga) [@sachin-panayil](https://github.com/sachin-panayil) [@IsaacMilarky](https://github.com/IsaacMilarky)
-- Outbound Checklists in /tier\*/checklist.md [@natalialuzuriaga](https://github.com/natalialuzuriaga)
+- Repository Templates in `/tier\*/` [@natalialuzuriaga](https://github.com/natalialuzuriaga) [@sachin-panayil](https://github.com/sachin-panayil) [@IsaacMilarky](https://github.com/IsaacMilarky)
+- Outbound Checklists in `/tier\*/checklist.md` [@natalialuzuriaga](https://github.com/natalialuzuriaga)
+- GitHub Actions in `.github` [@sachin-panayil](https://github.com/sachin-panayil) [@IsaacMilarky](https://github.com/IsaacMilarky) [@natalialuzuriaga](https://github.com/natalialuzuriaga)
 
 ## Shoutouts
 
