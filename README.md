@@ -32,7 +32,7 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 
 ## Documentation Index
 
-- [Using repo-scaffolder](#Using repo-scaffolder)
+- [Using repo-scaffolder](#Using-repo-scaffolder)
 - [Documentation (coming soon!)](./docs)
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md)
