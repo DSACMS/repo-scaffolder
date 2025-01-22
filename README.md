@@ -32,8 +32,31 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 
 ## Documentation Index
 
+<!-- TODO: check out slides from OSS NA baseline repo, copy and paste content from there -->
+
+##### Usage
+
 - [Using repo-scaffolder](#Using-repo-scaffolder)
-- [Documentation (coming soon!)](./docs)
+- [Updating repositories using GitHub Actions](#Updating-projects-with-new-repo-scaffolder-upstream-file-changes)
+- [Documentation](./docs)
+
+##### Maturity Models
+
+- [Maturity Model Framework](./maturity-model-tiers.md)
+- [Tier 0](./tier0/README.md)
+- [Tier 1](./tier1/README.md)
+- [Tier 2](./tier2/README.md)
+- [Tier 3](./tier3/README.md)
+- [Tier 4](./tier4/README.md)
+
+##### Outbound Checklists
+
+- [Tier 1](./tier1/checklist.md)
+- [Tier 2](./tier2/checklist.md)
+- [Tier 3](./tier3/checklist.md)
+- [Tier 4](./tier4/checklist.md)
+
+##### Files
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md)
 - [MAINTAINERS.md](./MAINTAINERS.md)
