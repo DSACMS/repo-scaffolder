@@ -1,5 +1,3 @@
-<!--- # NOTE: Modify sections marked with `TODO` and then rename the file.-->
-
 # How to Contribute
 
 We're so thankful you're considering contributing to an [open source project of
@@ -13,16 +11,36 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 ## Getting Started
 
-<!--- ### TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
+First, install the required dependencies.
+
+To create a new repository using repo-scaffolder, run the production version of repo-scaffolder. Subsitute `X` with the tier number you'd like to create in the directory flag.
+
+```
+cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
+```
+
+More commands on using repo-scaffolder for repository creation and maintenance can be found here: https://github.com/DSACMS/repo-scaffolder/blob/main/README.md#Using-repo-scaffolder
+
+### Team Specific Guidelines
+
+- Please try to keep pull requests to a reasonable size; try to split large contributions to multiple PRs
+- Please create pull requests into dev unless the contribution is some kind of bugfix or urgent hotfix.
+- Document and explain the contribution clearly according to provided standards when possible.
+- Feel free to reach out to us if there is any confusion. A list of the project maintainers is found here: [MAINTAINERS.md](./MAINTAINERS.md)
 
 ### Building dependencies
 
-In the root directory of the project,
-`pip install -r requirements.txt`
+1. Clone the repo
+
+   `git clone https://github.com/DSACMS/metrics.git`
+
+2. Install the required packages in requirements.txt
+
+   `pip install -r requirements.txt`
 
 ### Building the Project
 
-<!--- ### TODO -->
+N/A
 
 ### Workflow and Branching
 
@@ -37,13 +55,17 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 7.  Wait for your change to be pulled into `cmsgov/cmsgov-example-repo/main`
 8.  Delete your feature branch
 
+### Testing Conventions
+
+<!--- TODO: Currently, does not have tests. Write tests then discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. -->
+
 ### Coding Style and Linters
 
-This project strives to adhere to the Python Style Guide (http://peps.python.org/pep-0008/). We would recommend using a linter such as pyflakes, flake8, black, or other plugin for your editor or IDE of choice.
+<!-- TODO - Add the repo's linting and code style guidelines -->
 
--->
+Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
 
-### Issues
+### Writing Issues
 
 When creating an issue please try to adhere to the following format:
 
@@ -63,7 +85,7 @@ When creating an issue please try to adhere to the following format:
 
     see our .github/ISSUE_TEMPLATE.md for more examples.
 
-### Pull Requests
+### Writing Pull Requests
 
 Comments should be formatted to a width no greater than 80 columns.
 
@@ -107,7 +129,7 @@ a development branch for additional testing. Once the changes are merged, they w
 be pushed back to the main branch.
 
 If the issue the pull request is addressing is particularly urgent, the pull request
-will be merged directly into the main branch. 
+will be merged directly into the main branch.
 
 ## Documentation
 
@@ -124,7 +146,7 @@ questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
-*Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
+_Submit a vulnerability:_ Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
 
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
 
