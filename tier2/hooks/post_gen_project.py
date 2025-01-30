@@ -58,7 +58,7 @@ def addMaintainer():
         maintainers_table += f"| {maintainer["role"]} | {maintainer["name"]}| {maintainer["github_username"]} | {maintainer["affiliation"]} |\n"
 
     proj_name = "{{ cookiecutter.project_name }}"
-    maintainers_file_path = f"../{proj_name}/MAINTAINERS.md"
+    maintainers_file_path = f"MAINTAINERS.md"
 
     with open(maintainers_file_path, "r") as f:
         lines = f.readlines()
@@ -81,6 +81,11 @@ def moveCookiecutterFile():
     shutil.move(source_path, destination_path)
 
 def main():
+    if ADD_MAINTAINER == "True":
+        addMaintainer()
+
+    moveCookiecutterFile()
+
     subprocess.call(["git", "init", "-b", "main"])
     subprocess.call(["git", "add", "."])
     subprocess.call(["git", "commit", "-m", "initial commit"])
@@ -90,11 +95,6 @@ def main():
 
     if RECEIVE_UPDATES == "True":
         addTopic()
-    
-    if ADD_MAINTAINER == "True":
-        addMaintainer()
-    
-    moveCookiecutterFile()
-    
+        
 if __name__ == "__main__":
     main()
