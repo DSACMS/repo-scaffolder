@@ -10,6 +10,21 @@ This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS
 - [@sachin-panayil](https://github.com/sachin-panayil)
 - [@DinneK](https://github.com/DinneK)
 
+ ## Maintainers List: 
+<!-- TODO: What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams. -->
+Repository Templates
+- [@natalialuzuriaga](https://github.com/natalialuzuriaga)
+- [@sachin-panayil](https://github.com/sachin-panayil)
+- [@IsaacMilarky](https://github.com/IsaacMilarky)
+
+Outbound Checklists
+- [@natalialuzuriaga](https://github.com/natalialuzuriaga)
+
+GitHub Actions
+- [@sachin-panayil](https://github.com/sachin-panayil)
+- [@IsaacMilarky](https://github.com/IsaacMilarky)
+- [@natalialuzuriaga](https://github.com/natalialuzuriaga)
+
 ## Approvers:
 
 - [@decause-gov](https://github.com/decause-gov)
