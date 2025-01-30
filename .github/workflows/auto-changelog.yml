@@ -10,6 +10,4 @@ jobs:
       - name: "Auto Generate changelog"
         uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
-          {% raw %}
           token: ${{ secrets.GITHUB_TOKEN }}
-          {% endraw %}
