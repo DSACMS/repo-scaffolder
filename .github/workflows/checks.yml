@@ -1,18 +1,58 @@
-name: "run-linting-checks"
+name: "Repository Hygiene Check"
 on:
   push:
     branches:
       - 'main'
+  workflow_dispatch:
 
 jobs:
+  check-first-run:
+    name: Check For First Run
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: |
+          # If manually triggered, always run
+
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+            exit 0
+
+          fi
+          
+          # Check if initialization label exists
+
+          has_label=$(gh label list --json name | jq '.[] | select(.name=="repolinter-initialized")')
+
+          if [[ -z "$has_label" ]]; then
+            # First time - create label and allow run
+            gh label create repolinter-initialized --description "Marks repo as having run initial repolinter check"
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_run=false" >> $GITHUB_OUTPUT
+
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   resolve-repolinter-json:
+    name: Get Repolinter Config
+    needs: check-first-run
+    if: needs.check-first-run.outputs.should_run == 'true'
     uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@main
     with: 
       url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
   
   repolinter-checks:
     name: Tier 3 Checks
-    needs: resolve-repolinter-json
+    needs: [check-first-run, resolve-repolinter-json]
+    if: needs.check-first-run.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,39 +60,10 @@ jobs:
     env:
       RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json }}
     steps:
-      - uses: actions/checkout@v4
       - run: echo $RAW_JSON > repolinter.json
       - uses: DSACMS/repolinter-action@main
         with:
-          # A path to the JSON/YAML Repolinter ruleset to use, relative to the workflow
-          # working directory (i.e. under `$GITHUB_WORKSPACE`).
-          #
-          # This option is mutually exclusive with config_url. If this option and
-          # config_url are not specified, Repolinter's default ruleset will be used.
           config_file: 'repolinter.json'
-
-          # Where repolinter-action should put the linting results. There are two
-          # options available:
-          # * "exit-code": repolinter-action will print the lint output to the console
-          #   and set the exit code to result.passed. This output type is most useful for
-          #   PR status checks.
-          # * "issue": repolinter-action will create a GitHub issue on the current
-          #   repository with the repolinter output and always exit 0. See the README for
-          #   more details on issue outputting behavior. This output type is ideal for
-          #   non-intrusive notification.
-          #
-          # Default: "exit-code"
           output_type: 'pull-request'
-
-          # The title to use for the issue created by repolinter-action. This title
-          # should indicate the purpose of the issue, as well as that it was created by
-          # a bot.
-          #
-          # This option will be ignored if output_type != "issue".
-          #
-          # Default: "[Repolinter] Open Source Policy Issues"
-          pull_request_labels: 'repolinter, cms-oss, cms-gov'
-
-          # The default token is the repolinter token for the DSACMS org
-          # You can change it if needed.
+          pull_request_labels: 'repolinter-initialized, cms-oss, cms-gov'
           token: ${{ secrets.REPOLINTER_AUTO_TOKEN }}
