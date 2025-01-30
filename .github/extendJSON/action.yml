@@ -21,6 +21,7 @@ runs:
         python-version: '3.9'
     
     - name: Install dependencies
+      shell: bash
       run: pip install pydash
 
     - name: Extend JSON and write to env

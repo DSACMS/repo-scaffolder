@@ -1,59 +1,79 @@
-name: "run-linting-checks"
+name: "Repository Hygiene Check"
 on:
   push:
     branches:
       - 'main'
+  workflow_dispatch:
 
 jobs:
+  check-first-run:
+    name: Check For First Run
+    runs-on: ubuntu-latest
+    outputs:
+      {% raw %}
+      should_run: ${{ steps.check.outputs.should_run }}
+      {% endraw %}
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: |
+          # If manually triggered, always run
+          {% raw %}
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          {% endraw %}
+            echo "should_run=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          # Check if initialization label exists
+          has_label=$(gh label list --json name | jq '.[] | select(.name=="repolinter-initialized")')
+
+          if [[ -z "$has_label" ]]; then
+            # First time - create label and allow run
+            gh label create repolinter-initialized --description "Marks repo as having run initial repolinter check"
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_run=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          {% raw %}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          {% endraw %}
+
   resolve-repolinter-json:
+    name: Get Repolinter Config
+    needs: check-first-run
+    {% raw %}
+    if: needs.check-first-run.outputs.should_run == 'true'
+    {% endraw %}
     uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@main
     with: 
       url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
   
   repolinter-checks:
     name: Tier 4 Checks
-    needs: resolve-repolinter-json
+    needs: [check-first-run, resolve-repolinter-json]
+    {% raw %}
+    if: needs.check-first-run.outputs.should_run == 'true'
+    {% endraw %}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     env:
       {% raw %}
       RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json }}
       {% endraw %}
     steps:
-      - uses: actions/checkout@v4
       - run: echo $RAW_JSON > repolinter.json
-      - uses: newrelic/repolinter-action@v1
+      - uses: DSACMS/repolinter-action@main
         with:
-          # A path to the JSON/YAML Repolinter ruleset to use, relative to the workflow
-          # working directory (i.e. under `$GITHUB_WORKSPACE`).
-          #
-          # This option is mutually exclusive with config_url. If this option and
-          # config_url are not specified, Repolinter's default ruleset will be used.
           config_file: 'repolinter.json'
-
-          # Where repolinter-action should put the linting results. There are two
-          # options available:
-          # * "exit-code": repolinter-action will print the lint output to the console
-          #   and set the exit code to result.passed. This output type is most useful for
-          #   PR status checks.
-          # * "issue": repolinter-action will create a GitHub issue on the current
-          #   repository with the repolinter output and always exit 0. See the README for
-          #   more details on issue outputting behavior. This output type is ideal for
-          #   non-intrusive notification.
-          #
-          # Default: "exit-code"
-          output_type: 'issue'
-
-          # The title to use for the issue created by repolinter-action. This title
-          # should indicate the purpose of the issue, as well as that it was created by
-          # a bot.
-          #
-          # This option will be ignored if output_type != "issue".
-          #
-          # Default: "[Repolinter] Open Source Policy Issues"
-          output_name: '[Repolinter] Tier 4 Repository Hygiene Issue'
-
-          # The default token is the repolinter token for the DSACMS org
-          # You can change it if needed.
+          output_type: 'pull-request'
+          pull_request_labels: 'repolinter-initialized, cms-oss, cms-gov'
           {% raw %}
           token: ${{ secrets.REPOLINTER_AUTO_TOKEN }}
           {% endraw %}
