@@ -51,10 +51,10 @@ jobs:
     {% endraw %}
     uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@main
     with: 
-      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
   
   repolinter-checks:
-    name: Tier 2 Checks
+    name: Tier 3 Checks
     needs: [check-first-run, resolve-repolinter-json]
     {% raw %}
     if: needs.check-first-run.outputs.should_run == 'true'
@@ -68,6 +68,7 @@ jobs:
       RAW_JSON: ${{ needs.resolve-repolinter-json.outputs.raw-json }}
       {% endraw %}
     steps:
+      - uses: actions/checkout@v4
       - run: echo $RAW_JSON > repolinter.json
       - uses: DSACMS/repolinter-action@main
         with:
