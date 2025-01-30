@@ -3,7 +3,7 @@ name: "Repository Hygiene Check"
 on:
   push:
     branches: [main]
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -33,21 +33,22 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  repolinter:
+  get-config:
     needs: initial-check
+    if: needs.initial-check.outputs.should_run == 'true'
+    uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@main
+    with:
+      url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+
+  run-checks:
+    needs: [initial-check, get-config]
     if: needs.initial-check.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Get Repolinter Config
-        id: config
-        uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@main
-        with:
-          url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
-
       - name: Save Config
-        run: echo '${{ steps.config.outputs.raw-json }}' > repolinter.json
+        run: echo '${{ needs.get-config.outputs.raw-json }}' > repolinter.json
 
       - name: Run Checks
         uses: DSACMS/repolinter-action@main
