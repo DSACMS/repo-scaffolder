@@ -2,9 +2,8 @@ name: "Repository Hygiene Check"
 
 on:
   push:
-    branches: 
-      -main
-  workflow_dispatch:
+    branches: [main]
+  workflow_dispatch: {}
 
 permissions:
   contents: write
