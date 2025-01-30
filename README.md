@@ -138,6 +138,10 @@ cookiecutter . --directory=codejson
 
 ### Maintaining your repository using repo-scaffolder
 
+#### Updating repository using GitHub action workflows
+
+The OSPO created various [GitHub Action workflows](../docs/workflows.md) that can be used to regularly update your repository. The jobs are located in `.github` directory of your project.
+
 #### Updating projects with new repo-scaffolder upstream file changes
 
 When creating projects, if you want to receive updates then add `dsacms-tierX` as a github topic to the repo. The scaffolder repo includes github workflows that will find all repos with that tag and can raise a pull request with an updated string or adding a file. See [actions.md](https://github.com/DSACMS/repo-scaffolder/blob/main/.github/actions.md) for more information.
@@ -165,6 +169,7 @@ repolinter lint tier4/\{\{cookiecutter.project_slug\}\}
 ```
 
 #### Automated repolinter actions
+
 A tool to automatically update repositories up to hygenic standards with the use of [Repolinter through GitHub Actions](https://github.com/DSACMS/repolinter-actions) is also available. This action sends a PR to your repository with templates of all the missing files and sections that are required using a predefined rulset. Visit the repository for more information on how to get this action up and running.
 
 # Development and Software Delivery Lifecycle
