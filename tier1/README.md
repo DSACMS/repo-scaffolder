@@ -27,4 +27,6 @@ There are specific files that are required and recommended to include in the rep
 
 For more information about required sections and content within the files above, please visit [maturity-model-tiers.md](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
 
+## Workflows
+
 Located in the `.github` directory are [GitHub Action workflows](../docs/workflows.md) that can be used to regularly update your repository.
