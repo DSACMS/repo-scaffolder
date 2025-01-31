@@ -74,6 +74,11 @@ def moveCookiecutterFile():
     shutil.move(source_path, destination_path)
 
 def main():
+    if ADD_MAINTAINER == "True":
+        addMaintainer()
+
+    moveCookiecutterFile()
+        
     subprocess.call(["git", "init", "-b", "main"])
     subprocess.call(["git", "add", "."])
     subprocess.call(["git", "commit", "-m", "initial commit"])
@@ -83,11 +88,6 @@ def main():
 
     if RECEIVE_UPDATES == "True":
         addTopic()
-    
-    if ADD_MAINTAINER == "True":
-        addMaintainer()
-    
-    moveCookiecutterFile()
     
 if __name__ == "__main__":
     main()
