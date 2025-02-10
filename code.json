@@ -1,41 +1,41 @@
 {
   "name": "repo-scaffolder",
   "description": "Templates and commandline tools for creating repositories for US Federal open source projects ",
-  "longDescription": "",
-  "status": "",
+  "longDescription": "repo-scaffolder assists project teams with creating repositories that adhere to repository hygiene standards. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. ",
+  "status": "Production",
   "permissions": {
     "license": [
       {
-        "name": "",
-        "URL": ""
+        "name": "CC0 1.0 Universal",
+        "URL": "https://github.com/DSACMS/repo-scaffolder/blob/main/LICENSE"
       }
     ],
-    "usageType": "",
+    "usageType": "openSource",
     "exemptionText": ""
   },
-  "organization": "",
+  "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/repo-scaffolder",
   "vcs": "git",
   "laborHours": 5940,
-  "platforms": [],
-  "categories": [],
-  "softwareType": "",
+  "platforms": ["web", "windows", "mac", "linux"],
+  "categories": ["data-collection", "it-asset-management", "knowledge-management"],
+  "softwareType": "standalone/backend",
   "languages": [
     "Python"
   ],
-  "maintenance": "",
+  "maintenance": "internal",
   "date": {
     "created": "2023-10-05T18:06:51Z",
     "lastModified": "2025-02-10T19:51:24Z",
     "metaDataLastUpdated": "2025-02-10T19:52:18.683Z"
   },
-  "tags": [],
+  "tags": ["repository", "codejson", "cookiecutter"],
   "contact": {
-    "email": "",
-    "name": ""
+    "email": "opensource@cms.hhs.gov",
+    "name": "CMS Open Source Team"
   },
   "localisation": false,
-  "repositoryType": "",
+  "repositoryType": "tools",
   "userInput": "No",
   "fismaLevel": "Low",
   "group": "CMS/OA/DSAC",
