@@ -36,12 +36,12 @@
   },
   "localisation": false,
   "repositoryType": "tools",
-  "userInput": "No",
+  "userInput": false,
   "fismaLevel": "Low",
   "group": "CMS/OA/DSAC",
   "subsetInHealthcare": "Operational",
   "userType": "Government",
-  "repositoryHost": "Github.com",
-  "maturityModelTier": "3",
+  "repositoryHost": "github.com/DSACMS",
+  "maturityModelTier": 3,
   "projectType": "Tools"
 }
