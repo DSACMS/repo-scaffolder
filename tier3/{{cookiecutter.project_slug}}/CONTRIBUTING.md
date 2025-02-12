@@ -152,6 +152,9 @@ authorship metadata will be preserved.
 
 <!--
 ## Shipping Releases
+Our general policy for shipping releases can be found in our [MAINTAINERS.md](./MAINTAINERS.md) file.
+We adhere to semantic versioning and automatic generation of changelogs
+as described in this file. 
 
 <!-- TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so? 
 -->
