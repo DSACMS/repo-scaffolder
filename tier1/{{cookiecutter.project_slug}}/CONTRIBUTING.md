@@ -78,8 +78,6 @@ When creating an issue please try to adhere to the following format:
     ### Steps to reproduce the behavior
 
     List all relevant steps to reproduce the observed behavior.
-
-    see our .github/ISSUE_TEMPLATE.md for more examples.
 -->
 
 <!--

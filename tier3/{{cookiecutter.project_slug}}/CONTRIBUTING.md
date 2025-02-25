@@ -79,7 +79,6 @@ When creating an issue please try to adhere to the following format:
 
     List all relevant steps to reproduce the observed behavior.
 
-    see our .github/ISSUE_TEMPLATE.md for more examples.
 -->
 
 ### Writing Pull Requests
@@ -120,7 +119,6 @@ Some important notes regarding the summary line:
 * Do not end in a period — this is a title/subject
 * Prefix the subject with its scope
 
-    see our .github/PULL_REQUEST_TEMPLATE.md for more examples.
 -->
 
 ## Reviewing Pull Requests
