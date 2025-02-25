@@ -32,29 +32,29 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
-1.  Fork the project 
-2.  Check out the `main` branch 
+1.  Fork the project
+2.  Check out the `main` branch
 3.  Create a feature branch
-4.  Write code and tests for your change 
+4.  Write code and tests for your change
 5.  From your branch, make a pull request against `{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/main`
-6.  Work with repo maintainers to get your change reviewed 
+6.  Work with repo maintainers to get your change reviewed
 7.  Wait for your change to be pulled into `{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/main`
 8.  Delete your feature branch
 -->
 
-<!-- 
+<!--
 ### Testing Conventions
 
-TODO: Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. 
+TODO: Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has.
 -->
 
 <!--
 ### Coding Style and Linters
 
-TODO: Code Style Guide 
+TODO: Code Style Guide
 
 1. Mention any style guides you adhere to (e.g. pep8, etc...)
-2. Mention any linters your project uses (e.g. flake8, jslint, etc...) 
+2. Mention any linters your project uses (e.g. flake8, jslint, etc...)
 3. Mention any naming conventions your project uses (e.g. Semantic Versioning, CamelCasing, etc...)
 4. Mention any other content guidelines the project adheres to (e.g. plainlanguage.gov, etc...)
 -->
@@ -62,7 +62,8 @@ TODO: Code Style Guide
 ### Issues
 
 <!---
-TODO: Example Issue Guides
+TODO: Set up issues on your repository to receive feedback from the community.
+A issue template is provided in the repository located at .github/ISSUE_TEMPLATE/issue_report.md
 
 When creating an issue please try to adhere to the following format:
 
@@ -102,7 +103,7 @@ questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
-*Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
+_Submit a vulnerability:_ Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
 
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
 
