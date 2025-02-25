@@ -61,9 +61,7 @@ TODO: Code Style Guide
 
 ### Issues
 
-<!---
-TODO: Set up issues on your repository to receive feedback from the community. Below is an example issue report.
-An issue template is provided in the repository located at .github/ISSUE_TEMPLATE/issue_report.md
+<!--- TODO: Make a brief statement about filing issues to receive feedback from the community. An issue template is provided in the repository located at .github/ISSUE_TEMPLATE/issue_report.md. Below is an example issue report.
 
 When creating an issue please try to adhere to the following format:
 

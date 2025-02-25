@@ -61,7 +61,7 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 
 ### Writing Issues
 
-<!--- TODO: Example Issue Guides
+<!--- TODO: Make a brief statement about filing issues to receive feedback from the community. An issue template is provided in the repository located at .github/ISSUE_TEMPLATE/issue_report.md. Below is an example issue report.
 
 When creating an issue please try to adhere to the following format:
 
@@ -84,7 +84,7 @@ When creating an issue please try to adhere to the following format:
 
 ### Writing Pull Requests
 
-<!-- TODO: Make a brief statement about where to file pull/merge requests, and conventions for doing so. Link to PULL_REQUEST_TEMPLATE.md file.
+<!-- TODO: Make a brief statement about where to file pull/merge requests, and conventions for doing so. A pull request template is provided in the repository located at .github/PULL_REQUEST_TEMPLATE/pull_request_template.md. Below is an example pull request.
 
 Comments should be formatted to a width no greater than 80 columns.
 
