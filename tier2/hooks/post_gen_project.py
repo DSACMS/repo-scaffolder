@@ -71,14 +71,21 @@ def addMaintainer():
                 f.write(line)
 
 def moveCookiecutterFile(): 
-    github_dir = os.path.join(os.getcwd(), ".github")
-    os.chdir(github_dir)
+    original_dir = os.getcwd()
 
-    source_path = "cookiecutter.json"
-    destination_dir = "codejson"
-    destination_path = os.path.join(destination_dir, "cookiecutter.json")
+    try:
+        github_dir = os.path.join(original_dir, ".github")
+        os.chdir(github_dir)
 
-    shutil.move(source_path, destination_path)
+        source_path = "cookiecutter.json"
+        destination_dir = "codejson"
+        destination_path = os.path.join(destination_dir, "cookiecutter.json")
+
+        shutil.move(source_path, destination_path)
+    
+    finally:
+        # Moves back to project dir
+        os.chdir(original_dir)
 
 def main():
     if ADD_MAINTAINER == "True":

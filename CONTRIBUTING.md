@@ -83,8 +83,6 @@ When creating an issue please try to adhere to the following format:
 
     List all relevant steps to reproduce the observed behavior.
 
-    see our .github/ISSUE_TEMPLATE.md for more examples.
-
 ### Writing Pull Requests
 
 Comments should be formatted to a width no greater than 80 columns.
