@@ -57,4 +57,4 @@ Thank you for helping maintain accurate code.json information for this project! 
 ### Helpful Resources
 
 - [Generate your code.json entry](https://dsacms.github.io/codejson-generator/) - Use this form to generate a valid code.json
-- [code.json Guidance](https://github.com/DSACMS/gov-codejson) - Documentation on code.json 
+- [code.json Guidance](https://github.com/DSACMS/gov-codejson/tree/main/docs) - Documentation on code.json 
