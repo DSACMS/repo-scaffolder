@@ -172,6 +172,14 @@ repolinter lint tier4/\{\{cookiecutter.project_slug\}\}
 
 A tool to automatically update repositories up to hygenic standards with the use of [Repolinter through GitHub Actions](https://github.com/DSACMS/repolinter-actions) is also available. This action sends a PR to your repository with templates of all the missing files and sections that are required using a predefined rulset. Visit the repository for more information on how to get this action up and running.
 
+#### Automated Releases and Guidelines
+
+This tool automatically generates release guidelines and automated workflows that generate changelogs based on the standards that are set within those guidelines.
+
+For instance, semantic versioning is expected and required for the baseline changelog workflow to work in your newly generated project.
+
+More information on release guidelines can be found [here](./release-guidelines-template.md)
+
 # Development and Software Delivery Lifecycle
 
 The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that external contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
