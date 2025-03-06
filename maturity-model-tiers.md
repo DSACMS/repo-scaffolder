@@ -49,25 +49,25 @@ This document outlines the maturity model tiers.
 
 ## Ordinality
 
-| Level                                  | Description       |
-|----------------------------------------|-------------------|
-| $\color{green}\large{\textsf{M}}$      | Mandatory         |
-| $\color{blue}\large{\textsf{R}}$       | Recommended       |
-| $\color{lightcoral}\large{\textsf{N}}$ | Not Recommended   |
+| Level                                  | Description     |
+| -------------------------------------- | --------------- |
+| $\color{green}\large{\textsf{M}}$      | Mandatory       |
+| $\color{blue}\large{\textsf{R}}$       | Recommended     |
+| $\color{lightcoral}\large{\textsf{N}}$ | Not Recommended |
 
 ## Simplified
 
-| File                     | Tier 0 | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
-|--------------------------|--------|--------|--------|--------|--------|
-| LICENSE                  | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| SECURITY.md              | $\color{blue}\large{\textsf{R}}$  | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| README.md                | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| CONTRIBUTING.md          | $\color{blue}\large{\textsf{R}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| MAINTAINERS.md           | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$  |
-| GOVERNANCE.md            | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$  |
-| CODEOWNERS.md            | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  |
-| COMMUNITY_GUIDELINES.md  | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  |
-| CODE_OF_CONDUCT.md       | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  |
+| File                    | Tier 0                                 | Tier 1                                 | Tier 2                                 | Tier 3                            | Tier 4                            |
+| ----------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- | --------------------------------- | --------------------------------- |
+| LICENSE                 | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| SECURITY.md             | $\color{blue}\large{\textsf{R}}$       | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| README.md               | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| CONTRIBUTING.md         | $\color{blue}\large{\textsf{R}}$       | $\color{blue}\large{\textsf{R}}$       | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| GOVERNANCE.md           | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$  | $\color{green}\large{\textsf{M}}$ |
+| COMMUNITY_GUIDELINES.md | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| CODE_OF_CONDUCT.md      | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| COMMUNITY.md            | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| code.json               | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
 
 ## Tier Ordinality
 
