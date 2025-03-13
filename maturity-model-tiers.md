@@ -413,7 +413,7 @@ This document outlines the maturity model tiers.
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the MAINTAINERS.md file for further details.</td>
+      <td>This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the COMMUNITY.md file for further details.</td>
     </tr>
     <tr>
       <!-- <td>CONTRIBUTING.md</td> -->
@@ -493,7 +493,7 @@ This document outlines the maturity model tiers.
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to MAINTAINERS.md can help.</td>
+      <td>Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to COMMUNITY.md can help.</td>
     </tr>
     <tr>
       <!-- <td>CONTRIBUTING.md</td> -->
