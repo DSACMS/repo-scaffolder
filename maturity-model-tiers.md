@@ -97,13 +97,13 @@ This document outlines the maturity model tiers.
     </tr>
         <tr>
       <td>code.json</td>
-      <td>[Metadata](https://github.com/DSACMS/gov-codejson/blob/main/schemas)</td>
+      <td><a href="https://github.com/DSACMS/gov-codejson/blob/main/schemas">Metadata</a></td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>All repositories, whether private or public, must include a code.json file containing project metadata. For more information, visit the [code.json documentation repository](https://github.com/DSACMS/gov-codejson). </td>
+      <td>All repositories, whether private or public, must include a code.json file containing project metadata. For more information, visit the <a href="https://github.com/DSACMS/gov-codejson">code.json documentation repository</a>.</td>
     </tr>
     <tr>
       <td rowspan="22">README.md</td>
