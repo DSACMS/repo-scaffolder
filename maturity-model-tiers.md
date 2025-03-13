@@ -95,15 +95,15 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>All repositories, whether private or public, must include authorship and copyright information. By default, work done by federal employees is not subject to copyright protections under Title 17 U.S. Code Sections 101 & 105, unless for security or contracting purposes.</td>
     </tr>
-    <tr>
-      <td>SECURITY.md</td>
-      <td>Security & Responsible Disclosure Policy</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
+        <tr>
+      <td>code.json</td>
+      <td>Metadata</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This outlines the Security & Responsibility Disclosure policies including vulnerability submission, etc.</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>All repositories, whether private or public, must include a code.json file containing project metadata. For more information, visit the [code.json documentation repository](https://github.com/DSACMS/gov-codejson). </td>
     </tr>
     <tr>
       <td rowspan="22">README.md</td>
@@ -326,6 +326,66 @@ This document outlines the maturity model tiers.
       <td>A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International (world-wide public domain).</td>
     </tr>
     <tr>
+      <td rowspan="5">COMMUNITY.md</td>
+      <td>Table of Project Members</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Maintainers</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the project maintainers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Maintainers List</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Approvers List</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the project approvers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Reviewers List</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the project reviewers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
+    </tr>
+    <tr>
+      <td>SECURITY.md</td>
+      <td>Security & Responsible Disclosure Policy</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>This outlines the Security & Responsibility Disclosure policies including vulnerability submission, etc.</td>
+    </tr>
+    <tr>
       <td rowspan="15">CONTRIBUTING.md</td>
       <td>How to Contribute</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
@@ -476,76 +536,6 @@ This document outlines the maturity model tiers.
       <td>This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508) Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.</td>
     </tr>
     <tr>
-      <td rowspan="4">MAINTAINERS.md</td>
-      <td>Maintainers</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Who are the project maintainers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
-    </tr>
-    <tr>
-      <!-- <td>MAINTAINERS.md</td> -->
-      <td>Maintainers List</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams.</td>
-    </tr>
-    <tr>
-      <!-- <td>MAINTAINERS.md</td> -->
-      <td>Approvers List</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Who are the project approvers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
-    </tr>
-    <tr>
-      <!-- <td>MAINTAINERS.md</td> -->
-      <td>Reviewers List</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Who are the project reviewers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
-    </tr>
-    <tr>
-      <td>GOVERNANCE.md</td>
-      <td>Governance</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Starting at Tier 3 GOVERNANCE.md has basic language about early community governance, how the project make decisions, and how contirbutors are elevated through the leadership process if any (e.g. joining teams, getting maintainer status, etc...)</td>
-    </tr>
-    <tr>
-      <td rowspan="2">CODEOWNERS.md</td>
-      <td>List of Users</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.</td>
-    </tr>
-    <tr>
-      <!-- <td >CODEOWNERS.md</td> -->
-      <td>List of Repo Domains by Owner</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>e.g. Frontend, Backend, Documentation</td>
-    </tr>
-    <tr>
       <td rowspan="3">COMMUNITY_GUIDELINES.md</td>
       <td>Principles</td>
       <td>$\color{lightcoral}\large{\textsf{N}}$</td>
@@ -594,6 +584,16 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>This section recognizes previous work and best practices established by the other members of the federal open source community such as USDS, GSA, 18F, and the Justice40 Project.</td>
+    </tr>
+    <tr>
+      <td>GOVERNANCE.md</td>
+      <td>Governance</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Starting at Tier 3 GOVERNANCE.md has basic language about early community governance, how the project make decisions, and how contirbutors are elevated through the leadership process if any (e.g. joining teams, getting maintainer status, etc...)</td>
     </tr>
   </tbody>
 </table>
