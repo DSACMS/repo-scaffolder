@@ -97,7 +97,7 @@ This document outlines the maturity model tiers.
     </tr>
         <tr>
       <td>code.json</td>
-      <td>Metadata</td>
+      <td>[Metadata](https://github.com/DSACMS/gov-codejson/blob/main/schemas)</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
