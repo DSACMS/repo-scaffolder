@@ -14,7 +14,8 @@ For individuals that are not members of the DSACMS GitHub organization, these ou
 
 Name of individual:
 GitHub username:
-Role:
+Role in project:
+Role in repository according to COMMUNITY.md (Maintainer, Approver, Reviewer):
 
 ### Additional Notes (Optional)
 
