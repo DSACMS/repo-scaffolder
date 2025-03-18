@@ -2,7 +2,7 @@
 name: Outside Collaborator Repository Access Request Ticket
 about: Ticket for requesting outside collaborator to be added to repository
 title: Request an Outside Collaborator to be added to repository
-labels: ["help-desk", "repo-management"]
+labels: ["helpdesk", "repo-management"]
 assignees: "@dsac-ospo"
 ---
 

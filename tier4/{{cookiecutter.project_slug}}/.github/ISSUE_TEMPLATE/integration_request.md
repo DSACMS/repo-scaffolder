@@ -2,7 +2,7 @@
 name: Third-Party Integration Request Ticket
 about: Ticket for requesting a third-party integration to be added to repository
 title: Request third-party integration to be added to repository
-labels: ["help-desk", "repo-management"]
+labels: ["helpdesk", "repo-management"]
 assignees: "@dsac-ospo"
 ---
 

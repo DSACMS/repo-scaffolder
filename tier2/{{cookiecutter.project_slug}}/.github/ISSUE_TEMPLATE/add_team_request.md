@@ -2,7 +2,7 @@
 name: Add Team to Repository Request Ticket
 about: Ticket for requesting team to be added to repository
 title: Request Team Access to Repository
-labels: ["help-desk", "repo-management"]
+labels: ["helpdesk", "repo-management"]
 assignees: "@dsac-ospo"
 ---
 
