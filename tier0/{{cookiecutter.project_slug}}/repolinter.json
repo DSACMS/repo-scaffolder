@@ -1,0 +1,177 @@
+{
+    "extends": "https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json",
+    "$schema": "https://raw.githubusercontent.com/todogroup/repolinter/master/rulesets/schema.json",
+    "version": 2,
+    "axioms": {
+      "linguist": "language",
+      "licensee": "license",
+      "packagers": "packager"
+    },
+    "rules": {
+      "readme-file-exists": {
+        "level": "off"
+      },
+      "contributing-file-exists": {
+        "level": "off"
+      },
+      "maintainers-file-exists": {
+        "level": "off"
+      },
+      "governance-file-exists": {
+        "level": "off"
+      },
+      "community-guidelines-file-exists": {
+        "level": "off"
+      },
+      "code-of-conduct-file-exists": {
+        "level": "off"
+      },
+      "readme-contains-about-the-project": {
+        "level": "off"
+      },
+      "readme-contains-project-vision": {
+        "level": "off"
+      },
+      "readme-contains-project-mission": {
+        "level": "off"
+      },
+      "readme-contains-agency-mission": {
+        "level": "off"
+      },
+      "readme-contains-team-mission": {
+        "level": "off"
+      },
+      "readme-contains-core-team": {
+        "level": "off"
+      },
+      "readme-contains-documentation-index": {
+        "level": "off"
+      },
+      "readme-contains-repository-structure": {
+        "level": "off"
+      },
+      "readme-contains-development-and-software-delivery-lifecycle": {
+        "level": "off"
+      },
+      "readme-contains-local-development": {
+        "level": "off"
+      },
+      "readme-contains-coding-style-and-linters": {
+        "level": "off"
+      },
+      "readme-contains-branching-model": {
+        "level": "off"
+      },
+      "readme-contains-contributing": {
+        "level": "off"
+      },
+      "readme-contains-codeowners": {
+        "level": "off"
+      },
+      "readme-contains-community": {
+        "level": "off"
+      },
+      "readme-contains-community-guidelines": {
+        "level": "off"
+      },
+      "readme-contains-governance": {
+        "level": "off"
+      },
+      "readme-contains-feedback": {
+        "level": "off"
+      },
+      "readme-contains-glossary": {
+        "level": "off"
+      },
+      "contributing-contains-getting-started": {
+        "level": "off"
+      },
+      "contributing-contains-team-specific-guidelines": {
+        "level": "off"
+      },
+      "contributing-contains-building-dependencies": {
+        "level": "off"
+      },
+      "contributing-contains-building-the-project": {
+        "level": "off"
+      },
+      "contributing-contains-workflow-and-branching": {
+        "level": "off"
+      },
+      "contributing-contains-testing-conventions": {
+        "level": "off"
+      },
+      "contributing-contains-coding-style-and-linters": {
+        "level": "off"
+      },
+      "contributing-contains-writing-issues": {
+        "level": "off"
+      },
+      "contributing-contains-documentation": {
+        "level": "off"
+      },
+      "maintainers-contains-maintainers": {
+        "level": "off"
+      },
+      "maintainers-contains-maintainers-list": {
+        "level": "off"
+      },
+      "maintainers-contains-approvers-list": {
+        "level": "off"
+      },
+      "maintainers-contains-reviewers-list": {
+        "level": "off"
+      },
+      "governance-contains-governance": {
+        "level": "off"
+      },
+      "community-guidelines-contains-principles": {
+        "level": "off"
+      },
+      "community-guidelines-contains-community-guidelines": {
+        "level": "off"
+      },
+      "community-guidelines-contains-acknowledgements": {
+        "level": "off"
+      },
+      "code-of-conduct-contains-contributor-code-of-conduct": {
+        "level": "off"
+      },
+      "code-of-conduct-contains-acknowledgements": {
+        "level": "off"
+      },
+      "contributing-contains-how-to-contribute": {
+        "level": "off"
+      },
+      "contributing-contains-writing-pull-requests": {
+        "level": "off"
+      },
+      "contributing-contains-reviewing-pull-requests": {
+        "level": "off"
+      },
+      "contributing-contains-shipping-releases": {
+        "level": "off"
+      },
+      "contributing-contains-policies": {
+        "level": "off"
+      },
+      "contributing-contains-open-source-policy": {
+        "level": "off"
+      },
+      "contributing-contains-security-and-responsible-disclosure-policy": {
+        "level": "off"
+      },
+      "contributing-contains-public-domain": {
+        "level": "off"
+      },
+      "codeowners-file-exists": {
+        "level": "error"
+      },
+      "code-owners-contains-list-of-users": {
+        "level": "error"
+      },
+      "code-owners-contains-repo-domains": {
+        "level": "off"
+      }
+    }
+  }
