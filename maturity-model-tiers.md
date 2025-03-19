@@ -65,7 +65,6 @@ This document outlines the maturity model tiers.
 | COMMUNITY.md                                                                   | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
 | SECURITY.md                                                                    | $\color{blue}\large{\textsf{R}}$       | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
 | CONTRIBUTING.md                                                                | $\color{blue}\large{\textsf{R}}$       | $\color{blue}\large{\textsf{R}}$       | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| COMMUNITY_GUIDELINES.md                                                        | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
 | CODE_OF_CONDUCT.md                                                             | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
 | GOVERNANCE.md                                                                  | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$  | $\color{green}\large{\textsf{M}}$ |
 
@@ -326,7 +325,7 @@ This document outlines the maturity model tiers.
       <td>A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International (world-wide public domain).</td>
     </tr>
     <tr>
-      <td rowspan="5">COMMUNITY.md</td>
+      <td rowspan="10">COMMUNITY.md</td>
       <td>Table of Project Members</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
@@ -337,7 +336,7 @@ This document outlines the maturity model tiers.
     </tr>
     <tr>
       <!-- <td>COMMUNITY.md</td> -->
-      <td>Maintainers</td>
+      <td>Roles & Responsibilities</td>
       <td>$\color{lightcoral}\large{\textsf{N}}$</td>
       <td>$\color{lightcoral}\large{\textsf{N}}$</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
@@ -374,6 +373,56 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>Who are the project reviewers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Contributors</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who has contributed to the project? Highlight and credit the users who have contributed to the repository.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Alumni</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the past maintainers or contributors who previously played significant roles in this project who are no longer actively involved? Consider including their roles and dates for context.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Principles</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>This section communicates to prospective contributors and users what the values of your community are. The examples provided in the template were established by the Justice40 project at USDS.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Community Guidelines</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>This section communicates specific norms and guidelines for how to participate and contribute positively to your community. The more explicit you can be about behaviors you'd like to encourage or discourage, the less friction new contributors will experience in onboarding and operating within your project.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Acknowledgements</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>This section recognizes previous work and best practices established by the other members of the federal open source community such as USDS, GSA, 18F, and the Justice40 Project.</td>
     </tr>
     <tr>
       <td>SECURITY.md</td>
@@ -534,36 +583,6 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508) Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.</td>
-    </tr>
-    <tr>
-      <td rowspan="3">COMMUNITY_GUIDELINES.md</td>
-      <td>Principles</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This section communicates to prospective contributors and users what the values of your community are. The examples provided in the template were established by the Justice40 project at USDS.</td>
-    </tr>
-    <tr>
-      <!-- <td>COMMUNITY_GUIDELINES.md</td> -->
-      <td>Community Guidelines</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This section communicates specific norms and guidelines for how to participate and contribute positively to your community. The more explicit you can be about behaviors you'd like to encourage or discourage, the less friction new contributors will experience in onboarding and operating within your project.</td>
-    </tr>
-    <tr>
-      <!-- <td>COMMUNITY_GUIDELINES.md</td> -->
-      <td>Acknowledgements</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This section recognizes previous work and best practices established by the other members of the federal open source community such as USDS, GSA, 18F, and the Justice40 Project.</td>
     </tr>
     <tr>
       <td rowspan="2">CODE_OF_CONDUCT.md</td>
