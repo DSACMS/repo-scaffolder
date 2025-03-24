@@ -21,14 +21,15 @@ There are specific files that are required and recommended to include in the rep
 | **File**                  | **Requirement** | **Description**                                                                                                                                                          |
 | ------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `LICENSE`                 | Mandatory       | Defines the licensing terms under which the project is distributed.                                                                                                      |
-| `SECURITY.md`             | Mandatory       | Outlines the agency's security policies, including how to report security issues or vulnerabilities in the code.                                                         |
+| `code.json`               | Mandatory       | Contains project metadata following government requirements. |
 | `README.md`               | Mandatory       | Provides a comprehensive overview of the project, including its purpose, how to install or use it, and any relevant information for users or developers.                 |
+| `COMMUNITY.md`            | Mandatory       | Lists project team members and points of contact with detailed roles and responsibilities. |
+| `SECURITY.md`             | Mandatory       | Outlines the agency's security policies, including how to report security issues or vulnerabilities in the code.                                                         |
 | `CONTRIBUTING.md`         | Mandatory       | Offers guidelines for contributing to the project, including code standards, how to submit issues, and creating pull requests.                                           |
-| `MAINTAINERS.md`          | Recommended     | Lists the individuals responsible for maintaining the project as well as reviewing and approving pull requests.                                                          |
-| `GOVERNANCE.md`           | Recommended     | Describes the governance model of the project, such as decision-making processes and rules for contributing. It ensures a transparent process for managing the project.  |
-| `CODEOWNERS.md`           | Recommended     | Defines ownership of various sections of the repository.                                                                                                                 |
-| `COMMUNITY_GUIDELINES.md` | Mandatory       | Defines expectations for interactions within the project's community, including how external contributors should engage and behave.                                      |
 | `CODE_OF_CONDUCT.md`      | Mandatory       | Establishes guidelines for acceptable behavior within the community, setting expectations for how contributors should interact in a respectful and collaborative manner. |
+| `MAINTAINERS.md`          | Mandatory       | Lists the individuals responsible for maintaining the project as well as reviewing and approving pull requests.                                                          |
+| `CODEOWNERS.md`           | Mandatory       | Defines ownership of various sections of the repository.                                                                                                                 |
+| `GOVERNANCE.md`           | Recommended     | Describes the governance model of the project, such as decision-making processes and rules for contributing. It ensures a transparent process for managing the project.  |
 
 For more information about required sections and content within the files above, please visit [maturity-model-tiers.md](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
 

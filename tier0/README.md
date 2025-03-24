@@ -18,9 +18,11 @@ Although these projects are private, there are specific files that are required 
 
 | **File**              | **Requirement** | **Description**                                                                                             |
 |-----------------------|-----------------|-------------------------------------------------------------------------------------------------------------|
-| `LICENSE`             | Mandatory        | Defines the licensing terms under which the project is distributed. |
-| `SECURITY.md`         | Recommended       | Outlines the agency's security policies, including how to report security issues or vulnerabilities in the code. |
-| `README.md`           |  Mandatory     | Provides an overview of the project, including its purpose, setup instructions, or any relevant notes for the developer(s). |
-| `CONTRIBUTING.md`     | Recommended        | Guidelines for contributing, useful if the project is later opened to collaborators or transitioned to a public repository. |
+| `LICENSE`             | Mandatory       | Defines the licensing terms under which the project is distributed. |
+| `code.json`           | Mandatory       | Contains project metadata following government requirements. |
+| `README.md`           | Mandatory       | Provides an overview of the project, including its purpose, setup instructions, or any relevant notes for the developer(s). |
+| `COMMUNITY.md`        | Mandatory       | Lists project team members and points of contact. |
+| `SECURITY.md`         | Recommended     | Outlines the agency's security policies, including how to report security issues or vulnerabilities in the code. |
+| `CONTRIBUTING.md`     | Recommended     | Guidelines for contributing, useful if the project is later opened to collaborators or transitioned to a public repository. |
 
 For more information about sections and content within the files above, please visit [maturity-model-tiers.md](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
