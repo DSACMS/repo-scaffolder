@@ -77,28 +77,6 @@
         }
       }
     },
-    "maintainers-file-exists": {
-      "level": "off",
-      "rule": {
-        "type": "file-existence",
-        "options": {
-          "globsAny": ["{docs/,.github/,}MAINTAINERS.md"],
-          "file-name": "MAINTAINERS.md",
-          "file-content": ""
-        }
-      }
-    },
-    "codeowners-file-exists": {
-      "level": "off",
-      "rule": {
-        "type": "file-existence",
-        "options": {
-          "globsAny": ["{docs/,.github/,}CODEOWNERS.md"],
-          "file-name": "CODEOWNERS.md",
-          "file-content": ""
-        }
-      }
-    },
     "governance-file-exists": {
       "level": "off",
       "rule": {
@@ -232,7 +210,7 @@
           "content": "Core Team",
           "flags": "i",
           "file-name": "README.md",
-          "file-content": "## Core Team \nAn up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAINERS.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles. \n"
+          "file-content": "## Core Team \nAn up-to-date list of core team members can be found in [COMMUNITY.md](COMMUNITY.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles. \n"
         }
       }
     },
@@ -324,19 +302,6 @@
           "flags": "i",
           "file-name": "README.md",
           "file-content": "## Contributing \nThank you for considering contributing to an Open Source project of the US Government! For more information about our contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md). \n"
-        }
-      }
-    },
-    "readme-contains-codeowners": {
-      "level": "off",
-      "rule": {
-        "type": "file-contents",
-        "options": {
-          "globsAll": ["README.md"],
-          "content": "Codeowners",
-          "flags": "i",
-          "file-name": "README.md",
-          "file-content": "## Codeowners \nThe contents of this repository are managed by **{responsible organization(s)}**. Those responsible for the code and documentation in this repository can be found in [CODEOWNERS.md](CODEOWNERS.md). \n"
         }
       }
     },
@@ -505,7 +470,7 @@
           "content": "Team Specific Guidelines",
           "flags": "i",
           "file-name": "CONTRIBUTING.md",
-          "file-content": "### Team Specific Guidelines \n<!-- TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the MAINTAINERS.md file for further details.--> \n"
+          "file-content": "### Team Specific Guidelines \n<!-- TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the COMMUNITY.md file for further details.--> \n"
         }
       }
     },
@@ -609,7 +574,7 @@
           "content": "Reviewing Pull Requests",
           "flags": "i",
           "file-name": "CONTRIBUTING.md",
-          "file-content": "### Reviewing Pull Requests \n<!--- TODO: Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to MAINTAINERS.md can help.\n Code Review Example\n The repository on GitHub is kept in sync with an internal repository at github.cms.gov. For the most part this process should be transparent to the project users, but it does have some implications for how pull requests are merged into the codebase.\n When you submit a pull request on GitHub, it will be reviewed by the project community (both inside and outside of github.cms.gov), and once the changes are approved, your commits will be brought into github.cms.gov's internal system for additional testing. Once the changes are merged internally, they will be pushed back to GitHub with the next sync.\n This process means that the pull request will not be merged in the usual way. Instead a member of the project team will post a message in the pull request thread when your changes have made their way back to GitHub, and the pull request will be closed.\n The changes in the pull request will be collapsed into a single commit, but the authorship metadata will be preserved.\n -->\n"
+          "file-content": "### Reviewing Pull Requests \n<!--- TODO: Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to COMMUNITY.md can help.\n Code Review Example\n The repository on GitHub is kept in sync with an internal repository at github.cms.gov. For the most part this process should be transparent to the project users, but it does have some implications for how pull requests are merged into the codebase.\n When you submit a pull request on GitHub, it will be reviewed by the project community (both inside and outside of github.cms.gov), and once the changes are approved, your commits will be brought into github.cms.gov's internal system for additional testing. Once the changes are merged internally, they will be pushed back to GitHub with the next sync.\n This process means that the pull request will not be merged in the usual way. Instead a member of the project team will post a message in the pull request thread when your changes have made their way back to GitHub, and the pull request will be closed.\n The changes in the pull request will be collapsed into a single commit, but the authorship metadata will be preserved.\n -->\n"
         }
       }
     },
@@ -691,58 +656,6 @@
         }
       }
     },
-    "maintainers-contains-maintainers": {
-      "level": "off",
-      "rule": {
-        "type": "file-contents",
-        "options": {
-          "globsAll": ["{docs/,.github/,}MAINTAINERS.md"],
-          "content": "Maintainers",
-          "flags": "i",
-          "file-name": "MAINTAINERS.md",
-          "file-content": "## Maintainers \n<!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. -->\n This is a list of maintainers for this project. See [CODEOWNERS.md](./CODEOWNERS.md) for list of reviewers for different parts of the codebase. Team members include:\n"
-        }
-      }
-    },
-    "maintainers-contains-maintainers-list": {
-      "level": "off",
-      "rule": {
-        "type": "file-contents",
-        "options": {
-          "globsAll": ["{docs/,.github/,}MAINTAINERS.md"],
-          "content": "Maintainers List:",
-          "flags": "i",
-          "file-name": "MAINTAINERS.md",
-          "file-content": "## Maintainers List: \n<!-- TODO: What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams. -->\n - \n"
-        }
-      }
-    },
-    "maintainers-contains-approvers-list": {
-      "level": "off",
-      "rule": {
-        "type": "file-contents",
-        "options": {
-          "globsAll": ["{docs/,.github/,}MAINTAINERS.md"],
-          "content": "Approvers:",
-          "flags": "i",
-          "file-name": "MAINTAINERS.md",
-          "file-content": "## Approvers:\n - \n"
-        }
-      }
-    },
-    "maintainers-contains-reviewers-list": {
-      "level": "off",
-      "rule": {
-        "type": "file-contents",
-        "options": {
-          "globsAll": ["{docs/,.github/,}MAINTAINERS.md"],
-          "content": "Reviewers:",
-          "flags": "i",
-          "file-name": "MAINTAINERS.md",
-          "file-content": "## Reviewers:\n - \n\n| Roles        | Responsibilities                          | Requirements                                     | Defined by                              |\n| -------------|:-----------------------------------------|:-----------------------------------------------|:---------------------------------------|\n| member       | active contributor in the community       | multiple contributions to the project.         | PROJECT GitHub org Committer Team      |\n| reviewer     | review contributions from other members   | history of review and authorship in a sub-project | MAINTAINERS file reviewer entry, and GitHub Org Triage Team |\n| approver     | approve accepting contributions           | highly experienced and active reviewer + contributor to a sub-project | MAINTAINERS file approver entry and GitHub Triage Team |\n| lead         | set direction and priorities for a sub-project | demonstrated responsibility and excellent technical judgement for the sub-project | MAINTAINERS file owner entry and GitHub Org Admin Team |\n"
-        }
-      }
-    },
     "governance-contains-governance": {
       "level": "off",
       "rule": {
@@ -753,32 +666,6 @@
           "flags": "i",
           "file-name": "GOVERNANCE.md",
           "file-content": "# Governance \n<!-- TODO: Starting at Tier 3 GOVERNANCE.md has basic language about early community governance, how the project make decisions, and how contributors are elevated through the leadership process if any (e.g. joining teams, getting maintainer status, etc...)--> \n This project is governed by our [Community Guidelines](COMMUNITY_GUIDELINES.md) and [Code of Conduct](CODE_OF_CONDUCT.md). \n"
-        }
-      }
-    },
-    "code-owners-contains-list-of-users": {
-      "level": "off",
-      "rule": {
-        "type": "file-contents",
-        "options": {
-          "globsAll": ["{docs/,.github/,}CODEOWNERS.md"],
-          "content": "Code Owners",
-          "flags": "i",
-          "file-name": "CODEOWNERS.md",
-          "file-content": "# Code Owners \n<!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. List them by GitHub Username--> \n"
-        }
-      }
-    },
-    "code-owners-contains-repo-domains": {
-      "level": "off",
-      "rule": {
-        "type": "file-contents",
-        "options": {
-          "globsAll": ["{docs/,.github/,}CODEOWNERS.md"],
-          "content": "documentation | frontend | backend | Repository Domains",
-          "flags": "i",
-          "file-name": "CODEOWNERS.md",
-          "file-content": "## Repository Domains\n <!--\nThe Repo Domains section of your CODEOWNERS.md file helps manage code review responsibilities efficiently. Each domain represents a different aspect of the repository, such as documentation, frontend, backend, DevOps, testing, etc. In this section, list each domain and assign the appropriate GitHub usernames or teams responsible for that domain. This ensures that pull requests (PRs) are reviewed by the right experts, maintaining high code quality and relevance.\nFor example:\n/docs/ @doc-team @johnsmith @janedoe\n/frontend/ @frontend-team @alice @bob\n/backend/ @backend-team @charlie @dana\nFurthermore, GitHub teams are a good feature for managing groups of contributors who need to be notified about specific domains within a repository. By creating and using GitHub teams, you can allow contributors to ping multiple relevant experts simultaneously.\nTo set up GitHub teams:\n- Navigate to your organization's settings and select 'Teams'.\n- Create a new team for each domain, such as @frontend-team, @backend-team, or @doc-team.\n- Add the relevant members to each team. Ensure that the team includes all the individuals who should be notified about PRs in their domain.\n- When filling out the Repo Domains section in your CODEOWNERS.md file, use the team handles instead of or alongside individual usernames. This way, when a contributor opens a PR affecting a specific domain, they can simply tag the team, and every member of that team will be notified.\n--> \n"
         }
       }
     },
@@ -856,7 +743,7 @@
           "content": "Table of Project Members",
           "flags": "i",
           "file-name": "COMMUNITY.md",
-          "file-content": "## Table of Project Members \n<!-- Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. --> \n"
+          "file-content": "## Table of Project Members \n<!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. \n Roles to include, but not limited to: Project Owner, Technical Lead, Developers/Contributors, Community Manager, Security Team, Policy Advisor, Contracting Officer's Representative, Compliance Officer, Procurement Officer --> \n\n{{ cookiecutter.project_repo_name }} is supported by a dedicated team of individuals fulfilling various roles to ensure its success, security, and alignment with government standards and agency goals.\n\n| Role   | Name    | Affiliation    |\n| :----- | :------ | :------------- |\n| {role} | {names} | {affiliations} |\n"
         }           
       }
     },

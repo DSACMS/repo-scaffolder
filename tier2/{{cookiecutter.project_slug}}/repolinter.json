@@ -14,12 +14,6 @@
     "code-of-conduct-file-exists": {
       "level": "error"
     },
-    "maintainers-file-exists": {
-      "level": "warning"
-    },
-    "codeowners-file-exists": {
-      "level": "warning"
-    },
     "community-guidelines-file-exists": {
       "level": "error"
     },
@@ -124,18 +118,6 @@
     },
     "community-contains-acknowledgements": {
       "level": "error"
-    },
-    "maintainers-contains-maintainers": {
-      "level": "warning"
-    },
-    "maintainers-contains-maintainers-list": {
-      "level": "warning"
-    },
-    "code-owners-contains-list-of-users": {
-      "level": "warning"
-    },
-    "code-owners-contains-repo-domains": {
-      "level": "warning"
     },
     "code-of-conduct-contains-contributor-code-of-conduct": {
       "level": "error"
