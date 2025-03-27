@@ -2,7 +2,7 @@
 {{ cookiecutter.project_description }}
 
 ## About the Project
-**{project statement}**
+**{project_statement}**
 
 <!--- 
 ### Project Vision
@@ -14,61 +14,37 @@
 
 <!-- 
 ### Agency Mission
-TODO: Recommended to include since this is an agency-led project -->
+TODO: Good to include since this is an agency-led project -->
 
 <!-- 
 ### Team Mission
-TODO: Recommended to include since this is an agency-led project -->
+TODO: Good to include since this is an agency-led project -->
 
-<!-- ## Core Team
+<!-- 
+## Core Team
 
-A full list of contributors can be found on [https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors](https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors). -->
+An up-to-date list of core team members can be found in [COMMUNITY.md](COMMUNITY.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles. -->
 
-<!--
-## Documentation Index
+<!-- 
+## Documentation Index 
 
 TODO: This is a like a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.
 
-**{list of .md at top directory and descriptions}**
--->
+**{list of .md at top directory and descriptions}** -->
 
 <!--
 ## Repository Structure
 
-TODO: Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.
+ TODO: Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.-->
+<!--TREE START--> <!--TREE END-->
 
-**{list directories and descriptions}**
--->
+<!-- **{list directories and descriptions}** -->
 
-<!--- 
+<!---
 ## Local Development
 
-### Installation
-Example Install Instructions
-
-1. Clone the repo
-
-    `git clone https://github.com/cmsgov/{{ cookiecutter.project_repo_name }}.git`
-
-1. Setup your development environment
-
-    `python -m venv venv`
-
-1. Install project dependencies
-
-    `pip install -r requirements.txt`
-
-    `yarn install package.json`
-
-1. Run the test suite
-    
-    `pytest tests/tox.ini`
-
-1. Start the webserver
-
-    `make start`
-
-1. Visit [localhost:9001](https://localhost:9001) to view the server
+ TODO - with example below:
+This project is monorepo with several apps. Please see the [api](./api/README.md) and [frontend](./frontend/README.md) READMEs for information on spinning up those projects locally. Also see the project [documentation](./documentation) for more info.
 -->
 
 <!--
@@ -77,9 +53,9 @@ Example Install Instructions
 TODO - Add the repo's linting and code style guidelines
 
 Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before committing.
--->
+ -->
 
-<!--
+<!--- 
 ## Branching Model
 
 TODO - with example below:
@@ -96,47 +72,23 @@ This project uses **continuous deployment** using [Github Actions](https://githu
 Pull-requests are merged to `main` and the changes are immediately deployed to the development environment. Releases are created to push changes to production.
 -->
 
-<!--
-## Community
-The {{ cookiecutter.project_name }} team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
-
-We know that we can learn from a wide variety of communities, including those who will use or will be impacted by the tool, who are experts in technology, or who have experience with similar technologies deployed in other spaces. We are dedicated to creating forums for continuous conversation and feedback to help shape the design and development of the tool.
-
-We also recognize capacity building as a key part of involving a diverse open source community. We are doing our best to use accessible language, provide technical and process documents, and offer support to community members with a wide variety of backgrounds and skillsets.
--->
-
-<!--
-### Community Guidelines
-Principles and guidelines for participating in our open source community are can be found in [COMMUNITY_GUIDELINES.md](COMMUNITY_GUIDELINES.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events.
--->
-
-<!--
-## Glossary
-Information about terminology and acronyms used in this documentation may be found in [GLOSSARY.md](GLOSSARY.md).
--->
-
 ## Policies
 
 ### Open Source Policy
 
-We adhere to the [CMS Open Source
-Policy](https://github.com/CMSGov/cms-open-source-policy). If you have any
-questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
+We adhere to the [CMS Open Source Policy](https://github.com/CMSGov/cms-open-source-policy). If you have any questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
 *Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
 
-For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
-
 ### Software Bill of Materials (SBOM)
 
 A Software Bill of Materials (SBOM) is a formal record containing the details and supply chain relationships of various components used in building software. 
 
-In the spirit of [Executive Order 14028 - Improving the Nation’s Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/network/dependencies.
+In the spirit of [Executive Order 14028 - Improving the Nation's Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/network/dependencies.
 
 For more information and resources about SBOMs, visit: https://www.cisa.gov/sbom.
-
 
 ## Public domain
 
