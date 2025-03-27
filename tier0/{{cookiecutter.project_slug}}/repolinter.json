@@ -19,17 +19,6 @@
         }
       }
     },
-    "code-json-file-exists": {
-      "level": "error",
-      "rule": {
-        "type": "file-existence",
-        "options": {
-          "globsAny": ["code.json"],
-          "file-name": "code.json",
-          "file-content": ""
-        }
-      }
-    },
     "security-file-exists": {
       "level": "warning",
       "rule": {
@@ -740,10 +729,10 @@
         "type": "file-contents",
         "options": {
           "globsAll": ["{docs/,.github/,}COMMUNITY.md"],
-          "content": "Table of Project Members",
+          "content": "Project Members",
           "flags": "i",
           "file-name": "COMMUNITY.md",
-          "file-content": "## Table of Project Members \n<!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. \n Roles to include, but not limited to: Project Owner, Technical Lead, Developers/Contributors, Community Manager, Security Team, Policy Advisor, Contracting Officer's Representative, Compliance Officer, Procurement Officer --> \n\n{{ cookiecutter.project_repo_name }} is supported by a dedicated team of individuals fulfilling various roles to ensure its success, security, and alignment with government standards and agency goals.\n\n| Role   | Name    | Affiliation    |\n| :----- | :------ | :------------- |\n| {role} | {names} | {affiliations} |\n"
+          "file-content": "## Project Members \n<!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. \n Roles to include, but not limited to: Project Owner, Technical Lead, Developers/Contributors, Community Manager, Security Team, Policy Advisor, Contracting Officer's Representative, Compliance Officer, Procurement Officer --> \n\n{{ cookiecutter.project_repo_name }} is supported by a dedicated team of individuals fulfilling various roles to ensure its success, security, and alignment with government standards and agency goals.\n\n| Role   | Name    | Affiliation    |\n| :----- | :------ | :------------- |\n| {role} | {names} | {affiliations} |\n"
         }           
       }
     },
