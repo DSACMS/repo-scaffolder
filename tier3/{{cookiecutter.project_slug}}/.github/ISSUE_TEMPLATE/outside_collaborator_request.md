@@ -8,7 +8,7 @@ assignees: # TODO: Add organization owner or help desk team
 
 ## Request an outside collaborator to be added to repository
 
-For individuals that are not members of the DSACMS GitHub organization, these outside collaborators can request access to a repository. Fill out this issue to file the request or make a pull request to the `COMMUNITY.md` file, then a repository admin will grant access.
+For individuals that are not members of the {{ cookiecutter.project_org }} GitHub organization, these outside collaborators can request access to a repository. Fill out this issue to file the request or make a pull request to the `COMMUNITY.md` file, then a repository admin will grant access.
 
 ### Information Required
 
