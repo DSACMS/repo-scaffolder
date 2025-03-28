@@ -18,10 +18,10 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 <!--- TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
 
-<!-- 
+<!--
 ### Team Specific Guidelines
 
-TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the MAINTAINERS.md file for further details. 
+TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the COMMUNITY.md file for further details.
 -->
 
 ### Building dependencies
@@ -37,20 +37,20 @@ TODO: This section helps contributors understand any team structure in the proje
 <!--- TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
-1.  Fork the project 
-2.  Check out the `main` branch 
+1.  Fork the project
+2.  Check out the `main` branch
 3.  Create a feature branch
-4.  Write code and tests for your change 
+4.  Write code and tests for your change
 5.  From your branch, make a pull request against `{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/main`
-6.  Work with repo maintainers to get your change reviewed 
+6.  Work with repo maintainers to get your change reviewed
 7.  Wait for your change to be pulled into `{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/main`
 8.  Delete your feature branch
 -->
 
-<!-- 
+<!--
 ### Testing Conventions
 
-TODO: Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. 
+TODO: Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has.
 -->
 
 ### Coding Style and Linters
@@ -58,7 +58,7 @@ TODO: Discuss where tests can be found, how they are run, and what kind of tests
 <!--- TODO: HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for python, eslint for JavaScript, etc...)
 
 1. Mention any style guides you adhere to (e.g. pep8, etc...)
-2. Mention any linters your project uses (e.g. flake8, jslint, etc...) 
+2. Mention any linters your project uses (e.g. flake8, jslint, etc...)
 3. Mention any naming conventions your project uses (e.g. Semantic Versioning, CamelCasing, etc...)
 4. Mention any other content guidelines the project adheres to (e.g. plainlanguage.gov, etc...)
 -->
@@ -87,7 +87,7 @@ When creating an issue please try to adhere to the following format:
     see our .github/ISSUE_TEMPLATE.md for more examples.
 -->
 
-<!--- 
+<!---
 ### Writing Pull Requests
 
 TODO: Pull request example
@@ -119,17 +119,17 @@ columns (You can use `fmt -n -p -w 80` to accomplish this).
 
 Some important notes regarding the summary line:
 
-* Describe what was done; not the result 
-* Use the active voice 
-* Use the present tense 
-* Capitalize properly 
-* Do not end in a period — this is a title/subject 
+* Describe what was done; not the result
+* Use the active voice
+* Use the present tense
+* Capitalize properly
+* Do not end in a period — this is a title/subject
 * Prefix the subject with its scope
 
     see our .github/PULL_REQUEST_TEMPLATE.md for more examples.
 -->
 
-<!--- 
+<!---
 ## Code Review
 
 TODO: Code Review Example
@@ -157,15 +157,15 @@ authorship metadata will be preserved.
 <!--
 ## Shipping Releases
 
-Our general policy for shipping releases can be found in our [MAINTAINERS.md](./MAINTAINERS.md) file.
+Our general policy for shipping releases can be found in our [CONTRIBUTING.md](./CONTRIBUTING.md) file.
 We adhere to semantic versioning and automatic generation of changelogs
-as described in this file. 
+as described in this file.
 
 
 TODO: What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so?
 -->
 
-<!--- 
+<!---
 ## Documentation
 
 TODO: Documentation Example
@@ -184,7 +184,7 @@ questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
-*Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
+_Submit a vulnerability:_ Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
 
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
 
