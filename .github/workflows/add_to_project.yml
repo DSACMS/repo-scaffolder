@@ -1,0 +1,17 @@
+name: Add Issue to Project Board
+
+on:
+    issues:
+        types: [opened]
+
+jobs:
+    add_to_project:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Add issue to project
+              env:
+                token: ${{ secrets.pat }}
+                PROJECT_ID: "Your Project ID"
+              run: |
+                gh auth login --with token <<< "$token"
+                gh project item-create $PROJECT_ID --title "{{ github.event.issue.title  }}" --body "{{ github.event.issue.body }}"
