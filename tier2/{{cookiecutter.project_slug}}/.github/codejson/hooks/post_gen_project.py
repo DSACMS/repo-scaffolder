@@ -27,7 +27,7 @@ def get_scc_labor_hours():
 
             # Currently only supports specific files
             files_to_exclude = [
-                "checks.yml,auto-changelog.yml,contributors.yml,code.json,checklist.md,checklist.pdf,README.md,CONTIRBUTING.md,LICENSE,MAINTAINERS.md,repolinter.json,SECURITY.md,CODE_OF_CONDUCT.md,CODEOWNERS.md,COMMUNITY_GUIDELINES.md"
+                "checks.yml,auto-changelog.yml,contributors.yml,code.json,checklist.md,checklist.pdf,README.md,CONTRIBUTING.md,LICENSE,repolinter.json,SECURITY.md,CODE_OF_CONDUCT.md,CODEOWNERS.md,COMMUNITY.md"
             ]
 
             cmd.extend(files_to_exclude)

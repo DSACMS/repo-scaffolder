@@ -27,7 +27,7 @@ def get_scc_labor_hours():
 
             # Currently only supports specific files
             files_to_exclude = [
-                "checks.yml,README.md,CONTIRBUTING.md,LICENSE,repolinter.json,SECURITY.md"
+                "checks.yml,README.md,CONTRIBUTING.md,LICENSE,repolinter.json,SECURITY.md,COMMUNITY.md"
             ]
 
             cmd.extend(files_to_exclude)

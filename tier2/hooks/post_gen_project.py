@@ -58,12 +58,12 @@ def addMaintainer():
         maintainers_table += f"| {maintainer["role"]} | {maintainer["name"]}| {maintainer["github_username"]} | {maintainer["affiliation"]} |\n"
 
     proj_name = "{{ cookiecutter.project_name }}"
-    maintainers_file_path = f"MAINTAINERS.md"
+    community_file_path = f"COMMUNITY.md"
 
-    with open(maintainers_file_path, "r") as f:
+    with open(community_file_path, "r") as f:
         lines = f.readlines()
 
-    with open(maintainers_file_path, "w") as f:
+    with open(community_file_path, "w") as f:
         for line in lines:
             if "| {role} | {names} | {github usernames} | {affiliations}|" in line:
                 f.write(maintainers_table)  # Replace placeholder line with new table of maintainers
