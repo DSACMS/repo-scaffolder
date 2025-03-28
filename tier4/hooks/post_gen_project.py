@@ -47,9 +47,9 @@ def addMaintainer():
     approvers = getUsernames("APPROVERS")
     reviewers = getUsernames("REVIEWERS")
 
-    maintainers_file_path = "MAINTAINERS.md"
+    community_file_path = "COMMUNITY.md"
 
-    with open(maintainers_file_path, "r") as f:
+    with open(community_file_path, "r") as f:
         lines = f.readlines()
 
     for i, line in enumerate(lines):
@@ -60,7 +60,7 @@ def addMaintainer():
         elif line.strip() == "## Reviewers:" and i + 1 < len(lines) and lines[i + 1].strip() == "-":
             lines[i + 1] = formatUsernames(reviewers)
 
-    with open(maintainers_file_path, "w") as f:
+    with open(community_file_path, "w") as f:
         f.writelines(lines)
 
 def moveCookiecutterFile(): 
