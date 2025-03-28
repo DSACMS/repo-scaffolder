@@ -1,23 +1,26 @@
 # {{ cookiecutter.project_name }}
+
 {{ cookiecutter.project_description }}
 
 ## About the Project
-<!-- This should be a longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in. --> 
+
+<!-- This should be a longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in. -->
+
 **{project statement}**
 
-<!-- 
+<!--
 ### Project Mission
-**{project mission}** 
+**{project mission}**
 Provide the core mission and objectives driving this project.-->
 
-<!-- 
+<!--
 ### Agency Mission
-TODO: Recommended to include since this is an agency-led project 
+TODO: Recommended to include since this is an agency-led project
 Provide the mission of the agency and how this project aligns. -->
 
-<!-- 
+<!--
 ### Team Mission
-TODO: Recommended to include since this is an agency-led project 
+TODO: Recommended to include since this is an agency-led project
 Provide the team's mission and how they work together. -->
 
 ## Core Team
@@ -84,7 +87,7 @@ Thank you for considering contributing to an Open Source project of the US Gover
 
 <!--
 ## Codeowners
-The contents of this repository are managed by **{responsible organization(s)}**. Those responsible for the code and documentation in this repository can be found in [CODEOWNERS.md](CODEOWNERS.md).
+The contents of this repository are managed by **{responsible organization(s)}**. Those responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md).
 -->
 
 <!--
@@ -121,13 +124,13 @@ questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
-*Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
+_Submit a vulnerability:_ Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
 
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
 
 ### Software Bill of Materials (SBOM)
 
-A Software Bill of Materials (SBOM) is a formal record containing the details and supply chain relationships of various components used in building software. 
+A Software Bill of Materials (SBOM) is a formal record containing the details and supply chain relationships of various components used in building software.
 
 In the spirit of [Executive Order 14028 - Improving the Nation’s Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/network/dependencies.
 
