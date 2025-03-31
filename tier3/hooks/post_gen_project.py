@@ -53,12 +53,12 @@ def addMaintainer():
         lines = f.readlines()
 
     for i, line in enumerate(lines):
-        if line.strip() == "## Maintainers:" and i + 2 < len(lines) and lines[i + 2].strip() == "-":
+        if line.strip() == "### Maintainers:" and i + 2 < len(lines) and lines[i + 2].strip() == "-":
             lines[i + 2] = formatUsernames(maintainers)
-        elif line.strip() == "## Approvers:" and i + 1 < len(lines) and lines[i + 1].strip() == "-":
-            lines[i + 1] = formatUsernames(approvers)
-        elif line.strip() == "## Reviewers:" and i + 1 < len(lines) and lines[i + 1].strip() == "-":
-            lines[i + 1] = formatUsernames(reviewers)
+        elif line.strip() == "### Approvers:" and i + 2 < len(lines) and lines[i + 2].strip() == "-":
+            lines[i + 2] = formatUsernames(approvers)
+        elif line.strip() == "### Reviewers:" and i + 2 < len(lines) and lines[i + 2].strip() == "-":
+            lines[i + 2] = formatUsernames(reviewers)
 
     with open(community_file_path, "w") as f:
         f.writelines(lines)
