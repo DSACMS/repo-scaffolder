@@ -294,6 +294,19 @@
         }
       }
     },
+    "readme-contains-codeowners": {
+      "level": "off",
+      "rule": {
+        "type": "file-contents",
+        "options": {
+          "globsAll": ["README.md"],
+          "content": "Codeowners",
+          "flags": "i",
+          "file-name": "README.md",
+          "file-content": "## Codeowners \n The contents of this repository are managed by {responsible organization(s)}. Those responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md). \n"
+        }
+      }
+    },
     "readme-contains-community": {
       "level": "warning",
       "rule": {
