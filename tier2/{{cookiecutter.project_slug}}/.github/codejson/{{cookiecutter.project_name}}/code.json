@@ -1,11 +1,7 @@
 {
   "name": "{{ cookiecutter.project_name }}",
-  "description": {
-    "en": {
-      "shortDescription": "{{ cookiecutter.short_description }}",
-      "longDescription": "{{ cookiecutter.long_description }}"
-    }
-  },
+  "description": "{{ cookiecutter.description }}",
+  "longDescription": "{{ cookiecutter.long_description }}",
   "status": "{{ cookiecutter.status }}",
   "permissions": {
     "licenses": [
@@ -19,26 +15,35 @@
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_name }}",
+  "repositoryHost": "{{ cookiecutter.repository_host }}",
+  "repositoryVisibility": "{{ cookiecutter.repository_visibility}}",
   "vcs": "{{ cookiecutter.vcs }}",
   "laborHours": [""],
+  "reuseFrequency": {
+    "forks": "{{ cookiecutter.forks }}"
+  },
   "platforms": [ "{{ cookiecutter.platforms }}" ],
   "categories": [ "{{ cookiecutter.categories }}" ],
   "softwareType": "{{ cookiecutter.software_type }}",
   "languages": [ "{{ cookiecutter.languages }}" ],
   "maintenance": "{{ cookiecutter.maintenance }}",
+  "contractNumber": "{{ cookiecutter.contract_number }}",
   "date": [""],
   "tags": [ "{{ cookiecutter.tags }}" ],
   "contact": {
     "email": "{{ cookiecutter.contact_email }}",
     "name": "{{ cookiecutter.contact_name }}"
   },
+  "feedbackMechanisms": ["{{ cookiecutter.feedback_mechanisms }}"],
   "localisation": "{{ cookiecutter.localisation }}",
-  "repoType": "{{ cookiecutter.repo_type }}",
+  "repositoryType": "{{ cookiecutter.repository_type }}",
   "userInput": "{{ cookiecutter.user_input }}",
   "fismaLevel": "{{ cookiecutter.fisma_level }}",
   "group": "{{ cookiecutter.group }}",
-  "subsetInHealthcare": "{{ cookiecutter.subset_in_healthcare }}",
-  "userType": "{{ cookiecutter.user_type }}",
-  "repositoryHost": "{{ cookiecutter.repository_host }}",
-  "maturityModelTier": "1"
+  "projects": ["{{ cookiecutter.projects }}"],
+  "systems": ["{{ cookiecutter.systems }}"],
+  "upstream": ["{{ cookiecutter.upstream }}"],
+  "subsetInHealthcare": ["{{ cookiecutter.subset_in_healthcare }}"],
+  "userType": ["{{ cookiecutter.user_type }}"],
+  "maturityModelTier": 2
 }
