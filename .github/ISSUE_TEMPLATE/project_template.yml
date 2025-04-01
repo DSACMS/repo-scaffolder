@@ -1,0 +1,64 @@
+name: "Project Ticket"
+description: "Use this template to create new project tickets/issues."
+title: "[New Ticket]: "
+labels: ["project-task", "issue", "new feature", "bug", "triage"]
+assignees: []
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: "Objective"
+      description: "Explain the objective of the ticket in detail."
+      placeholder: "Describe the issue or task..."
+  - type: textarea
+    id: goals
+    attributes:
+      label: "Goals"
+      description: "Define the primary goals for this ticket."
+      placeholder: "What are the goals of this ticket?"
+  - type: textarea
+    id: stretch_goals
+    attributes:
+      label: "Stretch Goals (Optional)"
+      description: "Any extra goals that would be nice to haves?"
+      placeholder: "Additional enhancements, time allowing..."
+  - type: textarea
+    id: potential_obstacles
+    attributes:
+      label: "Potential Obstacles"
+      description: "What risks or blocker might exist?"
+      placeholder: "List any challenges..."
+  - type: textarea
+    id: resources
+    attributes:
+      label: "Resources"
+      description: "Links to documents, references or relevent materials."
+      placeholder: "Include links, files or other helpful resources..."
+  - type: textarea
+    id: connected_tickets
+    attributes:
+      label: "Connected Project Tickets or Repository Issues"
+      description: "Reference any related tickets or issues."
+      placeholder: "ex: #123, #456"
+  - type: textarea
+    id: questions
+    attributes:
+      label: "Questions (Optional)"
+      description: "Any open questions?"
+      placeholder: "List any questions or clarifications needed..."
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      options:
+        - High
+        - Medium
+        - Low
+  - type: dropdown
+    id: status
+    attributes:
+      label: "Current Status"
+      options:
+        - To Do
+        - In Progress
+        - Blocked
