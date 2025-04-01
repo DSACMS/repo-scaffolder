@@ -19,7 +19,7 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 ### Team Specific Guidelines
 
-<!-- TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the MAINTAINERS.md file for further details.-->
+<!-- TODO: This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the COMMUNITY.md file for further details.-->
 
 ### Building dependencies
 
@@ -125,7 +125,7 @@ Some important notes regarding the summary line:
 
 ## Reviewing Pull Requests
 
-<!--- TODO: Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to MAINTAINERS.md can help.
+<!--- TODO: Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to COMMUNITY.md can help.
 
 Code Review Example
 
@@ -152,7 +152,7 @@ authorship metadata will be preserved.
 
 ## Shipping Releases
 
-Our general policy for shipping releases can be found in our [MAINTAINERS.md](./MAINTAINERS.md) file.
+Our general policy for shipping releases can be found in our [CONTRIBUTING.md](./CONTRIBUTING.md) file.
 We adhere to semantic versioning and automatic generation of changelogs
 as described in this file.
 
