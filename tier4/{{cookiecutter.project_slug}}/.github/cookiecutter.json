@@ -1,5 +1,6 @@
 {
-    "project_name": "{{ cookiecutter.project_repo_name }}", 
+    "project_name": "{{ cookiecutter.project_name }}", 
+    "project_repo_name": "{{ cookiecutter.project_repo_name }}", 
     "project_org": "{{ cookiecutter.project_org }}", 
     "description": "A short description of the project.",
     "long_description": "A longer description of the project.",
@@ -32,6 +33,7 @@
     "user_type": "Providers, Patients, Government",
    "__prompts__": {
         "project_name": "What is the name of the project or software?",
+        "project_repo_name": "What is the name of the repository?",
         "project_org": "What CMS GitHub organization is it under?",
         "description": "Provide a short description of the software. It should be a single line containing a single sentence. Maximum 150 characters are allowed.",
         "long_description": "Provide longer description of the software, between 150 and 10000 chars. It is meant to provide an overview of the capabilities of the software for a potential user.",

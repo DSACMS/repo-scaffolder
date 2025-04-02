@@ -14,7 +14,7 @@
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
-  "repositoryURL": "https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_name }}",
+  "repositoryURL": "https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}",
   "repositoryHost": "{{ cookiecutter.repository_host }}",
   "repositoryVisibility": "{{ cookiecutter.repository_visibility}}",
   "vcs": "{{ cookiecutter.vcs }}",
