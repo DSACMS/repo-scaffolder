@@ -1,0 +1,49 @@
+{
+  "name": "{{ cookiecutter.project_name }}",
+  "description": "{{ cookiecutter.description }}",
+  "longDescription": "{{ cookiecutter.long_description }}",
+  "status": "{{ cookiecutter.status }}",
+  "permissions": {
+    "licenses": [
+      {
+        "URL": "LICENSE",
+        "name": "{{ cookiecutter.license }}"
+      }
+    ],
+    "usageType": "{{ cookiecutter.usage_type }}",
+    "exemptionText": ""
+  },
+  "organization": "Centers for Medicare & Medicaid Services",
+  "repositoryURL": "https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_name }}",
+  "repositoryHost": "{{ cookiecutter.repository_host }}",
+  "repositoryVisibility": "{{ cookiecutter.repository_visibility}}",
+  "vcs": "{{ cookiecutter.vcs }}",
+  "laborHours": [""],
+  "reuseFrequency": {
+    "forks": "{{ cookiecutter.forks }}"
+  },
+  "platforms": [ "{{ cookiecutter.platforms }}" ],
+  "categories": [ "{{ cookiecutter.categories }}" ],
+  "softwareType": "{{ cookiecutter.software_type }}",
+  "languages": [ "{{ cookiecutter.languages }}" ],
+  "maintenance": "{{ cookiecutter.maintenance }}",
+  "contractNumber": "{{ cookiecutter.contract_number }}",
+  "date": [""],
+  "tags": [ "{{ cookiecutter.tags }}" ],
+  "contact": {
+    "email": "{{ cookiecutter.contact_email }}",
+    "name": "{{ cookiecutter.contact_name }}"
+  },
+  "feedbackMechanisms": ["{{ cookiecutter.feedback_mechanisms }}"],
+  "localisation": "{{ cookiecutter.localisation }}",
+  "repositoryType": "{{ cookiecutter.repository_type }}",
+  "userInput": "{{ cookiecutter.user_input }}",
+  "fismaLevel": "{{ cookiecutter.fisma_level }}",
+  "group": "{{ cookiecutter.group }}",
+  "projects": ["{{ cookiecutter.projects }}"],
+  "systems": ["{{ cookiecutter.systems }}"],
+  "upstream": ["{{ cookiecutter.upstream }}"],
+  "subsetInHealthcare": ["{{ cookiecutter.subset_in_healthcare }}"],
+  "userType": ["{{ cookiecutter.user_type }}"],
+  "maturityModelTier": 0
+}
