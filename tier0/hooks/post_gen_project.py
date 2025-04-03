@@ -1,4 +1,6 @@
 import subprocess
+import shutil
+import os
 
 REPO_NAME = '{{ cookiecutter.project_repo_name }}'
 ORG_NAME = '{{ cookiecutter.project_org }}'
@@ -27,12 +29,35 @@ def addTopic():
     ]
     subprocess.call(gh_cli_command)
 
-subprocess.call(["git", "init", "-b", "main"])
-subprocess.call(["git", "add", "."])
-subprocess.call(["git", "commit", "-m", "initial commit"])
+def moveCookiecutterFile(): 
+    original_dir = os.getcwd()
 
-if CREATE_REPO == "True":
-    createGithubRepo()
+    try:
+        github_dir = os.path.join(original_dir, ".github")
+        os.chdir(github_dir)
 
-if RECEIVE_UPDATES == "True":
-    addTopic()
+        source_path = "cookiecutter.json"
+        destination_dir = "codejson"
+        destination_path = os.path.join(destination_dir, "cookiecutter.json")
+
+        shutil.move(source_path, destination_path)
+    
+    finally:
+        # Moves back to project dir
+        os.chdir(original_dir)
+
+def main():
+    moveCookiecutterFile()
+    
+    subprocess.call(["git", "init", "-b", "main"])
+    subprocess.call(["git", "add", "."])
+    subprocess.call(["git", "commit", "-m", "initial commit"])
+    
+    if CREATE_REPO == "True":
+        createGithubRepo()
+
+    if RECEIVE_UPDATES == "True":
+        addTopic()
+    
+if __name__ == "__main__":
+    main()

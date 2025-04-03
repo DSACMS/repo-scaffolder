@@ -45,5 +45,5 @@
   "upstream": ["{{ cookiecutter.upstream }}"],
   "subsetInHealthcare": ["{{ cookiecutter.subset_in_healthcare }}"],
   "userType": ["{{ cookiecutter.user_type }}"],
-  "maturityModelTier": 1
+  "maturityModelTier": 0
 }

@@ -17,7 +17,7 @@
     "languages": "",
     "maintenance": ["internal", "contract", "community", "none"],
     "contract_number": 0,
-    "tags": "dsacms-tier1",
+    "tags": "dsacms-tier0",
     "contact_email": "opensource@cms.hhs.gov",
     "contact_name": "CMS Open Source Program Office",
     "feedback_mechanisms": "https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/issues",
