@@ -96,6 +96,14 @@ There are 4 tiers in the maturity model framework. The `/tier*` directory consis
 - [cookiecutter](https://github.com/cookiecutter/cookiecutter)
 - [repolinter](https://github.com/todogroup/repolinter)
 
+##### Installation (On Mac)
+```
+python3 -m venv venv
+. venv/bin/activate
+pip install -r requirements.txt
+brew install gh
+```
+
 #### Need help picking a maturity tier?
 
 If you do not know what tier your project is, the cookiecutter will walk you through questions to figure out what tier you need. Run:
