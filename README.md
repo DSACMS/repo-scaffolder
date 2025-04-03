@@ -148,8 +148,6 @@ When creating projects, if you want to receive updates then add `dsacms-tierX` a
 
 ### Identify missing files and information using repolinter
 
-<!-- TODO: Revise once repolinter GH actions are up and link to it-->
-
 Repolinter is a tool maintained by the [TODOGroup](https://todogroup.org/) for checking repositories for common open source issues, using pre-defined rulesets. This can be run stand-alone as a script, pre-commit in your IDE, or post-commit or within CI/CD systems!
 
 ✔    =  Pass
@@ -158,14 +156,15 @@ Repolinter is a tool maintained by the [TODOGroup](https://todogroup.org/) for c
 
 ⚠  =  Warn
 
-Tiers of level 1 thru 4 have repolinter.json file in their projects. Tier1 has detailed configuration of all the rules. All the other tiers extends their previous tiers and has only the `rule` and the `level` configuration.
+Tiers of level 0 thru 4 have repolinter.json file in their projects. Tier0 has detailed configuration of all the rules. All the other tiers extends their previous tiers and has only the `rule` and the `level` configuration.
 
 Sample commands to run with the given repolinter.json path:
 
 ```
-repolinter lint .
+repolinter lint . # Runs on target directory
 
-repolinter lint tier4/\{\{cookiecutter.project_slug\}\}
+repolinter lint . --config path/to/repolinter.json # Use if the repolinter config is not in the root dir
+
 ```
 
 #### Automated repolinter actions
