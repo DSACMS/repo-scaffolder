@@ -8,6 +8,7 @@ VISIBILITY = '{{cookiecutter.project_visibility}}'
 DESCRIPTION = '{{cookiecutter.project_description}}'
 CREATE_REPO = '{{cookiecutter.create_repo}}'
 RECEIVE_UPDATES = '{{cookiecutter.receive_updates}}'
+ADD_TEAM = '{{cookiecutter.add_team}}'
 
 def createGithubRepo():
     gh_cli_command = [
@@ -29,6 +30,43 @@ def addTopic():
     ]
     subprocess.call(gh_cli_command)
 
+def addTeam():
+    team = []
+    add_member = True
+    while add_member:
+        member = {}
+        member["role"] = input("Project Member's Role (Engineer, Project Lead, COR, etc...): ").strip()
+        member["name"] = input("Project Member's Name: ").strip()
+        member["affiliation"] = input("Project Member's Affiliation (DSAC, CCSQ, CMMI, etc...): ").strip()
+        team.append(member)
+
+        while True:
+            add_member_input = input("Would you like to add another project member? [Y/n]: ").strip().lower()
+            if add_member_input in ("y", "yes", ""):
+                add_member = True
+                break
+            elif add_member_input in ("n", "no"):
+                add_member = False
+                break
+            else:
+                print("\nInvalid response, please respond with: 'y', 'yes', 'n', 'no', or just press Enter for yes")
+
+    team_table = ""
+    for member in team:
+        team_table += f"| {member["role"]} | {member["name"]} | {member["affiliation"]} |\n"
+
+    community_file_path = f"COMMUNITY.md"
+
+    with open(community_file_path, "r") as f:
+        lines = f.readlines()
+
+    with open(community_file_path, "w") as f:
+        for line in lines:
+            if "| {role} | {names} | {affiliations} |" in line:
+                f.write(team_table)  # Replace placeholder line with new table of project team members
+            else:
+                f.write(line)
+
 def moveCookiecutterFile(): 
     original_dir = os.getcwd()
 
@@ -47,6 +85,9 @@ def moveCookiecutterFile():
         os.chdir(original_dir)
 
 def main():
+    if ADD_TEAM == "True":
+        addTeam()
+
     moveCookiecutterFile()
     
     subprocess.call(["git", "init", "-b", "main"])
