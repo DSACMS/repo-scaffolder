@@ -176,23 +176,13 @@ This document outlines the maturity model tiers.
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
-      <td>Documentation Index</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This is a like a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.</td>
-    </tr>
-    <tr>
-      <!-- <td>README.md</td> -->
       <td>Repository Structure</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Using the "tree" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.</td>
+      <td>Including the repository structure helps viewers quickly understand the project layout. Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time. It is also helpful to include a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.</td>
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
