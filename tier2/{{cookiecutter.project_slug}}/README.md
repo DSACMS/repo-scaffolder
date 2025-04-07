@@ -24,7 +24,7 @@
 
 ## Core Team
 
-An up-to-date list of core team members can be found in [COMMUNITY.md](COMMUNITY.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles.
+A list of core team members responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md).
 
 <!--
 ## Documentation Index
@@ -80,10 +80,6 @@ Pull-requests are merged to `main` and the changes are immediately deployed to t
 ## Contributing
 
 Thank you for considering contributing to an Open Source project of the US Government! For more information about our contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Codeowners
-
-The contents of this repository are managed by **{responsible organization(s)}**. Those responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md).
 
 ## Community
 

@@ -25,7 +25,7 @@ Provide the team's mission and how they work together. -->
 
 ## Core Team
 
-A full list of contributors can be found on [https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors](https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors).
+A list of core team members responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md).
 
 <!--
 ## Documentation Index
@@ -83,11 +83,6 @@ Pull-requests are merged to `main` and the changes are immediately deployed to t
 <!--
 ## Contributing
 Thank you for considering contributing to an Open Source project of the US Government! For more information about our contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
--->
-
-<!--
-## Codeowners
-The contents of this repository are managed by **{responsible organization(s)}**. Those responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md).
 -->
 
 <!--

@@ -246,16 +246,6 @@ This document outlines the maturity model tiers.
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
-      <td>Codeowners</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Though all tiers have an 'implied' code-owner, since there is at least one author of the repo, explicit is better than implicit. In the case that a project may outlive the employment or contract of the original author, a shared inbox or alias is recommended for longer-lived projects (e.g. opensource@cms.hhs.gov).</td>
-    </tr>
-    <tr>
-      <!-- <td>README.md</td> -->
       <td>Community</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
