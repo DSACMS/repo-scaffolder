@@ -4,12 +4,13 @@
   "project_org": "DSACMS",
   "project_repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
   "project_description": "This is the project description, could match github.com repo description.",
-  "code_owners": "Git usernames of code owners; separated by commas.",
+  "code_owners": "",
   "project_visibility": ["public", "internal", "private"],
   "create_repo": [true, false],
   "receive_updates": [true, false],
   "add_team": [true, false],
   "__prompts__": {
+    "code_owners": "Would you like to add a CODEOWNERS.md to get notified on repository updates? If so, please provide the usernames separated by commas.",
     "create_repo": "Would you like to create a repo on github.com?",
     "receive_updates": "Would you like to receive updates from the DSACMS team via pull requests?",
     "add_team": "Would you like to add project team members to COMMUNITY.md?"
