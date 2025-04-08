@@ -25,22 +25,19 @@ Provide the team's mission and how they work together. -->
 
 ## Core Team
 
-A full list of contributors can be found on [https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors](https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/graphs/contributors).
-
-<!--
-## Documentation Index
-
-TODO: This is a like a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.
-
-**{list of .md at top directory and descriptions}**
--->
+A list of core team members responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md).
 
 <!--
 ## Repository Structure
 
-TODO: Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.
+TODO: Including the repository structure helps viewers quickly understand the project layout. Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.
 
 **{list directories and descriptions}**
+
+TODO: Add a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.
+
+**{list of .md at top directory and descriptions}**
+
 -->
 
 <!--
@@ -83,11 +80,6 @@ Pull-requests are merged to `main` and the changes are immediately deployed to t
 <!--
 ## Contributing
 Thank you for considering contributing to an Open Source project of the US Government! For more information about our contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
--->
-
-<!--
-## Codeowners
-The contents of this repository are managed by **{responsible organization(s)}**. Those responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md).
 -->
 
 <!--

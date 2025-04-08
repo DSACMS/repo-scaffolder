@@ -176,23 +176,13 @@ This document outlines the maturity model tiers.
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
-      <td>Documentation Index</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This is a like a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.</td>
-    </tr>
-    <tr>
-      <!-- <td>README.md</td> -->
       <td>Repository Structure</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Using the "tree" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.</td>
+      <td>Including the repository structure helps viewers quickly understand the project layout. Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time. It is also helpful to include a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.</td>
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
@@ -243,16 +233,6 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>For projects that accept contributions, point towards the CONTRIBUTING.md file. For those that do not (tier0/1) not recommended to include this section, instead, mention one-time release, or private repo status instead.</td>
-    </tr>
-    <tr>
-      <!-- <td>README.md</td> -->
-      <td>Codeowners</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Though all tiers have an 'implied' code-owner, since there is at least one author of the repo, explicit is better than implicit. In the case that a project may outlive the employment or contract of the original author, a shared inbox or alias is recommended for longer-lived projects (e.g. opensource@cms.hhs.gov).</td>
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
