@@ -113,6 +113,9 @@ If you do not know what tier your project is, the `tier-determiner.py` script wi
 python tier-determiner.py
 ```
 
+You can also follow the flowchart below to determine your project's tier.
+![Tier Selection Flowchart](../assets/flowchart.png)
+
 #### Know what maturity tier you need?
 
 If you know what tier you need, you can run the cookiecutter for an individual tier. Use the below command with `X` substituted for the tier number.
