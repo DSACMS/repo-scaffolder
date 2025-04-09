@@ -11,7 +11,7 @@ jobs:
             - name: Add issue to project
               env:
                 token: ${{ secrets.pat }}
-                PROJECT_ID: "Your Project ID"
+                PROJECT_ID: "https://github.com/orgs/DSACMS/projects/9"
               run: |
                 gh auth login --with token <<< "$token"
                 gh project item-create $PROJECT_ID --title "{{ github.event.issue.title  }}" --body "{{ github.event.issue.body }}"
