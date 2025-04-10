@@ -29,9 +29,10 @@ def main():
 
     print("🌱 The OSPO follows a maturity model framework to classify projects according to their open source journey:")
     print_tier_description()
+    print("ℹ️  Visit https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md for more information.\n")
 
     print("\n📝 Answer the following questions to identify the maturity model tier of your project.")
-    print("ℹ️  Visit https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md for more information.\n")
+
     print("****************************************\n")
 
     prompts = {
