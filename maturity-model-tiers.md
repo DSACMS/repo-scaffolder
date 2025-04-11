@@ -105,7 +105,7 @@ This document outlines the maturity model tiers.
       <td>All repositories, whether private or public, must include a code.json file containing project metadata. For more information, visit the <a href="https://github.com/DSACMS/gov-codejson">code.json documentation repository</a>.</td>
     </tr>
     <tr>
-      <td rowspan="22">README.md</td>
+      <td rowspan="20">README.md</td>
       <td>Project Description</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
@@ -304,7 +304,7 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International (world-wide public domain).</td>
     </tr>
-    <tr>
+        <tr>
       <td rowspan="10">COMMUNITY.md</td>
       <td>Table of Project Members</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
