@@ -139,5 +139,8 @@ def main():
     if RECEIVE_UPDATES == "True":
         addTopic()
     
+    print(f"\n****************************************")
+    print(f"\n✅ {REPO_NAME} has successfully been created!\n")
+    
 if __name__ == "__main__":
     main()

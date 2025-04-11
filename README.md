@@ -97,6 +97,7 @@ There are 4 tiers in the maturity model framework. The `/tier*` directory consis
 - [repolinter](https://github.com/todogroup/repolinter)
 
 ##### Installation (On Mac)
+
 ```
 python3 -m venv venv
 . venv/bin/activate
@@ -106,11 +107,14 @@ brew install gh
 
 #### Need help picking a maturity tier?
 
-If you do not know what tier your project is, the cookiecutter will walk you through questions to figure out what tier you need. Run:
+If you do not know what tier your project is, the `tier-determiner.py` script will walk you through questions to figure out what tier you need. Run:
 
 ```
-cookiecutter https://github.com/DSACMS/repo-scaffolder
+python tier-determiner.py
 ```
+
+You can also follow the flowchart below to determine your project's tier.
+![Tier Selection Flowchart](../assets/flowchart.png)
 
 #### Know what maturity tier you need?
 
