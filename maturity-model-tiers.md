@@ -1,8 +1,16 @@
 # Maturity Model Tiers
 
-This document outlines the maturity model tiers.
+Our maturity model framework is designed to evaluate and categorize open source repositories based on its level of maturity and development. This framework consists of five tiers (0-4), each representing different stages of a project's maturity, collaboration scope, community engagement, and governance structure.
 
-## Tier Information
+- [Tier 0](./tier0/README.md) - Private Repository
+- [Tier 1](./tier1/README.md) - One-Time Release
+- [Tier 2](./tier2/README.md) - Close Collaboration
+- [Tier 3](./tier3/README.md) - Working in Public
+- [Tier 4](./tier4/README.md) - Community Governance
+
+Different projects have varying needs based on their scope, team size, and community involvement. The framework establishes clear requirements for documentation, collaboration, and governance, ranging from small private repositories (Tier 0) to fully community-governed projects (Tier 4). Each tier has specific mandatory, recommended, and not recommended elements that help guide projects based on the stage of their open source development journey.
+
+## Tier Definitions
 
 <table>
   <thead>
@@ -47,15 +55,21 @@ This document outlines the maturity model tiers.
   </tbody>
 </table>
 
-## Ordinality
+### Determining a project's maturity model tier
+
+Use the series of questions below to identify your project's maturity model tier
+
+![Tier Selection Flowchart](./assets/flowchart.png)
+
+## Repository File Requirements by Tier
+
+Each tier requires certain files that must be included in the repository.
 
 | Level                                  | Description     |
 | -------------------------------------- | --------------- |
 | $\color{green}\large{\textsf{M}}$      | Mandatory       |
 | $\color{blue}\large{\textsf{R}}$       | Recommended     |
 | $\color{lightcoral}\large{\textsf{N}}$ | Not Recommended |
-
-## Simplified
 
 | File                                                                           | Tier 0                                 | Tier 1                                 | Tier 2                                 | Tier 3                            | Tier 4                            |
 | ------------------------------------------------------------------------------ | -------------------------------------- | -------------------------------------- | -------------------------------------- | --------------------------------- | --------------------------------- |
@@ -68,7 +82,9 @@ This document outlines the maturity model tiers.
 | CODE_OF_CONDUCT.md                                                             | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
 | GOVERNANCE.md                                                                  | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$  | $\color{green}\large{\textsf{M}}$ |
 
-## Tier Ordinality
+## Repository File Content Requirements by Tier
+
+Each tier outlines specific content that are required or recommended to be included in files of the repository.
 
 <table>
   <thead>
