@@ -2,11 +2,9 @@
 
 ## Tier 1: One-Time Release
 
-### Instructions
-
 This is a review process to approve CMS-developed software to be released open source. If you would like your repository to be released, please complete the following steps.
 
-[Instructions](#instructions)
+[Prerequisites](#prerequisites)
 
 [State the Benefits of Open Sourcing the Project](#state-the-benefits-of-open-sourcing-the-project)
 
@@ -33,6 +31,17 @@ This is a review process to approve CMS-developed software to be released open s
 [Sign off on risk acceptance of open-sourcing the software product](#sign-off-on-risk-acceptance-of-open-sourcing-the-software-product)
 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
+
+### Prerequisites
+
+Does your repository align with the requirements of a Tier 4 project? To verify:
+
+- Review the flowchart or use `tier-determiner.py` provided in the [README.md](https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#need-help-picking-a-maturity-tier).
+- Read more about [Tier 4](https://github.com/DSACMS/repo-scaffolder/tree/main/tier4) and the overall [CMS OSPO maturity model framework](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
+
+#### Results
+
+_Insert Review Here_
 
 ### State the Benefits of Open Sourcing the Project
 
@@ -197,19 +206,7 @@ repolinter lint .
 
 #### Review Content
 
-The project should include the following files and sections [(link to template)](https://github.com/DSACMS/repo-scaffolder/tree/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D):
-
-- [ ] **README.md**
-
-  _An essential guide that gives viewers a detailed description of your project_
-
-| Section             | Description                                                                                                                                                                                                                                                                                    | Included               |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
-| Project Description | 1-3 sentences short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on GitHub repo landing page.                                                                                  | :white_check_mark: :x: |
-| About the Project   | Longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in.                                          |                        |
-| Core Team           | This information helps with succession planning and provenance for security compliances and remediation. It helps future users and contributors understand where the code originated.                                                                                                          |                        |
-| Policies            | This section is to explicitly link to Federal policies and guidelines that are required or rocommended for Federal projects to comply with, such as Accessibility (508) Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |                        |
-| Public Domain       | A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International(world-wide public domain.)                                                                        |                        |
+The project should include the following files and sections [(link to templates)]({{cookiecutter.project_slug}}):
 
 - [ ] **LICENSE**
 
@@ -217,26 +214,50 @@ The project should include the following files and sections [(link to template)]
   ‘vanilla’ license text will allow for GitHub to auto-label the license information on the
   repository landing page._
 
+- [ ] **code.json**
+
+  _Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)_
+
+- [ ] **README.md**
+
+  _An essential guide that gives viewers a detailed description of your project_
+
+| Section             | Description                                                                                                                                                                                                                                                                                     | Included? |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| Project Description | This should be 1-3 sentence short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on a GitHub repo landing page.                                                                   | ✅ ❌     |
+| About the Project   | This should be a longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in.                          |           |
+| Core Team           | This information helps with succession planning and provenance for security compliance and remediation. It helps future users and contributors understand where the code originated.                                                                                                            |           |
+| Policies            | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |           |
+| Public Domain       | A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International (world-wide public domain).                                                                        |           |
+
+- [ ] **COMMUNITY.md**
+
+  _Outlines the community members, roles, responsibilities, and guidelines for participating in the project._
+
+| Section                  | Description                                                                                                                                                                                                                | Included |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Table of Project Members | Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project. | ✅ ❌    |
+
 - [ ] **CONTRIBUTING.md**
 
   _Provides guidance on how users can run your project and make contributions to it_
 
-| Section               | Description                                                                                                                                                                                                                                                                                         | Included |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| Getting Started       | Included installations steps, prerequisites for installation, and instructions for working with the source code                                                                                                                                                                                     |          |
-| Building Dependencies | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches!                                                                                 |          |
-| Building the Project  | Be sure to include build scripts and instructions, not just the source code itself!                                                                                                                                                                                                                 |          |
-| Writing Issues        | Make a brief statement about where to file issues, and conventions for doing so.                                                                                                                                                                                                                    |          |
-| Policies              | This section is here to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508) Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |          |
-| Public Domain         | This section is to explicitly link to Federal policies and guidelines that required or recommended for Federal projects to comply with, such as Accessibility (508) Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.          |          |
+| Section               | Description                                                                                                                                                                                                                                                                                          | Included |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Getting Started       | Includes installation steps, prerequisites for installation, and instructions for working with the source code.                                                                                                                                                                                      | ✅ ❌    |
+| Building dependencies | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches.                                                                                  |          |
+| Building the Project  | Be sure to include build scripts and instructions, not just the source code itself!                                                                                                                                                                                                                  |          |
+| Writing Issues        | Make a brief statement about where to file issues, and conventions for doing so. Link to ISSUE_TEMPLATE.md file.                                                                                                                                                                                     |          |
+| Policies              | This section is here to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |          |
+| Public Domain         | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.      |          |
+
+- [ ] **SECURITY.md**
+
+  _Details security policies and procedures_
 
 - [ ] **repolinter.json**
 
   _Lints repository for missing files and sections above_
-
-- [ ] **code.json**
-
-  _Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)_
 
 #### Communications Style Guide
 
@@ -264,9 +285,21 @@ _Insert Review Here_
 
 ### Review Project Metadata
 
-As part of the [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the agency’s software inventory tracking initiatives, each repository must contain a code.json file, storing metadata on your project.
+As part of the [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih), [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf), and the agency’s software inventory tracking initiatives, each repository must contain a [code.json file](https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md), storing metadata on your project.
 
-**Creating code.json on your repository**
+For more information on code.json, please review the [gov-codejson documentation repository](https://github.com/DSACMS/gov-codejson).
+
+#### Creating code.json on your repository
+
+**Using form site**
+
+Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://dsacms.github.io/codejson-generator.
+
+**Using automated-codejson-generator**
+
+The [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) is a GitHub Action that automatically generates and maintains code.json files for federal open source repositories. It ensures schema consistency and automates various metadata calculations.
+
+**Using the repo-scaffolder cookiecutter CLI**
 
 1. In the `.github` directory, run the command:
 
@@ -278,7 +311,7 @@ cookiecutter . –directory=codejson
 
 3. A code.json file will be generated with your responses.
 
-Please keep this file up-to-date as you continue development in this repository. The OSPO is currently developing workflows to help assist with this work.
+As you continue development in this repository, it is important to keep this file up-to-date. Our [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) can assist with updating this file.
 
 #### Results
 
