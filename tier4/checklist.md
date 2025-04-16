@@ -7,7 +7,7 @@
 This is a review process to approve CMS-developed software to be released open source.
 If you would like your repository to be released, please complete the following steps.
 
-[Prerequisites] (#prerequisites)
+[Prerequisites](#prerequisites)
 
 [State the Benefits of Open Sourcing the Project](#state-the-benefits-of-open-sourcing-the-project)
 
@@ -379,7 +379,7 @@ Users can fill out a web form that creates a code.json file to be uploaded to a 
 
 **Using automated-codejson-generator**
 
-The [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) is a GitHub Action that automatically generates and maintains code.json files for federal open source repositories. It ensures schema consistency and automates various metadata calculations.
+[automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) is a GitHub Action that automatically generates and maintains code.json files for federal open source repositories. It ensures schema consistency and automates various metadata calculations.
 
 **Using the repo-scaffolder cookiecutter CLI**
 
@@ -393,7 +393,7 @@ cookiecutter . –directory=codejson
 
 3. A code.json file will be generated with your responses.
 
-As you continue development in this repository, it is important to keep this file up-to-date. automated-codejson-generator can assist with updating this file.
+As you continue development in this repository, it is important to keep this file up-to-date. [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) can assist with updating this file.
 
 #### Results
 
