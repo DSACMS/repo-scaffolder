@@ -2,8 +2,6 @@
 
 ## Tier 2: Close Collaboration
 
-### Instructions
-
 This is a review process to approve CMS-developed software to be released open source at [github.cms.gov](https://github.cms.gov/). If you would like your repository to be released, please complete the following steps.
 
 [Prerequisites](#prerequisites)
