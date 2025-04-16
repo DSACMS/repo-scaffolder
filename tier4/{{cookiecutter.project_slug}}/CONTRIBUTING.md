@@ -338,6 +338,8 @@ This workflow will be triggered when a new release is created.
 
 If you do not wish to use automatic changelogs, you can delete the workflow and update the CHANGELOG.md file manually. Although, this is not recommended.
 
+For best practices on writing changelogs, see: https://keepachangelog.com/en/1.1.0/#how
+
 ### Hotfix Releases
 
 In rare cases, a hotfix for a prior release may be required out-of-phase with the normal release cycle. For example, if a critical bug is discovered in the `0.3.x` line after `0.4.0` has already been released.
