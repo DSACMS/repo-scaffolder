@@ -314,9 +314,9 @@ The project should include the following files and sections [(link to templates)
 | Team Specific Guidelines | This section helps contributors understand any team structure in the project (formal or informal). Encouraged to point towards the COMMUNITY.md file for further details.                                                                                                                                              |          |
 | Building dependencies    | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches.                                                                                                    |          |
 | Building the Project     | Be sure to include build scripts and instructions, not just the source code itself!                                                                                                                                                                                                                                    |          |
-| Workflow & Branching     | If your project has a preferred workflow or branching structure, mention it here. We recommend 'git flow' as a good default.                                                                                                                                                                                           |          |
+| Workflow and Branching   | If your project has a preferred workflow or branching structure, mention it here. We recommend 'git flow' as a good default.                                                                                                                                                                                           |          |
 | Testing Conventions      | Discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has.                                                                                                                                                                                                |          |
-| Coding Style + Linters   | HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for Python, eslint for JavaScript, etc.).                                                                                                                                                                               |          |
+| Coding Style and Linters | HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for Python, eslint for JavaScript, etc.).                                                                                                                                                                               |          |
 | Writing Issues           | Make a brief statement about where to file issues, and conventions for doing so. Link to ISSUE_TEMPLATE.md file.                                                                                                                                                                                                       |          |
 | Writing Pull Requests    | Make a brief statement about where to file pull/merge requests, and conventions for doing so. Link to PULL_REQUEST_TEMPLATE.md file.                                                                                                                                                                                   |          |
 | Reviewing Pull Requests  | Make a brief statement about how pull requests are reviewed, and who is doing the reviewing. Linking to COMMUNITY.md can help.                                                                                                                                                                                         |          |
@@ -379,7 +379,7 @@ Users can fill out a web form that creates a code.json file to be uploaded to a 
 
 **Using automated-codejson-generator**
 
-[automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) is a GitHub Action that automatically generates and maintains code.json files for federal open source repositories. It ensures schema consistency and automates various metadata calculations.
+The [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) is a GitHub Action that automatically generates and maintains code.json files for federal open source repositories. It ensures schema consistency and automates various metadata calculations.
 
 **Using the repo-scaffolder cookiecutter CLI**
 
@@ -393,7 +393,7 @@ cookiecutter . –directory=codejson
 
 3. A code.json file will be generated with your responses.
 
-As you continue development in this repository, it is important to keep this file up-to-date. [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) can assist with updating this file.
+As you continue development in this repository, it is important to keep this file up-to-date. Our [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) can assist with updating this file.
 
 #### Results
 
