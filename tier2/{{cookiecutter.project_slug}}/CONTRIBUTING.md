@@ -340,7 +340,9 @@ This provided workflow will automatically populate the CHANGELOG.md with all of 
 
 This workflow will be triggered when a new release is created.
 
-If you do not wish to use automatic changelogs, you can delete the workflow and update the CHANGELOG.md file manually. Although, this is not recommended. -->
+If you do not wish to use automatic changelogs, you can delete the workflow and update the CHANGELOG.md file manually. Although, this is not recommended.
+
+For best practices on writing changelogs, see: https://keepachangelog.com/en/1.1.0/#how -->
 
 <!-- ### Hotfix Releases
 
