@@ -198,7 +198,7 @@ repolinter lint .
 
 #### Running repolinter on your repository via GitHub Actions
 
-1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the github directory of your project. The file includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13)
+1. Add the tier-specific [repoHygieneCheck.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/repoHygieneCheck.yml) to the github directory of your project. The file includes a job that runs repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/repoHygieneCheck.yml#L56)
 
 2. Manually trigger the workflow
 
