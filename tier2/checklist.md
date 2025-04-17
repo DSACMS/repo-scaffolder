@@ -2,11 +2,9 @@
 
 ## Tier 2: Close Collaboration
 
-### Instructions
-
 This is a review process to approve CMS-developed software to be released open source at [github.cms.gov](https://github.cms.gov/). If you would like your repository to be released, please complete the following steps.
 
-[Instructions](#instructions)
+[Prerequisites](#prerequisites)
 
 [State the Benefits of Open Sourcing the Project](#state-the-benefits-of-open-sourcing-the-project)
 
@@ -33,6 +31,17 @@ This is a review process to approve CMS-developed software to be released open s
 [Sign off on risk acceptance of open-sourcing the software product](#sign-off-on-risk-acceptance-of-open-sourcing-the-software-product)
 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
+
+### Prerequisites
+
+Does your repository align with the requirements of a Tier 4 project? To verify:
+
+- Review the flowchart or use `tier-determiner.py` provided in the [README.md](https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#need-help-picking-a-maturity-tier).
+- Read more about [Tier 4](https://github.com/DSACMS/repo-scaffolder/tree/main/tier4) and the overall [CMS OSPO maturity model framework](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
+
+#### Results
+
+_Insert Review Here_
 
 ### State the Benefits of Open Sourcing the Project
 
@@ -195,7 +204,7 @@ repolinter lint
 
 #### Running repolinter on your repository via GitHub Actions
 
-1. Add the tier-specific [checks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml) to the .github directory of your project. The file includes a job that runs a repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/4d48f831bc21534d599817e98130fa7956e4282b/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/checks.yml#L13).
+1. Add the tier-specific [repoHygieneCheck.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/repoHygieneCheck.yml) to the github directory of your project. The file includes a job that runs repolinter called [repolinter-checks](https://github.com/DSACMS/repo-scaffolder/blob/main/tier2/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/repoHygieneCheck.yml#L56)
 
 2. Manually trigger the workflow.
 
@@ -206,80 +215,75 @@ repolinter lint
 
 The project should include the following files and sections [(link to templates)]({{cookiecutter.project_slug}}):
 
-- [ ] **README.md**
-
-  _An essential guide that gives viewers a detailed description of your project_
-
-| Section              | Description                                                                                                                                                                                                                                                                                                                                                           | Included |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| Project Description  | 1-3 sentence short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on a GitHub repo landing page.                                                                                                                                                        | ✅ ❌    |
-| About the Project    | Longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in.                                                                                                                 |          |
-| Project Vision       | This should be a forward-looking statement that outlines the desired future state or long-term goals of the project.                                                                                                                                                                                                                                                  |          |
-| Project Mission      | This should be a statement that defines the purpose, scope, and specific objectives of the project.                                                                                                                                                                                                                                                                   |          |
-| Agency Mission       | Agency-led projects should include information about their agency mission. This should be taken directly from agency websites or wikis.                                                                                                                                                                                                                               |          |
-| Team Mission         | Agency-led projects should include information about the team executing on the mission. This should be taken directly from internal team charters and functional statements                                                                                                                                                                                           |          |
-| Core Team            | This information helps with succession planning and provenance for security compliance and remediation. It helps future users and contributors understand where the code originated.                                                                                                                                                                                  |          |
-| Local Development    | Use step by step instructions to get from 'zero' to 'running code.' Should include any system libraries or packages that are a 'pre-requisite' to installation of your project. When possible, including install instructions for multiple Operation Systems (or being explicit about which operating system the project was developed on) is a recommended practice. |          |
-| Code Style & Linters | This section outlines best practices contributors should follow to reduce friction and improve readability, functionality, and quality of contributions to a project. Oftentimes, these checks can be automated and run as part of a continuous integration and deployment pipeline.                                                                                  |          |
-| Contributing         | For projects that accept contributions, point towards the CONTRIBUTING.md file.                                                                                                                                                                                                                                                                                       |          |
-| Codeowners           | Though all tiers have an 'implied' code-owner, since there is at least one author of the repo, explicit is better than implicit. In the case that a project may outlive the original author, a shared inbox or alias is recommended for longer-lived projects (e.g. opensource@cms.hhs.gov).                                                                          |          |
-| Community            | Point your contributors towards wherever your community exists (e.g. email lists, online discussion boards or channels, project backlogs and documentation, etc.).                                                                                                                                                                                                    |          |
-| Community Guidelines | This section points to a CODE_OF_CONDUCT.md file or website providing information around acceptable conduct and reporting mechanisms and escalation strategies. It is better to have these processes defined before they are needed, so you can focus on support if/when there is an incident (e.g. Contributor-covenant.org).                                        |          |
-| Feedback             | Direct users towards the channel where they're encouraged to provide feedback, typically a github.com/$REPO/issue/new URL.                                                                                                                                                                                                                                            |          |
-| Policies             | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.                                                                       |          |
-| Public Domain        | A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International (world-wide public domain).                                                                                                                                              |          |
-
 - [ ] **LICENSE**
 
   _License of your project, whether public domain (CC0) or other OSI-approved License. Using
   ‘vanilla’ license text will allow for GitHub to auto-label the license information on the
   repository landing page._
 
+- [ ] **code.json**
+
+  _Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)_
+
+- [ ] **README.md**
+
+  _An essential guide that gives viewers a detailed description of your project_
+
+| Section                  | Description                                                                                                                                                                                                                                                                                                                    | Included? |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
+| Project Description      | This should be 1-3 sentence short description of the project that can be used as a 'one-liner' to describe the repo. A best practice is using this same language as the official 'description' on a GitHub repo landing page.                                                                                                  | ✅ ❌     |
+| About the Project        | This should be a longer-form description of the project. It can include history, background, details, problem statements, links to design documents or other supporting materials, or any other information/context that a user or contributor might be interested in.                                                         |           |
+| Project Vision           | This should be a forward-looking statement that outlines the desired future state or long-term goals of the project.                                                                                                                                                                                                           |           |
+| Project Mission          | This should be a statement that defines the purpose, scope, and specific objectives of the project.                                                                                                                                                                                                                            |           |
+| Agency Mission           | Agency-led projects should include information about their agency mission. This should be taken directly from agency websites or wikis.                                                                                                                                                                                        |           |
+| Team Mission             | Agency-led projects should include information about the team executing on the mission. This should be taken directly from internal team charters and functional statements.                                                                                                                                                   |           |
+| Core Team                | This information helps with succession planning and provenance for security compliance and remediation. It helps future users and contributors understand where the code originated.                                                                                                                                           |           |
+| Local Development        | Use step by step instructions to get from 'zero' to 'running code.'                                                                                                                                                                                                                                                            |           |
+| Coding Style and Linters | Best practices contributors should follow to reduce friction and improve readability, functionality, and quality of contributions.                                                                                                                                                                                             |           |
+| Contributing             | For projects that accept contributions, point towards the CONTRIBUTING.md file.                                                                                                                                                                                                                                                |           |
+| Community                | Point your contributors towards wherever your community exists (e.g. email lists, online discussion boards or channels, project backlogs and documentation, etc.).                                                                                                                                                             |           |
+| Community Guidelines     | This section points to a CODE_OF_CONDUCT.md file or website providing information around acceptable conduct and reporting mechanisms and escalation strategies. It is better to have these processes defined before they are needed, so you can focus on support if/when there is an incident (e.g. Contributor-covenant.org). |           |
+| Policies                 | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.                                |           |
+| Public Domain            | A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International (world-wide public domain).                                                                                                       |           |
+
+- [ ] **COMMUNITY.md**
+
+  _Outlines the community members, roles, responsibilities, and guidelines for participating in the project._
+
+| Section                  | Description                                                                                                                                                                                                                                                                                                         | Included |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Table of Project Members | Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.                                                                                          | ✅ ❌    |
+| Principles               | This section communicates to prospective contributors and users what the values of your community are. The examples provided in the template were established by the Justice40 project at USDS.                                                                                                                     |          |
+| Community Guidelines     | This section communicates specific norms and guidelines for how to participate and contribute positively to your community. The more explicit you can be about behaviors you'd like to encourage or discourage, the less friction new contributors will experience in onboarding and operating within your project. |          |
+| Acknowledgements         | This section recognizes previous work and best practices established by the other members of the federal open source community such as USDS, GSA, 18F, and the Justice40 Project.                                                                                                                                   |          |
+
 - [ ] **CONTRIBUTING.md**
 
   _Provides guidance on how users can run your project and make contributions to it_
 
-| Section                | Description                                                                                                                                                                                                                                                                                          | Included |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| How to Contribute      | Basic instructions about where to send patches, check out source code, and get development support.                                                                                                                                                                                                  | ✅ ❌    |
-| Getting Started        | Includes installation steps, prerequisites for installation, and instructions for working with the source code.                                                                                                                                                                                      |          |
-| Building dependencies  | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches.                                                                                  |          |
-| Building the Project   | Be sure to include build scripts and instructions, not just the source code itself!                                                                                                                                                                                                                  |          |
-| Workflow & Branching   | If your project has a preferred workflow or branching structure, mention it here. We recommend 'git flow' as a good default.                                                                                                                                                                         |          |
-| Coding Style + Linters | HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for Python, eslint for JavaScript, etc.).                                                                                                                                                             |          |
-| Writing Issues         | Make a brief statement about where to file issues, and conventions for doing so. Link to ISSUE_TEMPLATE.md file.                                                                                                                                                                                     |          |
-| Policies               | This section is here to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |          |
-| Public Domain          | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.      |          |
-
-- [ ] **CODE_OF_CONDUCT.md**
-
-  _Defines the code of conduct for contributors_
-
-- [ ] **COMMUNITY_GUIDELINES.md**
-
-  _Provides guidelines for community participation_
+| Section                  | Description                                                                                                                                                                                                                                                                                          | Included |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| How to Contribute        | Basic instructions about where to send patches, check out source code, and get development support.                                                                                                                                                                                                  | ✅ ❌    |
+| Getting Started          | Includes installation steps, prerequisites for installation, and instructions for working with the source code.                                                                                                                                                                                      |          |
+| Building dependencies    | This step is often skipped, so don't forget to include the steps needed to install on your platform. If your project can be multi-platform, this is an excellent place for first time contributors to send patches.                                                                                  |          |
+| Building the Project     | Be sure to include build scripts and instructions, not just the source code itself!                                                                                                                                                                                                                  |          |
+| Workflow and Branching   | If your project has a preferred workflow or branching structure, mention it here. We recommend 'git flow' as a good default.                                                                                                                                                                         |          |
+| Coding Style and Linters | HIGHLY ENCOURAGED. Specific tools will vary between different languages/frameworks (e.g. Black for Python, eslint for JavaScript, etc.).                                                                                                                                                             |          |
+| Writing Issues           | Make a brief statement about where to file issues, and conventions for doing so. Link to ISSUE_TEMPLATE.md file.                                                                                                                                                                                     |          |
+| Policies                 | This section is here to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains. |          |
+| Public Domain            | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.      |          |
 
 - [ ] **SECURITY.md**
 
   _Details security policies and procedures_
 
+- [ ] **CODE_OF_CONDUCT.md**
+
+  _Defines the code of conduct for contributors_
+
 - [ ] **repolinter.json**
 
   _Lints repository for missing files and sections above_
-
-- [ ] **code.json**
-
-  _Contains metadata about the project, refer to [Review Project Metadata](#review-project-metadata)_
-
-**Recommended Files:**
-
-- [ ] **CODEOWNERS.md**
-
-  _Specifies code ownership and reviewers_
-
-- [ ] **MAINTAINERS.md**
-
-  _Lists project maintainers and their responsibilities_
 
 #### Communications Style Guide
 
@@ -307,9 +311,21 @@ _Insert Review Here_
 
 ### Review Project Metadata
 
-As part of the [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf) and the agency’s software inventory tracking initiatives, each repository must contain a code.json file, storing metadata on your project.
+As part of the [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih), [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf), and the agency’s software inventory tracking initiatives, each repository must contain a [code.json file](https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md), storing metadata on your project.
 
-**Creating code.json on your repository**
+For more information on code.json, please review the [gov-codejson documentation repository](https://github.com/DSACMS/gov-codejson).
+
+#### Creating code.json on your repository
+
+**Using form site**
+
+Users can fill out a web form that creates a code.json file to be uploaded to a project's source code repository: https://dsacms.github.io/codejson-generator.
+
+**Using automated-codejson-generator**
+
+The [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) is a GitHub Action that automatically generates and maintains code.json files for federal open source repositories. It ensures schema consistency and automates various metadata calculations.
+
+**Using the repo-scaffolder cookiecutter CLI**
 
 1. In the `.github` directory, run the command:
 
@@ -321,7 +337,7 @@ cookiecutter . –directory=codejson
 
 3. A code.json file will be generated with your responses.
 
-Please keep this file up-to-date as you continue development in this repository. The OSPO is currently developing workflows to help assist with this work.
+As you continue development in this repository, it is important to keep this file up-to-date. Our [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) can assist with updating this file.
 
 #### Results
 
