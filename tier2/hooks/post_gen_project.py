@@ -8,7 +8,7 @@ VISIBILITY = '{{cookiecutter.project_visibility}}'
 DESCRIPTION = '{{cookiecutter.project_description}}'
 CREATE_REPO = '{{cookiecutter.create_repo}}'
 RECEIVE_UPDATES = '{{cookiecutter.receive_updates}}'
-ADD_MAINTAINER = '{{cookiecutter.add_maintainer}}'
+ADD_TEAM = '{{cookiecutter.add_team}}'
 
 def createGithubRepo():
     gh_cli_command = [
@@ -30,43 +30,40 @@ def addTopic():
     ]
     subprocess.call(gh_cli_command)
 
-def addMaintainer():
-    maintainers = []
-    add_maintainer = True
-    while add_maintainer:
-        maintainer = {}
-        maintainer["role"] = input("Maintainer's Role (Reviewer, Approver, Maintainer): ").strip()
-        maintainer["name"] = input("Maintainer's Name: ").strip()
-        github_username = input("Maintainer's GitHub Username: ").strip()
-        maintainer["github_username"] = github_username if github_username.startswith('@') else f'@{github_username}'
-        maintainer["affiliation"] = input("Maintainer's Affiliation (DSAC, CCSQ, CMMI, etc...): ").strip()
-        maintainers.append(maintainer)
+def addTeam():
+    team = []
+    add_member = True
+    while add_member:
+        member = {}
+        member["role"] = input("Project Member's Role (Engineer, Project Lead, COR, etc...): ").strip()
+        member["name"] = input("Project Member's Name: ").strip()
+        member["affiliation"] = input("Project Member's Affiliation (DSAC, CCSQ, CMMI, etc...): ").strip()
+        team.append(member)
 
         while True:
-            add_maintainer_input = input("Would you like to add another maintainer? [Y/n]: ").strip().lower()
-            if add_maintainer_input in ("y", "yes", ""):
-                add_maintainer = True
+            add_member_input = input("Would you like to add another project member? [Y/n]: ").strip().lower()
+            if add_member_input in ("y", "yes", ""):
+                add_member = True
                 break
-            elif add_maintainer_input in ("n", "no"):
-                add_maintainer = False
+            elif add_member_input in ("n", "no"):
+                add_member = False
                 break
             else:
                 print("\nInvalid response, please respond with: 'y', 'yes', 'n', 'no', or just press Enter for yes")
 
-    maintainers_table = ""
-    for maintainer in maintainers:
-        maintainers_table += f"| {maintainer["role"]} | {maintainer["name"]}| {maintainer["github_username"]} | {maintainer["affiliation"]} |\n"
+    team_table = ""
+    for member in team:
+        team_table += f"| {member["role"]} | {member["name"]} | {member["affiliation"]} |\n"
 
-    proj_name = "{{ cookiecutter.project_name }}"
-    maintainers_file_path = f"MAINTAINERS.md"
+    community_file_path = f"COMMUNITY.md"
 
-    with open(maintainers_file_path, "r") as f:
+    with open(community_file_path, "r") as f:
         lines = f.readlines()
 
-    with open(maintainers_file_path, "w") as f:
+    with open(community_file_path, "w") as f:
         for line in lines:
-            if "| {role} | {names} | {github usernames} | {affiliations}|" in line:
-                f.write(maintainers_table)  # Replace placeholder line with new table of maintainers
+            if "| {role} | {names} | {affiliations} |" in line:
+                f.write(team_table)  # Replace placeholder line with new table of project team members
             else:
                 f.write(line)
 
@@ -88,8 +85,8 @@ def moveCookiecutterFile():
         os.chdir(original_dir)
 
 def main():
-    if ADD_MAINTAINER == "True":
-        addMaintainer()
+    if ADD_TEAM == "True":
+        addTeam()
 
     moveCookiecutterFile()
 
@@ -102,6 +99,9 @@ def main():
 
     if RECEIVE_UPDATES == "True":
         addTopic()
+    
+    print(f"\n****************************************")
+    print(f"\n✅ {REPO_NAME} has successfully been created!\n")
         
 if __name__ == "__main__":
     main()

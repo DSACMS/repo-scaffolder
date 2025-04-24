@@ -27,13 +27,13 @@ def get_scc_labor_hours():
 
             # Currently only supports specific files
             files_to_exclude = [
-                "checks.yml,auto-changelog.yml,contributors.yml,repoStructure.yml,code.json,checklist.md,checklist.pdf,README.md,CONTIRBUTING.md,LICENSE,MAINTAINERS.md,repolinter.json,SECURITY.md,CODE_OF_CONDUCT.md,CODEOWNERS.md,COMMUNITY_GUIDELINES.md,GOVERANCE.md"
+                "checks.yml,auto-changelog.yml,contributors.yml,repoStructure.yml,code.json,checklist.md,checklist.pdf,README.md,CONTRIBUTING.md,LICENSE,repolinter.json,SECURITY.md,CODE_OF_CONDUCT.md,CODEOWNERS.md,COMMUNITY.md,GOVERNANCE.md"
             ]
 
             cmd.extend(files_to_exclude)
 
-            d = json.loads(subprocess.run(cmd,check=True, capture_output=True).stdout)
-            
+            d = json.loads(subprocess.run(cmd,check=True, capture_output=True).stdout) 
+                       
             l_hours = d['estimatedScheduleMonths'] * 730.001
 
             return round(l_hours,2)
@@ -48,10 +48,13 @@ def get_scc_labor_hours():
         return None
 
 def prompt_exemption_text(exemptionType):
-    print(f"You have selected {exemptionType} for your Usage Type.")
-    return input("Please provide a one or two sentence justification for the exemption used: ")
+    print(f"ℹ️ You have selected {exemptionType} for your Usage Type.")
+    return input("Please provide a one or two sentence justification for the exemption used. For more information on Usage Type, visit github.com/DSACMS/gov-codejson: ")
 
 def format_multi_select_fields(text):
+    if text == "":
+        return []
+    
     new_text = text.split(",")
 
     new_text = [text.strip() for text in new_text]
@@ -81,9 +84,13 @@ def update_code_json(json_file_path):
         del data['permissions']['exemptionText']
 
     # Format multi-select options
-    data['categories'] = format_multi_select_fields(data['categories'][0])
-    data['languages'] = format_multi_select_fields(data['languages'][0])
-    data['tags'] = format_multi_select_fields(data['tags'][0])
+    multi_select_fields = ["platforms", "categories", "languages", "tags", "feedbackMechanisms", "projects", "systems", "upstream", "subsetInHealthcare", "userType"]
+    for field in multi_select_fields:
+        data[field] = format_multi_select_fields(data[field][0])
+
+    # Format integer fields
+    if data['reuseFrequency']['forks'].isdigit():
+        data['reuseFrequency']['forks'] = int(data['reuseFrequency']['forks'])
 
     # Update the JSON 
     with open(json_file_path, 'w') as file:

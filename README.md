@@ -96,13 +96,25 @@ There are 4 tiers in the maturity model framework. The `/tier*` directory consis
 - [cookiecutter](https://github.com/cookiecutter/cookiecutter)
 - [repolinter](https://github.com/todogroup/repolinter)
 
+##### Installation (On Mac)
+
+```
+python3 -m venv venv
+. venv/bin/activate
+pip install -r requirements.txt
+brew install gh
+```
+
 #### Need help picking a maturity tier?
 
-If you do not know what tier your project is, the cookiecutter will walk you through questions to figure out what tier you need. Run:
+If you do not know what tier your project is, the `tier-determiner.py` script will walk you through questions to figure out what tier you need. Run:
 
 ```
-cookiecutter https://github.com/DSACMS/repo-scaffolder
+python tier-determiner.py
 ```
+
+You can also follow the flowchart below to determine your project's tier.
+![Tier Selection Flowchart](./assets/flowchart.png)
 
 #### Know what maturity tier you need?
 
@@ -148,8 +160,6 @@ When creating projects, if you want to receive updates then add `dsacms-tierX` a
 
 ### Identify missing files and information using repolinter
 
-<!-- TODO: Revise once repolinter GH actions are up and link to it-->
-
 Repolinter is a tool maintained by the [TODOGroup](https://todogroup.org/) for checking repositories for common open source issues, using pre-defined rulesets. This can be run stand-alone as a script, pre-commit in your IDE, or post-commit or within CI/CD systems!
 
 ✔    =  Pass
@@ -158,14 +168,15 @@ Repolinter is a tool maintained by the [TODOGroup](https://todogroup.org/) for c
 
 ⚠  =  Warn
 
-Tiers of level 1 thru 4 have repolinter.json file in their projects. Tier1 has detailed configuration of all the rules. All the other tiers extends their previous tiers and has only the `rule` and the `level` configuration.
+Tiers of level 0 thru 4 have repolinter.json file in their projects. Tier0 has detailed configuration of all the rules. All the other tiers extends their previous tiers and has only the `rule` and the `level` configuration.
 
 Sample commands to run with the given repolinter.json path:
 
 ```
-repolinter lint .
+repolinter lint . # Runs on target directory
 
-repolinter lint tier4/\{\{cookiecutter.project_slug\}\}
+repolinter lint . --config path/to/repolinter.json # Use if the repolinter config is not in the root dir
+
 ```
 
 #### Automated repolinter actions

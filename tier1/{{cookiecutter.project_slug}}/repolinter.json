@@ -20,6 +20,9 @@
     "readme-contains-contributing": {
       "level": "warning"
     },
+    "readme-contains-codeowners": {
+      "level": "warning"
+    },
     "readme-contains-feedback": {
       "level": "warning"
     },

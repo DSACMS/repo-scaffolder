@@ -1,11 +1,12 @@
 # COMMUNITY.md
 
+{{ cookiecutter.project_repo_name }} is supported by a dedicated team of individuals fulfilling various roles to ensure its success, security, and alignment with government standards and agency goals.
+
 ## Project Members
+
 <!-- TODO: Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.
 
 Roles to include, but not limited to: Project Owner, Technical Lead, Developers/Contributors, Community Manager, Security Team, Policy Advisor, Contracting Officer's Representative, Compliance Officer, Procurement Officer -->
-
-{{ cookiecutter.project_repo_name }} is supported by a dedicated team of individuals fulfilling various roles to ensure its success, security, and alignment with government standards and agency goals.
 
 | Role   | Name    | Affiliation    |
 | :----- | :------ | :------------- |
@@ -20,17 +21,23 @@ See [Community Guidelines](#{{cookiecutter.project_name}}-open-source-community-
 
 ## Roles & Responsibilities
 
-The members of {{ cookiecutter.project_repo_name }} community are responsible for guiding its development, ensuring quality standards, and fostering a collaborative environment. They play a vital role in making decisions about code contributions, handling releases, and ensuring the project meets its goals and objectives. Below is a list of the key members and their specific roles and responsibilities.
+The members of {{ cookiecutter.project_repo_name }} community are responsible for guiding its development, ensuring quality standards, and fostering a collaborative environment. They play a vital role in making decisions about code contributions, handling releases, and ensuring the project meets its goals and objectives. Below is a list of the key members and their specific roles and responsibilities. We are eagerly seeking individuals who are interested in joining the community and helping shape and support these roles.
 
 ### Maintainers:
+
+-
 
 <!-- TODO: List the individuals who are the maintainers. What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams. -->
 
 ### Approvers:
 
+-
+
 <!-- TODO: Who are the project approvers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly. -->
 
 ### Reviewers:
+
+-
 
 <!-- TODO: Who are the project reviewers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly. -->
 
