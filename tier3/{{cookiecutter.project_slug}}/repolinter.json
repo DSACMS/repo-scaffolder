@@ -26,6 +26,9 @@
     "readme-contains-glossary": {
       "level": "warning"
     },
+    "contributing-contains-team-specific-guidelines": {
+      "level": "error"
+    },
     "contributing-contains-testing-conventions": {
       "level": "error"
     },

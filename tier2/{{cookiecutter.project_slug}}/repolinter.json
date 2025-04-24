@@ -29,6 +29,9 @@
     "readme-contains-team-mission": {
       "level": "error"
     },
+    "readme-contains-core-team": {
+      "level": "error"
+    },
     "readme-contains-documentation-index": {
       "level": "warning"
     },
@@ -65,11 +68,23 @@
     "readme-contains-feedback": {
       "level": "warning"
     },
+    "readme-contains-glossary": {
+      "level": "warning"
+    },
     "contributing-contains-how-to-contribute": {
+      "level": "error"
+    },
+    "contributing-contains-getting-started": {
       "level": "error"
     },
     "contributing-contains-team-specific-guidelines": {
       "level": "warning"
+    },
+    "contributing-contains-building-dependencies": {
+      "level": "error"
+    },
+    "contributing-contains-building-the-project": {
+      "level": "error"
     },
     "contributing-contains-workflow-and-branching": {
       "level": "error"
@@ -78,6 +93,9 @@
       "level": "warning"
     },
     "contributing-contains-coding-style-and-linters": {
+      "level": "error"
+    },
+    "contributing-contains-writing-issues": {
       "level": "error"
     },
     "contributing-contains-writing-pull-requests": {
@@ -91,6 +109,21 @@
     },
     "contributing-contains-documentation": {
       "level": "warning"
+    },
+    "contributing-contains-policies": {
+      "level": "error"
+    },
+    "contributing-contains-open-source-policy": {
+      "level": "error"
+    },
+    "contributing-contains-security-and-responsible-disclosure-policy": {
+      "level": "error"
+    },
+    "contributing-contains-public-domain": {
+      "level": "error"
+    },
+    "community-contains-table-of-project-members": {
+      "level": "error"
     },
     "community-contains-roles-and-responsibilities": {
       "level": "warning"
