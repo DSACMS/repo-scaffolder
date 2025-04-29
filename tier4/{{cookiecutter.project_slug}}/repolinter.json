@@ -22,6 +22,12 @@
     },
     "governance-contains-governance": {
       "level": "error"
+    },
+    "readme-contains-agency-mission": {
+      "level": "off"
+    },
+    "readme-contains-team-mission": {
+      "level": "off"
     }
   }
 }

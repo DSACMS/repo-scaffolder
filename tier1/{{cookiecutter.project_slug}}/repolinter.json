@@ -23,6 +23,9 @@
     "readme-contains-codeowners": {
       "level": "warning"
     },
+    "readme-contains-feedback": {
+      "level": "warning"
+    },
     "readme-contains-project-vision": {
       "level": "off"
     },
