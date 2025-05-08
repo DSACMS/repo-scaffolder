@@ -59,7 +59,7 @@ Different projects have varying needs based on their scope, team size, and commu
 
 Use the series of questions below to identify your project's maturity model tier
 
-![Tier Selection Flowchart](./assets/flowchart.png)
+![Tier Selection Flowchart](./assets/images/flowchart.png)
 
 ## Repository File Requirements by Tier
 

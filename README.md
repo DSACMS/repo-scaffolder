@@ -114,7 +114,7 @@ python tier-determiner.py
 ```
 
 You can also follow the flowchart below to determine your project's tier.
-![Tier Selection Flowchart](./assets/flowchart.png)
+![Tier Selection Flowchart](./assets/images/flowchart.png)
 
 #### Know what maturity tier you need?
 

@@ -234,7 +234,7 @@ repolinter lint
 
 3. The result produces a list of file and section existence checks, indicating whether each requirement was met or not.
 
-![repolinter results](../assets/repolinter-results.png)
+![repolinter results](../assets/images/repolinter-results.png)
 
 #### Running repolinter on your repository via GitHub Actions
 
