@@ -415,6 +415,18 @@ nav ul li a[aria-current="page"] {
   padding-top: 20px;
 }
 
+.results-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+img.tree-graphic {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 30em) {
   .usa-form {
     max-width: 80rem !important;
