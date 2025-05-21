@@ -34,10 +34,10 @@ This is a review process to approve CMS-developed software to be released open s
 
 ### Prerequisites
 
-Does your repository align with the requirements of a Tier 4 project? To verify:
+Does your repository align with the requirements of a Tier 2 project? To verify:
 
 - Review the flowchart or use `tier-determiner.py` provided in the [README.md](https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#need-help-picking-a-maturity-tier).
-- Read more about [Tier 4](https://github.com/DSACMS/repo-scaffolder/tree/main/tier4) and the overall [CMS OSPO maturity model framework](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
+- Read more about [Tier 2](https://github.com/DSACMS/repo-scaffolder/tree/main/tier2) and the overall [CMS OSPO maturity model framework](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
 
 #### Results
 
