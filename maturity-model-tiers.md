@@ -1,5 +1,7 @@
 # Maturity Model Tiers
 
+![Maturity Model Tier Summary](./assets/images/maturity-model-trees-graphic-horizontal.png)
+
 Our maturity model framework is designed to evaluate and categorize open source repositories based on its level of maturity and development. This framework consists of five tiers (0-4), each representing different stages of a project's maturity, collaboration scope, community engagement, and governance structure.
 
 - [Tier 0](./tier0/README.md): Private Repository
@@ -64,6 +66,8 @@ Use the series of questions below to identify your project's maturity model tier
 ## Repository File Requirements by Tier
 
 Each tier requires certain files that must be included in the repository.
+
+![Maturity Model Tier Summary](./assets/images/maturity-model-trees-graphic-horizontal.png)
 
 | Level                                  | Description     |
 | -------------------------------------- | --------------- |
