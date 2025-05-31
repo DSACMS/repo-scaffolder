@@ -142,6 +142,13 @@ Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COU
 		</tr>
 		<tr>
             <td align="center">
+                <a href="https://github.com/DinneK">
+                    <img src="https://avatars.githubusercontent.com/u/63877492?v=4" width="100;" alt="DinneK"/>
+                    <br />
+                    <sub><b>Dinne Kopelevich</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/sgarciahelguera">
                     <img src="https://avatars.githubusercontent.com/u/9489918?v=4" width="100;" alt="sgarciahelguera"/>
                     <br />
@@ -153,13 +160,6 @@ Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COU
                     <img src="https://avatars.githubusercontent.com/u/109629269?v=4" width="100;" alt="jabirG"/>
                     <br />
                     <sub><b>Jabir Ghaffar</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/DinneK">
-                    <img src="https://avatars.githubusercontent.com/u/63877492?v=4" width="100;" alt="DinneK"/>
-                    <br />
-                    <sub><b>Dinne Kopelevich</b></sub>
                 </a>
             </td>
 		</tr>
