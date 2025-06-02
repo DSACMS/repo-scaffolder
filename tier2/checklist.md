@@ -34,10 +34,10 @@ This is a review process to approve CMS-developed software to be released open s
 
 ### Prerequisites
 
-Does your repository align with the requirements of a Tier 4 project? To verify:
+Does your repository align with the requirements of a Tier 2 project? To verify:
 
 - Review the flowchart or use `tier-determiner.py` provided in the [README.md](https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#need-help-picking-a-maturity-tier).
-- Read more about [Tier 4](https://github.com/DSACMS/repo-scaffolder/tree/main/tier4) and the overall [CMS OSPO maturity model framework](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
+- Read more about [Tier 2](https://github.com/DSACMS/repo-scaffolder/tree/main/tier2) and the overall [CMS OSPO maturity model framework](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
 
 #### Results
 
@@ -200,7 +200,7 @@ repolinter lint
 
 3. The result produces a list of file and section existence checks, indicating whether each requirement was met or not.
 
-![repolinter results](../assets/repolinter-results.png)
+![repolinter results](../assets/images/repolinter-results.png)
 
 #### Running repolinter on your repository via GitHub Actions
 
@@ -379,6 +379,32 @@ _Insert Review Here_
 _Insert any notes or questions here_
 
 ### Sign off on risk acceptance of open-sourcing the software product
+
+- **Date:** Add date
+- **Repository Name:** Add repo-name
+
+Before outbounding this repository, it’s important that the appropriate stakeholders review and acknowledge the risks and responsibilities associated with releasing the code to the public. This step ensures transparency and accountability while enabling informed decision making.
+
+#### Security and Privacy Verification
+- [ ] I acknowledge that this project does **NOT**:
+  - [ ] contain any PII/PHI, or create an identifiable risk to the privacy of an individual.
+  - [ ] interface with any CMS Internal Systems. 
+  - [ ] contain any keys or credentials to authenticate with CMS systems.
+
+#### National Security and Intelligence Verification
+- [ ] I acknowledge that this project is **NOT**:
+  - [ ] primarily for use in national security systems, as defined in Section 11103 of title 40, USC.
+  - [ ] created by an agency or part of an agency that is an element of the intelligence community, as defined in section 3(4) of the National Security Act of 1947.
+  - [ ] exempt under section 552(b) of title 5, USC (commonly known as the "Freedom of Information Act").
+
+#### Export and Regulatory Compliance
+- [ ] I acknowledge that this project is **NOT** prohibited under:
+  - [ ] Export Administration Regulations.
+  - [ ] International Traffic in Arms Regulations (ITAR).
+  - [ ] Regulations of the Transportation Security Administration related to the protection of sensitive information.
+  - [ ] Federal laws and regulations governing the sharing of classified information.
+
+If all boxes have been checked, please proceed to the **Flipping the Switch** section below this one, otherwise, this section must be filled out and approved by the indicated stakeholders before public release.
 
 After reviewing the materials prepared by the team that is working to open source the product, the business owner signs off on a risk acceptance for open-sourcing the software product.
 
