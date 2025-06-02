@@ -32,11 +32,9 @@ TODO: Good to include since this is an agency-led project -->
 
 ## Core Team
 
-An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAINERS.md). At this time, the project is still building the core team and defining roles and responsibilities. We are eagerly seeking individuals who would like to join the community and help us define and fill these roles.
+A list of core team members responsible for the code and documentation in this repository can be found in [COMMUNITY.md](COMMUNITY.md).
 
-## Documentation Index
-
-<!-- TODO: check out slides from OSS NA baseline repo, copy and paste content from there -->
+## Repository Structure
 
 ##### Usage
 
@@ -63,17 +61,12 @@ An up-to-date list of core team members can be found in [MAINTAINERS.md](MAINTAI
 ##### Files
 
 - [CONTRIBUTING.md](./CONTRIBUTING.md)
-- [MAINTAINERS.md](./MAINTAINERS.md)
+- [COMMUNITY.md](./COMMUNITY.md)
 - [CODEOWNERS.md](./CODEOWNERS.md)
 - [COMMUNITY_GUIDELINES.md](./COMMUNITY_GUIDELINES.md)
 - [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
 - [SECURITY.md](./SECURITY.md)
 - [LICENSE](./LICENSE)
-
-## Repository Structure
-
-<!-- TODO: Using the 'tree -d' command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time. -->
- <!--TREE START--><!--TREE END-->
 
 ## Using repo-scaffolder
 
@@ -238,10 +231,6 @@ Pull-requests are merged to `dev` and the changes are immediately deployed to th
 
 Thank you for considering contributing to an Open Source project of the US Government! For more information about our contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Codeowners
-
-The contents of this repository are managed by the CMS Open Source Program Office. Those responsible for the code and documentation in this repository can be found in [CODEOWNERS.md](CODEOWNERS.md).
-
 ## Community
 
 The repo-scaffolder team is taking a community-first and open source approach to the product development of this tool. We believe government software should be made in the open and be built and licensed such that anyone can download the code, run it themselves without paying money to third parties or using proprietary software, and use it as they will.
@@ -252,7 +241,7 @@ We also recognize capacity building as a key part of involving a diverse open so
 
 ### Community Guidelines
 
-Principles and guidelines for participating in our open source community are can be found in [COMMUNITY_GUIDELINES.md](COMMUNITY_GUIDELINES.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events.
+Principles and guidelines for participating in our open source community are can be found in [COMMUNITY.md](COMMUNITY.md). Please read them before joining or starting a conversation in this repo or one of the channels listed below. All community members and participants are expected to adhere to the community guidelines and code of conduct when participating in community spaces including: code repositories, communication channels and venues, and events.
 
 ## Feedback
 
