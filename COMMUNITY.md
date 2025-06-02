@@ -40,11 +40,32 @@ The members of the repo-scaffolder community are responsible for guiding its dev
 | maintainer | set direction and priorities for a sub-project | demonstrated responsibility and excellent technical judgement for the sub-project | COMMUNITY file owner entry and GitHub Org Admin Team      |
  
  ## Contributors 
-<!-- Who has contributed to the project? Highlight and credit the users who have contributed to the repository. -->
+
+<!-- TODO: A list of CONTRIBUTORS is generated below using contributors.yml located in the workflows directory. In order to automatically update the COMMUNITY.md, you must enter a secret into your Secrets and Variables under Actions within your repository settings. The name of the secret must be PUSH_TO_PROTECTED_BRANCH and the value must be a Personal Access Token with specific permissions. Please follow [this link](https://github.com/CasperWA/push-protected?tab=readme-ov-file#notes-on-token-and-user-permissions) for more information. -->
+
+Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COUNT END-->
+
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
+
  
  ## Alumni 
 <!-- Who are the past maintainers or contributors who previously played significant roles in this project who are no longer actively involved? Consider including their roles and dates for context. -->
- 
+
+Thank you [US Digital Response](https://www.usdigitalresponse.org/) ([@usdigitalresponse](https://github.com/usdigitalresponse)) Team for your support creating this repository!
+
+- [@aprilselby88](https://github.com/aprilselby88)
+- [@vantuyls](https://github.com/vantuyls)
+- [@sgarciahelguera](https://github.com/sgarciahelguera)
+
+
+[Coding It Forward Fellows](https://codingitforward.com/fellowship)
+
+- [@Firebird1029](https://github.com/Firebird1029)
+- [@CreativeNick](https://github.com/CreativeNick)
+- [@RicardoZamora01](https://github.com/RicardoZamora01)
+
+
 ### Principles
 
 These principles guide our data, product, and process decisions, architecture, and approach.
