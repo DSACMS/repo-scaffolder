@@ -26,7 +26,7 @@ More commands on using repo-scaffolder for repository creation and maintenance c
 - Please try to keep pull requests to a reasonable size; try to split large contributions to multiple PRs
 - Please create pull requests into dev unless the contribution is some kind of bugfix or urgent hotfix.
 - Document and explain the contribution clearly according to provided standards when possible.
-- Feel free to reach out to us if there is any confusion. A list of the project maintainers is found here: [MAINTAINERS.md](./MAINTAINERS.md)
+- Feel free to reach out to us if there is any confusion. A list of the project maintainers is found here: [COMMUNITY.md](./COMMUNITY.md)
 
 ### Building dependencies
 
