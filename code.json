@@ -1,7 +1,7 @@
 {
   "name": "repo-scaffolder",
   "description": "Templates and commandline tools for creating repositories for US Federal open source projects ",
-  "longDescription": "repo-scaffolder assists project teams with creating repositories that adhere to repository hygiene standards. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. ",
+  "longDescription": "A suite of tools for creating new repositories that align with repository hygiene standards and best practices in US Federal open source development. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. ",
   "status": "Production",
   "permissions": {
     "license": [
