@@ -15,13 +15,13 @@
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/repo-scaffolder",
-  "projectURL": "",
+  "projectURL": "https://dsacms.github.io/repo-scaffolder/",
   "repositoryHost": "github.com/DSACMS",
-  "repositoryVisibility": "",
+  "repositoryVisibility": "public",
   "vcs": "git",
   "laborHours": 7783,
   "reuseFrequency": {
-    "forks": 0,
+    "forks": 13,
     "clones": 0
   },
   "platforms": [
@@ -53,7 +53,10 @@
   "tags": [
     "repository",
     "codejson",
-    "cookiecutter"
+    "cookiecutter",
+    "outbound",
+    "repository-hygiene",
+    "featured"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
