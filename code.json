@@ -73,7 +73,11 @@
   "projects": [],
   "systems": [],
   "upstream": "https://github.com/DSACMS/repo-scaffolder/network/dependencies",
-  "subsetInHealthcare": "Operational",
-  "userType": "Government",
+  "subsetInHealthcare": [
+    "Operational"
+  ],
+  "userType": [
+    "Government"
+  ],
   "maturityModelTier": 3
 }
