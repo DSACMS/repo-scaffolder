@@ -1,7 +1,7 @@
 {
   "name": "repo-scaffolder",
   "description": "Templates and commandline tools for creating repositories for US Federal open source projects ",
-  "longDescription": "repo-scaffolder assists project teams with creating repositories that adhere to repository hygiene standards. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. ",
+  "longDescription": "A suite of tools for creating new repositories that align with repository hygiene standards and best practices in US Federal open source development. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. ",
   "status": "Production",
   "permissions": {
     "license": [
@@ -15,33 +15,69 @@
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/repo-scaffolder",
+  "projectURL": "https://dsacms.github.io/repo-scaffolder/",
+  "repositoryHost": "github.com/DSACMS",
+  "repositoryVisibility": "public",
   "vcs": "git",
-  "laborHours": 5940,
-  "platforms": ["web", "windows", "mac", "linux"],
-  "categories": ["data-collection", "it-asset-management", "knowledge-management"],
+  "laborHours": 7783,
+  "reuseFrequency": {
+    "forks": 13,
+    "clones": 0
+  },
+  "platforms": [
+    "web",
+    "windows",
+    "mac",
+    "linux"
+  ],
+  "categories": [
+    "data-collection",
+    "it-asset-management",
+    "knowledge-management"
+  ],
   "softwareType": "standalone/backend",
   "languages": [
-    "Python"
+    "HTML",
+    "Python",
+    "CSS",
+    "JavaScript",
+    "Shell"
   ],
   "maintenance": "internal",
+  "contractNumber": "",
   "date": {
     "created": "2023-10-05T18:06:51Z",
-    "lastModified": "2025-02-10T19:51:24Z",
-    "metaDataLastUpdated": "2025-02-10T19:52:18.683Z"
+    "lastModified": "2025-06-05T19:04:59Z",
+    "metaDataLastUpdated": "2025-06-06T16:01:58.351Z"
   },
-  "tags": ["repository", "codejson", "cookiecutter"],
+  "tags": [
+    "repository",
+    "codejson",
+    "cookiecutter",
+    "outbound",
+    "repository-hygiene",
+    "featured"
+  ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Team"
   },
+  "feedbackMechanisms": [
+    "https://github.com/DSACMS/repo-scaffolder/issues"
+  ],
   "localisation": false,
   "repositoryType": "tools",
   "userInput": false,
   "fismaLevel": "Low",
   "group": "CMS/OA/DSAC",
-  "subsetInHealthcare": "Operational",
-  "userType": "Government",
-  "repositoryHost": "github.com/DSACMS",
-  "maturityModelTier": 3,
-  "projectType": "Tools"
+  "projects": [],
+  "systems": [],
+  "upstream": "https://github.com/DSACMS/repo-scaffolder/network/dependencies",
+  "subsetInHealthcare": [
+    "Operational"
+  ],
+  "userType": [
+    "Government"
+  ],
+  "maturityModelTier": 3
 }
