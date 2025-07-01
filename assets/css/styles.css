@@ -406,10 +406,34 @@ nav ul li a[aria-current="page"] {
 
 /* Section: Maturity Models */
 
-img.tree-graphic-summary {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  max-width: 1000px;
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+
+  .mobile-only img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 400px;
+  }
+
+  .desktop-only img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 1150px;
+  }
 }
 
 .documentation {
