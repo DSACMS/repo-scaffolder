@@ -53,7 +53,7 @@ def addTeam():
 
     team_table = ""
     for member in team:
-        team_table += f"| {member["role"]} | {member["name"]} | {member["affiliation"]} |\n"
+        team_table += f"""| {member["role"]} | {member["name"]} | {member["affiliation"]} |\n"""
 
     community_file_path = f"COMMUNITY.md"
 
