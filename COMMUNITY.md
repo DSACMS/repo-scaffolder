@@ -158,6 +158,13 @@ Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COU
                     <sub><b>Jabir Ghaffar</b></sub>
                 </a>
             </td>
+            <td align="center">
+                <a href="https://github.com/spopelka-dsac">
+                    <img src="https://avatars.githubusercontent.com/u/216547207?v=4" width="100;" alt="spopelka-dsac"/>
+                    <br />
+                    <sub><b>spopelka-dsac</b></sub>
+                </a>
+            </td>
 		</tr>
 	<tbody>
 </table>
