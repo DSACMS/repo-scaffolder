@@ -454,10 +454,10 @@ Requesting sign off from key people on this request.
 
 | Reviewer Organization            | Reviewer Names                                            | Reviewer’s Recommendation                                                               |
 | -------------------------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Code Reviewer 's Reccommendation | CODE REVIEWER 1 <br> CODE REVIEWER 2 <br> CODE REVIEWER 3 | [Approved/Needs Approval] <br> [Approved/Needs Approval] <br> [Approved/Needs Approval] |
-| ISSO                             | ISSO REVIEWER                                             | [Approved/Needs Approval]                                                               |
-| ISG Technical Approval           | ISG REVIEWER                                              | [Approved/Needs Approval]                                                               |
-| Business Owner(s)                | BUSINESS OWNER 1 </n> BUSINESS OWNER 2                    | [Approved/Needs Approval] </n> [Approved/Needs Approval]                                |
+| Code Reviewer's Reccommendation | CODE REVIEWER 1 <br/> CODE REVIEWER 2 <br/> CODE REVIEWER 3 | [Approved/Needs Approval] <br/> [Approved/Needs Approval] <br/> [Approved/Needs Approval] |
+| ISSO Approval                   | ISSO REVIEWER                                             | [Approved/Needs Approval]                                                               |
+| ISPG Technical Approval           | ISPG REVIEWER                                              | [Approved/Needs Approval]                                                               |
+| Business Owner(s) Approval       | BUSINESS OWNER 1 <br/> BUSINESS OWNER 2                    | [Approved/Needs Approval] <br/> [Approved/Needs Approval]                                |
 
 ### Flipping the Switch: Making the Repository Public
 
