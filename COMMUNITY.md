@@ -168,7 +168,6 @@ Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COU
 		</tr>
 	<tbody>
 </table>
-<!-- readme: contributors -end -->
 
  
  ## Alumni 
