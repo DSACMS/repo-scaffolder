@@ -492,7 +492,7 @@
               <div class="doc-card-number">3</div>Risks
             </h3>
             <p>Evaluate the potential security, financial, and privacy risks of open sourcing the repository.</p>
-            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-benefits-of-open-sourcing-the-project"
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-risks-of-open-sourcing-the-project"
               target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
                 aria-hidden="true">→</span></a>
           </div>
@@ -614,7 +614,155 @@
               process (if Tier 4)</label>
           </div>
         </fieldset>
+
+        <div class="publishing-repo">
+          <h3>How a Repository Becomes Published</h3>
+          <p>To responsibly and safely release an open source repository publicly (or outbounding), we formalized
+            a checklist to ensure Federal requirements and guidelines, as well as industry best practices are being
+            followed: </p>
+          <br>
+          <div class="journey-step" id="pre-requisites">
+            <div class="step-header">
+              <div class="doc-card-number">1</div>
+              <h4>Pre-Requisites</h4>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-maturity-model-tier" type="checkbox">
+              <label class="usa-checkbox__label" for="check-maturity-model-tier">
+                <a href="#maturity-model-framework">Identify Maturity Model Tier</a>
+              </label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-outbound-checklist" type="checkbox">
+              <label class="usa-checkbox__label" for="check-outbound-checklist">
+                <a href="#outbound-checklists">Identify corresponding Outbound Review
+                  Checklist</a>
+              </label>
+            </div>
+          </div>
+          <div class="journey-step" id="benefits-and-risks">
+            <div class="step-header">
+              <div class="doc-card-number">2</div>
+              <h4>Benefits and Risks</h4>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-benefits" type="checkbox">
+              <label class="usa-checkbox__label" for="check-benefits">
+                <a
+                  href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-benefits-of-open-sourcing-the-project">
+                  Evaluate cost savings, extensibility, innovation, and other development benefits
+                </a>
+              </label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-risks" type="checkbox">
+              <label class="usa-checkbox__label" for="check-risks">
+                <a
+                  href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-risks-of-open-sourcing-the-project">
+                  Evaluate the potential security, financial, and privacy risks
+                </a>
+              </label>
+            </div>
+          </div>
+          <div class="journey-step" id="code-review-and-analysis">
+            <div class="step-header">
+              <div class="doc-card-number">3</div>
+              <h4>Code Review & Analysis</h4>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-code-quality" type="checkbox">
+              <label class="usa-checkbox__label" for="check-code-quality">
+                <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-review">
+                  Ensure Code Quality
+                </a>
+              </label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-pii-phi" type="checkbox">
+              <label class="usa-checkbox__label" for="check-pii-phi">
+                <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-analysis">
+                  Detect PII/PHI
+                </a>
+              </label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-secrets-keys" type="checkbox">
+              <label class="usa-checkbox__label" for="check-secrets-keys">
+                <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-commit-history">
+                  Detect Secrets and Keys
+                </a>
+              </label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-vulnerabilities" type="checkbox">
+              <label class="usa-checkbox__label" for="check-vulnerabilities">
+                <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-analysis">
+                  Detect Security Vulnerabilities
+                </a>
+              </label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-licensing-and-provenance" type="checkbox">
+              <label class="usa-checkbox__label" for="check-licensing-and-provenance">
+                <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-licensing">
+                  Identify Licensing and Provenance
+                </a>
+              </label>
+            </div>
+          </div>
+          <div class="journey-step" id="metadata-and-hygiene">
+            <div class="step-header">
+              <div class="doc-card-number">4</div>
+              <h4>Metadata & Hygiene</h4>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-files" type="checkbox">
+              <label class="usa-checkbox__label" for="check-files">
+                <a
+                  href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-repository-hygiene">
+                  Ensure repository files exist and are complete
+                </a>
+              </label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-metadata" type="checkbox">
+              <label class="usa-checkbox__label" for="check-metadata">
+                <a
+                  href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-project-metadata">
+                  Ensure repository metadata exist in a code.json file and are complete
+                </a>
+              </label>
+            </div>
+          </div>
+          <div class="journey-step" id="sign-off">
+            <div class="step-header">
+              <div class="doc-card-number">5</div>
+              <h4>Sign-off and Flipping the Switch</h4>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-ack" type="checkbox">
+              <label class="usa-checkbox__label" for="check-ack">
+                <a
+                  href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#sign-off-on-risk-acceptance-of-open-sourcing-the-software-product">
+                  Acknowledgment and/or Approvals from Technical, Business, and Security Stakeholders
+                </a>
+              </label>
+            </div>
+            <div class="usa-checkbox">
+              <input class="usa-checkbox__input" id="check-config" type="checkbox">
+              <label class="usa-checkbox__label" for="check-config">
+                <a
+                  href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#flipping-the-switch-making-the-repository-public">
+                  Set up repository configuration settings and publishing
+                </a>
+              </label>
+            </div>
+          </div>
+          <br>
+        </div>
       </div>
+
+
     </section>
 
     <!-- CTA Section -->
