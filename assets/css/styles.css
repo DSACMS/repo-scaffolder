@@ -463,6 +463,16 @@ img.tree-graphic {
   }
 }
 
+/* Section: Repo to Project */
+.repo-to-project {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+#repo-to-project .section-title {
+  margin-bottom: 20px;
+}
+
 /* Section: Repository Templates */
 
 .repository-templates {
