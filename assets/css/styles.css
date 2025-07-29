@@ -404,6 +404,49 @@ nav ul li a[aria-current="page"] {
   color: var(--gray-dark);
 }
 
+/* Section: Characteristics of Open Source Projects */
+.characteristics {
+  padding: 80px 0;
+  background-color: var(--cms-light-blue);
+}
+
+.characteristics .usa-checkbox {
+  background-color: var(--cms-light-blue);
+}
+
+#characteristics .section-title {
+  margin-bottom: 20px;
+}
+
+/* Section: How a Repository becomes published */
+
+.journey-step .doc-link {
+  margin-top: .75rem;
+}
+
+.repo-to-project {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+#repo-to-project .section-title {
+  margin-bottom: 40px;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.journey-step {
+  margin-bottom: 20px;
+}
+
+.journey-step .doc-card-number {
+  margin-right: 0px;
+}
+
 /* Section: Maturity Models */
 
 .mobile-only {
@@ -499,35 +542,6 @@ img.tree-graphic {
     }
   }
 }
-
-/* Section: Repo to Project */
-.repo-to-project {
-  padding: 80px 0;
-  background-color: var(--white);
-}
-
-#repo-to-project .section-title {
-  margin-bottom: 20px;
-}
-
-.step-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.journey-step {
-  margin-bottom: 20px;
-}
-
-.journey-step .doc-card-number {
-  margin-right: 0px;
-}
-
-.publishing-repo {
-  margin-top: 40px;
-}
-
 
 /* Card styles */
 
