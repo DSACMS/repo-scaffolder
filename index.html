@@ -168,6 +168,7 @@
       </div>
     </section>
 
+    <!-- How a Repository Becomes Published Section -->
     <section class="repo-to-project" id="repo-to-project" aria-labelledby="repo-to-project-heading">
       <div class="container">
         <div class="section-title">
@@ -237,51 +238,107 @@
               <div class="doc-card-number">3</div>
               <h4>Follow the outbound checklist to review repository</h4>
             </div>
-            <div style="margin-left: 4em;">
-              <div class="usa-checkbox">
-                <input class="usa-checkbox__input" id="check-code-quality" type="checkbox">
-                <label class="usa-checkbox__label" for="check-code-quality">
-                  <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-review"
-                    target="_blank" rel="noopener noreferrer">
-                    Ensure Code Quality
-                  </a>
-                </label>
+            <div class="journey-substeps" style="margin-left: 4em;">
+              <p> Benefits & Risks </p>
+              <div style="margin-left: 2em;">
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-benefits" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-benefits">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-benefits-of-open-sourcing-the-project"
+                      target="_blank" rel="noopener noreferrer">
+                      Evaluate cost savings, extensibility, innovation, and other development benefits
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-risks" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-risks">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-risks-of-open-sourcing-the-project"
+                      target="_blank" rel="noopener noreferrer">
+                      Evaluate the potential security, financial, and privacy risks
+                    </a>
+                  </label>
+                </div>
               </div>
-              <div class="usa-checkbox">
-                <input class="usa-checkbox__input" id="check-pii-phi" type="checkbox">
-                <label class="usa-checkbox__label" for="check-pii-phi">
-                  <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-analysis"
-                    target="_blank" rel="noopener noreferrer">
-                    Detect PII/PHI
-                  </a>
-                </label>
+              <p> Code Review & Analysis </p>
+              <div style="margin-left: 2em;">
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-code-quality" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-code-quality">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-review"
+                      target="_blank" rel="noopener noreferrer">
+                      Ensure Code Quality
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-pii-phi" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-pii-phi">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-analysis"
+                      target="_blank" rel="noopener noreferrer">
+                      Detect PII/PHI
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-secrets-keys" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-secrets-keys">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-commit-history"
+                      target="_blank" rel="noopener noreferrer">
+                      Detect Secrets and Keys
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-vulnerabilities" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-vulnerabilities">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-analysis"
+                      target="_blank" rel="noopener noreferrer">
+                      Detect Security Vulnerabilities
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-licensing-and-provenance" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-licensing-and-provenance">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-licensing"
+                      target="_blank" rel="noopener noreferrer">
+                      Identify Licensing and Provenance
+                    </a>
+                  </label>
+                </div>
               </div>
-              <div class="usa-checkbox">
-                <input class="usa-checkbox__input" id="check-secrets-keys" type="checkbox">
-                <label class="usa-checkbox__label" for="check-secrets-keys">
-                  <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-commit-history"
-                    target="_blank" rel="noopener noreferrer">
-                    Detect Secrets and Keys
-                  </a>
-                </label>
+              <p> Metadata & Hygiene </p>
+              <div style="margin-left: 2em;">
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-files" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-files">
+                    <a href="#repository-templates">
+                      Ensure repository files exist and are complete
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-metadata" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-metadata">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-project-metadata"
+                      target="_blank" rel="noopener noreferrer">
+                      Ensure repository metadata exist in a code.json file and are complete
+                    </a>
+                  </label>
+                </div>
               </div>
-              <div class="usa-checkbox">
-                <input class="usa-checkbox__input" id="check-vulnerabilities" type="checkbox">
-                <label class="usa-checkbox__label" for="check-vulnerabilities">
-                  <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-analysis"
-                    target="_blank" rel="noopener noreferrer">
-                    Detect Security Vulnerabilities
-                  </a>
-                </label>
-              </div>
-              <div class="usa-checkbox">
-                <input class="usa-checkbox__input" id="check-licensing-and-provenance" type="checkbox">
-                <label class="usa-checkbox__label" for="check-licensing-and-provenance">
-                  <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-licensing"
-                    target="_blank" rel="noopener noreferrer">
-                    Identify Licensing and Provenance
-                  </a>
-                </label>
+              <p> Sign-off</p>
+              <div style="margin-left: 2em;">
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-ack" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-ack">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#sign-off-on-risk-acceptance-of-open-sourcing-the-software-product"
+                      target="_blank" rel="noopener noreferrer">
+                      Acknowledgment and/or Approvals from Technical, Business, and Security Stakeholders
+                    </a>
+                  </label>
+                </div>
               </div>
               <a href="#outbound-checklists" class="doc-link">
                 Learn more about outbound checklists

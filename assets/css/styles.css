@@ -420,10 +420,6 @@ nav ul li a[aria-current="page"] {
 
 /* Section: How a Repository becomes published */
 
-.journey-step .doc-link {
-  margin-top: .75rem;
-}
-
 .repo-to-project {
   padding: 80px 0;
   background-color: var(--white);
@@ -433,18 +429,27 @@ nav ul li a[aria-current="page"] {
   margin-bottom: 40px;
 }
 
-.step-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
 .journey-step {
   margin-bottom: 20px;
 }
 
 .journey-step .doc-card-number {
   margin-right: 0px;
+}
+
+.journey-substeps p {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.journey-step .doc-link {
+  margin-top: .75rem;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 /* Section: Maturity Models */
