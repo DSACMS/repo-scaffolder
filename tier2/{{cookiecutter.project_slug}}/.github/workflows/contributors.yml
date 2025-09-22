@@ -20,25 +20,27 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  
+          token: ${{ secrets.PUSH_TO_PROTECTED_BRANCH }}
 
       - name: Update contributor list
         id: contrib_list
         uses: akhilmhdh/contributors-readme-action@v2.3.10
         env:
-          {% raw %}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          {% endraw %}
+          
+          GITHUB_TOKEN: ${{ secrets.PUSH_TO_PROTECTED_BRANCH }}
+          
         with:
           readme_path: COMMUNITY.md
           use_username: false
           commit_message: "update contributors information"
+          auto_detect_branch_protection: false
 
       - name: Get contributors count
         id: get_contributors
         env:
-          {% raw %}
+          
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          {% endraw %}
+          
 
         run: |
             OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
@@ -57,22 +59,15 @@ jobs:
 
       - name: Update COMMUNITY.md
         run: |
-          {% raw %}
+          
           CONTRIBUTORS="${{ steps.get_contributors.outputs.contributors }}"
-          {% endraw %}
+          
 
           perl -i -pe 's/(<!--CONTRIBUTOR COUNT START-->).*?(<!--CONTRIBUTOR COUNT END-->)/$1 '"$CONTRIBUTORS"' $2/' COMMUNITY.md
 
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git pull
           git add COMMUNITY.md
           git commit -m "update contributors count to $CONTRIBUTORS" || exit 0
-
-      - name: Push protected
-        uses: CasperWA/push-protected@v2
-        with:
-          {% raw %}
-          token: ${{ secrets.PUSH_TO_PROTECTED_BRANCH }}
-          {% endraw %}
-
-          branch: main
+          git push
