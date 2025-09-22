@@ -1,9 +1,9 @@
 title = "Custom Gitleaks Config for Common Secrets"
 version = "2"
 
-[allowlist]
-description = "Global allowlist"
-# --- Replace with your local secret files ---
+#[allowlist]
+#description = "Global allowlist"
+# --- Replace with your local secret files
 
 # --- Common Secrets ---
 [[rules]]
