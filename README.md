@@ -6,7 +6,7 @@ Templates and commandline tools for creating repositories for US Federal open so
 
 The CMS Open Source Program Office developed a [maturity model framework](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md) to classify federal open source projects based on their maturity level. Each tier outlines specific files and content that are required or recommended to be included in the repository.
 
-The repo-scaffolder project creates repositories that adhere to open source hygiene standards and best practices. It provides templates and guidance for project metadata, contributing practices, community governance, feedback mechanisms, security policies, and more. Using [cookiecutter](https://github.com/cookiecutter/cookiecutter), repo-scaffolder helps teams identify what tier their project is classified as and fill in project information to be inputted into the file templates. In turn, this provides the project sufficient structure and foundation to promote a healthy open source ecosystem
+The repo-scaffolder project creates repositories that adhere to open source hygiene standards and best practices. It provides templates and guidance for project metadata, contributing practices, community governance, feedback mechanisms, security policies, and more. Using [cookiecutter](https://github.com/cookiecutter/cookiecutter), repo-scaffolder helps teams identify what tier their project is classified as and fill in project information to be inputted into the file templates. In turn, this provides the project sufficient structure and foundation to promote a healthy open source ecosystem.
 
 This repository also includes [outbound checklists](#Outbound-Checklists) for each tier outlining the review process for releasing repositories as open source.
 
@@ -80,6 +80,22 @@ A list of core team members responsible for the code and documentation in this r
 
 ## Using repo-scaffolder
 
+##### Prerequisites
+
+- python
+- github cli
+- [cookiecutter](https://github.com/cookiecutter/cookiecutter)
+- [repolinter](https://github.com/todogroup/repolinter)
+
+###### Installation (On Mac)
+
+```
+python3 -m venv venv
+. venv/bin/activate
+pip install -r requirements.txt
+brew install gh
+```
+
 ### 1. Identify your project's maturity model tier
 
 If you do not know what tier your project is, the `tier-determiner.py` script will walk you through questions to figure out what tier you need. Run:
@@ -118,22 +134,6 @@ Now that you identified your project's maturity model tier, use the command belo
 
 ```
 cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
-```
-
-##### Prerequisites
-
-- python
-- github cli
-- [cookiecutter](https://github.com/cookiecutter/cookiecutter)
-- [repolinter](https://github.com/todogroup/repolinter)
-
-###### Installation (On Mac)
-
-```
-python3 -m venv venv
-. venv/bin/activate
-pip install -r requirements.txt
-brew install gh
 ```
 
 #### Add files to an existing repository using repolinter
