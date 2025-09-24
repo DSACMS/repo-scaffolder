@@ -46,7 +46,7 @@ A list of core team members responsible for the code and documentation in this r
       - [Using repo-scaffolder](#add-files-to-an-existing-repository-using-repo-scaffolder)
 3. [Review your repository using outbound checklists](#3-review-your-repository-using-outbound-checklists)
     - [Add metadata to your project](#metadata-collection-using-codejson)
-4. [Maintaining your repository](#4-maintaining-your-repository-using-repo-scaffolder)
+4. [Maintain your repository](#4-maintain-your-repository-using-repo-scaffolder)
     - [GitHub Actions](#updating-repository-using-github-action-workflows)
     - [Upstream file changes](#Updating-projects-with-new-repo-scaffolder-upstream-file-changes)
 
@@ -88,6 +88,8 @@ If you do not know what tier your project is, the `tier-determiner.py` script wi
 python tier-determiner.py
 ```
 
+Alternatively, the landing page includes a [quiz](https://dsacms.github.io/repo-scaffolder/#maturity-model-tier-quiz) to determine your project's tier.
+
 You can also follow the flowchart below to determine your project's tier.
 ![Tier Selection Flowchart](./assets/images/flowchart.png)
 
@@ -112,7 +114,7 @@ The `/tier*` directory consists of templates, files, and scripts for each respec
 - `checklist.md` & `checklist.pdf` is the outbound review checklist with guidelines on releasing the repository as open source.
 - `README.md` with more information about the maturity tier and file contents.
 
-**Now that you identified your project's maturity model tier, use the command below to create a new repository, with `X` substituted for the tier number.**
+Now that you identified your project's maturity model tier, use the command below to create a new repository, with `X` substituted for the tier number.
 
 ```
 cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
@@ -154,7 +156,6 @@ Sample commands to run with the given repolinter.json path:
 repolinter lint . # Runs on target directory
 
 repolinter lint . --config path/to/repolinter.json # Use if the repolinter config is not in the root dir
-
 ```
 
 ##### Use automated repolinter GitHub Actions to add files
@@ -171,7 +172,7 @@ For repositories that have already exist and are in active development, you can 
 4. Make sure when answering the questions you use the existing folder/project name
 5. Raise pr into main
 
-### 3. Review your repository using Outbound Checklists
+### 3. Review your repository using outbound checklists
 Before releasing your project as open source, follow the [outbound checklists](#outbound-checklists) to review your repository.
 
 #### Metadata collection using code.json
@@ -188,7 +189,7 @@ To add code.json into your project, navigate to your project's `.github` directo
 cookiecutter . --directory=codejson
 ```
 
-### 4. Maintaining your repository using repo-scaffolder
+### 4. Maintain your repository using repo-scaffolder
 
 #### Updating repository using GitHub Action workflows
 
