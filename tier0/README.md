@@ -6,6 +6,8 @@ A **Tier 0** project is an **experimental or historical** repository that is **p
 
 The main purpose of a Tier 0 project is to provide a space for initial development, exploration, and testing. These repositories generally lack formal documentation or governance structures that are typical of more mature projects.
 
+> The Tier 0 repository template can be found in [`{{cookiecutter.project_slug}}`](./{{cookiecutter.project_slug}}/) and is offered as a GitHub template repository: https://github.com/DSACMS/tier0
+
 ### Key Characteristics of a Tier 0 Project:
 
 - **Private** and often limited to individual or small team access.
