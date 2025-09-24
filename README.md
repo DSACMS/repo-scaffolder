@@ -70,7 +70,17 @@ A list of core team members responsible for the code and documentation in this r
 
 ## Using repo-scaffolder
 
-### Create a new repository using repo-scaffolder
+### Create a new repository using repository templates
+
+Use our GitHub repository templates to create a repository of any tier:
+- [Tier 0](https://github.com/DSACMS/tier0)
+- [Tier 1](https://github.com/DSACMS/tier1)
+- [Tier 2](https://github.com/DSACMS/tier2)
+- [Tier 3](https://github.com/DSACMS/tier3)
+- [Tier 4](https://github.com/DSACMS/tier4)
+
+
+### Create a new repository using cookiecutter
 
 The Open Source Program Office follows a maturity model framework to classify federal repositories according to their level of maturity: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md.
 
