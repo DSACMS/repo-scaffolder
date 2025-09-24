@@ -38,14 +38,14 @@ A list of core team members responsible for the code and documentation in this r
 
 1. [Identify your project's maturity model tier](#1-identify-your-projects-maturity-model-tier)
 2. [Set up your repository](#2-set-up-your-repository)
-  - Create a new repository 
-    - [Using repository templates](#create-a-new-repository-using-repository-templates)
-    - [Using repo-scaffolder](#create-a-new-repository-using-repo-scaffolder)
-  - Add files to an existing repository
-    - [Using repolinter](#add-files-to-an-existing-repository-using-repolinter)
-    - [Using repo-scaffolder](#add-files-to-an-existing-repository-using-repo-scaffolder)
+    - Create a new repository 
+      - [Using repository templates](#create-a-new-repository-using-repository-templates)
+      - [Using repo-scaffolder](#create-a-new-repository-using-repo-scaffolder)
+    - Add files to an existing repository
+      - [Using repolinter](#add-files-to-an-existing-repository-using-repolinter)
+      - [Using repo-scaffolder](#add-files-to-an-existing-repository-using-repo-scaffolder)
 3. [Review your repository using outbound checklists](#3-review-your-repository-using-outbound-checklists)
-  - [Add metadata to your project](#metadata-collection-using-codejson)
+    - [Add metadata to your project](#metadata-collection-using-codejson)
 4. [Maintaining your repository](#4-maintaining-your-repository-using-repo-scaffolder)
     - [GitHub Actions](#updating-repository-using-github-action-workflows)
     - [Upstream file changes](#Updating-projects-with-new-repo-scaffolder-upstream-file-changes)
