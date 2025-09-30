@@ -4,6 +4,8 @@
 
 A **Tier 3** project is an **open collaboration** effort where the work is conducted in public. The project is led by smaller, semi-open teams but encourages **limited external contributions**. The work is typically **open source**, but the direction and maintenance of the project are CMS-led, controlled by a smaller group or team, rather than a large, decentralized community. Tier 3 projects may be public-facing tools, utilities, or websites, where external contributions are welcomed but managed closely by the core team.
 
+> The Tier 3 repository template can be found in [`{{cookiecutter.project_slug}}`](./{{cookiecutter.project_slug}}/) and is offered as a GitHub template repository: https://github.com/DSACMS/tier3
+
 ### Key Characteristics of a Tier 3 Project:
 
 - **Collaborative in public**, where the work is open to external stakeholders.

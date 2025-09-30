@@ -6,6 +6,8 @@ A **Tier 2** project is a **collaborative effort** that typically occurs within 
 
 Innersource projects often allow different teams within the same organization to contribute, fostering collaboration and code-sharing internally while maintaining control over external access.
 
+> The Tier 2 repository template can be found in [`{{cookiecutter.project_slug}}`](./{{cookiecutter.project_slug}}/) and is offered as a GitHub template repository: https://github.com/DSACMS/tier2
+
 ### Key Characteristics of a Tier 2 Project:
 
 - Focuses on **collaborating within a smaller team** or internal group.

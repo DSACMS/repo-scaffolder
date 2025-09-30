@@ -6,13 +6,11 @@ Templates and commandline tools for creating repositories for US Federal open so
 
 The CMS Open Source Program Office developed a [maturity model framework](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md) to classify federal open source projects based on their maturity level. Each tier outlines specific files and content that are required or recommended to be included in the repository.
 
-The repo-scaffolder project creates repositories that adhere to open source hygiene standards and best practices. It provides templates and guidance for project metadata, contributing practices, community governance, feedback mechanisms, security policies, and more. Using [cookiecutter](https://github.com/cookiecutter/cookiecutter), repo-scaffolder helps teams identify what tier their project is classified as and fill in project information to be inputted into the file templates. In turn, this provides the project sufficient structure and foundation to promote a healthy open source ecosystem
+The repo-scaffolder project creates repositories that adhere to open source hygiene standards and best practices. It provides templates and guidance for project metadata, contributing practices, community governance, feedback mechanisms, security policies, and more. Using [cookiecutter](https://github.com/cookiecutter/cookiecutter), repo-scaffolder helps teams identify what tier their project is classified as and fill in project information to be inputted into the file templates. In turn, this provides the project sufficient structure and foundation to promote a healthy open source ecosystem.
 
 This repository also includes [outbound checklists](#Outbound-Checklists) for each tier outlining the review process for releasing repositories as open source.
 
 For existing repositories, repolinter via GitHub Actions is used to identify any files and information missing from the repository according to their maturity tier.
-
-<!-- TODO: Include more information on outbound checklists -->
 
 <!---
 ### Project Vision
@@ -38,9 +36,21 @@ A list of core team members responsible for the code and documentation in this r
 
 ##### Usage
 
-- [Using repo-scaffolder](#Using-repo-scaffolder)
-- [Updating repositories using GitHub Actions](#Updating-projects-with-new-repo-scaffolder-upstream-file-changes)
-- [Documentation](./docs)
+1. [Identify your project's maturity model tier](#1-identify-your-projects-maturity-model-tier)
+2. [Set up your repository](#2-set-up-your-repository)
+    - Create a new repository 
+      - [Using repository templates](#create-a-new-repository-using-repository-templates)
+      - [Using repo-scaffolder](#create-a-new-repository-using-repo-scaffolder)
+    - Add files to an existing repository
+      - [Using repolinter](#add-files-to-an-existing-repository-using-repolinter)
+      - [Using repo-scaffolder](#add-files-to-an-existing-repository-using-repo-scaffolder)
+3. [Review your repository using outbound checklists](#3-review-your-repository-using-outbound-checklists)
+    - [Add metadata to your project](#metadata-collection-using-codejson)
+4. [Maintain your repository](#4-maintain-your-repository-using-repo-scaffolder)
+    - [GitHub Actions](#updating-repository-using-github-action-workflows)
+    - [Upstream file changes](#Updating-projects-with-new-repo-scaffolder-upstream-file-changes)
+
+[Additional Documentation](./docs)
 
 ##### Maturity Models
 
@@ -70,26 +80,14 @@ A list of core team members responsible for the code and documentation in this r
 
 ## Using repo-scaffolder
 
-### Create a new repository using repo-scaffolder
-
-The Open Source Program Office follows a maturity model framework to classify federal repositories according to their level of maturity: https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md.
-
-There are 4 tiers in the maturity model framework. The `/tier*` directory consists of templates, files, and scripts for each respective tier:
-
-- `{{cookiecutter.project_slug}}` is the directory containing templates and files to be generated upon repository creation. This serves as your repository starting point.
-- `cookiecutter.json` defining the questions cookiecutter asks.
-- `hooks`, a folder containing scripts to be run upon repository creation.
-- `checklist.md` & `checklist.pdf` is the outbound review checklist with guidelines on releasing the repository as open source.
-- `README.md` with more information about the maturity tier and file contents.
-
-#### Prerequisites
+##### Prerequisites
 
 - python
 - github cli
 - [cookiecutter](https://github.com/cookiecutter/cookiecutter)
 - [repolinter](https://github.com/todogroup/repolinter)
 
-##### Installation (On Mac)
+###### Installation (On Mac)
 
 ```
 python3 -m venv venv
@@ -98,7 +96,7 @@ pip install -r requirements.txt
 brew install gh
 ```
 
-#### Need help picking a maturity tier?
+### 1. Identify your project's maturity model tier
 
 If you do not know what tier your project is, the `tier-determiner.py` script will walk you through questions to figure out what tier you need. Run:
 
@@ -106,52 +104,41 @@ If you do not know what tier your project is, the `tier-determiner.py` script wi
 python tier-determiner.py
 ```
 
+Alternatively, the landing page includes a [quiz](https://dsacms.github.io/repo-scaffolder/#maturity-model-tier-quiz) to determine your project's tier.
+
 You can also follow the flowchart below to determine your project's tier.
 ![Tier Selection Flowchart](./assets/images/flowchart.png)
 
-#### Know what maturity tier you need?
+### 2. Set up your repository
 
-If you know what tier you need, you can run the cookiecutter for an individual tier. Use the below command with `X` substituted for the tier number.
+#### Create a new repository using repository templates
+
+Use our GitHub repository templates to create a repository of any tier:
+- [Tier 0](https://github.com/DSACMS/tier0)
+- [Tier 1](https://github.com/DSACMS/tier1)
+- [Tier 2](https://github.com/DSACMS/tier2)
+- [Tier 3](https://github.com/DSACMS/tier3)
+- [Tier 4](https://github.com/DSACMS/tier4)
+
+#### Create a new repository using repo-scaffolder
+
+The `/tier*` directory consists of templates, files, and scripts for each respective tier:
+
+- `{{cookiecutter.project_slug}}` is the directory containing templates and files to be generated upon repository creation. This serves as your repository starting point.
+- `cookiecutter.json` defining the questions cookiecutter asks.
+- `hooks`, a folder containing scripts to be run upon repository creation.
+- `checklist.md` & `checklist.pdf` is the outbound review checklist with guidelines on releasing the repository as open source.
+- `README.md` with more information about the maturity tier and file contents.
+
+Now that you identified your project's maturity model tier, use the command below to create a new repository, with `X` substituted for the tier number.
 
 ```
 cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX
 ```
 
-### Update an existing repository using repo-scaffolder
+#### Add files to an existing repository using repolinter
 
-You can update existing projects with repo-scaffolder. Using the `-s` flag on cookiecutter will not overwrite existing files. Follow these steps:
-
-1. Create a new branch in your repo
-2. cd into folder above
-3. run: `cookiecutter -f -s https://github.com/DSACMS/repo-scaffolder --directory=tierX`
-4. Make sure when answering the questions you use the existing folder/project name
-5. Raise pr into main
-
-### Metadata collection using code.json
-
-<!-- TODO: Add text here about code.json and link code.json docs -->
-
-#### Add code.json to your project
-
-Each repository should contain a code.json file with metadata about the project.
-
-To add code.json into your project, navigate to your project's `.github` directory and run the following cookiecutter command. You will be asked questions about the project (see cookiecutter.json) in order to collect and store this metadata in code.json.
-
-```
-cookiecutter . --directory=codejson
-```
-
-### Maintaining your repository using repo-scaffolder
-
-#### Updating repository using GitHub action workflows
-
-The OSPO created various [GitHub Action workflows](../docs/workflows.md) that can be used to regularly update your repository. The jobs are located in `.github` directory of your project.
-
-#### Updating projects with new repo-scaffolder upstream file changes
-
-When creating projects, if you want to receive updates then add `dsacms-tierX` as a github topic to the repo. The scaffolder repo includes github workflows that will find all repos with that tag and can raise a pull request with an updated string or adding a file. See [actions.md](https://github.com/DSACMS/repo-scaffolder/blob/main/.github/actions.md) for more information.
-
-### Identify missing files and information using repolinter
+##### Identify missing files and information using repolinter
 
 Repolinter is a tool maintained by the [TODOGroup](https://todogroup.org/) for checking repositories for common open source issues, using pre-defined rulesets. This can be run stand-alone as a script, pre-commit in your IDE, or post-commit or within CI/CD systems!
 
@@ -169,12 +156,48 @@ Sample commands to run with the given repolinter.json path:
 repolinter lint . # Runs on target directory
 
 repolinter lint . --config path/to/repolinter.json # Use if the repolinter config is not in the root dir
-
 ```
 
-#### Automated repolinter actions
+##### Use automated repolinter GitHub Actions to add files
 
-A tool to automatically update repositories up to hygenic standards with the use of [Repolinter through GitHub Actions](https://github.com/DSACMS/repolinter-actions) is also available. This action sends a PR to your repository with templates of all the missing files and sections that are required using a predefined rulset. Visit the repository for more information on how to get this action up and running.
+A tool to automatically update repositories up to hygienic standards with the use of [Repolinter through GitHub Actions](https://github.com/DSACMS/repolinter-actions) is also available. This action sends a PR to your repository with templates of all the missing files and sections that are required using a predefined ruleset. Visit the repository for more information on how to get this action up and running.
+
+#### Add files to an existing repository using repo-scaffolder
+
+For repositories that have already exist and are in active development, you can update and add required files using repo-scaffolder. Using the `-s` flag on cookiecutter will not overwrite existing files. Follow these steps:
+
+1. Create a new branch in your repo
+2. cd into folder above
+3. run: `cookiecutter -f -s https://github.com/DSACMS/repo-scaffolder --directory=tierX`
+4. Make sure when answering the questions you use the existing folder/project name
+5. Raise pr into main
+
+### 3. Review your repository using outbound checklists
+Before releasing your project as open source, follow the [outbound checklists](#outbound-checklists) to review your repository.
+
+#### Metadata collection using code.json
+
+code.json is a metadata standard used to collect information on agency software projects. Every repository is required to have a code.json file.
+
+Learn more about code.json: https://github.com/DSACMS/gov-codejson
+
+#### Add code.json to your project
+
+To add code.json into your project, navigate to your project's `.github` directory and run the following cookiecutter command. You will be asked questions about the project (see cookiecutter.json) in order to collect and store this metadata in code.json.
+
+```
+cookiecutter . --directory=codejson
+```
+
+### 4. Maintain your repository using repo-scaffolder
+
+#### Updating repository using GitHub Action workflows
+
+The OSPO created various [GitHub Action workflows](../docs/workflows.md) that can be used to regularly update your repository. The jobs are located in `.github` directory of your project.
+
+#### Updating projects with new repo-scaffolder upstream file changes
+
+When creating projects, if you want to receive updates then add `dsacms-tierX` as a github topic to the repo. The scaffolder repo includes github workflows that will find all repos with that tag and can raise a pull request with an updated string or adding a file. See [actions.md](https://github.com/DSACMS/repo-scaffolder/blob/main/.github/actions.md) for more information.
 
 #### Automated Releases and Guidelines
 

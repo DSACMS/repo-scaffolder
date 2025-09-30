@@ -6,6 +6,8 @@ A **Tier 1** project refers to an **informational or historical** project that h
 
 The main purpose of a Tier 1 project is to share knowledge and provide information from past work. Though available for public consumption, the project is **not expected to evolve or expand** in the future. Contributors may not engage in continuous development or issue resolution.
 
+> The Tier 1 repository template can be found in [`{{cookiecutter.project_slug}}`](./{{cookiecutter.project_slug}}/) and is offered as a GitHub template repository: https://github.com/DSACMS/tier1
+
 ### Key Characteristics of a Tier 1 Project:
 
 - **Publicly released** without planned future development or maintenance.

@@ -4,6 +4,8 @@
 
 A **Tier 4** project is a fully **open and collaborative** project that operates under a **community governance model**. In Tier 4 projects, the focus is on **collaborating broadly with the public**, and the project is often either **donated** to or **stewarded** by an external community. The governance structure is **open** and welcomes input from a wide range of contributors, typically from outside the original development team.
 
+> The Tier 4 repository template can be found in [`{{cookiecutter.project_slug}}`](./{{cookiecutter.project_slug}}/) and is offered as a GitHub template repository: https://github.com/DSACMS/tier4
+
 ### Key Characteristics of a Tier 4 Project:
 
 - **Broad public collaboration** with contributions welcomed from the community.
