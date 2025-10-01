@@ -2,19 +2,30 @@ import subprocess
 import shutil
 import json
 import os
-import shutil
+from datetime import datetime, timezone
 
 def get_date_fields():
     # Run git commands and capture as string
     output = subprocess.run(['git', 'log', '--date=iso', '--pretty=%cI', '--max-parents=0', '-n', '1'], capture_output=True, text=True)
-
+    
     # Store string and strip of leading / trailing whitespace
     date =  output.stdout.strip()
+    
+    # Parse the git timestamp and convert to UTC
+    git_date = datetime.fromisoformat(date)
+    utc_date = git_date.astimezone(timezone.utc)
+    created_date = utc_date.strftime('%Y-%m-%dT%H:%M:%SZ')
+    
+    # Generate current UTC timestamps using the new recommended method
+    current_utc = datetime.now(timezone.utc)
+    current_timestamp = current_utc.strftime('%Y-%m-%dT%H:%M:%SZ')
 
     # Create a dictionary for date information to be pushed to JSON
-    date_information = {"created": f"{date}", 
-    "lastModified": "{% now 'utc', '%Y-%m-%dT%H:%M:%S%z' %}",
-    "metadataLastUpdated": "{% now 'utc', '%Y-%m-%dT%H:%M:%S%z' %}"}
+    date_information = {
+        "created": created_date,
+        "lastModified": current_timestamp,
+        "metadataLastUpdated": current_timestamp
+    }
 
     return date_information
 
@@ -77,7 +88,8 @@ def update_code_json(json_file_path):
         data['laborHours'] = None
 
     # Check if usageType is an exemption
-    if data['permissions']['usageType'].startswith('exempt'):
+    contains_exempt = any("exempt" in item for item in data['permissions']['usageType'])
+    if contains_exempt:
         exemption_text = prompt_exemption_text(data['permissions']['usageType'])
         data['permissions']['exemptionText'] = exemption_text
     else:

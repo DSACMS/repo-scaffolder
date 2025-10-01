@@ -11,7 +11,7 @@
         
       }
     ],
-    "usageType": "{{ cookiecutter.usage_type }}",
+    "usageType": [ "{{ cookiecutter.usage_type }}" ],
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",

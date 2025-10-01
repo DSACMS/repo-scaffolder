@@ -65,7 +65,7 @@
         "group": "Which group at CMS is the project part of?",
         "projects": "What project is the repository associated with? Separate items by commas.",
         "systems": "What systems does the repository use or interface with? Separate items by commas.",
-        "subset_in_healthcare": "Which subset of healthcare does the project belong to?",
-        "user_type": "Who are the intended users?"
+        "subset_in_healthcare": "Which subset of healthcare does the project belong to? Separate items by commas.",
+        "user_type": "Who are the intended users? Separate items by commas."
     }
 }
