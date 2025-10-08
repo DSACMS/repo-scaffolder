@@ -14,9 +14,6 @@
     "code-of-conduct-file-exists": {
       "level": "error"
     },
-    "community-guidelines-file-exists": {
-      "level": "error"
-    },
     "readme-contains-project-vision": {
       "level": "error"
     },
