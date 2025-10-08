@@ -1,4 +1,7 @@
 name: Sync Template Repos
+permissions:
+  contents: write
+  pull-requests: write
 on:
   push:
     branches:
