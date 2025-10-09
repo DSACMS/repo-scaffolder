@@ -19,7 +19,7 @@
   "repositoryHost": "github.com/DSACMS",
   "repositoryVisibility": "public",
   "vcs": "git",
-  "laborHours": 7783,
+  "laborHours": 7811,
   "reuseFrequency": {
     "forks": 13,
     "clones": 0
@@ -47,8 +47,8 @@
   "contractNumber": "",
   "date": {
     "created": "2023-10-05T18:06:51Z",
-    "lastModified": "2025-06-05T19:04:59Z",
-    "metaDataLastUpdated": "2025-06-06T16:01:58.351Z"
+    "lastModified": "2025-06-23T15:11:42Z",
+    "metaDataLastUpdated": "2025-06-24T18:25:43.519Z"
   },
   "tags": [
     "repository",
