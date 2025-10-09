@@ -1,0 +1,129 @@
+DSACMS/tier0:
+  - source: ./tier0/{{cookiecutter.project_slug}}/LICENSE
+    dest: ./LICENSE
+  - source: ./tier0/{{cookiecutter.project_slug}}/README.md
+    dest: ./README.md
+  - source: ./tier0/{{cookiecutter.project_slug}}/COMMUNITY.md
+    dest: ./COMMUNITY.md
+  - source: ./tier0/{{cookiecutter.project_slug}}/repolinter.json
+    dest: ./repolinter.json
+  - source: ./tier0/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
+    dest: ./.github/ISSUE_TEMPLATE
+  - source: ./tier0/{{cookiecutter.project_slug}}/.github/codejson/hooks
+    dest: ./.github/codejson/hooks
+  - source: ./tier0/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
+    dest: ./.github/codejson/{{cookiecutter.project_name}}
+  - source: ./tier0/{{cookiecutter.project_slug}}/.github/cookiecutter.json
+    dest: ./.github/codejson/cookiecutter.json
+
+DSACMS/tier1:
+  - source: ./tier1/{{cookiecutter.project_slug}}/LICENSE
+    dest: ./LICENSE
+  - source: ./tier1/{{cookiecutter.project_slug}}/README.md
+    dest: ./README.md
+  - source: ./tier1/{{cookiecutter.project_slug}}/COMMUNITY.md
+    dest: ./COMMUNITY.md
+  - source: ./tier1/{{cookiecutter.project_slug}}/SECURITY.md
+    dest: ./SECURITY.md
+  - source: ./tier1/{{cookiecutter.project_slug}}/CONTRIBUTING.md
+    dest: ./CONTRIBUTING.md
+  - source: ./tier1/{{cookiecutter.project_slug}}/repolinter.json
+    dest: ./repolinter.json
+  - source: ./tier1/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
+    dest: ./.github/ISSUE_TEMPLATE
+  - source: ./tier1/{{cookiecutter.project_slug}}/.github/workflows
+    dest: ./.github/workflows
+  - source: ./tier1/{{cookiecutter.project_slug}}/.github/codejson/hooks
+    dest: ./.github/codejson/hooks
+  - source: ./tier1/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
+    dest: ./.github/codejson/{{cookiecutter.project_name}}
+  - source: ./tier1/{{cookiecutter.project_slug}}/.github/cookiecutter.json
+    dest: ./.github/codejson/cookiecutter.json
+
+DSACMS/tier2:
+  - source: ./tier2/{{cookiecutter.project_slug}}/LICENSE
+    dest: ./LICENSE
+  - source: ./tier2/{{cookiecutter.project_slug}}/README.md
+    dest: ./README.md
+  - source: ./tier2/{{cookiecutter.project_slug}}/COMMUNITY.md
+    dest: ./COMMUNITY.md
+  - source: ./tier2/{{cookiecutter.project_slug}}/SECURITY.md
+    dest: ./SECURITY.md
+  - source: ./tier2/{{cookiecutter.project_slug}}/CONTRIBUTING.md
+    dest: ./CONTRIBUTING.md
+  - source: ./tier2/{{cookiecutter.project_slug}}/CODE_OF_CONDUCT.md
+    dest: ./CODE_OF_CONDUCT.md
+  - source: ./tier2/{{cookiecutter.project_slug}}/repolinter.json
+    dest: ./repolinter.json
+  - source: ./tier2/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
+    dest: ./.github/ISSUE_TEMPLATE
+  - source: ./tier2/{{cookiecutter.project_slug}}/.github/workflows
+    dest: ./.github/workflows
+  - source: ./tier2/{{cookiecutter.project_slug}}/.github/CODEOWNERS.md
+    dest: ./.github/CODEOWNERS.md
+  - source: ./tier2/{{cookiecutter.project_slug}}/.github/codejson/hooks
+    dest: ./.github/codejson/hooks
+  - source: ./tier2/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
+    dest: ./.github/codejson/{{cookiecutter.project_name}}
+  - source: ./tier2/{{cookiecutter.project_slug}}/.github/cookiecutter.json
+    dest: ./.github/codejson/cookiecutter.json
+
+DSACMS/tier3:
+  - source: ./tier3/{{cookiecutter.project_slug}}/LICENSE
+    dest: ./LICENSE
+  - source: ./tier3/{{cookiecutter.project_slug}}/README.md
+    dest: ./README.md
+  - source: ./tier3/{{cookiecutter.project_slug}}/COMMUNITY.md
+    dest: ./COMMUNITY.md
+  - source: ./tier3/{{cookiecutter.project_slug}}/SECURITY.md
+    dest: ./SECURITY.md
+  - source: ./tier3/{{cookiecutter.project_slug}}/CONTRIBUTING.md
+    dest: ./CONTRIBUTING.md
+  - source: ./tier3/{{cookiecutter.project_slug}}/CODE_OF_CONDUCT.md
+    dest: ./CODE_OF_CONDUCT.md
+  - source: ./tier3/{{cookiecutter.project_slug}}/GOVERNANCE.md
+    dest: ./GOVERNANCE.md
+  - source: ./tier3/{{cookiecutter.project_slug}}/repolinter.json
+    dest: ./repolinter.json
+  - source: ./tier3/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
+    dest: ./.github/ISSUE_TEMPLATE
+  - source: ./tier3/{{cookiecutter.project_slug}}/.github/workflows
+    dest: ./.github/workflows
+  - source: ./tier3/{{cookiecutter.project_slug}}/.github/CODEOWNERS.md
+    dest: ./.github/CODEOWNERS.md
+  - source: ./tier3/{{cookiecutter.project_slug}}/.github/codejson/hooks
+    dest: ./.github/codejson/hooks
+  - source: ./tier3/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
+    dest: ./.github/codejson/{{cookiecutter.project_name}}
+  - source: ./tier3/{{cookiecutter.project_slug}}/.github/cookiecutter.json
+    dest: ./.github/codejson/cookiecutter.json
+
+DSACMS/tier4:
+  - source: ./tier4/{{cookiecutter.project_slug}}/LICENSE
+    dest: ./LICENSE
+  - source: ./tier4/{{cookiecutter.project_slug}}/README.md
+    dest: ./README.md
+  - source: ./tier4/{{cookiecutter.project_slug}}/COMMUNITY.md
+    dest: ./COMMUNITY.md
+  - source: ./tier4/{{cookiecutter.project_slug}}/SECURITY.md
+    dest: ./SECURITY.md
+  - source: ./tier4/{{cookiecutter.project_slug}}/CONTRIBUTING.md
+    dest: ./CONTRIBUTING.md
+  - source: ./tier4/{{cookiecutter.project_slug}}/CODE_OF_CONDUCT.md
+    dest: ./CODE_OF_CONDUCT.md
+  - source: ./tier4/{{cookiecutter.project_slug}}/GOVERNANCE.md
+    dest: ./GOVERNANCE.md
+  - source: ./tier4/{{cookiecutter.project_slug}}/repolinter.json
+    dest: ./repolinter.json
+  - source: ./tier4/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
+    dest: ./.github/ISSUE_TEMPLATE
+  - source: ./tier4/{{cookiecutter.project_slug}}/.github/workflows
+    dest: ./.github/workflows
+  - source: ./tier4/{{cookiecutter.project_slug}}/.github/CODEOWNERS.md
+    dest: ./.github/CODEOWNERS.md
+  - source: ./tier4/{{cookiecutter.project_slug}}/.github/codejson/hooks
+    dest: ./.github/codejson/hooks
+  - source: ./tier4/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
+    dest: ./.github/codejson/{{cookiecutter.project_name}}
+  - source: ./tier4/{{cookiecutter.project_slug}}/.github/cookiecutter.json
+    dest: ./.github/codejson/cookiecutter.json
