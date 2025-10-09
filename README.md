@@ -193,7 +193,7 @@ cookiecutter . --directory=codejson
 
 #### Updating repository using GitHub Action workflows
 
-The OSPO created various [GitHub Action workflows](../docs/workflows.md) that can be used to regularly update your repository. The jobs are located in `.github` directory of your project.
+The OSPO created various [GitHub Action workflows](https://github.com/DSACMS/repo-scaffolder/blob/main/docs/.github-directory.md) that can be used to regularly update your repository. The jobs are located in `.github` directory of your project.
 
 #### Updating projects with new repo-scaffolder upstream file changes
 
