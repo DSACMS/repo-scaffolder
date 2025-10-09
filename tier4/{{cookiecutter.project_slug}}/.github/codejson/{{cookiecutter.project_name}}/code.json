@@ -6,11 +6,12 @@
   "permissions": {
     "licenses": [
       {
-        "URL": "LICENSE",
-        "name": "{{ cookiecutter.license }}"
+        "name": "{{ cookiecutter.license }}",
+        "URL": "{{cookiecutter.license_url}}"
+        
       }
     ],
-    "usageType": "{{ cookiecutter.usage_type }}",
+    "usageType": [ "{{ cookiecutter.usage_type }}" ],
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
@@ -20,21 +21,24 @@
   "vcs": "{{ cookiecutter.vcs }}",
   "laborHours": [""],
   "reuseFrequency": {
-    "forks": "{{ cookiecutter.forks }}"
+    "forks": "{{ cookiecutter.forks }}",
+    "clones": "{{ cookiecutter.clones }}"
   },
   "platforms": [ "{{ cookiecutter.platforms }}" ],
   "categories": [ "{{ cookiecutter.categories }}" ],
   "softwareType": "{{ cookiecutter.software_type }}",
   "languages": [ "{{ cookiecutter.languages }}" ],
   "maintenance": "{{ cookiecutter.maintenance }}",
-  "contractNumber": "{{ cookiecutter.contract_number }}",
+  "contractNumber": [ "{{ cookiecutter.contract_number }}" ],
+  "SBOM": "{{ cookiecutter.sbom }}",
   "date": [""],
   "tags": [ "{{ cookiecutter.tags }}" ],
   "contact": {
     "email": "{{ cookiecutter.contact_email }}",
     "name": "{{ cookiecutter.contact_name }}"
   },
-  "feedbackMechanisms": ["{{ cookiecutter.feedback_mechanisms }}"],
+  "feedbackMechanism": "https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/issues",
+  "AIUseCaseID": "{{ cookiecutter.ai_use_case_id }}",
   "localisation": "{{ cookiecutter.localisation }}",
   "repositoryType": "{{ cookiecutter.repository_type }}",
   "userInput": "{{ cookiecutter.user_input }}",
@@ -42,7 +46,6 @@
   "group": "{{ cookiecutter.group }}",
   "projects": ["{{ cookiecutter.projects }}"],
   "systems": ["{{ cookiecutter.systems }}"],
-  "upstream": ["{{ cookiecutter.upstream }}"],
   "subsetInHealthcare": ["{{ cookiecutter.subset_in_healthcare }}"],
   "userType": ["{{ cookiecutter.user_type }}"],
   "maturityModelTier": 4
