@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       tier = "1";
       name = "One-Time Release"
     }
-    else if (!checkedValues.includes("maintain")) {
+    else if (!checkedValues.includes("contribute")) {
       tier = "2";
       name = "Close Collaboration"
     }
