@@ -37,7 +37,7 @@ def main():
 
     prompts = {
         "CONTRIBUTORS": Prompt("Does your project have more than one contributor?"),
-        "RELEASE": Prompt("Do you plan on shipping more code or releases to the project in the future?"),
+        "RELEASE": Prompt("Do you plan on shipping more code or releases in the future?"),
         "WORK": Prompt("Do you plan on accepting innersource contributions to the repository? (e.g. internal staff and contractors only)"),
         "CONTRIBUTE": Prompt("Do you plan on accepting outside contributions to the repository? (e.g. pull requests and issues from the public)"),
         "ROADMAP": Prompt("Do you plan on having other individuals/teams outside the agency co-planning the development roadmap with you?")
