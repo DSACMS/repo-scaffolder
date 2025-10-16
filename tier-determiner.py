@@ -37,10 +37,10 @@ def main():
 
     prompts = {
         "CONTRIBUTORS": Prompt("Does your project have more than one contributor?"),
-        "RELEASE": Prompt("Do you plan on shipping more than one release?"),
-        "WORK": Prompt("Do you plan on having other individuals/teams outside the agency work with you?"),
-        "MAINTAIN": Prompt("Do you plan on having other individuals/teams outside the agency maintain the project with you?"),
-        "ROADMAP": Prompt("Do you plan on having other individuals/teams outside the agency plan the development roadmap with you?")
+        "RELEASE": Prompt("Do you plan on shipping more code or releases to the project in the future?"),
+        "WORK": Prompt("Do you plan on accepting innersource contributions to the repository? (e.g. internal staff and contractors only)"),
+        "CONTRIBUTE": Prompt("Do you plan on accepting outside contributions to the repository? (e.g. pull requests and issues from the public)"),
+        "ROADMAP": Prompt("Do you plan on having other individuals/teams outside the agency co-planning the development roadmap with you?")
     }
 
     # Obtain answers
@@ -63,7 +63,7 @@ def main():
         tier = 0
     elif not prompts["WORK"].answer:
         tier = 1
-    elif not prompts["MAINTAIN"].answer:
+    elif not prompts["CONTRIBUTE"].answer:
         tier = 2
     elif not prompts["ROADMAP"].answer:
         tier = 3
