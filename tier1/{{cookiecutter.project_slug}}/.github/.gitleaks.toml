@@ -1,0 +1,43 @@
+title = "Custom Gitleaks Config for Common Secrets"
+version = "2"
+
+#[allowlist]
+#description = "Global allowlist"
+# --- Replace with your local secret files
+
+# --- Common Secrets ---
+[[rules]]
+id = "github-pat"
+description = "GitHub Personal Access Token"
+regex = '''ghp_[0-9A-Za-z]{36}'''
+tags = ["key", "GitHub"]
+
+[[rules]]
+id = "slack-token"
+description = "Slack Token"
+regex = '''xox[baprs]-[0-9A-Za-z]{10,48}'''
+tags = ["key", "slack"]
+
+[[rules]]
+id = "google-api-key"
+description = "Google API Key"
+regex = '''AIza[0-9A-Za-z\-_]{35}'''
+tags = ["key", "Google"]
+
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key"
+regex = '''(A3T[A-Z0-9]|AKIA|ASIA|AGPA|AIDA|AROA|AIPA|ANPA)[A-Z0-9]{16}'''
+tags = ["AWS"]
+
+[[rules]]
+id = "aws-secret-key"
+description = "AWS Secret Key"
+regex = '''(?i)aws(.{0,20})?(?-i)['"][0-9a-zA-Z/+]{40}['"]'''
+tags = ["AWS"]
+
+[[rules]]
+id = "private-key"
+description = "Private Key"
+regex = '''-----BEGIN( RSA| EC| DSA)? PRIVATE KEY-----'''
+tags = ["private"]
