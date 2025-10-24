@@ -57,6 +57,8 @@ DSACMS/tier2:
     dest: ./repolinter.json
   - source: ./tier2/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
     dest: ./.github/ISSUE_TEMPLATE
+  - source: ./tier2/{{cookiecutter.project_slug}}/.github/PULL_REQUEST_TEMPLATE.md
+    dest: ./.github/PULL_REQUEST_TEMPLATE.md
   - source: ./tier2/{{cookiecutter.project_slug}}/.github/workflows
     dest: ./.github/workflows
   - source: ./tier2/{{cookiecutter.project_slug}}/.github/CODEOWNERS.md
@@ -87,6 +89,8 @@ DSACMS/tier3:
     dest: ./repolinter.json
   - source: ./tier3/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
     dest: ./.github/ISSUE_TEMPLATE
+  - source: ./tier3/{{cookiecutter.project_slug}}/.github/PULL_REQUEST_TEMPLATE.md
+    dest: ./.github/PULL_REQUEST_TEMPLATE.md
   - source: ./tier3/{{cookiecutter.project_slug}}/.github/workflows
     dest: ./.github/workflows
   - source: ./tier3/{{cookiecutter.project_slug}}/.github/CODEOWNERS.md
@@ -117,6 +121,8 @@ DSACMS/tier4:
     dest: ./repolinter.json
   - source: ./tier4/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
     dest: ./.github/ISSUE_TEMPLATE
+  - source: ./tier4/{{cookiecutter.project_slug}}/.github/PULL_REQUEST_TEMPLATE.md
+    dest: ./.github/PULL_REQUEST_TEMPLATE.md
   - source: ./tier4/{{cookiecutter.project_slug}}/.github/workflows
     dest: ./.github/workflows
   - source: ./tier4/{{cookiecutter.project_slug}}/.github/CODEOWNERS.md
