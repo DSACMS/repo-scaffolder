@@ -9,6 +9,8 @@ DSACMS/tier0:
     dest: ./repolinter.json
   - source: ./tier0/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
     dest: ./.github/ISSUE_TEMPLATE
+  - source: ./tier0/{{cookiecutter.project_slug}}/.github/.gitleaks.toml
+    dest: ./.github/.gitleaks.toml
   - source: ./tier0/{{cookiecutter.project_slug}}/.github/codejson/hooks
     dest: ./.github/codejson/hooks
   - source: ./tier0/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
@@ -33,6 +35,8 @@ DSACMS/tier1:
     dest: ./.github/ISSUE_TEMPLATE
   - source: ./tier1/{{cookiecutter.project_slug}}/.github/workflows
     dest: ./.github/workflows
+  - source: ./tier1/{{cookiecutter.project_slug}}/.github/.gitleaks.toml
+    dest: ./.github/.gitleaks.toml
   - source: ./tier1/{{cookiecutter.project_slug}}/.github/codejson/hooks
     dest: ./.github/codejson/hooks
   - source: ./tier1/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
@@ -57,12 +61,14 @@ DSACMS/tier2:
     dest: ./repolinter.json
   - source: ./tier2/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
     dest: ./.github/ISSUE_TEMPLATE
-  - source: ./tier2/{{cookiecutter.project_slug}}/.github/PULL_REQUEST_TEMPLATE.md
-    dest: ./.github/PULL_REQUEST_TEMPLATE.md
   - source: ./tier2/{{cookiecutter.project_slug}}/.github/workflows
     dest: ./.github/workflows
+  - source: ./tier2/{{cookiecutter.project_slug}}/.github/.gitleaks.toml
+    dest: ./.github/.gitleaks.toml
   - source: ./tier2/{{cookiecutter.project_slug}}/.github/CODEOWNERS.md
     dest: ./.github/CODEOWNERS.md
+  - source: ./tier2/{{cookiecutter.project_slug}}/.github/PULL_REQUEST_TEMPLATE.md
+    dest: ./.github/PULL_REQUEST_TEMPLATE.md
   - source: ./tier2/{{cookiecutter.project_slug}}/.github/codejson/hooks
     dest: ./.github/codejson/hooks
   - source: ./tier2/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
@@ -89,12 +95,14 @@ DSACMS/tier3:
     dest: ./repolinter.json
   - source: ./tier3/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
     dest: ./.github/ISSUE_TEMPLATE
-  - source: ./tier3/{{cookiecutter.project_slug}}/.github/PULL_REQUEST_TEMPLATE.md
-    dest: ./.github/PULL_REQUEST_TEMPLATE.md
   - source: ./tier3/{{cookiecutter.project_slug}}/.github/workflows
     dest: ./.github/workflows
+  - source: ./tier3/{{cookiecutter.project_slug}}/.github/.gitleaks.toml
+    dest: ./.github/.gitleaks.toml
   - source: ./tier3/{{cookiecutter.project_slug}}/.github/CODEOWNERS.md
     dest: ./.github/CODEOWNERS.md
+  - source: ./tier3/{{cookiecutter.project_slug}}/.github/PULL_REQUEST_TEMPLATE.md
+    dest: ./.github/PULL_REQUEST_TEMPLATE.md
   - source: ./tier3/{{cookiecutter.project_slug}}/.github/codejson/hooks
     dest: ./.github/codejson/hooks
   - source: ./tier3/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
@@ -121,12 +129,14 @@ DSACMS/tier4:
     dest: ./repolinter.json
   - source: ./tier4/{{cookiecutter.project_slug}}/.github/ISSUE_TEMPLATE
     dest: ./.github/ISSUE_TEMPLATE
-  - source: ./tier4/{{cookiecutter.project_slug}}/.github/PULL_REQUEST_TEMPLATE.md
-    dest: ./.github/PULL_REQUEST_TEMPLATE.md
   - source: ./tier4/{{cookiecutter.project_slug}}/.github/workflows
     dest: ./.github/workflows
+  - source: ./tier4/{{cookiecutter.project_slug}}/.github/.gitleaks.toml
+    dest: ./.github/.gitleaks.toml
   - source: ./tier4/{{cookiecutter.project_slug}}/.github/CODEOWNERS.md
     dest: ./.github/CODEOWNERS.md
+  - source: ./tier4/{{cookiecutter.project_slug}}/.github/PULL_REQUEST_TEMPLATE.md
+    dest: ./.github/PULL_REQUEST_TEMPLATE.md
   - source: ./tier4/{{cookiecutter.project_slug}}/.github/codejson/hooks
     dest: ./.github/codejson/hooks
   - source: ./tier4/{{cookiecutter.project_slug}}/.github/codejson/{{cookiecutter.project_name}}
