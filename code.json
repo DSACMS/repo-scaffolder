@@ -5,7 +5,7 @@
   "longDescription": "A suite of tools for creating new repositories that align with repository hygiene standards and best practices in US Federal open source development. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. ",
   "status": "Production",
   "permissions": {
-    "license": [
+    "licenses": [
       {
         "name": "CC0 1.0 Universal",
         "URL": "https://github.com/DSACMS/repo-scaffolder/blob/main/LICENSE"
