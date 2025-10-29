@@ -11,7 +11,7 @@
         "URL": "https://github.com/DSACMS/repo-scaffolder/blob/main/LICENSE"
       }
     ],
-    "usageType": "openSource",
+    "usageType": ["openSource"],
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
@@ -67,22 +67,22 @@
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
-    "name": "CMS Open Source Team"
+    "name": "CMS Open Source Program Office"
   },
   "feedbackMechanism": "https://github.com/DSACMS/repo-scaffolder/issues",
   "AIUseCaseID": "0",
   "localisation": false,
   "repositoryType": "tools",
   "userInput": false,
-  "fismaLevel": "Low",
+  "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
   "projects": [],
   "systems": [],
   "subsetInHealthcare": [
-    "Operational"
+    "operational"
   ],
   "userType": [
-    "Government"
+    "government"
   ],
   "maturityModelTier": 3
 }
