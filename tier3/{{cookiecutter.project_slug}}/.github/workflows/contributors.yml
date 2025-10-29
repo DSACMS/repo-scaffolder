@@ -28,7 +28,6 @@ jobs:
         id: contrib_list
         uses: akhilmhdh/contributors-readme-action@v2.3.10
         env:
-          
           {% raw %}
           GITHUB_TOKEN: ${{ secrets.PUSH_TO_PROTECTED_BRANCH }}
           {% endraw %}
@@ -42,7 +41,6 @@ jobs:
       - name: Get contributors count
         id: get_contributors
         env:
-          
           {% raw %}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           {% endraw %}
@@ -65,16 +63,10 @@ jobs:
 
       - name: Update COMMUNITY.md
         run: |
-          
           {% raw %}
-
           CONTRIBUTORS="${{ steps.get_contributors.outputs.contributors }}"
-          
           {% endraw %}
-          
-
           perl -i -pe 's/(<!--CONTRIBUTOR COUNT START-->).*?(<!--CONTRIBUTOR COUNT END-->)/$1 '"$CONTRIBUTORS"' $2/' COMMUNITY.md
-
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git pull
