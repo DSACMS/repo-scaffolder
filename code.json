@@ -1,5 +1,6 @@
 {
   "name": "repo-scaffolder",
+  "version": "",
   "description": "Templates and commandline tools for creating repositories for US Federal open source projects ",
   "longDescription": "A suite of tools for creating new repositories that align with repository hygiene standards and best practices in US Federal open source development. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. ",
   "status": "Production",
@@ -15,13 +16,16 @@
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/repo-scaffolder",
-  "projectURL": "https://dsacms.github.io/repo-scaffolder/",
   "repositoryHost": "github.com/DSACMS",
   "repositoryVisibility": "public",
+  "homepageURL": "",
+  "downloadURL": "",
+  "disclaimerURL": "",
+  "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 7783,
+  "laborHours": 7974,
   "reuseFrequency": {
-    "forks": 13,
+    "forks": 17,
     "clones": 0
   },
   "platforms": [
@@ -44,27 +48,29 @@
     "Shell"
   ],
   "maintenance": "internal",
-  "contractNumber": "",
+  "contractNumber": [],
+  "SBOM": "https://github.com/DSACMS/repo-scaffolder/network/dependencies",
+  "relatedCode": [],
+  "reusedCode": [],
+  "partners": [],
   "date": {
     "created": "2023-10-05T18:06:51Z",
-    "lastModified": "2025-06-05T19:04:59Z",
-    "metaDataLastUpdated": "2025-06-06T16:01:58.351Z"
+    "lastModified": "2025-10-29T20:10:03Z",
+    "metadataLastUpdated": "2025-10-29T21:15:16.168Z"
   },
   "tags": [
-    "repository",
-    "codejson",
-    "cookiecutter",
-    "outbound",
-    "repository-hygiene",
-    "featured"
+    "cmsoss-tier3",
+    "cookiecutter-template",
+    "maturity-models",
+    "repo-hygiene",
+    "repolinter"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Team"
   },
-  "feedbackMechanisms": [
-    "https://github.com/DSACMS/repo-scaffolder/issues"
-  ],
+  "feedbackMechanism": "https://github.com/DSACMS/repo-scaffolder/issues",
+  "AIUseCaseID": "0",
   "localisation": false,
   "repositoryType": "tools",
   "userInput": false,
@@ -72,7 +78,6 @@
   "group": "CMS/OA/DSAC",
   "projects": [],
   "systems": [],
-  "upstream": "https://github.com/DSACMS/repo-scaffolder/network/dependencies",
   "subsetInHealthcare": [
     "Operational"
   ],
