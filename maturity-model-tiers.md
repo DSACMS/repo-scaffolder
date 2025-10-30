@@ -20,7 +20,7 @@ Different projects have varying needs based on their scope, team size, and commu
       <th>Level</th>
       <th>Name</th>
       <th>Purpose</th>
-      <th>Description</th>
+      <th>Description/Examples</th>
     </tr>
   </thead>
   <tbody>
@@ -46,13 +46,13 @@ Different projects have varying needs based on their scope, team size, and commu
       <td>Tier 3</td>
       <td>Working in Public</td>
       <td>Collaborate in the Open with smaller, semi-open teams</td>
-      <td>Project developed Open Source by CMS or a CMS contractor, public website hosted on GitHub, tool or utility used in CMS official business by the public. Limited external contribution, CMS-led (by choice or by statute).</td>
+      <td>Project developed Open Source by CMS or a CMS contractor OR public website hosted on GitHub OR tool or utility used in CMS official business by the public. Limited external contribution, CMS-led (by choice or by statute).</td>
     </tr>
     <tr>
       <td>Tier 4</td>
       <td>Community Governance</td>
       <td>Collaborate broadly in public</td>
-      <td>Project donated to or stewarded by an external community, open standard that welcomes public input, mature open source project that purposefully develops an open governance structure.</td>
+      <td>Project often donated to or stewarded by an external community OR open standard that welcomes public input OR mature open source project that purposefully develops an open governance structure.</td>
     </tr>
   </tbody>
 </table>
