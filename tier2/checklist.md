@@ -33,6 +33,8 @@ This is a review process to approve CMS-developed software to be released open s
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
 
 ### Prerequisites
+**Your project should be stored in a GitHub repository**
+If you are new to GitHub or repositories, checkout the OSPO's [Beginner Guide to Creating GitHub Repos](https://dsacms.github.io/ospo-guide/resources/beginner-guide-github-repos/) before moving on to the next steps.
 
 Does your repository align with the requirements of a Tier 2 project? To verify:
 
