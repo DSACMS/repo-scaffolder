@@ -38,6 +38,8 @@ If you would like your repository to be released, please complete the following 
 [Flipping the Switch: Making the Repository Public](#flipping-the-switch-making-the-repository-public)
 
 ### Prerequisites
+**Your project should be stored in a GitHub repository**
+If you are new to GitHub or repositories, checkout the OSPO's [Beginner Guide to Creating GitHub Repos](https://dsacms.github.io/ospo-guide/resources/beginner-guide-github-repos/) before moving on to the next steps.
 
 Does your repository align with the requirements of a Tier 4 project? To verify:
 
