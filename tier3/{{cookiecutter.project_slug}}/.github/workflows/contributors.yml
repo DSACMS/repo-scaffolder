@@ -2,9 +2,6 @@ name: Update Contributors Information
 
 on:
   workflow_dispatch: {}
-  schedule:
-    # Weekly on Saturdays.
-    - cron: "30 1 * * 6"
   push:
     branches: [main]
 
@@ -19,57 +16,64 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  
-          {% raw %}
-          token: ${{ secrets.PUSH_TO_PROTECTED_BRANCH }}
-          {% endraw %}
+          fetch-depth: 0
 
-      - name: Update contributor list
-        id: contrib_list
-        uses: akhilmhdh/contributors-readme-action@v2.3.10
-        env:
-          {% raw %}
-          GITHUB_TOKEN: ${{ secrets.PUSH_TO_PROTECTED_BRANCH }}
-          {% endraw %}
-          
-        with:
-          readme_path: COMMUNITY.md
-          use_username: false
-          commit_message: "update contributors information"
-          auto_detect_branch_protection: false
-
-      - name: Get contributors count
-        id: get_contributors
+      - name: Check if update needed
+        id: check_changes
         env:
           {% raw %}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           {% endraw %}
-          
-
         run: |
-            OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
-            REPO=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
-            QUERY='query { repository(owner: \"'"$OWNER"'\", name: \"'"$REPO"'\") { collaborators { totalCount } } }'
+          OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
+          REPO=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
+          
+          CURRENT=$(gh api \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "/repos/$OWNER/$REPO/contributors?per_page=100" | \
+            jq -r '[.[] | select(.type != "Bot" and (.login | test("\\[bot\\]$") | not) and (.login | test("-bot$") | not)) | .login] | sort | join(",")')
+          
+          EXISTING=$(grep -oP '(?<=github.com/)[^"]+(?=">)' COMMUNITY.md | \
+            grep -v "^$" | sort | uniq | tr '\n' ',' | sed 's/,$//')
+          
+          echo "Current contributors: $CURRENT"
+          echo "Existing contributors: $EXISTING"
+          
+          if [ "$CURRENT" = "$EXISTING" ]; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No new contributors found. Skipping update!"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "New contributors detected. Running update!"
+          fi
 
-            CONTRIBUTORS=$(gh api \
-              -H "Accept: application/vnd.github+json" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              "/repos/$OWNER/$REPO/contributors?per_page=100" | \
-              jq '[.[] | select(.type != "Bot" and (.login | test("\\[bot\\]$") | not) and (.login | test("-bot$") | not))] | length')
+      - name: Update contributor list
+        if: steps.check_changes.outputs.has_changes == 'true'
+        id: update_contributors
+        uses: akhilmhdh/contributors-readme-action@v2.3.10
+        env:
+          {% raw %}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          {% endraw %}
+        with:
+          readme_path: COMMUNITY.md
+          commit_message: "updating contributors list"
+          pr_title_on_protected: "docs: update contributors information"
+          committer_username: "github-actions[bot]"
+          committer_email: "github-actions[bot]@users.noreply.github.com"
 
-            echo "Total contributors: $CONTRIBUTORS"
-            echo "contributors=$CONTRIBUTORS" >> $GITHUB_OUTPUT
-
-
-      - name: Update COMMUNITY.md
+      - name: Update PR
+        if: steps.check_changes.outputs.has_changes == 'true' && steps.update_contributors.outputs.pr_id != ''
+        env:
+          {% raw %}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          {% endraw %}
         run: |
           {% raw %}
-          CONTRIBUTORS="${{ steps.get_contributors.outputs.contributors }}"
+          PR_NUMBER="${{ steps.update_contributors.outputs.pr_id }}"
           {% endraw %}
-          perl -i -pe 's/(<!--CONTRIBUTOR COUNT START-->).*?(<!--CONTRIBUTOR COUNT END-->)/$1 '"$CONTRIBUTORS"' $2/' COMMUNITY.md
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git pull
-          git add COMMUNITY.md
-          git commit -m "update contributors count to $CONTRIBUTORS" || exit 0
-          git push
+          
+          gh pr edit $PR_NUMBER \
+            --body "New contributors detected! This PR updates the contributors list in COMMUNITY.md." \
+            --add-label "documentation"
