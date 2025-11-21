@@ -538,6 +538,10 @@ quality:
 
   _Requires all commit messages to contain the Signed-off-by line with an email address that matches the commit author. The Developer Certificate of Origin (DCO) is a lightweight way for contributors to certify that they wrote or otherwise have the right to submit the code they are contributing to the project. The GitHub app to enforce DCO can be found [here](https://github.com/apps/dco) ._
 
+- [ ] **Optional: Enable Wiz via GitHub App**
+
+  _Add your repository to Wiz in order to track cloud security risks and vulnerabilities. Contact ISPG for more information._
+
 #### Communications & Rollout 📣
 
 Share the good news with communities both inside and outside CMS!
