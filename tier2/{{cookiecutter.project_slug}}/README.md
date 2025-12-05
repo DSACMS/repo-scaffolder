@@ -5,14 +5,17 @@
 ## About the Project
 
 **{project statement}**
+<!-- TODO: Write an about statement for this project. -->
 
 ### Project Vision
 
 **{project vision}**
+<!-- TODO: What is the vision for this project -->
 
 ### Project Mission
 
 **{project mission}**
+<!-- TODO: Mission statement -->
 
 ### Agency Mission
 
@@ -31,6 +34,24 @@ A list of core team members responsible for the code and documentation in this r
 
 TODO: Including the repository structure helps viewers quickly understand the project layout. Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.
 
+To install the tree command:
+In the command line
+- MacOS: 
+```
+brew install tree
+```
+
+- Linux: 
+```
+sudo apt-get update
+sudo apt-get install tree
+```
+
+Windows:
+```
+choco install tree
+```
+
 **{list directories and descriptions}**
 
 TODO: Add a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.
@@ -39,15 +60,24 @@ TODO: Add a 'table of contents" for your documentation. Tier 0/1 projects with s
 
 -->
 
-<!--
-# Development and Software Delivery Lifecycle
-The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that external contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
+<!-- TODO
+## Development and Software Delivery Lifecycle
+This section provides an overview of how this project typically manages code changes and delivers software updates. It is intended to help contributors understand the general flow of work, not to set mandatory procedures. Programs and teams may adjust these practices to meet their own requirements, governance structures, or release schedules.
+
+Project team members with write access work directly in this repository. External contributors follow the same general workflow but submit changes through a fork and cannot merge their own pull requests. Additional guidance for contributing is available in:
+[CONTRIBUTING.md](./CONTRIBUTING.md).
+
+This project aligns with the organization’s common approach to versioning, preparing releases, and communicating updates. Rather than restating those details here, please refer to the OSPO Release Guidelines:
+
+[Release Guidelines (OSPO Guide)](https://dsacms.github.io/ospo-guide/outbound/release-guidelines/)
+
+These guidelines outline agency-wide expectations for semantic versioning, release candidates, GitHub releases, and associated review and communication practices. Individual projects may follow this model in full or tailor it to their operational needs.
 -->
 
 ## Local Development
 
 <!--- TODO - with example below:
-This project is monorepo with several apps. Please see the [api](./api/README.md) and [frontend](./frontend/README.md) READMEs for information on spinning up those projects locally. Also see the project [documentation](./documentation) for more info.
+This project is a monorepo with several apps. Please see the [api](./api/README.md) and [frontend](./frontend/README.md) READMEs for information on spinning up those projects locally. Also see the project [documentation](./documentation) for more info.
 -->
 
 ## Coding Style and Linters
