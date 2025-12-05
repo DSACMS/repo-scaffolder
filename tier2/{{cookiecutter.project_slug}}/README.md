@@ -3,26 +3,18 @@
 {{ cookiecutter.project_description }}
 
 ## About the Project
-
-**{project statement}**
 <!-- TODO: Write an about statement for this project. -->
 
 ### Project Vision
-
-**{project vision}**
-<!-- TODO: What is the vision for this project -->
+<!-- TODO: What is the vision for this project? -->
 
 ### Project Mission
-
-**{project mission}**
-<!-- TODO: Mission statement -->
+<!-- TODO: Write a mission statement for this project. -->
 
 ### Agency Mission
-
 <!-- TODO: Must include since this is an agency-led project -->
 
 ### Team Mission
-
 <!-- TODO: Must include since this is an agency-led project -->
 
 ## Core Team
