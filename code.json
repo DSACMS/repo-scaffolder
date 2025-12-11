@@ -65,7 +65,8 @@
     "cookiecutter-template",
     "maturity-models",
     "repo-hygiene",
-    "repolinter"
+    "repolinter",
+    "featured"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
