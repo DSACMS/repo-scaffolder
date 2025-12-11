@@ -1,0 +1,140 @@
+# .gitignore
+# For more language-specific templates, visit https://github.com/github/gitignore
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._
+*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+
+*.swp
+
+*.swo
+
+*~
+.project
+.classpath
+.settings/
+
+*.sublime-project
+
+*.sublime-workspace
+
+# Build Outputs and Dependencies
+node_modules/
+npm-debug.log
+*
+yarn-debug.log
+*
+yarn-error.log
+*
+dist/
+build/
+target/
+out/
+
+*.class
+
+*.jar
+
+*.war
+
+*.ear
+
+# Environment and Configuration Files
+.env
+.env.local
+.env.
+*.local
+
+*.local
+config/local.js
+secrets.yml
+application-local.properties
+
+# Logs
+logs/
+
+*.log
+log/
+
+# Testing and Coverage
+coverage/
+
+*.cover
+.coverage
+.pytest_cache/
+test-results/
+junit.xml
+
+# Temporary Files
+tmp/
+temp/
+
+*.tmp
+
+*.bak
+
+*.cache
+
+# Database Files
+
+*.sqlite
+
+*.db
+
+# Compiled Source
+
+*.com
+
+*.dll
+
+*.exe
+
+*.o
+
+*.so
+
+# Python
+__pycache__/
+
+*.py[cod]
+
+*$py.class
+
+*.egg-info/
+.Python
+venv/
+env/
+ENV/
+
+# Java/Maven/Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Docker
+.dockerignore
+
+# Security and Credentials
+
+*.pem
+
+*.key
+
+*.cert
+
+*.crt
+credentials.json
+serviceAccountKey.json
