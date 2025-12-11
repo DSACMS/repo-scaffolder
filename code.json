@@ -1,6 +1,6 @@
 {
   "name": "repo-scaffolder",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Templates and commandline tools for creating repositories for US Federal open source projects ",
   "longDescription": "A suite of tools for creating new repositories that align with repository hygiene standards and best practices in US Federal open source development. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. ",
   "status": "Production",
@@ -11,7 +11,9 @@
         "URL": "https://github.com/DSACMS/repo-scaffolder/blob/main/LICENSE"
       }
     ],
-    "usageType": ["openSource"],
+    "usageType": [
+      "openSource"
+    ],
     "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
@@ -23,7 +25,7 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 7974,
+  "laborHours": 8064,
   "reuseFrequency": {
     "forks": 17,
     "clones": 0
@@ -55,15 +57,16 @@
   "partners": [],
   "date": {
     "created": "2023-10-05T18:06:51Z",
-    "lastModified": "2025-10-29T20:10:03Z",
-    "metadataLastUpdated": "2025-10-29T21:15:16.168Z"
+    "lastModified": "2025-11-13T21:10:06Z",
+    "metadataLastUpdated": "2025-12-01T02:33:50.232Z"
   },
   "tags": [
     "cmsoss-tier3",
     "cookiecutter-template",
     "maturity-models",
     "repo-hygiene",
-    "repolinter"
+    "repolinter",
+    "featured"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
@@ -76,7 +79,7 @@
   "userInput": false,
   "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
-  "projects": [],
+  "projects": ["ospo-outbound"],
   "systems": [],
   "subsetInHealthcare": [
     "operational"
