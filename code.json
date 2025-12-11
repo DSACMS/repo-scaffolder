@@ -1,6 +1,6 @@
 {
   "name": "repo-scaffolder",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Templates and commandline tools for creating repositories for US Federal open source projects ",
   "longDescription": "A suite of tools for creating new repositories that align with repository hygiene standards and best practices in US Federal open source development. It provides file templates detailing project information, contributing guidance, maintainer roles, project metadata, community involvement, feedback mechanisms, governance, security policies, and more. ",
   "status": "Production",
