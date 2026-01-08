@@ -28,6 +28,7 @@ There are specific files that are required and recommended to include in the rep
 | `COMMUNITY.md`    | Mandatory       | Lists project team members and points of contact.                                                                                                        |
 | `SECURITY.md`     | Mandatory       | Outlines the agency's security policies, including how to report security issues or vulnerabilities in the code.                                         |
 | `CONTRIBUTING.md` | Recommended     | Offers guidelines for contributing to the project, including code standards, how to submit issues, and creating pull requests.                           |
+| `.gitignore` | Optional     | Lists intentionally untracked files that Git should ignore.                           |
 
 For more information about required sections and content within the files above, please visit [maturity-model-tiers.md](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
 
