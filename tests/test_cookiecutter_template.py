@@ -1,7 +1,6 @@
 import os
 import re
 from pathlib import Path
-
 from binaryornot.check import is_binary
 
 PATTERN = r"{{(\s?cookiecutter)[.](.*?)}}"
@@ -44,24 +43,23 @@ def check_temp_paths_are_removed(result):
     for temp_path in temp_paths:
         assert not temp_path.exists()
 
-
-# Source: https://github.com/cookiecutter/cookiecutter-django/blob/f8897bfdff9681a28bc07b3361ab51bddb71a27c/tests/test_cookiecutter_generation.py
-def test_project_generation(context, result):
+def test_project_generation(context, bakery):
     """Test that project is generated and fully rendered."""
 
-    assert result.exit_code == 0
-    assert result.exception is None
-    assert result.project_path.name == context["project_slug"]
-    assert result.project_path.is_dir()
+    assert bakery.exit_code == 0
+    assert bakery.exception is None
+    assert bakery.project_path.name == context["project_slug"]
+    assert bakery.project_path.is_dir()
 
 
-    check_temp_paths_are_removed(result)
-
-    paths = build_files_list(result.project_path)
+    check_temp_paths_are_removed(bakery)
+    paths = build_files_list(bakery.project_path)
     assert paths
 
+    print(bakery.project_path, "before codejson generation")
+
     # Specific checks for codejson cookiecutter files
-    assert Path(result.project_path)/".github/codejson/cookiecutter.json" in paths
-    assert Path(result.project_path)/".github/cookiecutter.json" not in paths
+    assert Path(bakery.project_path)/".github/codejson/cookiecutter.json" in paths
+    assert Path(bakery.project_path)/".github/cookiecutter.json" not in paths
 
     check_paths(paths)

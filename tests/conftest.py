@@ -26,5 +26,6 @@ def context(template_tier):
     return context
 
 @pytest.fixture
-def result(cookies, context):
-    return cookies.bake(extra_context={**context})
+def bakery(cookies_session, context):
+    result = cookies_session.bake(extra_context={**context})
+    yield result
