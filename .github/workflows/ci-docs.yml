@@ -1,0 +1,17 @@
+name: CI Documentation Checks
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+
+jobs:
+  lint-markdown:
+    name: Lint markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # This is the GitHub Actions-friendly port of the linter used in the Makefile.
+      - uses: tcort/github-action-markdown-link-check@3.14.2
+        with:
+          use-quiet-mode: "yes" # errors only.
