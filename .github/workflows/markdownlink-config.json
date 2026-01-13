@@ -11,6 +11,9 @@
         },
         {
             "pattern": "^https://www.hhs.gov"
+        },
+        {
+            "pattern": "^#%7B%7Bcookiecutter.project_name"
         }
     ]
 }
