@@ -346,7 +346,7 @@ Please refer to the style guides below for additional tips and guidance:
   - [Guidelines for Effective Writing](https://www.cms.gov/training-education/learn/find-tools-to-help-you-help-others/guidelines-for-effective-writing)
   - [Tone of Voice section in Branding Guide](https://www.cms.gov/About-CMS/Agency-Information/CMS-Brand-Identity/Downloads/Branding-Guide.pdf)
   - [2020 Plain Writing Report](https://www.medicare.gov/media/2020-Annual-Plain-Writing-Report.pdf)
-- [18F Style Guide](https://guides.18f.gov/content-guide/our-style/)
+- [18F Style Guide](https://guides.18f.org/content-guide/our-style/)
 - [UK Content Style Guide](https://design.homeoffice.gov.uk/content-style-guide/designing-for-limited-english)
 
 #### Results
@@ -355,7 +355,7 @@ _Insert Review Here_
 
 ### Review Project Metadata
 
-As part of the [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text/ih), [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf), and the agency’s software inventory tracking initiatives, each repository must contain a [code.json file](https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md), storing metadata on your project.
+As part of the [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text), [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf), and the agency’s software inventory tracking initiatives, each repository must contain a [code.json file](https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md), storing metadata on your project.
 
 For more information on code.json, please review the [gov-codejson documentation repository](https://github.com/DSACMS/gov-codejson).
 
