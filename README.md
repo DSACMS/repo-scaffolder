@@ -8,7 +8,7 @@ The CMS Open Source Program Office developed a [maturity model framework](https:
 
 The repo-scaffolder project creates repositories that adhere to open source hygiene standards and best practices. It provides templates and guidance for project metadata, contributing practices, community governance, feedback mechanisms, security policies, and more. Using [cookiecutter](https://github.com/cookiecutter/cookiecutter), repo-scaffolder helps teams identify what tier their project is classified as and fill in project information to be inputted into the file templates. In turn, this provides the project sufficient structure and foundation to promote a healthy open source ecosystem.
 
-This repository also includes [outbound checklists](#utbound-Checklists) for each tier outlining the review process for releasing repositories as open source.
+This repository also includes [outbound checklists](#outbound-checklists) for each tier outlining the review process for releasing repositories as open source.
 
 For existing repositories, repolinter via GitHub Actions is used to identify any files and information missing from the repository according to their maturity tier.
 
