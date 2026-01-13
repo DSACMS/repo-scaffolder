@@ -212,7 +212,7 @@ Consider using the following tools to perform the tasks above:
 | --------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | gitleaks        | Open source tool that detects and prevents secrets (passwords/api/ssh keys) checked-in to your git repo | https://github.com/gitleaks/gitleaks <br> [What is git leaks and how to use it?](https://akashchandwani.medium.com/what-is-gitleaks-and-how-to-use-it-a05f2fb5b034) <br /> Use and run [gitleaks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/gitleaks.yml) provided in repository |
 | git filter-repo | Entirely remove unwanted files / files with sensitive data from a repository's history                  | https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository                                                                                                                                                                                                                                     |
-| bulk_extractor  | Check for secrets, URLs, emails, etc.                                                                   | [bulk_extractor Official Documentation](https://github.com/simsong/bulk_extractor) <br> [OSPO Guide Documentation](https://github.com/DSACMS/ospo-guide/blob/main/outbound/bulk_extractor.md)                                                                                                                                                                |
+| bulk_extractor  | Check for secrets, URLs, emails, etc.                                                                   | [bulk_extractor Official Documentation](https://github.com/simsong/bulk_extractor) <br> [OSPO Guide Documentation](https://dsacms.github.io/ospo-guide/outbound/bulk_extractor/)                                                                                                                                                                |
 
 #### Results
 
@@ -360,7 +360,7 @@ Please refer to the style guides below for additional tips and guidance:
   - [Guidelines for Effective Writing](https://www.cms.gov/training-education/learn/find-tools-to-help-you-help-others/guidelines-for-effective-writing)
   - [Tone of Voice section in Branding Guide](https://www.cms.gov/About-CMS/Agency-Information/CMS-Brand-Identity/Downloads/Branding-Guide.pdf)
   - [2020 Plain Writing Report](https://www.medicare.gov/media/2020-Annual-Plain-Writing-Report.pdf)
-- [18F Style Guide](https://guides.18f.gov/content-guide/our-style/)
+- [18F Style Guide](https://guides.18f.org/content-guide/our-style/)
 - [UK Content Style Guide](https://design.homeoffice.gov.uk/content-style-guide/designing-for-limited-english)
 
 #### Results
