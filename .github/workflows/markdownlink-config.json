@@ -5,6 +5,12 @@
         },
         {
             "pattern": "^https://akashchandwani.medium.com"
+        },
+        {
+            "pattern": "^https://www.congress.gov"
+        },
+        {
+            "pattern": "^https://www.hhs.gov"
         }
     ]
 }
