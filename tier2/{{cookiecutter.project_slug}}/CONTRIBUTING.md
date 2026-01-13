@@ -11,7 +11,7 @@ you'll be politely asked to change something. We appreciate all friendly
 contributions.
 
 We encourage you to read this project's CONTRIBUTING policy (you are here), its
-[LICENSE](LICENSE.md), and its [README](README.md).
+[LICENSE](LICENSE), and its [README](README.md).
 -->
 
 ## Getting Started
