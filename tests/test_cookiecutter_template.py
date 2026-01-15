@@ -3,11 +3,11 @@ import re
 from pathlib import Path
 from binaryornot.check import is_binary
 
-PATTERN = r"{{(\s?cookiecutter)[.](.*?)}}"
-RE_OBJ = re.compile(PATTERN)
+COOKIECUTTER_VAR_PATTERN = r"{{(\s?cookiecutter)[.](.*?)}}"
+RAW_TAGS_PATTERN = r"{%\s*(raw|endraw)\s*%}"
 
 # Source: https://github.com/cookiecutter/cookiecutter-django/blob/f8897bfdff9681a28bc07b3361ab51bddb71a27c/tests/test_cookiecutter_generation.py
-def check_paths(paths):
+def check_paths(paths, pattern):
     """Method to check all paths have correct substitutions."""
     # Assert that no match is found in any of the files
     for path in paths:
@@ -17,13 +17,15 @@ def check_paths(paths):
             print("SKIP BINARY")
             continue
 
-        if ".github" in path_obj.parts:
+        # Skip files in .github for cookiecutter variable pattern since cookiecutter variables are expected there
+        if ".github" in path_obj.parts and pattern == COOKIECUTTER_VAR_PATTERN:
             print("SKIP .github")
             continue
 
         print("OPEN FILE")
         for line in path.open("r", encoding="utf-8"):
-            match = RE_OBJ.search(line)
+            re_obj = re.compile(pattern)
+            match = re_obj.search(line)
             assert match is None, f"cookiecutter variable not replaced in {path}"
 
 # Source: https://github.com/cookiecutter/cookiecutter-django/blob/f8897bfdff9681a28bc07b3361ab51bddb71a27c/tests/test_cookiecutter_generation.py
@@ -62,4 +64,8 @@ def test_project_generation(context, bakery):
     assert Path(bakery.project_path)/".github/codejson/cookiecutter.json" in paths
     assert Path(bakery.project_path)/".github/cookiecutter.json" not in paths
 
-    check_paths(paths)
+    # Check files for unrendered cookiecutter variables 
+    check_paths(paths, COOKIECUTTER_VAR_PATTERN)
+
+    #Check files to ensure removal of raw tags
+    check_paths(paths, RAW_TAGS_PATTERN)
