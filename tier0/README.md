@@ -33,7 +33,7 @@ For more information about sections and content within the files above, please v
 
 ## .github directory
 
-The .github directory includes various files such as GitHub action workflows, code.json metadata cookiecutter creation, and issue templates. For more information, please visit the [.github-directory.md]([../docs/.github-directory.md).
+The .github directory includes various files such as GitHub action workflows, code.json metadata cookiecutter creation, and issue templates. For more information, please visit the [.github-directory.md](../docs/.github-directory.md).
 
 ## Repository Hygiene using repolinter
 
