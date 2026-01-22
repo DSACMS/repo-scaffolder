@@ -59,7 +59,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on the release process.
 
 TODO: A list of CONTRIBUTORS is generated below using contributors.yml located in the workflows directory. In order to automatically update the COMMUNITY.md, you must enter a secret into your Secrets and Variables under Actions within your repository settings. The name of the secret must be PUSH_TO_PROTECTED_BRANCH and the value must be a Personal Access Token with specific permissions. Please follow [this link](https://github.com/CasperWA/push-protected?tab=readme-ov-file#notes-on-token-and-user-permissions) for more information.
 
-Total number of contributors: <!--CONTRIBUTOR COUNT START--> <!--CONTRIBUTOR COUNT END-->
+![](https://img.shields.io/github/contributors/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}?style=flat-square&label=Contributor%20Count(incl.%20bots)) 
 
 <!-- readme: contributors -start -->
 <!-- readme: contributors -end -->
