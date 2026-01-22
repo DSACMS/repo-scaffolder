@@ -8,7 +8,7 @@ The CMS Open Source Program Office developed a [maturity model framework](https:
 
 The repo-scaffolder project creates repositories that adhere to open source hygiene standards and best practices. It provides templates and guidance for project metadata, contributing practices, community governance, feedback mechanisms, security policies, and more. Using [cookiecutter](https://github.com/cookiecutter/cookiecutter), repo-scaffolder helps teams identify what tier their project is classified as and fill in project information to be inputted into the file templates. In turn, this provides the project sufficient structure and foundation to promote a healthy open source ecosystem.
 
-This repository also includes [outbound checklists](#Outbound-Checklists) for each tier outlining the review process for releasing repositories as open source.
+This repository also includes [outbound checklists](#outbound-checklists) for each tier outlining the review process for releasing repositories as open source.
 
 For existing repositories, repolinter via GitHub Actions is used to identify any files and information missing from the repository according to their maturity tier.
 
@@ -48,7 +48,7 @@ A list of core team members responsible for the code and documentation in this r
     - [Add metadata to your project](#metadata-collection-using-codejson)
 4. [Maintain your repository](#4-maintain-your-repository-using-repo-scaffolder)
     - [GitHub Actions](#updating-repository-using-github-action-workflows)
-    - [Upstream file changes](#Updating-projects-with-new-repo-scaffolder-upstream-file-changes)
+    - [Upstream file changes](#updating-projects-with-new-repo-scaffolder-upstream-file-changes)
 
 [Additional Documentation](./docs)
 
@@ -274,7 +274,7 @@ If you have ideas for how we can improve or add to our capacity building efforts
 
 This project was developed as a collaboration between the United States Digital
 Service ([USDS.gov](https://usds.gov)), The Department of Health and Human
-Services ([HHS.gov](https://hhs.gov)), The Digital Service at the Centers for
+Services ([HHS.gov](https://www.hhs.gov)), The Digital Service at the Centers for
 Medicare & Medicaid Services ([CMS.gov](https://cms.gov)) and The
 [USDigitalResponse.org](https://usdigitalresponse.org).
 

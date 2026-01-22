@@ -28,12 +28,13 @@ There are specific files that are required to include in the repository as part 
 | `CONTRIBUTING.md`    | Mandatory       | Offers guidelines for contributing to the project, including code standards, how to submit issues, and creating pull requests.                                           |
 | `CODE_OF_CONDUCT.md` | Mandatory       | Establishes guidelines for acceptable behavior within the community, setting expectations for how contributors should interact in a respectful and collaborative manner. |
 | `GOVERNANCE.md`      | Mandatory       | Describes the governance model of the project, such as decision-making processes and rules for contributing. It ensures a transparent process for managing the project.  |
+| `.gitignore` | Optional     | Lists intentionally untracked files that Git should ignore.                           |
 
 For more information about required sections and content within the files above, please visit [maturity-model-tiers.md](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
 
 ## .github directory
 
-The .github directory includes various files such as GitHub action workflows, code.json metadata cookiecutter creation, and issue templates. For more information, please visit the [.github-directory.md]([../docs/.github-directory.md).
+The .github directory includes various files such as GitHub action workflows, code.json metadata cookiecutter creation, and issue templates. For more information, please visit the [.github-directory.md](../docs/.github-directory.md).
 
 ## Repository Hygiene using repolinter
 

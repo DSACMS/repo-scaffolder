@@ -1,0 +1,68 @@
+# .gitignore
+# For more language-specific templates, visit https://github.com/github/gitignore
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Environment and Configuration Files
+.env
+.env.local
+*.local
+secrets.yml
+
+# Logs
+logs/
+*.log
+
+# Testing and Coverage
+.pytest_cache/
+.coverage
+coverage/
+test-results/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.bak
+*.cache
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+venv/
+env/
+ENV/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+
+# Build Outputs
+dist/
+build/
+target/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*

@@ -168,7 +168,7 @@ Below is a list of suggested tools to run for code analysis:
 | Repo Linter     | Lint repositories for common issues such as missing files,etc...                       | https://github.com/todogroup/repolinter                                                                                                                                                                                       |
 | Gitleaks        | Protect and discover secrets using Gitleaks 🔑                                         | https://github.com/gitleaks/gitleaks <br /> Use and run [gitleaks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/gitleaks.yml) provided in repository |
 | git filter-repo | Entirely remove unwanted files / files with sensitive data from a repository's history | https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository                                                                                                      |
-| bulk_extractor  | Check for secrets, URLs, emails, etc.                                                  | [bulk_extractor Official Documentation](https://github.com/simsong/bulk_extractor) <br> [OSPO Guide Documentation](https://github.com/DSACMS/ospo-guide/blob/main/outbound/bulk_extractor.md)                                 |
+| bulk_extractor  | Check for secrets, URLs, emails, etc.                                                  | [bulk_extractor Official Documentation](https://github.com/simsong/bulk_extractor) <br> [OSPO Guide Documentation](https://dsacms.github.io/ospo-guide/outbound/bulk_extractor)                                 |
 | Wiz _(Optional)_  | Cloud security platform for vulnerability scanning and code analysis; recommended for large scale projects | https://www.wiz.io/    
 
 #### Results
@@ -212,7 +212,7 @@ Consider using the following tools to perform the tasks above:
 | --------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | gitleaks        | Open source tool that detects and prevents secrets (passwords/api/ssh keys) checked-in to your git repo | https://github.com/gitleaks/gitleaks <br> [What is git leaks and how to use it?](https://akashchandwani.medium.com/what-is-gitleaks-and-how-to-use-it-a05f2fb5b034) <br /> Use and run [gitleaks.yml](https://github.com/DSACMS/repo-scaffolder/blob/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/gitleaks.yml) provided in repository |
 | git filter-repo | Entirely remove unwanted files / files with sensitive data from a repository's history                  | https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository                                                                                                                                                                                                                                     |
-| bulk_extractor  | Check for secrets, URLs, emails, etc.                                                                   | [bulk_extractor Official Documentation](https://github.com/simsong/bulk_extractor) <br> [OSPO Guide Documentation](https://github.com/DSACMS/ospo-guide/blob/main/outbound/bulk_extractor.md)                                                                                                                                                                |
+| bulk_extractor  | Check for secrets, URLs, emails, etc.                                                                   | [bulk_extractor Official Documentation](https://github.com/simsong/bulk_extractor) <br> [OSPO Guide Documentation](https://dsacms.github.io/ospo-guide/outbound/bulk_extractor/)                                                                                                                                                                |
 
 #### Results
 
@@ -360,7 +360,7 @@ Please refer to the style guides below for additional tips and guidance:
   - [Guidelines for Effective Writing](https://www.cms.gov/training-education/learn/find-tools-to-help-you-help-others/guidelines-for-effective-writing)
   - [Tone of Voice section in Branding Guide](https://www.cms.gov/About-CMS/Agency-Information/CMS-Brand-Identity/Downloads/Branding-Guide.pdf)
   - [2020 Plain Writing Report](https://www.medicare.gov/media/2020-Annual-Plain-Writing-Report.pdf)
-- [18F Style Guide](https://guides.18f.gov/content-guide/our-style/)
+- [18F Style Guide](https://guides.18f.org/content-guide/our-style/)
 - [UK Content Style Guide](https://design.homeoffice.gov.uk/content-style-guide/designing-for-limited-english)
 
 #### Results
@@ -538,6 +538,10 @@ quality:
 - [ ] **Optional: DCO (Developer Certificate of Origin)**
 
   _Requires all commit messages to contain the Signed-off-by line with an email address that matches the commit author. The Developer Certificate of Origin (DCO) is a lightweight way for contributors to certify that they wrote or otherwise have the right to submit the code they are contributing to the project. The GitHub app to enforce DCO can be found [here](https://github.com/apps/dco) ._
+
+- [ ] **Optional: Enable Wiz via GitHub App**
+
+  _Add your repository to Wiz in order to track cloud security risks and vulnerabilities. Contact ISPG for more information._
 
 #### Communications & Rollout 📣
 

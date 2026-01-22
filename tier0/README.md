@@ -27,12 +27,13 @@ Although these projects are private, there are specific files that are required 
 | `COMMUNITY.md`    | Mandatory       | Lists project team members and points of contact.                                                                           |
 | `SECURITY.md`     | Recommended     | Outlines the agency's security policies, including how to report security issues or vulnerabilities in the code.            |
 | `CONTRIBUTING.md` | Recommended     | Guidelines for contributing, useful if the project is later opened to collaborators or transitioned to a public repository. |
+| `.gitignore` | Optional     | Lists intentionally untracked files that Git should ignore.                           |
 
 For more information about sections and content within the files above, please visit [maturity-model-tiers.md](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
 
 ## .github directory
 
-The .github directory includes various files such as GitHub action workflows, code.json metadata cookiecutter creation, and issue templates. For more information, please visit the [.github-directory.md]([../docs/.github-directory.md).
+The .github directory includes various files such as GitHub action workflows, code.json metadata cookiecutter creation, and issue templates. For more information, please visit the [.github-directory.md](../docs/.github-directory.md).
 
 ## Repository Hygiene using repolinter
 

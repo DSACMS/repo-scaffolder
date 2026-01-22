@@ -25,7 +25,7 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 8064,
+  "laborHours": 8069,
   "reuseFrequency": {
     "forks": 17,
     "clones": 0
@@ -57,16 +57,16 @@
   "partners": [],
   "date": {
     "created": "2023-10-05T18:06:51Z",
-    "lastModified": "2025-11-13T21:10:06Z",
-    "metadataLastUpdated": "2025-12-01T02:33:50.232Z"
+    "lastModified": "2025-12-12T19:24:17Z",
+    "metadataLastUpdated": "2026-01-01T02:33:26.248Z"
   },
   "tags": [
     "cmsoss-tier3",
     "cookiecutter-template",
+    "featured",
     "maturity-models",
     "repo-hygiene",
-    "repolinter",
-    "featured"
+    "repolinter"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
@@ -79,7 +79,9 @@
   "userInput": false,
   "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
-  "projects": ["ospo-outbound"],
+  "projects": [
+    "ospo-outbound"
+  ],
   "systems": [],
   "subsetInHealthcare": [
     "operational"
