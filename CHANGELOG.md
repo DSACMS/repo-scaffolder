@@ -1,5 +1,32 @@
 # Changelog
 
+## [v1.2.0](https://github.com/DSACMS/repo-scaffolder/tree/v1.2.0) (2026-01-22)
+
+[Full Changelog](https://github.com/DSACMS/repo-scaffolder/compare/v1.1.0...v1.2.0)
+
+**Implemented enhancements:**
+
+- Docs: Add examples column to maturity model documentation files [\#161](https://github.com/DSACMS/repo-scaffolder/issues/161)
+
+**Closed issues:**
+
+- Update Contributor Workflow Fails When There Are Branch Protections on Main [\#342](https://github.com/DSACMS/repo-scaffolder/issues/342)
+
+**Merged pull requests:**
+
+- Workflow: Update contributors.yml with fix and update contributor count in COMMUNITY.md [\#378](https://github.com/DSACMS/repo-scaffolder/pull/378) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
+- Release: Merge dev to main [\#377](https://github.com/DSACMS/repo-scaffolder/pull/377) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
+- Workflows: Add workflow for markdown docs check [\#376](https://github.com/DSACMS/repo-scaffolder/pull/376) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
+- Tests: Create tests using pytest-cookies [\#375](https://github.com/DSACMS/repo-scaffolder/pull/375) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
+- Update code.json [\#374](https://github.com/DSACMS/repo-scaffolder/pull/374) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Repository Templates: Add .gitignore [\#373](https://github.com/DSACMS/repo-scaffolder/pull/373) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
+- Add edits from previous PR [\#372](https://github.com/DSACMS/repo-scaffolder/pull/372) ([DinneK](https://github.com/DinneK))
+- Change README Tier2 [\#371](https://github.com/DSACMS/repo-scaffolder/pull/371) ([DinneK](https://github.com/DinneK))
+- Outbound Checklists: Fix bulk\_extractor OSPO guide link in Tiers 2-4 [\#370](https://github.com/DSACMS/repo-scaffolder/pull/370) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
+- Add Wiz as an optional cloud security tool [\#369](https://github.com/DSACMS/repo-scaffolder/pull/369) ([sachin-panayil](https://github.com/sachin-panayil))
+- Update code.json [\#368](https://github.com/DSACMS/repo-scaffolder/pull/368) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Outbound Checklist: Update Tier 4 checklist.md to include Wiz [\#367](https://github.com/DSACMS/repo-scaffolder/pull/367) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
+
 ## [v1.1.0](https://github.com/DSACMS/repo-scaffolder/tree/v1.1.0) (2025-11-13)
 
 [Full Changelog](https://github.com/DSACMS/repo-scaffolder/compare/v1.0.0...v1.1.0)
