@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+title: repo-scaffolder
+message: >-
+  A suite of tools for creating new repositories that align
+  with repository hygiene standards and best practices in US
+  Federal open source development.
+type: software
+authors:
+  - name: CMS Open Source Program Office
+    email: opensource@cms.hhs.gov
+    website: 'https://go.cms.gov/ospo'
+repository-code: 'https://github.com/dsacms/repo-scaffolder'
+url: 'https://dsacms.github.io/repo-scaffolder'
+abstract: >-
+  The CMS Open Source Program Office developed a maturity
+  model framework to classify federal open source projects
+  based on their repository maturity. Each tier outlines
+  specific files and content that are required or
+  recommended to be included in the repository.
+
+
+  The repo-scaffolder project creates repositories that
+  adhere to open source hygiene standards and best
+  practices. It provides templates and guidance for project
+  metadata, contributing practices, community governance,
+  feedback mechanisms, security policies, and more. Using
+  cookiecutter, repo-scaffolder helps teams identify what
+  tier their project is classified as and fill in project
+  information to be inputted into the file templates. In
+  turn, this provides the project sufficient structure and
+  foundation to promote a healthy open source ecosystem.
+
+
+  This repository also includes outbound checklists for each
+  tier outlining the review process for releasing
+  repositories as open source.
+
+
+  For existing repositories, repolinter via GitHub Actions
+  is used to identify any files and information missing from
+  the repository according to their maturity tier.
+keywords:
+  - repo-scaffolder
+  - OSPO
+  - CHAOSS
+  - open source
+  - maturity models
+  - CMS.gov
+  - repo hygiene
+  - repolinter
+license: CC0-1.0
+commit: e888c0bd80ec70c5584b69af4c3fd07fd179ac3d
+version: 1.2.0
+date-released: '2026-01-22'
