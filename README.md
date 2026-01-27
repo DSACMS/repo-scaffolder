@@ -232,9 +232,7 @@ for more information.
 
 ## Coding Style and Linters
 
-<!-- TODO - Add the repo's linting and code style guidelines -->
-
-Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
+On each pull request, `ci-docs.yml` runs MarkdownLinkCheck to lint markdown files.
 
 ## Branching Model
 
