@@ -57,13 +57,13 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 
 ### Testing Conventions
 
-<!--- TODO: Currently, does not have tests. Write tests then discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. -->
+We use `pytest-cookies` to ensure projects are generated successfully using our repository templates via cookiecutter. Tests are located in the `tests` directory and are run on each pull request in `test.yml`.
+
+To run tests: `pytest --template $TIER_DIRECTORY`
 
 ### Coding Style and Linters
 
-<!-- TODO - Add the repo's linting and code style guidelines -->
-
-Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
+On each pull request, `ci-docs.yml` runs MarkdownLinkCheck to lint markdown files.
 
 ### Writing Issues
 
