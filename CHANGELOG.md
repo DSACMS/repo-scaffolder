@@ -1,5 +1,20 @@
 # Changelog
 
+## [v1.2.1](https://github.com/DSACMS/repo-scaffolder/tree/v1.2.1) (2026-01-27)
+
+[Full Changelog](https://github.com/DSACMS/repo-scaffolder/compare/v1.2.0...v1.2.1)
+
+**Closed issues:**
+
+- CITATION.cff [\#299](https://github.com/DSACMS/repo-scaffolder/issues/299)
+- Create a standard .gitignore  [\#195](https://github.com/DSACMS/repo-scaffolder/issues/195)
+
+**Merged pull requests:**
+
+- Docs: Add information on tests and linters [\#381](https://github.com/DSACMS/repo-scaffolder/pull/381) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
+- Create CITATION.cff [\#380](https://github.com/DSACMS/repo-scaffolder/pull/380) ([decause-gov](https://github.com/decause-gov))
+- \[Snyk\] Fix for 8 vulnerabilities [\#379](https://github.com/DSACMS/repo-scaffolder/pull/379) ([decause-gov](https://github.com/decause-gov))
+
 ## [v1.2.0](https://github.com/DSACMS/repo-scaffolder/tree/v1.2.0) (2026-01-22)
 
 [Full Changelog](https://github.com/DSACMS/repo-scaffolder/compare/v1.1.0...v1.2.0)
