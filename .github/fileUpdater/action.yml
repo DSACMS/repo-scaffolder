@@ -3,8 +3,8 @@ name: 'Update'
 description: 'Update strings'
 
 inputs:
-  find:
-    description: String to replace
+    file:
+    description: 'Comma-separated list of files (e.g. README.md, LICENSE)'
     required: true
   replace:
     description: Replacement string
