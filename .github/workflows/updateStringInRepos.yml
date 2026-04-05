@@ -20,8 +20,10 @@ on:
                 default: 'y'
                 required: true
             file:
-                description: 'File to replace in'
+                description: 'Comma-separated list of files (e.g. README.md, CONTRIBUTING.md)'
                 default: 'CONTRIBUTING.md'
+                required: true
+
 
 env:
     repo: ""
