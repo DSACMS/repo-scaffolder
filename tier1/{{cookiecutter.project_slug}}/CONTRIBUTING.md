@@ -98,7 +98,7 @@ AI tools *(LLMs, coding assistants)* are welcome as part of your contribution wo
 
 ### Acceptable uses
 
-- Gaining understanding of the existing code or solution ideas of the issue
+- Gaining understanding of the existing code, or solution ideas of the issue
 - Translating or proofreading your comments or PR descriptions while keep the wording as close as possible to what you originally wrote
 
 Whenever you use AI in any of these ways, disclose it explicitly in your PR description.
