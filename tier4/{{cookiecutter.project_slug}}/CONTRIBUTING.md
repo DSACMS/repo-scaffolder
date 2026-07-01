@@ -158,19 +158,38 @@ authorship metadata will be preserved.
 
 ### Table of Contents
 
-- [Versioning](#versioning)
-  <!-- * [Breaking vs. non-breaking changes](#breaking-vs-non-breaking-changes) -->
-  - [Ongoing version support](#ongoing-version-support)
-- [Release Process](#release-process)
-  - [Goals](#goals)
-  - [Schedule](#schedule)
-  - [Communication and Workflow](#communication-and-workflow)
-  <!-- * [Beta Features](#beta-features) -->
-- [Preparing a Release Candidate](#preparing-a-release-candidate)
-  - [Incorporating feedback from review](#incorporating-feedback-from-review)
-- [Making a Release](#making-a-release)
-- [Auto Changelog](#auto-changelog)
-- [Hotfix Releases](#hotfix-releases)
+- [How to Contribute](#how-to-contribute)
+  - [Getting Started](#getting-started)
+    - [Team Specific Guidelines](#team-specific-guidelines)
+    - [Building dependencies](#building-dependencies)
+    - [Building the Project](#building-the-project)
+    - [Workflow and Branching](#workflow-and-branching)
+    - [Testing Conventions](#testing-conventions)
+    - [Coding Style and Linters](#coding-style-and-linters)
+    - [Writing Issues](#writing-issues)
+    - [Writing Pull Requests](#writing-pull-requests)
+  - [Reviewing Pull Requests](#reviewing-pull-requests)
+  - [Shipping Releases](#shipping-releases)
+    - [Table of Contents](#table-of-contents)
+    - [Versioning](#versioning)
+      - [Ongoing version support](#ongoing-version-support)
+    - [Release Process](#release-process)
+      - [Goals](#goals)
+      - [Schedule](#schedule)
+      - [Communication and Workflow](#communication-and-workflow)
+    - [Preparing a Release Candidate](#preparing-a-release-candidate)
+      - [Incorporating feedback from review](#incorporating-feedback-from-review)
+    - [Making a Release](#making-a-release)
+    - [Auto Changelog](#auto-changelog)
+    - [Hotfix Releases](#hotfix-releases)
+  - [Documentation](#documentation)
+- [AI Usage](#ai-usage)
+    - [Acceptable uses](#acceptable-uses)
+    - [Unacceptable uses](#unacceptable-uses)
+  - [Policies](#policies)
+    - [Open Source Policy](#open-source-policy)
+    - [Security and Responsible Disclosure Policy](#security-and-responsible-disclosure-policy)
+  - [Public domain](#public-domain)
 
 ### Versioning
 
@@ -383,6 +402,24 @@ In rare cases, a hotfix for a prior release may be required out-of-phase with th
 We also welcome improvements to the project documentation or to the existing
 docs. Please file an [issue](https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/issues).
 -->
+
+# AI Usage
+
+AI tools *(LLMs, coding assistants)* are welcome as part of your contribution workflow, but they don't change who's responsible for the code you submit.
+
+### Acceptable uses
+
+- Gaining understanding of the existing code or solution ideas of the issue
+- Translating or proofreading your comments or PR descriptions while keep the wording as close as possible to what you originally wrote
+
+Whenever you use AI in any of these ways, disclose it explicitly in your PR description.
+
+### Unacceptable uses
+
+- External AI tooling *(bots, agents)* directly interacting with the project, including creating issues, opening PRs, or commenting on GitHub
+- Submitting AI generated code you can't explain line by line to a developer, or using AI output without fully understanding it or verifying it's the correct approach
+- Submitting a PR where the effort you put in, such as writing a prompt, is less than the effort it would take a maintainer to review it. We can already write prompts or run automated tools ourselves and doing that directly is faster and more secure than reviewing a low effort PR.
+- Using AI to increase the breadth of your contributions, such as spreading yourself across several projects at once. You provide more value by engaging deeply with one or two projects than shallowly with many.
 
 ## Policies
 
