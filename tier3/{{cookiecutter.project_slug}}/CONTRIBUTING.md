@@ -385,18 +385,18 @@ We also welcome improvements to the project documentation or to the existing
 docs. Please file an [issue](https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/issues).
 -->
 
-# AI Usage
+## AI Usage
 
 AI tools *(LLMs, coding assistants)* are welcome as part of your contribution workflow, but they don't change who's responsible for the code you submit.
 
-### Acceptable uses
+### Recommended uses
 
 - Gaining understanding of the existing code, or solution ideas of the issue
 - Translating or proofreading your comments or PR descriptions while keep the wording as close as possible to what you originally wrote
 
 Whenever you use AI in any of these ways, disclose it explicitly in your PR description.
 
-### Unacceptable uses
+### Not recommended uses
 
 - External AI tooling *(bots, agents)* directly interacting with the project, including creating issues, opening PRs, or commenting on GitHub
 - Submitting AI generated code you can't explain line by line to a developer, or using AI output without fully understanding it or verifying it's the correct approach
