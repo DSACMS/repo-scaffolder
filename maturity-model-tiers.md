@@ -566,6 +566,16 @@ Each tier outlines specific content that are required or recommended to be inclu
     </tr>
     <tr>
       <!-- <td>CONTRIBUTING.md</td> -->
+      <td>AI Usage</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Our stance on how AI usage should be used within software projects. Includes recommended and non recommended uses.</td>
+    </tr>
+    <tr>
+      <!-- <td>CONTRIBUTING.md</td> -->
       <td>Policies</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
