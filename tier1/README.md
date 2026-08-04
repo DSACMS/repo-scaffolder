@@ -1,6 +1,6 @@
 # Tier 1: One-Time Release
 
-## What is a Tier 1 Project?
+## What is a Tier One Project?
 
 A **Tier 1** project refers to an **informational or historical** project that has been **released publicly**. However, it does **not** have planned future updates or maintenance by the original authors or contributors. These projects typically include code samples, prototypes, public documentation, or other types of resources that are made available for use but won't receive ongoing updates or active development.
 
