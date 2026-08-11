@@ -456,8 +456,6 @@ Be sure to include the following information:
 
 #### Tracking 📈
 
-Add your project to our inventories.
+Add your project to our inventories via code.json.
 
-- [ ] **Add to https://github.com/dsacms/open projects inventory**
-
-- [ ] **Add code.json to repository and sent over a pull request to [code.gov](https://code.gov/)**
+- [ ] **Add a completed code.json file to the repository**
