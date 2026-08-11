@@ -223,17 +223,21 @@ be added to your repository before outbounding.
 
 #### Running repolinter on your repository locally
 
-1. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
-
-2. Run command:
+1. Install repolinter
 
 ```
-repolinter lint
-
+npm install -g repolinter
 ```
 
-3. The result produces a list of file and section existence checks, indicating whether
-   each requirement was met or not.
+2. Add [repolinter.json](https://github.com/DSACMS/repo-scaffolder/blob/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json) to the root directory of your project
+
+3. Run command:
+
+```
+repolinter lint .
+```
+
+4. The result produces a list of files section existence checks, indicating whether each requirement was met or not.
 
 ![repolinter results](../assets/images/repolinter-results.png)
 
