@@ -145,6 +145,36 @@ In the spirit of [Executive Order 14028 - Improving the Nation’s Cyber Securit
 
 For more information and resources about SBOMs, visit: https://www.cisa.gov/sbom.
 
+### Paperwork Reduction Act
+
+If this project collects information from the public, the [Paperwork Reduction Act](https://pra.digital.gov/)
+may apply. It is triggered by collecting standardized information from ten or more members of the
+public within a twelve month period, which includes forms, surveys, and some kinds of user research,
+and it requires OMB clearance before the collection begins rather than after.
+
+See [pra.digital.gov](https://pra.digital.gov/) for what counts as a collection and how the review
+works, and talk to your agency's PRA contact early, since clearance takes time to obtain.
+
+### Plain Language
+
+Public-facing content in this project follows the [Federal Plain Language Guidelines](https://www.plainlanguage.gov/guidelines/),
+as required by the [Plain Writing Act of 2010](https://www.plainlanguage.gov/law/). The test is
+whether a reader can find what they need, understand it the first time they read it, and use it.
+
+This applies to documentation as much as to interface text. A README is often the first thing a
+member of the public reads about a government project.
+
+### Accessibility
+
+This project follows [Section 508 of the Rehabilitation Act](https://www.section508.gov/), which
+requires that information and communication technology developed, procured, maintained, or used by
+federal agencies be accessible to people with disabilities. The Revised 508 Standards incorporate
+[WCAG 2.0](https://www.w3.org/TR/WCAG20/) Level A and AA by reference, and many teams now target
+[WCAG 2.1](https://www.w3.org/TR/WCAG21/) Level AA.
+
+Automated checkers find only a portion of accessibility defects. Test with a keyboard, and with a
+screen reader, as part of normal development rather than as a release gate.
+
 ## Public domain
 
 This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/) as indicated in [LICENSE](LICENSE).
