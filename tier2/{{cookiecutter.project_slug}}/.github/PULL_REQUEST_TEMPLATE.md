@@ -30,7 +30,7 @@ thought of being the motivation for your change.
 Describe the modifications you've done.
 
 ## AI Usage
-- [ ] Generated AI was used in this contribution
+- [ ] Generative AI was used in this contribution
 
 If checked, please provide an explanation on how AI was used in the development of this pull request:
 
