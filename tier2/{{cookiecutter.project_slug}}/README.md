@@ -155,15 +155,6 @@ and it requires OMB clearance before the collection begins rather than after.
 See [pra.digital.gov](https://pra.digital.gov/) for what counts as a collection and how the review
 works, and talk to your agency's PRA contact early, since clearance takes time to obtain.
 
-### Plain Language
-
-Public-facing content in this project follows the [Federal Plain Language Guidelines](https://www.plainlanguage.gov/guidelines/),
-as required by the [Plain Writing Act of 2010](https://www.plainlanguage.gov/law/). The test is
-whether a reader can find what they need, understand it the first time they read it, and use it.
-
-This applies to documentation as much as to interface text. A README is often the first thing a
-member of the public reads about a government project.
-
 ### Accessibility
 
 This project follows [Section 508 of the Rehabilitation Act](https://www.section508.gov/), which
