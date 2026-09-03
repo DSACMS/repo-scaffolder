@@ -25,9 +25,9 @@ If you would like your repository to be released, please complete the following 
 
 [Review Repository Hygiene](#review-repository-hygiene)
 
-[Review Policies](#review-policies)
-
 [Review Project Metadata](#review-project-metadata)
+
+[Review Policies](#review-policies)
 
 [Review Repository Details](#review-repository-details)
 
