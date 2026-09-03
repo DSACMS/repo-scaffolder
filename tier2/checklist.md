@@ -327,6 +327,28 @@ Please refer to the style guides below for additional tips and guidance:
 
 _Insert Review Here_
 
+#### Review Policies
+
+Before public release, review the policies below to check if they apply to your repository. If so, be sure to uncomment and add the following policies to the README under the "Policies" section:
+
+##### Paperwork Reduction Act
+
+Does your project collect standardized information from 10 or more members of the public within a twelve month period, which includes forms, surveys, and some kinds of user research?
+
+If yes, then the Paperwork Reduction Act applies to your project. It is triggered by collecting standardized information from ten or more members of the public within a twelve month period, and it requires OMB clearance before the collection begins rather than after.
+
+See [pra.digital.gov](https://pra.digital.gov/) for what counts as a collection and how the review works, and talk to your agency's PRA contact early, since clearance takes time to obtain.
+
+##### 508 Accessibility
+
+Does your project have 508 requirements?
+
+If yes, ensure they are met before release. The Revised 508 Standards incorporate [WCAG 2.0](https://www.w3.org/TR/WCAG20/) Level A and AA by reference, and many teams now target [WCAG 2.1](https://www.w3.org/TR/WCAG21/) Level AA.
+
+Use automated accessibility checkers and 508 tools to identify issues early. Test with both keyboard navigation and screen readers as part of regular development rather than as a release gate. Automated tools catch only a portion of accessibility defects, so a combination of automated and manual testing remains essential. 
+
+See [ospo-guide](https://dsacms.github.io/ospo-guide/growing/508-training/) for Section 508 resources.
+
 ### Review Project Metadata
 
 As part of the [SHARE IT Act](https://www.congress.gov/bill/118th-congress/house-bill/9566/text), [Federal Source Code Policy](https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2016/m_16_21.pdf), and the agency’s software inventory tracking initiatives, each repository must contain a [code.json file](https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md), storing metadata on your project.
