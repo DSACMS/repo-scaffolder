@@ -9,8 +9,8 @@
   "create_repo": [true, false],
   "extra_repo_topics": "",
   "add_team": [true, false],
-  "pra": [true, false],
   "accessibility": [true, false],
+  "pra": [true, false],
   "__prompts__": {
     "code_owners": "Would you like to add a CODEOWNERS.md to get notified on repository updates? If so, please provide the usernames separated by commas.",
     "create_repo": "Would you like to create a repo on github.com?",
