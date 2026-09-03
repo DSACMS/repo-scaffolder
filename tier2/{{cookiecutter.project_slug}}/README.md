@@ -149,14 +149,15 @@ For more information and resources about SBOMs, visit: https://www.cisa.gov/sbom
 ### Paperwork Reduction Act
 
 The [Paperwork Reduction Act](https://pra.digital.gov/) applies to this project since it collects information from the public.
+
 {% endif %}
 
 {%- if cookiecutter.accessibility -%}
 ### Accessibility
 
 This project follows [Section 508 of the Rehabilitation Act](https://www.section508.gov/), which requires that information and communication technology developed, procured, maintained, or used by federal agencies be accessible to people with disabilities.
-{% endif %}
 
+{% endif %}
 ## Public domain
 
 This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/) as indicated in [LICENSE](LICENSE).
