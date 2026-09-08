@@ -112,26 +112,19 @@ In the spirit of [Executive Order 14028 - Improving the Nation’s Cyber Securit
 
 For more information and resources about SBOMs, visit: https://www.cisa.gov/sbom.
 
+{%- if cookiecutter.pra -%}
 ### Paperwork Reduction Act
 
-If this project collects information from the public, the [Paperwork Reduction Act](https://pra.digital.gov/)
-may apply. It is triggered by collecting standardized information from ten or more members of the
-public within a twelve month period, which includes forms, surveys, and some kinds of user research,
-and it requires OMB clearance before the collection begins rather than after.
+The [Paperwork Reduction Act](https://pra.digital.gov/) applies to this project since it collects information from the public.
 
-See [pra.digital.gov](https://pra.digital.gov/) for what counts as a collection and how the review
-works, and talk to your agency's PRA contact early, since clearance takes time to obtain.
+{% endif %}
 
+{%- if cookiecutter.accessibility -%}
 ### Accessibility
 
-This project follows [Section 508 of the Rehabilitation Act](https://www.section508.gov/), which
-requires that information and communication technology developed, procured, maintained, or used by
-federal agencies be accessible to people with disabilities. The Revised 508 Standards incorporate
-[WCAG 2.0](https://www.w3.org/TR/WCAG20/) Level A and AA by reference, and many teams now target
-[WCAG 2.1](https://www.w3.org/TR/WCAG21/) Level AA.
+This project follows [Section 508 of the Rehabilitation Act](https://www.section508.gov/), which requires that information and communication technology developed, procured, maintained, or used by federal agencies be accessible to people with disabilities.
 
-Automated checkers find only a portion of accessibility defects. Test with a keyboard, and with a
-screen reader, as part of normal development rather than as a release gate.
+{% endif %}
 
 ## Public domain
 
