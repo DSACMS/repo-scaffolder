@@ -19,6 +19,9 @@ on:
           - tier3
           - tier4
 
+permissions:
+   contents: read
+
 jobs:
   bulk_update_repos:
     runs-on: ubuntu-latest
