@@ -1,0 +1,45 @@
+name: Global workflow to add, update, and remove files from repos
+
+on:
+  workflow_dispatch:
+    inputs:
+      file_path:
+        description: "Path to the file"
+        type: string
+        required: true
+      type:
+        description: "Select tier type of the file"
+        required: true
+        default: "tier0"
+        type: choice
+        options:
+          - tier0
+          - tier1
+          - tier2
+          - tier3
+          - tier4
+
+jobs:
+  bulk_update_repos:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 2: Checkout the external repo into a sub-folder
+      - name: Checkout external repo
+        uses: actions/checkout@v7
+        with:
+          repository: "natalialuzuriaga-testing-org/${{ inputs.type }}"
+          # path: 'template' # Saves files to ./my-external-repo
+          ref: "main"
+      - name: Replicating global workflow
+        uses: derberg/manage-files-in-multiple-repositories@v2
+        with:
+          github_token: ${{ secrets.ORG_BULK_UPDATE_TOKEN }}
+          patterns_to_include: "${{ inputs.file_path }}"
+          #   patterns_to_remove:
+          patterns_to_ignore: ".github/workflows/filesToRepos.yml"
+          repos_to_ignore: tier0, tier1, tier2, tier3, tier4
+          #   topics_to_include: topic1,topic2 # TODO: Update once bulk-update strategy is figured out for maturity tiers
+          exclude_private: true
+          exclude_forked: true
+          branches: main
+          commit_message: "ci: update ${{ inputs.file_path }}"
