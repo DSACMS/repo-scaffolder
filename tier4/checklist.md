@@ -27,6 +27,8 @@ If you would like your repository to be released, please complete the following 
 
 [Review Project Metadata](#review-project-metadata)
 
+[Review Policies](#review-policies)
+
 [Review Repository Details](#review-repository-details)
 
 [Review OpenSSF Scorecard](#review-openssf-scorecard)
@@ -352,12 +354,23 @@ The project should include the following files and sections [(link to templates)
 
 As you are writing content about the repository, consider the following when describing the project, the agency, and how work is done:
 
-- **Focus on solutions, not problems**
-  _Rather than describing the negatives and shortcomings of an existing project, process, or group, focus on highlighting the benefits, outcomes, and positive impacts of the solution. Be constructive and accentuate the positive._
 - **Use Plain Language**
-  _Be clear and concise when explaining concepts. Avoid jargon unless it is necessary and well-defined. Use active voice to be clearer and more engaging._
+
+  Public-facing content in this project must follow the [Federal Plain Language Guidelines](https://www.plainlanguage.gov/guidelines/), as required by the [Plain Writing Act of 2010](https://www.plainlanguage.gov/law/).
+
+  Be clear and concise when explaining concepts. Avoid jargon unless it is necessary and well-defined. Use active voice to be clearer and more engaging.
+
+  The test is whether a reader can find what they need, understand it the first time they read it, and use it.
+
+  This applies to documentation as much as to interface text. A README is often the first thing a member of the public reads about a government project.
+
+- **Focus on solutions, not problems**
+
+  Rather than describing the negatives and shortcomings of an existing project, process, or group, focus on highlighting the benefits, outcomes, and positive impacts of the solution. Be constructive and accentuate the positive.
+
 - **Focus on the audience**
-  _Write for a broad audience, ensuring that developers, stakeholders, end-users, and viewers of all skill levels can understand and engage with the content._
+
+  Write for a broad audience, ensuring that developers, stakeholders, end-users, and viewers of all skill levels can understand and engage with the content.
 
 Please refer to the style guides below for additional tips and guidance:
 
@@ -406,6 +419,36 @@ cookiecutter . –directory=codejson
 4. A code.json file will be generated with your responses.
 
 As you continue development in this repository, it is important to keep this file up-to-date. Our [automated-codejson-generator](https://github.com/DSACMS/automated-codejson-generator) can assist with updating this file.
+
+#### Results
+
+_Insert Review Here_
+
+### Review Policies
+
+Before public release, review the policies below to check if they apply to your repository:
+
+#### Paperwork Reduction Act
+
+Does your project collect standardized information from 10 or more members of the public within a twelve month period, which includes forms, surveys, and some kinds of user research?
+
+If yes, then the Paperwork Reduction Act applies to your project. It is triggered by collecting standardized information from ten or more members of the public within a twelve month period, and it requires OMB clearance before the collection begins rather than after. 
+
+Be sure to uncomment and add the [Paperwork Reduction Act text](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/README.md#paperwork-reduction-act) to the README.md under the "Policies" section.
+
+See [pra.digital.gov](https://pra.digital.gov/) for what counts as a collection and how the review works, and talk to your agency's PRA contact early, since clearance takes time to obtain.
+
+#### 508 Accessibility
+
+Does your project have 508 requirements?
+
+If yes, ensure they are met before release. The Revised 508 Standards incorporate [WCAG 2.0](https://www.w3.org/TR/WCAG20/) Level A and AA by reference, and many teams now target [WCAG 2.1](https://www.w3.org/TR/WCAG21/) Level AA. 
+
+Be sure to uncomment and add the [Paperwork Reduction Act text](https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/%7B%7Bcookiecutter.project_slug%7D%7D/README.md#paperwork-reduction-act) to the README.md under the "Policies" section.
+
+Use automated accessibility checkers and 508 tools to identify issues early. Test with both keyboard navigation and screen readers as part of regular development rather than as a release gate. Automated tools catch only a portion of accessibility defects, so a combination of automated and manual testing remains essential. 
+
+See [ospo-guide](https://dsacms.github.io/ospo-guide/growing/508-training/) for Section 508 resources.
 
 #### Results
 

@@ -16,12 +16,14 @@ def context(template_tier):
         "project_visibility": "private",
         "create_repo": False,
         "receive_updates": False,
-        "add_team": False
+        "add_team": False,
+        "accessibility": False
     }
     if template_tier == 3 or template_tier == 4:
         context.update({
             "code_owners": "",
-            "add_maintainer": False
+            "add_maintainer": False,
+            "pra": False
         })
     return context
 

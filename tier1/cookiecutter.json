@@ -8,10 +8,12 @@
   "create_repo": [true, false],
   "extra_repo_topics": "",
   "add_team": [true, false],
+  "accessibility": [true, false],
   "__prompts__": {
     "create_repo": "Would you like to create a repo on github.com?",
     "extra_repo_topics": "Enter additional GitHub topics (comma-separated, optional). Example: content-management,dashboard,regulations-and-directives,CodingItForward,Medicare,Medicaid,CMCS,CCSQ",
-    "add_team": "Would you like to add project team members to COMMUNITY.md?"
+    "add_team": "Would you like to add project team members to COMMUNITY.md?",
+    "accessibility": "Does your project adhere to Section 508 accessibility standards?"
   },
   "_copy_without_render": [".github/codejson"]
 }

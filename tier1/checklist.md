@@ -271,12 +271,23 @@ The project should include the following files and sections [(link to templates)
 
 As you are writing content about the repository, consider the following when describing the project, the agency, and how work is done:
 
-- **Focus on solutions, not problems**
-  _Rather than describing the negatives and shortcomings of an existing project, process, or group, focus on highlighting the benefits, outcomes, and positive impacts of the solution. Be constructive and accentuate the positive._
 - **Use Plain Language**
-  _Be clear and concise when explaining concepts. Avoid jargon unless it is necessary and well-defined. Use active voice to be clearer and more engaging._
+
+  Public-facing content in this project must follow the [Federal Plain Language Guidelines](https://www.plainlanguage.gov/guidelines/), as required by the [Plain Writing Act of 2010](https://www.plainlanguage.gov/law/).
+
+  Be clear and concise when explaining concepts. Avoid jargon unless it is necessary and well-defined. Use active voice to be clearer and more engaging.
+
+  The test is whether a reader can find what they need, understand it the first time they read it, and use it.
+
+  This applies to documentation as much as to interface text. A README is often the first thing a member of the public reads about a government project.
+
+- **Focus on solutions, not problems**
+
+  Rather than describing the negatives and shortcomings of an existing project, process, or group, focus on highlighting the benefits, outcomes, and positive impacts of the solution. Be constructive and accentuate the positive.
+
 - **Focus on the audience**
-  _Write for a broad audience, ensuring that developers, stakeholders, end-users, and viewers of all skill levels can understand and engage with the content._
+
+  Write for a broad audience, ensuring that developers, stakeholders, end-users, and viewers of all skill levels can understand and engage with the content.
 
 Please refer to the style guides below for additional tips and guidance:
 
