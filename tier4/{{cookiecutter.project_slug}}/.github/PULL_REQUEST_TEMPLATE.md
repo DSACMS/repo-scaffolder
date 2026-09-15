@@ -14,6 +14,7 @@ Happy contributing!
 messages along these guidelines. Please keep the line width no greater than 80
 columns (You can use `fmt -n -p -w 80` to accomplish this).
 
+- If the PR contains AI-generated code, add a "AI-assisted" label to the PR
 
 -->
 
@@ -32,6 +33,8 @@ Describe the modifications you've done.
 ## AI Usage
 
 - [ ] Generative AI was used in this contribution
+
+<!-- TODO: If the PR contains AI-generated code, add an "AI-assisted" label to the PR -->
 
 If checked, please provide an explanation on how AI was used in the development of this pull request:
 
