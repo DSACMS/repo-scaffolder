@@ -331,6 +331,7 @@ The project should include the following files and sections [(link to templates)
 | Reviewing Pull Requests  | Make a brief statement about how pull requests are reviewed, and who is doing the reviewing. Linking to COMMUNITY.md can help.                                                                                                                                                                                         |          |
 | Shipping Releases        | What cadence does your project ship new releases? (e.g. one-time, ad-hoc, periodically, upon merge of new patches) Who does so? Using the [release-guidelines-template.md](https://github.com/DSACMS/repo-scaffolder/blob/main/release-guidelines-template.md) can assist with developing and documenting the process. |          |
 | Documentation Updates    | Where is the documentation hosted? How is it updated? Who updates it?                                                                                                                                                                                                                                                  |          |
+| AI Usage                 | Define how AI can be used in your project with recommended and non-recommended uses. Link to PULL_REQUEST_TEMPLATE.md which includes a section for contributors to disclose AI usage                                                                                                                                       |          |
 | Policies                 | This section is here to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.                   |          |
 | Public Domain            | This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508), Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.                        |          |
 
@@ -568,6 +569,26 @@ taken:
 Please enable the following features to enhance repository security and maintain code
 quality:
 
+- [ ] **Git Branching**
+
+  _Make sure there is a coherent git branching plan in place. For example: agree to merge feature related pull requests into dev but merge bug fixes into main instead of dev first._
+
+- [ ] **Branch Protections**
+
+  _Enable branch protection rules requiring pull request reviews and required status checks before merging. Main and dev should be protected branches in the repository._
+
+- [ ] **Required security scan status checks**
+
+  _Configure required status checks for security scans so merges cannot proceed until required code analysis and security checks have passed._
+
+- [ ] **Signed Commits**
+
+  _Enforce signed commits to verify author identity and maintain accountability for repository changes._
+
+- [ ] **Authorized Merge Permissions**
+
+  _Limit merge capabilities to authorized team members so only approved contributors can merge protected branches._
+
 - [ ] **Dependabot Alerts**
 
   _A GitHub Feature. Get notified when one of your dependencies has a vulnerability_
@@ -575,14 +596,6 @@ quality:
 - [ ] **Secret Scanning Alerts**
 
   _A GitHub Feature. Get notified when a secret is pushed to this repository. Ideally set this up to run after each new commit is pushed to the Repository._
-
-- [ ] **Branch Protections**
-
-  _Ensures the integrity of important branches by preventing unauthorized actions like force pushes and requiring pull request reviews with specific checks before merging. Dev and main should be protected branches in the repository._
-
-- [ ] **Git Branching**
-
-  _After making the repository public, make sure there is a coherent git branching plan in place. For example: agree to merge feature related pull requests into dev but merge bug fixes into main instead of dev first._
 
 - [ ] **Add Repolinter GH Action to CI**
 

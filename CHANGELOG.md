@@ -15,6 +15,7 @@
 **Merged pull requests:**
 
 - Release: Merging Dev to Main [\#404](https://github.com/DSACMS/repo-scaffolder/pull/404) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
+- Workflows: Specify permissions for various workflows [\#403](https://github.com/DSACMS/repo-scaffolder/pull/403) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
 - Templates: Fix typo in PR templates [\#402](https://github.com/DSACMS/repo-scaffolder/pull/402) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
 - Outbound Checklists and Docs: Add instructions for installing dependencies [\#400](https://github.com/DSACMS/repo-scaffolder/pull/400) ([natalialuzuriaga](https://github.com/natalialuzuriaga))
 - Added AI usage section to tier 2, 3, and 4 PR templates [\#398](https://github.com/DSACMS/repo-scaffolder/pull/398) ([kmsheikh](https://github.com/kmsheikh))
