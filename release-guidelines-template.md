@@ -1,23 +1,22 @@
-
 # Tier X Release Guidelines
 
 {{ cookiecutter.project_repo_name }} will see regular updates and new releases. This document describes the general guidelines around how and when a new release is cut.
 
 ## Table of Contents
 
-* [Versioning](#versioning)
- <!-- * [Breaking vs. non-breaking changes](#breaking-vs-non-breaking-changes) -->
-  * [Ongoing version support](#ongoing-version-support)
-* [Release Process](#release-process)
-  * [Goals](#goals)
-  * [Schedule](#schedule)
-  * [Communication and Workflow](#communication-and-workflow)
-<!-- * [Beta Features](#beta-features) -->
-* [Preparing a Release Candidate](#preparing-a-release-candidate)
-  * [Incorporating feedback from review](#incorporating-feedback-from-review)
-* [Making a Release](#making-a-release)
-* [Auto Changelog](#auto-changelog)
-* [Hotfix Releases](#hotfix-releases)
+- [Versioning](#versioning)
+  <!-- * [Breaking vs. non-breaking changes](#breaking-vs-non-breaking-changes) -->
+  - [Ongoing version support](#ongoing-version-support)
+- [Release Process](#release-process)
+  - [Goals](#goals)
+  - [Schedule](#schedule)
+  - [Communication and Workflow](#communication-and-workflow)
+  <!-- * [Beta Features](#beta-features) -->
+- [Preparing a Release Candidate](#preparing-a-release-candidate)
+  - [Incorporating feedback from review](#incorporating-feedback-from-review)
+- [Making a Release](#making-a-release)
+- [Auto Changelog](#auto-changelog)
+- [Hotfix Releases](#hotfix-releases)
 
 ## Versioning
 
@@ -29,7 +28,6 @@ Given a version number in the `MAJOR.MINOR.PATCH` (eg., `X.Y.Z`) format, here ar
 - **MINOR** version - add functionality in a backwards compatible manner
 - **PATCH** version - make backwards compatible bug fixes
 
-
 <!-- ### Breaking vs. non-breaking changes -->
 
 <!--- TODO: Examples and protocol for breaking changes
@@ -39,7 +37,7 @@ Definitions for breaking changes will vary depending on the use-case and project
 
 ### Ongoing version support
 
-<!-- TODO: Explanation of general thought process 
+<!-- TODO: Explanation of general thought process
 
 Explain the project’s thought process behind what versions will and won’t be supported in the future.
 -->
@@ -49,12 +47,9 @@ Explain the project’s thought process behind what versions will and won’t be
 This section should make clear which versions of the project are considered actively supported.
 -->
 
-
-
 ## Release Process
 
 The sections below define the release process itself, including timeline, roles, and communication best practices.
-
 
 ### Goals
 
@@ -62,17 +57,17 @@ The sections below define the release process itself, including timeline, roles,
 
 This should ideally be a bulleted list of what your regular releases will deliver to key users and stakeholders
 -->
+
 .
 
 ### Schedule
 
 <!-- TODO: Communicate the timing of the regular release structure
 
-For example, if you plan on creating regular releases on a weekly basis you should communicate that as well as the typical days upcoming releases will become tagged. 
+For example, if you plan on creating regular releases on a weekly basis you should communicate that as well as the typical days upcoming releases will become tagged.
 
-You should also communicate special cases such as security updates or critical bugfixes and how they would likely be released earlier than what is usually scheduled. 
+You should also communicate special cases such as security updates or critical bugfixes and how they would likely be released earlier than what is usually scheduled.
 -->
-
 
 ### Communication and Workflow
 
@@ -80,7 +75,6 @@ You should also communicate special cases such as security updates or critical b
 
 Communicate the slack channels, mailing lists, or other means of pushing out release notifications.
 -->
-
 
 <!-- TODO: (OPTIONAL) Support beta feature testing
 ## Beta Features
@@ -94,39 +88,35 @@ Once an item is moved out of beta, close its Issue and change the text to say 'B
 
 The following steps outline the process to prepare a Release Candidate of {{ cookiecutter.project_repo_name }}. This process makes public the intention and contents of an upcoming release, while allowing work on the next release to continue as usual in `dev`.
 
+1. Create a _Release branch_ from the tip of `dev` named `release-x.y.z`, where `x.y.z` is the intended version of the release. This branch will be used to prepare the Release Candidate. For example, to prepare a Release Candidate for `0.5.0`:
 
-1. Create a *Release branch* from the tip of `dev` named `release-x.y.z`, where `x.y.z` is the intended version of the release. This branch will be used to prepare the Release Candidate. For example, to prepare a Release Candidate for `0.5.0`:
+   ```bash
+   git fetch
+   git checkout origin/dev
+   git checkout -b release-0.5.0
+   git push -u origin release-0.5.0
+   ```
 
-	```bash
-	git fetch
-	git checkout origin/dev
-	git checkout -b release-0.5.0
-	git push -u origin release-0.5.0
-	```
-
-	Changes generated by the steps below should be committed to this branch later.
-
-
-
+   Changes generated by the steps below should be committed to this branch later.
 
 2. Create a tag like `x.y.z-rcN` for this Release Candidate. For example, for the first `0.5.0` Release Candidate:
 
-	```bash
-	git fetch
-	git checkout origin/release-0.5.0
-	git tag 0.5.0-rc1
-	git push --tags
-	```
+   ```bash
+   git fetch
+   git checkout origin/release-0.5.0
+   git tag 0.5.0-rc1
+   git push --tags
+   ```
 
 3. Publish a [pre-Release in GitHub](proj-releases-new):
 
-	```md
-	Tag version: [tag you just pushed]
-	Target: [release branch]
-	Release title: [X.Y.Z Release Candidate N]
-	Description: [copy in ReleaseNotes.md created earlier]
-	This is a pre-release: Check
-	```
+   ```md
+   Tag version: [tag you just pushed]
+   Target: [release branch]
+   Release title: [X.Y.Z Release Candidate N]
+   Description: [copy in ReleaseNotes.md created earlier]
+   This is a pre-release: Check
+   ```
 
 4. Open a Pull Request to `main` from the release branch (eg. `0.5.0-rc1`). This pull request is where review comments and feedback will be collected.
 
@@ -146,7 +136,7 @@ git tag 0.5.0-rc2
 git push --tags
 ```
 
-Repeat as-needed for subsequent Release Candidates.  Note the release branch will be pushed to `dev` at key points in the approval process to ensure the community is working with the latest code.
+Repeat as-needed for subsequent Release Candidates. Note the release branch will be pushed to `dev` at key points in the approval process to ensure the community is working with the latest code.
 
 ## Making a Release
 
@@ -165,7 +155,6 @@ The following steps describe how to make an approved [Release Candidate](#prepar
    - Release title: [X.Y.Z]
    - Description: copy in Release Notes created earlier
    - This is a pre-release: DO NOT check
-
 
 5. **Branch**. Finally, keep the release branch and don't delete it. This allows easy access to a browsable spec.
 
@@ -188,55 +177,49 @@ jobs:
         with:
           token: ${{{{ secrets.GITHUB_TOKEN }}}}
 ```
-This provided workflow will automatically populate the CHANGELOG.md with all of the associated changes created since the last release that are included in the current release. 
+
+This provided workflow will automatically populate the CHANGELOG.md with all of the associated changes created since the last release that are included in the current release.
 
 This workflow will be triggered when a new release is created.
 
 If you do not wish to use automatic changelogs, you can delete the workflow and update the CHANGELOG.md file manually. Although, this is not recommended.
 
+For best practices on writing changelogs, see: https://keepachangelog.com/en/1.1.0/#how
+
 ## Hotfix Releases
 
 In rare cases, a hotfix for a prior release may be required out-of-phase with the normal release cycle. For example, if a critical bug is discovered in the `0.3.x` line after `0.4.0` has already been released.
 
-1. Create a *Support branch* from the tag in `main` at which the hotfix is needed. For example if the bug was discovered in `0.3.2`, create a branch from this tag:
+1. Create a _Support branch_ from the tag in `main` at which the hotfix is needed. For example if the bug was discovered in `0.3.2`, create a branch from this tag:
 
-	```bash
-	git fetch
-	git checkout 0.3.2
-	git checkout -b 0.3.x
-	git push -u origin 0.3.x
-	```
+   ```bash
+   git fetch
+   git checkout 0.3.2
+   git checkout -b 0.3.x
+   git push -u origin 0.3.x
+   ```
 
 2. Merge (or commit directly) the hotfix work into this branch.
 
-
 3. Tag the support branch with the hotfix version. For example if `0.3.2` is the version being hotfixed:
 
-	```bash
-	git fetch
-	git checkout 0.3.x
-	git tag 0.3.3
-	git push --tags
-	```
+   ```bash
+   git fetch
+   git checkout 0.3.x
+   git tag 0.3.3
+   git push --tags
+   ```
 
 4. Create a [GitHub Release](proj-releases-new) from this tag and the support branch. For example if `0.3.3` is the new hotfix version:
 
-	```md
-	Tag version: 0.3.3
-	Target: 0.3.x
-	Release title: 0.3.3
-	Description: [copy in ReleaseNotes created earlier]
-	This is a pre-release: DO NOT check
-	```
-
-
-
-
-
+   ```md
+   Tag version: 0.3.3
+   Target: 0.3.x
+   Release title: 0.3.3
+   Description: [copy in ReleaseNotes created earlier]
+   This is a pre-release: DO NOT check
+   ```
 
 [proj-releases-new]: https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/releases/new
 
 [Inspiration for this document](https://github.com/openmobilityfoundation/governance/blob/main/technical/ReleaseGuidelines.md)
-
-
-

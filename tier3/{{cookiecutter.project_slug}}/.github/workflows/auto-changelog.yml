@@ -3,13 +3,23 @@ on:
   release:
     types:
       - created
+permissions:
+  contents: write
 jobs:
   changelog:
     runs-on: ubuntu-latest
     steps:
-      - name: "Auto Generate changelog"
-        uses: heinrichreimer/action-github-changelog-generator@v2.3
-        with:
-          {% raw %}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          {% endraw %}
+       - name: Checkout code
+         uses: actions/checkout@v4
+         with:
+           ref: main
+       - name: "Auto Generate changelog"
+         uses: heinrichreimer/action-github-changelog-generator@v2.3
+         with:
+           {% raw %}
+           token: ${{ secrets.GITHUB_TOKEN }}
+           {% endraw %}
+       - uses: stefanzweifel/git-auto-commit-action@v4
+         with:
+           commit_message: Update Changelog with new release
+           file_pattern: CHANGELOG.md

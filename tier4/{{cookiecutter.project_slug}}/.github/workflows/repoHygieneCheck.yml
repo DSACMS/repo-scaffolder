@@ -49,6 +49,8 @@ jobs:
     {% raw %}
     if: needs.check-first-run.outputs.should_run == 'true'
     {% endraw %}
+    permissions:
+      contents: read
     uses: DSACMS/repo-scaffolder/.github/workflows/extendJSONFile.yml@main
     with: 
       url_to_json: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier4/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'

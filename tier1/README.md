@@ -6,6 +6,8 @@ A **Tier 1** project refers to an **informational or historical** project that h
 
 The main purpose of a Tier 1 project is to share knowledge and provide information from past work. Though available for public consumption, the project is **not expected to evolve or expand** in the future. Contributors may not engage in continuous development or issue resolution.
 
+> The Tier 1 repository template can be found in [`{{cookiecutter.project_slug}}`](./{{cookiecutter.project_slug}}/) and is offered as a GitHub template repository: https://github.com/DSACMS/tier1
+
 ### Key Characteristics of a Tier 1 Project:
 
 - **Publicly released** without planned future development or maintenance.
@@ -21,12 +23,25 @@ There are specific files that are required and recommended to include in the rep
 | **File**          | **Requirement** | **Description**                                                                                                                                          |
 | ----------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `LICENSE`         | Mandatory       | Defines the licensing terms under which the project is distributed.                                                                                      |
-| `SECURITY.md`     | Mandatory       | Outlines the agency's security policies, including how to report security issues or vulnerabilities in the code.                                         |
+| `code.json`       | Mandatory       | Contains project metadata following government requirements.                                                                                             |
 | `README.md`       | Mandatory       | Provides a comprehensive overview of the project, including its purpose, how to install or use it, and any relevant information for users or developers. |
+| `COMMUNITY.md`    | Mandatory       | Lists project team members and points of contact.                                                                                                        |
+| `SECURITY.md`     | Mandatory       | Outlines the agency's security policies, including how to report security issues or vulnerabilities in the code.                                         |
 | `CONTRIBUTING.md` | Recommended     | Offers guidelines for contributing to the project, including code standards, how to submit issues, and creating pull requests.                           |
+| `.gitignore` | Optional     | Lists intentionally untracked files that Git should ignore.                           |
 
 For more information about required sections and content within the files above, please visit [maturity-model-tiers.md](https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md).
 
-## Workflows
+## .github directory
 
-Located in the `.github` directory are [GitHub Action workflows](../docs/workflows.md) that can be used to regularly update your repository.
+The .github directory includes various files such as GitHub action workflows, code.json metadata cookiecutter creation, and issue templates. For more information, please visit the [.github-directory.md](../docs/.github-directory.md).
+
+## Repository Hygiene using repolinter
+
+As part of maintaining repository hygiene, repolinter is used to identify missing files and information. `repolinter.json` defines a set of checks that verify the existence of these files in your repository. To run repolinter, execute the following command from the root directory:
+
+```
+repolinter lint .
+```
+
+A GitHub action is also available for running repolinter checks. For more information, please visit [README.md](https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#identify-missing-files-and-information-using-repolinter).

@@ -1,8 +1,18 @@
 # Maturity Model Tiers
 
-This document outlines the maturity model tiers.
+![Maturity Model Tier Summary](./assets/images/maturity-model-trees-graphic-horizontal.png)
 
-## Tier Information
+Our maturity model framework is designed to evaluate and categorize open source repositories based on its level of maturity and development. This framework consists of five tiers (0-4), each representing different stages of a project's maturity, collaboration scope, community engagement, and governance structure.
+
+- [Tier 0](./tier0/README.md): Private Repository
+- [Tier 1](./tier1/README.md): One-Time Release
+- [Tier 2](./tier2/README.md): Close Collaboration
+- [Tier 3](./tier3/README.md): Working in Public
+- [Tier 4](./tier4/README.md): Community Governance
+
+Different projects have varying needs based on their scope, team size, and community involvement. The framework establishes clear requirements for documentation, collaboration, and governance, ranging from small private repositories (Tier 0) to fully community-governed projects (Tier 4). Each tier has specific mandatory, recommended, and not recommended elements that help guide projects based on the stage of their open source development journey.
+
+## Tier Definitions
 
 <table>
   <thead>
@@ -10,14 +20,14 @@ This document outlines the maturity model tiers.
       <th>Level</th>
       <th>Name</th>
       <th>Purpose</th>
-      <th>Description</th>
+      <th>Description/Examples</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Tier 0</td>
       <td>Private Repository</td>
-      <td>Experimental/Historical</td>
+      <td>Experimental</td>
       <td>Project is private, usually with a single developer. Typically working projects, example code, and early prototypes.</td>
     </tr>
     <tr>
@@ -36,40 +46,49 @@ This document outlines the maturity model tiers.
       <td>Tier 3</td>
       <td>Working in Public</td>
       <td>Collaborate in the Open with smaller, semi-open teams</td>
-      <td>Project developed Open Source by CMS or a CMS contractor, public website hosted on GitHub, tool or utility used in CMS official business by the public. Limited external contribution, CMS-led (by choice or by statute).</td>
+      <td>Project developed Open Source by CMS or a CMS contractor OR public website hosted on GitHub OR tool or utility used in CMS official business by the public. Limited external contribution, CMS-led (by choice or by statute).</td>
     </tr>
     <tr>
       <td>Tier 4</td>
       <td>Community Governance</td>
       <td>Collaborate broadly in public</td>
-      <td>Project donated to or stewarded by an external community, open standard that welcomes public input, mature open source project that purposefully develops an open governance structure.</td>
+      <td>Project often donated to or stewarded by an external community OR open standard that welcomes public input OR mature open source project that purposefully develops an open governance structure.</td>
     </tr>
   </tbody>
 </table>
 
-## Ordinality
+### Determining a project's maturity model tier
 
-| Level                                  | Description       |
-|----------------------------------------|-------------------|
-| $\color{green}\large{\textsf{M}}$      | Mandatory         |
-| $\color{blue}\large{\textsf{R}}$       | Recommended       |
-| $\color{lightcoral}\large{\textsf{N}}$ | Not Recommended   |
+Use the series of questions below to identify your project's maturity model tier
 
-## Simplified
+![Tier Selection Flowchart](./assets/images/flowchart.png)
 
-| File                     | Tier 0 | Tier 1 | Tier 2 | Tier 3 | Tier 4 |
-|--------------------------|--------|--------|--------|--------|--------|
-| LICENSE                  | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| SECURITY.md              | $\color{blue}\large{\textsf{R}}$  | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| README.md                | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| CONTRIBUTING.md          | $\color{blue}\large{\textsf{R}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
-| MAINTAINERS.md           | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$  |
-| GOVERNANCE.md            | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$  |
-| CODEOWNERS.md            | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$ | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  |
-| COMMUNITY_GUIDELINES.md  | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  |
-| CODE_OF_CONDUCT.md       | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  | $\color{green}\large{\textsf{M}}$  |
+## Repository File Requirements by Tier
 
-## Tier Ordinality
+Each tier requires certain files that must be included in the repository.
+
+![Maturity Model Tier Summary](./assets/images/maturity-model-trees-graphic-horizontal.png)
+
+| Level                                  | Description     |
+| -------------------------------------- | --------------- |
+| $\color{green}\large{\textsf{M}}$      | Mandatory       |
+| $\color{blue}\large{\textsf{R}}$       | Recommended     |
+| $\color{lightcoral}\large{\textsf{N}}$ | Not Recommended |
+
+| File                                                                           | Tier 0                                 | Tier 1                                 | Tier 2                                 | Tier 3                            | Tier 4                            |
+| ------------------------------------------------------------------------------ | -------------------------------------- | -------------------------------------- | -------------------------------------- | --------------------------------- | --------------------------------- |
+| LICENSE                                                                        | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| [code.json](https://github.com/DSACMS/gov-codejson/blob/main/docs/metadata.md) | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| README.md                                                                      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| COMMUNITY.md                                                                   | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| SECURITY.md                                                                    | $\color{blue}\large{\textsf{R}}$       | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| CONTRIBUTING.md                                                                | $\color{blue}\large{\textsf{R}}$       | $\color{blue}\large{\textsf{R}}$       | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| CODE_OF_CONDUCT.md                                                             | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{green}\large{\textsf{M}}$      | $\color{green}\large{\textsf{M}}$ | $\color{green}\large{\textsf{M}}$ |
+| GOVERNANCE.md                                                                  | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{lightcoral}\large{\textsf{N}}$ | $\color{blue}\large{\textsf{R}}$  | $\color{green}\large{\textsf{M}}$ |
+
+## Repository File Content Requirements by Tier
+
+Each tier outlines specific content that are required or recommended to be included in files of the repository.
 
 <table>
   <thead>
@@ -95,18 +114,18 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>All repositories, whether private or public, must include authorship and copyright information. By default, work done by federal employees is not subject to copyright protections under Title 17 U.S. Code Sections 101 & 105, unless for security or contracting purposes.</td>
     </tr>
-    <tr>
-      <td>SECURITY.md</td>
-      <td>Security & Responsible Disclosure Policy</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
+        <tr>
+      <td>code.json</td>
+      <td><a href="https://github.com/DSACMS/gov-codejson/blob/main/schemas">Metadata</a></td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This outlines the Security & Responsibility Disclosure policies including vulnerability submission, etc.</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>All repositories, whether private or public, must include a code.json file containing project metadata. For more information, visit the <a href="https://github.com/DSACMS/gov-codejson">code.json documentation repository</a>.</td>
     </tr>
     <tr>
-      <td rowspan="22">README.md</td>
+      <td rowspan="20">README.md</td>
       <td>Project Description</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
@@ -177,23 +196,13 @@ This document outlines the maturity model tiers.
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
-      <td>Documentation Index</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This is a like a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.</td>
-    </tr>
-    <tr>
-      <!-- <td>README.md</td> -->
       <td>Repository Structure</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Using the "tree" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time.</td>
+      <td>Including the repository structure helps viewers quickly understand the project layout. Using the "tree -d" command can be a helpful way to generate this information, but, be sure to update it as the project evolves and changes over time. It is also helpful to include a 'table of contents" for your documentation. Tier 0/1 projects with simple README.md files without many sections may or may not need this, but it is still extremely helpful to provide "bookmark" or "anchor" links to specific sections of your file to be referenced in tickets, docs, or other communication channels.</td>
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
@@ -244,16 +253,6 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>For projects that accept contributions, point towards the CONTRIBUTING.md file. For those that do not (tier0/1) not recommended to include this section, instead, mention one-time release, or private repo status instead.</td>
-    </tr>
-    <tr>
-      <!-- <td>README.md</td> -->
-      <td>Codeowners</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Though all tiers have an 'implied' code-owner, since there is at least one author of the repo, explicit is better than implicit. In the case that a project may outlive the employment or contract of the original author, a shared inbox or alias is recommended for longer-lived projects (e.g. opensource@cms.hhs.gov).</td>
     </tr>
     <tr>
       <!-- <td>README.md</td> -->
@@ -325,6 +324,116 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>A best practice is to list the LICENSE under which a project is released at the bottom of the README. In most cases for Federal repos, we default to Creative Commons Zero 1.0 International (world-wide public domain).</td>
     </tr>
+        <tr>
+      <td rowspan="10">COMMUNITY.md</td>
+      <td>Table of Project Members</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Roles & Responsibilities</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the project maintainers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Maintainers List</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Approvers List</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the project approvers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Reviewers List</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the project reviewers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Contributors</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who has contributed to the project? Highlight and credit the users who have contributed to the repository.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Alumni</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Who are the past maintainers or contributors who previously played significant roles in this project who are no longer actively involved? Consider including their roles and dates for context.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Principles</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>This section communicates to prospective contributors and users what the values of your community are. The examples provided in the template were established by the Justice40 project at USDS.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Community Guidelines</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>This section communicates specific norms and guidelines for how to participate and contribute positively to your community. The more explicit you can be about behaviors you'd like to encourage or discourage, the less friction new contributors will experience in onboarding and operating within your project.</td>
+    </tr>
+    <tr>
+      <!-- <td>COMMUNITY.md</td> -->
+      <td>Acknowledgements</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>This section recognizes previous work and best practices established by the other members of the federal open source community such as USDS, GSA, 18F, and the Justice40 Project.</td>
+    </tr>
+    <tr>
+      <td>SECURITY.md</td>
+      <td>Security & Responsible Disclosure Policy</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>This outlines the Security & Responsibility Disclosure policies including vulnerability submission, etc.</td>
+    </tr>
     <tr>
       <td rowspan="15">CONTRIBUTING.md</td>
       <td>How to Contribute</td>
@@ -353,7 +462,7 @@ This document outlines the maturity model tiers.
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the MAINTAINERS.md file for further details.</td>
+      <td>This section helps contributors understand any team structure in the project (formal or informal.) Encouraged to point towards the COMMUNITY.md file for further details.</td>
     </tr>
     <tr>
       <!-- <td>CONTRIBUTING.md</td> -->
@@ -433,7 +542,7 @@ This document outlines the maturity model tiers.
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to MAINTAINERS.md can help.</td>
+      <td>Make a brief statement about how pull-requests are reviewed, and who is doing the reviewing. Linking to COMMUNITY.md can help.</td>
     </tr>
     <tr>
       <!-- <td>CONTRIBUTING.md</td> -->
@@ -457,6 +566,16 @@ This document outlines the maturity model tiers.
     </tr>
     <tr>
       <!-- <td>CONTRIBUTING.md</td> -->
+      <td>AI Usage</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Our stance on how AI usage should be used within software projects. Includes recommended and non recommended uses.</td>
+    </tr>
+    <tr>
+      <!-- <td>CONTRIBUTING.md</td> -->
       <td>Policies</td>
       <td>$\color{blue}\large{\textsf{R}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
@@ -474,106 +593,6 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>This section is to explicitly link to Federal policies and guidelines that are required or recommended for Federal projects to comply with, such as Accessibility (508) Interoperability, Anti-deficiency, Security, Licensing, and other policies that can vary between agencies and domains.</td>
-    </tr>
-    <tr>
-      <td rowspan="4">MAINTAINERS.md</td>
-      <td>Maintainers</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Who are the project maintainers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
-    </tr>
-    <tr>
-      <!-- <td>MAINTAINERS.md</td> -->
-      <td>Maintainers List</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>What groups/domains are maintainers a part of? Does your project have domains/areas that are maintained by specific people? List @USERNAMES directly, or any @ALIASES for groups/teams.</td>
-    </tr>
-    <tr>
-      <!-- <td>MAINTAINERS.md</td> -->
-      <td>Approvers List</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Who are the project approvers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
-    </tr>
-    <tr>
-      <!-- <td>MAINTAINERS.md</td> -->
-      <td>Reviewers List</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Who are the project reviewers? List out @USERNAMES where possible so they can be tagged in issues/PRs directly.</td>
-    </tr>
-    <tr>
-      <td>GOVERNANCE.md</td>
-      <td>Governance</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Starting at Tier 3 GOVERNANCE.md has basic language about early community governance, how the project make decisions, and how contirbutors are elevated through the leadership process if any (e.g. joining teams, getting maintainer status, etc...)</td>
-    </tr>
-    <tr>
-      <td rowspan="2">CODEOWNERS.md</td>
-      <td>List of Users</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>Who are the points of contact in your project who are responsible/accountable for the project? This can often be an engineering or design manager or leader, who may or may not be the primary maintainers of the project.</td>
-    </tr>
-    <tr>
-      <!-- <td >CODEOWNERS.md</td> -->
-      <td>List of Repo Domains by Owner</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{blue}\large{\textsf{R}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>e.g. Frontend, Backend, Documentation</td>
-    </tr>
-    <tr>
-      <td rowspan="3">COMMUNITY_GUIDELINES.md</td>
-      <td>Principles</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This section communicates to prospective contributors and users what the values of your community are. The examples provided in the template were established by the Justice40 project at USDS.</td>
-    </tr>
-    <tr>
-      <!-- <td>COMMUNITY_GUIDELINES.md</td> -->
-      <td>Community Guidelines</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This section communicates specific norms and guidelines for how to participate and contribute positively to your community. The more explicit you can be about behaviors you'd like to encourage or discourage, the less friction new contributors will experience in onboarding and operating within your project.</td>
-    </tr>
-    <tr>
-      <!-- <td>COMMUNITY_GUIDELINES.md</td> -->
-      <td>Acknowledgements</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>$\color{green}\large{\textsf{M}}$</td>
-      <td>This section recognizes previous work and best practices established by the other members of the federal open source community such as USDS, GSA, 18F, and the Justice40 Project.</td>
     </tr>
     <tr>
       <td rowspan="2">CODE_OF_CONDUCT.md</td>
@@ -594,6 +613,16 @@ This document outlines the maturity model tiers.
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>$\color{green}\large{\textsf{M}}$</td>
       <td>This section recognizes previous work and best practices established by the other members of the federal open source community such as USDS, GSA, 18F, and the Justice40 Project.</td>
+    </tr>
+    <tr>
+      <td>GOVERNANCE.md</td>
+      <td>Governance</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{lightcoral}\large{\textsf{N}}$</td>
+      <td>$\color{blue}\large{\textsf{R}}$</td>
+      <td>$\color{green}\large{\textsf{M}}$</td>
+      <td>Starting at Tier 3 GOVERNANCE.md has basic language about early community governance, how the project make decisions, and how contirbutors are elevated through the leadership process if any (e.g. joining teams, getting maintainer status, etc...)</td>
     </tr>
   </tbody>
 </table>

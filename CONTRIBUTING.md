@@ -7,7 +7,7 @@ you'll be politely asked to change something. We appreciate all friendly
 contributions.
 
 We encourage you to read this project's CONTRIBUTING policy (you are here), its
-[LICENSE](LICENSE.md), and its [README](README.md).
+[LICENSE](LICENSE), and its [README](README.md).
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ More commands on using repo-scaffolder for repository creation and maintenance c
 - Please try to keep pull requests to a reasonable size; try to split large contributions to multiple PRs
 - Please create pull requests into dev unless the contribution is some kind of bugfix or urgent hotfix.
 - Document and explain the contribution clearly according to provided standards when possible.
-- Feel free to reach out to us if there is any confusion. A list of the project maintainers is found here: [MAINTAINERS.md](./MAINTAINERS.md)
+- Feel free to reach out to us if there is any confusion. A list of the project maintainers is found here: [COMMUNITY.md](./COMMUNITY.md)
 
 ### Building dependencies
 
@@ -57,13 +57,13 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 
 ### Testing Conventions
 
-<!--- TODO: Currently, does not have tests. Write tests then discuss where tests can be found, how they are run, and what kind of tests/coverage strategy and goals the project has. -->
+We use `pytest-cookies` to ensure projects are generated successfully using our repository templates via cookiecutter. Tests are located in the `tests` directory and are run on each pull request in `test.yml`.
+
+To run tests: `pytest --template $TIER_DIRECTORY`
 
 ### Coding Style and Linters
 
-<!-- TODO - Add the repo's linting and code style guidelines -->
-
-Each application has its own linting and testing guidelines. Lint and code tests are run on each commit, so linters and tests should be run locally before commiting.
+On each pull request, `ci-docs.yml` runs MarkdownLinkCheck to lint markdown files.
 
 ### Writing Issues
 
@@ -135,6 +135,24 @@ will be merged directly into the main branch.
 
 We also welcome improvements to the project documentation or to the existing
 docs. Please file an [issue](https://github.com/DSACMS/repo-scaffolder/issues).
+
+## AI Usage
+
+AI tools *(LLMs, coding assistants)* are welcome as part of your contribution workflow, but they don't change who's responsible for the code you submit.
+
+### Recommended uses
+
+- Gaining understanding of the existing code, or solution ideas of the issue
+- Translating or proofreading your comments or PR descriptions while keep the wording as close as possible to what you originally wrote
+
+Whenever you use AI in any of these ways, disclose it explicitly in your PR description.
+
+### Not recommended uses
+
+- External AI tooling *(bots, agents)* directly interacting with the project, including creating issues, opening PRs, or commenting on GitHub
+- Submitting AI generated code you can't explain line by line to a developer, or using AI output without fully understanding it or verifying it's the correct approach
+- Submitting a PR where the effort you put in, such as writing a prompt, is less than the effort it would take a maintainer to review it. We can already write prompts or run automated tools ourselves and doing that directly is faster and more secure than reviewing a low effort PR.
+- Using AI to increase the breadth of your contributions, such as spreading yourself across several projects at once. You provide more value by engaging deeply with one or two projects than shallowly with many.
 
 ## Policies
 

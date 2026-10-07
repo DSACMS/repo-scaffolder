@@ -1,0 +1,42 @@
+name: Tests
+
+on: 
+    push:
+        branches: [ main ]
+        paths:
+            - "tests/**"
+            - "tier*/**"
+    pull_request:
+        types: [ opened, synchronize ]
+        paths:
+            - "tests/**"
+            - "tier*/**"
+
+permissions:
+    contents: read
+
+jobs:
+    run-tests:
+        name: Run Tests
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: '3.9'
+
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install -r requirements.txt
+
+            - name: Run Tests
+              run: |
+                  pytest --template tier0
+                  pytest --template tier1
+                  pytest --template tier2
+                  pytest --template tier3
+                  pytest --template tier4

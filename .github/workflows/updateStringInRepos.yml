@@ -1,64 +1,67 @@
 name: Update string
 
 on:
-    workflow_dispatch:
-        inputs:
-            query:
-                description: 'Query from github API'
-                default: 'topic:x'
-                required: true
-            org:
-                description: 'Org to search for repos in'
-                default: 'DSACMS'
-                required: true
-            find:
-                description: 'String to search for'
-                default: 'x'
-                required: true
-            replace:
-                description: 'Replacement string'
-                default: 'y'
-                required: true
-            file:
-                description: 'File to replace in'
-                default: 'CONTRIBUTING.md'
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "Query from github API"
+        default: "topic:x"
+        required: true
+      org:
+        description: "Org to search for repos in"
+        default: "DSACMS"
+        required: true
+      find:
+        description: "String to search for"
+        default: "x"
+        required: true
+      replace:
+        description: "Replacement string"
+        default: "y"
+        required: true
+      file:
+        description: "File to replace in"
+        default: "CONTRIBUTING.md"
+
+permissions:
+  contents: read
 
 env:
-    repo: ""
+  repo: ""
 
 jobs:
-    find-repos:
-        runs-on: ubuntu-latest
-        name: Find repos and generate matrix
-        steps:
-            - name: Checkout Action
-              uses: actions/checkout@v4
-            - name: Find repos
-              uses: ./.github/findRepos
-              with:
-                query: ${{ github.event.inputs.query }}
-                org: ${{ github.event.inputs.org }}
-                token: ${{ secrets.pat }}
-        outputs:
-            matrix: ${{ env.repo }}
+  find-repos:
+    runs-on: ubuntu-latest
+    name: Find repos and generate matrix
+    steps:
+      - name: Checkout Action
+        uses: actions/checkout@v4
+      - name: Find repos
+        uses: ./.github/findRepos
+        with:
+          query: ${{ github.event.inputs.query }}
+          org: ${{ github.event.inputs.org }}
+          token: ${{ secrets.pat }}
+    outputs:
+      matrix: ${{ env.repo }}
 
-    update:
-        runs-on: ubuntu-latest
-        name: Update file
-        needs: [find-repos]
-        strategy:
-            matrix:
-                repo: ${{ fromJSON(needs.find-repos.outputs.matrix ) }}
-        steps:
-            - name: Checkout Action
-              uses: actions/checkout@v4
-            - name: Update file
-              uses: ./.github/fileUpdater
-              with:
-                repository: ${{ matrix.repo }}
-                find: ${{ github.event.inputs.find }}
-                replace: ${{ github.event.inputs.replace }}
-                file: ${{ github.event.inputs.file }}
-                token: ${{ secrets.pat }}
-            - name: Checkout Action again to stop post error
-              uses: actions/checkout@v4
+  update:
+    runs-on: ubuntu-latest
+    name: Update file
+    needs: [find-repos]
+    strategy:
+      matrix:
+        repo: ${{ fromJSON(needs.find-repos.outputs.matrix ) }}
+    steps:
+      - name: Checkout Action
+        uses: actions/checkout@v4
+      - name: Update file
+        uses: ./.github/fileUpdater
+        with:
+          repository: ${{ matrix.repo }}
+          find: ${{ github.event.inputs.find }}
+          replace: ${{ github.event.inputs.replace }}
+          file: ${{ github.event.inputs.file }}
+          token: ${{ secrets.pat }}
+      - name: Checkout Action again to stop post error
+        uses: actions/checkout@v4

@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> repo-scaffolder | Centers for Medicare & Medicaid Services </title>
+  <link rel="icon" type="image/x-icon" href="assets/images/dsacms.svg">
+  <meta name="description"
+    content="The repo-scaffolder project creates repositories that adhere to open source hygiene standards and best practices. It provides templates and guidance for project metadata, contributing practices, community governance, feedback mechanisms, security policies, and more.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/quizHandler.js" defer></script>
+
+  <!-- Add USWDS assets for federal banner and USA identifier -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/css/uswds.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.6.1/js/uswds.min.js" defer></script>
+</head>
+
+<body>
+  <!-- Feedback Banner -->
+  <div class="feedback-banner">
+    <div class="bg-primary-lighter text-ink text-center">
+      <div class="grid-container">
+        <p class="usa-banner__header-text">
+          Work in progress. We welcome questions and suggestions —
+          <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
+            href="https://github.com/DSACMS/repo-scaffolder/issues/new?template=feature_request.md">give us
+            feedback.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CMS Header -->
+  <header role="banner" class="cms-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="project-logo" aria-label="SHARE-IT Home">
+          <img src="assets/images/dsacms.svg" alt="DSACMS Logo" />
+          repo-scaffolder
+        </a>
+        <nav role="navigation" aria-label="Main navigation">
+          <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Toggle menu">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul id="main-menu">
+            <li><a href="#hero" aria-current="page">Home</a></li>
+            <li><a href="#maturity-model-framework">Maturity Models</a></li>
+            <li><a href="#repository-templates">Repository Templates</a></li>
+            <li><a href="#outbound-checklists">Outbound Checklists</a></li>
+            <li><a href="https://github.com/DSACMS/repo-scaffolder" target="_blank"
+                rel="noopener noreferrer">GitHub<span class="sr-only"></span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <h1>Creating Open Source Projects at CMS</h1>
+        <div class="cta-buttons">
+          <a href="#maturity-model-framework" class="btn">Get Started</a>
+          <a href="https://github.com/DSACMS/repo-scaffolder" target="_blank" class="btn btn-outline">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explain Section -->
+    <section class="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="features-heading">What is repo-scaffolder?</h2>
+          <p>A suite of tools for creating new repositories that align with repository hygiene standards and best
+            practices in US Federal open source development.</p>
+        </div>
+
+        <div class="features-grid">
+          <a href="#maturity-model-framework" class="feature-card-link">
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🌱</div>
+              <div class="feature-content">
+                <h3>Maturity Models</h3>
+                <p>A framework to evaluate and categorize open source repositories based on their composition and goals
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="#repository-templates" class="feature-card-link">
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">🗂️</div>
+              <div class="feature-content">
+                <h3>Repository Templates</h3>
+                <p>A foundation for building repositories that are well-documented, clean, and adhere to repository
+                  hygiene standards and best practices</p>
+              </div>
+            </div>
+          </a>
+          <a href="#outbound-checklists" class="feature-card-link">
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">📝</div>
+              <div class="feature-content">
+                <h3>Outbound Checklists</h3>
+                <p>A review process to reduce risk and improve quality when releasing open source projects</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Characteristics of a Open Source Project Section -->
+    <section class="characteristics" id="characteristics" aria-labelledby="characteristics-heading">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="characteristics-heading">A healthy open source project <br>is more than just a repository of files:
+          </h2>
+        </div>
+        <fieldset class="usa-fieldset">
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="check-goals" type="checkbox">
+            <label class="usa-checkbox__label" for="check-goals">Define a clear goal or purpose</label>
+          </div>
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="check-maturity-model" type="checkbox">
+            <label class="usa-checkbox__label" for="check-maturity-model">Select and adhere to a maturity model
+              tier</label>
+          </div>
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="check-structure" type="checkbox">
+            <label class="usa-checkbox__label" for="check-structure">Maintain a clear and organized structure</label>
+          </div>
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="check-docs" type="checkbox">
+            <label class="usa-checkbox__label" for="check-docs">Provide thorough and up-to-date documentation</label>
+          </div>
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="check-security" type="checkbox">
+            <label class="usa-checkbox__label" for="check-security">Implement proactive security measures such as checks
+              and vulnerability scanning</label>
+          </div>
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="check-metadata" type="checkbox">
+            <label class="usa-checkbox__label" for="check-metadata">Publish project metadata</label>
+          </div>
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="check-development" type="checkbox">
+            <label class="usa-checkbox__label" for="check-development">Foster ongoing development and
+              collaboration</label>
+          </div>
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="check-contributing" type="checkbox">
+            <label class="usa-checkbox__label" for="check-contributing">Provide instructions on contributing</label>
+          </div>
+          <div class="usa-checkbox">
+            <input class="usa-checkbox__input" id="check-governance" type="checkbox">
+            <label class="usa-checkbox__label" for="check-governance">Establish a governance and decision-making
+              process (if Tier 4)</label>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- How a Repository Becomes Published Section -->
+    <section class="repo-to-project" id="repo-to-project" aria-labelledby="repo-to-project-heading">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="repo-to-project-heading">How a Repository Becomes Published</h2>
+          <p>
+          <p>To responsibly and safely release an open source repository publicly (or outbounding), we formalized
+            a checklist to ensure Federal requirements and guidelines, as well as industry best practices are being
+            followed: </p>
+          </p>
+        </div>
+        <div class="publishing-repo">
+          <div class="journey-step" id="identify-maturity-model">
+            <div class="step-header">
+              <div class="doc-card-number">1</div>
+              <h4>Identify your project's maturity model tier</h4>
+            </div>
+            <div style="margin-left: 4em;">
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="check-maturity-model-tier" type="checkbox">
+                <label class="usa-checkbox__label" for="check-maturity-model-tier">
+                  Use <a href="#maturity-model-tier-quiz">Maturity Model Tier Quiz</a> or
+                  <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#1-identify-your-projects-maturity-model-tier"
+                    target="_blank" rel="noopener noreferrer">tier-determiner</a>
+                  script in repo-scaffolder
+                </label>
+              </div>
+              <a href="#maturity-model-framework" class="doc-link">
+                Learn more about maturity models
+                <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="journey-step" id="set-up-repo">
+            <div class="step-header">
+              <div class="doc-card-number">2</div>
+              <h4>Set up your repository to include required files and information using
+                <a href="https://github.com/DSACMS/repo-scaffolder" target="_blank" rel="noopener noreferrer">
+                  repo-scaffolder
+                </a>
+              </h4>
+              <br>
+            </div>
+            <div style="margin-left: 4em;">
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="check-repo-creation-templates" type="checkbox">
+                <label class="usa-checkbox__label" for="check-repo-creation-templates">
+                  Create a new repository using
+                  <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#create-a-new-repository-using-repository-templates"
+                    target="_blank" rel="noopener noreferrer">
+                    repository templates</a>
+                </label>
+              </div>
+              <p style="margin-top: 0.75rem;">OR</p>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="check-repo-creation-cookiecutter" type="checkbox">
+                <label class="usa-checkbox__label" for="check-repo-creation-cookiecutter">
+                  Create a new repository by running
+                  <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#create-a-new-repository-using-repo-scaffolder"
+                    target="_blank" rel="noopener noreferrer">
+                    cookiecutter</a>
+                </label>
+              </div>
+              <p style="margin-top: 0.75rem;">OR</p>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="check-existing-repo-repolinter" type="checkbox">
+                <label class="usa-checkbox__label" for="check-existing-repo-repolinter">
+                  Add files to an existing repository using
+                  <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#add-files-to-an-existing-repository-using-repolinter"
+                    target="_blank" rel="noopener noreferrer">
+                    repolinter</a>
+                </label>
+              </div>
+              <p style="margin-top: 0.75rem;">OR</p>
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="check-existing-repo-cookiecutter" type="checkbox">
+                <label class="usa-checkbox__label" for="check-existing-repo-cookiecutter">
+                  Add files to an existing repository by running
+                  <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#add-files-to-an-existing-repository-using-repo-scaffolder"
+                    target="_blank" rel="noopener noreferrer">
+                    cookiecutter</a>
+                </label>
+              </div>
+              <a href="#repository-templates" class="doc-link">
+                Learn more about repository templates
+                <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="journey-step" id="outbounding">
+            <div class="step-header">
+              <div class="doc-card-number">3</div>
+              <h4>Follow the outbound checklist to review repository</h4>
+            </div>
+            <div class="journey-substeps" style="margin-left: 4em;">
+              <p> Benefits & Risks </p>
+              <div style="margin-left: 2em;">
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-benefits" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-benefits">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-benefits-of-open-sourcing-the-project"
+                      target="_blank" rel="noopener noreferrer">
+                      Evaluate cost savings, extensibility, innovation, and other development benefits
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-risks" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-risks">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-risks-of-open-sourcing-the-project"
+                      target="_blank" rel="noopener noreferrer">
+                      Evaluate the potential security, financial, and privacy risks
+                    </a>
+                  </label>
+                </div>
+              </div>
+              <p> Code Review & Analysis </p>
+              <div style="margin-left: 2em;">
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-code-quality" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-code-quality">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-review"
+                      target="_blank" rel="noopener noreferrer">
+                      Ensure Code Quality
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-pii-phi" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-pii-phi">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-analysis"
+                      target="_blank" rel="noopener noreferrer">
+                      Detect PII/PHI
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-secrets-keys" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-secrets-keys">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-commit-history"
+                      target="_blank" rel="noopener noreferrer">
+                      Detect Secrets and Keys
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-vulnerabilities" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-vulnerabilities">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-analysis"
+                      target="_blank" rel="noopener noreferrer">
+                      Detect Security Vulnerabilities
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-licensing-and-provenance" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-licensing-and-provenance">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-licensing"
+                      target="_blank" rel="noopener noreferrer">
+                      Identify Licensing and Provenance
+                    </a>
+                  </label>
+                </div>
+              </div>
+              <p> Metadata & Hygiene </p>
+              <div style="margin-left: 2em;">
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-files" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-files">
+                    <a href="#repository-templates">
+                      Ensure repository files exist and are complete
+                    </a>
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-metadata-outbound" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-metadata-outbound">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-project-metadata"
+                      target="_blank" rel="noopener noreferrer">
+                      Ensure repository metadata exist in a code.json file and are complete
+                    </a>
+                  </label>
+                </div>
+              </div>
+              <p> Sign-off</p>
+              <div style="margin-left: 2em;">
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input" id="check-ack" type="checkbox">
+                  <label class="usa-checkbox__label" for="check-ack">
+                    <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#sign-off-on-risk-acceptance-of-open-sourcing-the-software-product"
+                      target="_blank" rel="noopener noreferrer">
+                      Acknowledgment and/or Approvals from Technical, Business, and Security Stakeholders
+                    </a>
+                  </label>
+                </div>
+              </div>
+              <a href="#outbound-checklists" class="doc-link">
+                Learn more about outbound checklists
+                <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="journey-step" id="release">
+            <div class="step-header">
+              <div class="doc-card-number">4</div>
+              <h4>The project is ready! Release to the public as an open source project</h4>
+            </div>
+            <div style="margin-left: 4em;">
+              <div class="usa-checkbox">
+                <input class="usa-checkbox__input" id="check-config" type="checkbox">
+                <label class="usa-checkbox__label" for="check-config">
+                  <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#flipping-the-switch-making-the-repository-public"
+                    target="_blank" rel="noopener noreferrer">
+                    Set up repository configuration settings and publishing
+                  </a>
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maturity Model Framework Section -->
+    <section class="documentation" id="maturity-model-framework" aria-labelledby="maturity-model-framework-heading">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="maturity-model-framework-heading">Maturity Models</h2>
+          <p>Our maturity model framework is designed to evaluate and categorize open source repositories based on
+            their
+            composition and goals. This framework consists of five tiers, each representing different stages of a
+            project's development practices, collaboration scope, community engagement, and governance structure.
+          </p>
+          <div class="tree-graphic-summary">
+            <div class="image-set mobile-only">
+              <img src="assets/images/tier0-files.png" alt="Maturity Model Trees Summary Tier 0">
+              <img src="assets/images/tier1-files.png" alt="Maturity Model Trees Summary Tier 1">
+              <img src="assets/images/tier2-files.png" alt="Maturity Model Trees Summary Tier 2">
+              <img src="assets/images/tier3-files.png" alt="Maturity Model Trees Summary Tier 3">
+              <img src="assets/images/tier4-files.png" alt="Maturity Model Trees Summary Tier 4">
+            </div>
+
+            <div class="image-set desktop-only">
+              <img src="assets/images/maturity-model-trees-graphic-horizontal.png" class="tree-graphic-summary"
+                alt="Maturity Model Trees Summary">
+            </div>
+          </div>
+          <br>
+          <a href=https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md target="_blank"
+            class="doc-link">Learn More <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="framework-container">
+          <table class="usa-table">
+            <h3>
+              Tier Definitions
+            </h3>
+            <thead>
+              <tr>
+                <th scope="col">Level</th>
+                <th scope="col">Name</th>
+                <th scope="col">Purpose</th>
+                <th scope="col">Description/Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><a href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier0" target="_blank"
+                    rel="noopener noreferrer">Tier 0</a></th>
+                <td>
+                  Private Repository
+                </td>
+                <td>Experimental</td>
+                <td>Project is private, usually with a single developer. Typically working projects, example code,
+                  and
+                  early prototypes.</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier1" target="_blank"
+                    rel="noopener noreferrer">Tier 1</a></th>
+                <td>
+                  One-Time Release
+                </td>
+                <td>Information/Historical</td>
+                <td>Project released publicly, but without planned future activity or maintenance from original
+                  author(s)</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier2" target="_blank"
+                    rel="noopener noreferrer">Tier 2</a></th>
+                <td>Close Collaboration</td>
+                <td>Collaborate with smaller, mostly internal teams</td>
+                <td>Project within a team or Operational Division (OpDiv), Internal Repo for Innersource-style work.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier3" target="_blank"
+                    rel="noopener noreferrer">Tier 3</a></th>
+                <td>Working in Public</td>
+                <td>Collaborate in the Open with smaller, semi-open teams</td>
+                <td>Project developed Open Source by CMS or a CMS contractor OR public website hosted on GitHub OR tool
+                  or utility used in CMS official business by the public. Limited external contribution, CMS-led (by
+                  choice or by statute).</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier4" target="_blank"
+                    rel="noopener noreferrer">Tier 4</a></th>
+                <td>Community Governance</td>
+                <td>Collaborate broadly in public</td>
+                <td>Project often donated to or stewarded by an external community OR open standard that welcomes public
+                  input OR mature open source project that purposefully develops an open governance structure.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Tier Determiner Quiz -->
+        <div class="quiz" id="maturity-model-tier-quiz">
+          <h3 class="site-preview-heading">What is my project's maturity model tier?</h3>
+          <div class="form-container">
+            <form class="usa-form">
+              <fieldset class="usa-fieldset">
+                <legend class="usa-legend">Answer the series of questions below to determine the maturity model tier
+                  of
+                  your project:</legend>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input usa-checkbox__input--tile" id="tier-determiner-contributors"
+                    type="checkbox" name="tier-determiner" value="contributors" />
+                  <label class="usa-checkbox__label" for="tier-determiner-contributors">
+                    Does your project have more than one contributor?
+                  </label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input usa-checkbox__input--tile" id="tier-determiner-release"
+                    type="checkbox" name="tier-determiner" value="release" />
+                  <label class="usa-checkbox__label" for="tier-determiner-release">Do you plan on shipping more code or
+                    releases in the future?</label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input usa-checkbox__input--tile" id="tier-determiner-work" type="checkbox"
+                    name="tier-determiner" value="work" />
+                  <label class="usa-checkbox__label" for="tier-determiner-work">Do you plan on accepting innersource
+                    contributions to the repository? (e.g. internal staff and contractors only)</label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input usa-checkbox__input--tile" id="tier-determiner-contribute"
+                    type="checkbox" name="tier-determiner" value="contribute" />
+                  <label class="usa-checkbox__label" for="tier-determiner-contribute">Do you plan on accepting outside
+                    contributions to the repository? (e.g. pull requests and issues from the public)</label>
+                </div>
+                <div class="usa-checkbox">
+                  <input class="usa-checkbox__input usa-checkbox__input--tile" id="tier-determiner-roadmap"
+                    type="checkbox" name="tier-determiner" value="roadmap" />
+                  <label class="usa-checkbox__label" for="tier-determiner-roadmap">Do you plan on having other
+                    individuals/teams outside the agency co-planning the development roadmap with you?</label>
+                </div>
+              </fieldset>
+              <button type="submit" class="usa-button">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="results" style="display: none;">
+          <div class="results-container">
+            <img src="assets/images/tier0-tree.svg" class="tree-graphic" alt="Tree graphic">
+            <p class="tier-result">Your project is: </p>
+            <br>
+          </div>
+          <a href="#" class="doc-link" onclick="handleClick(event)">Try Again</a>
+        </div>
+    </section>
+
+    <!-- Repository Templates Section -->
+    <section class="repository-templates" id="repository-templates" aria-labelledby="repository-templates-heading">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="repository-templates-heading">Repository Templates</h2>
+          <p>Each maturity model tier requires specific files and documentation such as: project information,
+            security
+            policies, licensing details, and contribution guidelines. This documentation creates transparency,
+            enables
+            collaboration, and supports sustainability.</p>
+        </div>
+
+        <div class="files">
+          <div class="tables-container">
+            <div class="table-container">
+              <h3>Repository File Requirements by Tier</h3>
+              <table class="usa-table">
+                <thead>
+                  <tr>
+                    <th scope="col">File</th>
+                    <th scope="col">Description</th>
+                    <th scope="col"><a
+                        href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier0/{{cookiecutter.project_slug}}"
+                        target="_blank" rel="noopener noreferrer">Tier 0</a></th>
+                    <th scope="col"><a
+                        href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier1/{{cookiecutter.project_slug}}"
+                        target="_blank" rel="noopener noreferrer">Tier 1</a></th>
+                    <th scope="col"><a
+                        href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier2/{{cookiecutter.project_slug}}"
+                        target="_blank" rel="noopener noreferrer">Tier 2</a></th>
+                    <th scope="col"><a
+                        href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier3/{{cookiecutter.project_slug}}"
+                        target="_blank" rel="noopener noreferrer">Tier 3</a></th>
+                    <th scope="col"><a
+                        href="https://github.com/DSACMS/repo-scaffolder/tree/main/tier4/{{cookiecutter.project_slug}}"
+                        target="_blank" rel="noopener noreferrer">Tier 4</a></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">LICENSE</th>
+                    <td>Defines the licensing terms under which the project is distributed.</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">code.json</th>
+                    <td>Contains project metadata following legislative requirements.</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">README.md</th>
+                    <td>Provides a comprehensive overview of the project, including its purpose, how to install or
+                      use
+                      it, and any relevant information for users or developers.</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">COMMUNITY.md</th>
+                    <td>Lists project team members and points of contact with detailed roles and responsibilities.
+                    </td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">SECURITY.md</th>
+                    <td>Outlines the agency's security policies, including how to report security issues or
+                      vulnerabilities in the code.</td>
+                    <td class="blue">R</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CONTRIBUTING.md</th>
+                    <td>Offers guidelines for contributing to the project, including code standards, how to submit
+                      issues, and creating pull requests.</td>
+                    <td class="blue">R</td>
+                    <td class="blue">R</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CODE_OF_CONDUCT.md</th>
+                    <td>Establishes guidelines for acceptable behavior within the community, setting expectations
+                      for
+                      how contributors should interact in a respectful and collaborative manner.</td>
+                    <td class="pink">N</td>
+                    <td class="pink">N</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                    <td class="green">M</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">GOVERNANCE.md</th>
+                    <td>Describes the governance model of the project, such as decision-making processes and rules
+                      for
+                      contributing. It ensures a transparent process for managing the project.</td>
+                    <td class="pink">N</td>
+                    <td class="pink">N</td>
+                    <td class="pink">N</td>
+                    <td class="blue">R</td>
+                    <td class="green">M</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="table-container">
+                <table class="usa-table">
+                  <h3>Legend</h3>
+                  <thead>
+                    <tr>
+                      <th scope="col">Level</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="green">M</th>
+                      <td>Mandatory</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="blue">R</th>
+                      <td>Recommended</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="pink">N</th>
+                      <td>Not Recommended</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/maturity-model-tiers.md#repository-file-content-requirements-by-tier"
+              target="_blank" rel="noopener noreferrer" class="doc-link">Learn more about file content requirements
+              <span aria-hidden="true">→</span></a>
+          </div>
+          <br>
+
+          <h3>Get started!</h3>
+          <p>Create a repository using our cookiecutter CLI by running the commands below, replacing X with the tier
+            number: </p>
+          <div class="code">
+            <pre>python3 -m pip install --user cookiecutter</pre>
+            <br>
+            <pre>cookiecutter https://github.com/DSACMS/repo-scaffolder --directory=tierX</pre>
+          </div>
+          <br>
+
+          <h3>Managing your Repository</h3>
+          <p>repo-scaffolder includes a suite of tools to help maintain and manage your repository throughout
+            development.</p>
+          <br>
+          <div class="doc-grid">
+            <div class="doc-card">
+              <h3>Cookiecutter</h3>
+              <p>Create new repositories using file templates as your starting point.</p>
+              <a href="https://github.com/DSACMS/repo-scaffolder/tree/main?tab=readme-ov-file#2-set-up-your-repository"
+                target="_blank" rel="noopener noreferrer" class="doc-link">View docs <span
+                  aria-hidden="true">→</span></a>
+            </div>
+            <div class="doc-card">
+              <h3>Repolinter</h3>
+              <p>Identify missing files and content.</p>
+              <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#add-files-to-an-existing-repository-using-repolinter"
+                target="_blank" rel="noopener noreferrer" class="doc-link">View docs <span
+                  aria-hidden="true">→</span></a>
+            </div>
+            <div class="doc-card">
+              <h3>Metadata</h3>
+              <p>Create and update metadata in code.json using cookiecutter and GitHub Actions.</p>
+              <a href="https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#metadata-collection-using-codejson"
+                target="_blank" rel="noopener noreferrer" class="doc-link">View docs <span
+                  aria-hidden="true">→</span></a>
+            </div>
+            <div class="doc-card">
+              <h3>Workflows</h3>
+              <p>Automated GitHub Action jobs to keep your repository updated.</p>
+              <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/docs/.github-directory.md" target="_blank"
+                rel="noopener noreferrer" class="doc-link">View docs <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Outbound Checklist Section -->
+    <section class="documentation" id="outbound-checklists" aria-labelledby="outbound-checklists-section-heading">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="outbound-checklists-heading">Outbound Checklists</h2>
+          <p> A review process to approve CMS-developed software to be released as open source. </p>
+          <br>
+          <a href=https://github.com/DSACMS/repo-scaffolder?tab=readme-ov-file#outbound-checklists target="_blank"
+            class="doc-link">Learn more about each step of our outbound checklists<span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="doc-grid">
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">1</div>Pre-Requisites
+            </h3>
+            <p>Verify the project's tier and ensure the corresponding outbound checklist is being followed.
+            </p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#prerequisites"
+              target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
+                aria-hidden="true">→</span></a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">2</div>Benefits
+            </h3>
+            <p>Evaluate the cost savings, extensibility, innovation, and other development benefits of
+              open sourcing the repository.</p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-benefits-of-open-sourcing-the-project"
+              target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
+                aria-hidden="true">→</span></a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">3</div>Risks
+            </h3>
+            <p>Evaluate the potential security, financial, and privacy risks of open sourcing the repository.</p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#state-the-risks-of-open-sourcing-the-project"
+              target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
+                aria-hidden="true">→</span></a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">4</div>Code Review
+            </h3>
+            <p>Ensure code quality and security through an independent review of the codebase by agency developers.
+            </p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-review" target="_blank"
+              rel="noopener noreferrer" class="doc-link">View section <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">5</div>Code Analysis
+            </h3>
+            <p>Ensure code quality and security through analysis and testing with open source tools. </p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#code-analysis"
+              target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
+                aria-hidden="true">→</span></a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">6</div>Review Licensing
+            </h3>
+            <p>Ensure acceptable licensing is decided for the project. </p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-licensing"
+              target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
+                aria-hidden="true">→</span></a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">7</div>Repository Hygiene
+            </h3>
+            <p>Include required files, sections, and documentation in the repository to meet hygiene standards.</p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-repository-hygiene"
+              target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
+                aria-hidden="true">→</span></a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">8</div>Metadata
+            </h3>
+            <p>Store metadata on the project, as part of the Federal Source Code Policy and the agency’s software
+              inventory tracking initiatives.</p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#review-project-metadata"
+              target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
+                aria-hidden="true">→</span></a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">9</div>Sign off
+            </h3>
+            <p> Review and acknowledge the risks and responsibilities associated with releasing the code to the
+              public.
+            </p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#sign-off-on-risk-acceptance-of-open-sourcing-the-software-product"
+              target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
+                aria-hidden="true">→</span></a>
+          </div>
+          <div class="doc-card">
+            <h3>
+              <div class="doc-card-number">10</div>Flip the Switch!
+            </h3>
+            <p>After passing outbound review, the repository is officially ready to be public and shared with the
+              greater community. </p>
+            <a href="https://github.com/DSACMS/repo-scaffolder/blob/main/tier3/checklist.md#flipping-the-switch-making-the-repository-public"
+              target="_blank" rel="noopener noreferrer" class="doc-link">View section <span
+                aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to create an open source repository?</h2>
+        <p>Use the templates and tools here!</p>
+        <a href="https://github.com/DSACMS/repo-scaffolder" target="_blank" rel="noopener noreferrer" class="btn">View
+          on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- CMS Footer -->
+  <footer class="usa-footer site-footer" role="contentinfo">
+    <div class="footer-section-bottom bg-base-darker">
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="footer-simple-content">
+            <p class="footer-text">This site is maintained by <a
+                href="https://www.cms.gov/digital-service/open-source-program-office" class="footer-link">the CMS Open
+                Source Program Office</a>.</p>
+            <p class="footer-text">Read our <a href="https://github.com/DSACMS/ospo-guide/blob/main/LINKING_POLICY.md"
+                class="footer-link">linking policy</a>.</p>
+            <p class="footer-text">Have questions or want to contact us? Email us at <a
+                href="mailto:opensource@cms.hhs.gov" class="footer-link">opensource@cms.hhs.gov</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="usa-identifier">
+    <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+      <div class="usa-identifier__container">
+        <div class="cms-identifier">
+          <div class="cms-logos">
+            <a href="https://hhs.gov" class="cms-logo-link">
+              <img src="assets/images/hhs-white.svg" class="cms-logo-img" alt="HHS logo">
+            </a>
+            <a href="https://cms.gov" class="cms-logo-link">
+              <img src="assets/images/cms-white.svg" class="cms-logo-img" alt="CMS logo">
+            </a>
+          </div>
+          <div class="cms-identity">
+            <p class="cms-domain">cms.gov</p>
+            <p class="cms-disclaimer">
+              An official website of the <a href="https://hhs.gov">Department of Health and Human Services</a> and the
+              <a href="https://cms.gov">Centers for Medicare and Medicaid Services</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links,,,">
+      <div class="usa-identifier__container">
+        <div class="footer-links-wrapper">
+          <div class="footer-links-group">
+            <a href="https://www.cms.gov/about-cms/about-cms" class="usa-identifier__required-link usa-link">About
+              CMS</a>
+            <a href="https://www.cms.gov/about-cms/agency-information/aboutwebsite/cmsnondiscriminationnotice"
+              class="usa-identifier__required-link usa-link">Accessibility statement</a>
+          </div>
+
+          <div class="footer-links-group">
+            <a href="https://www.cms.gov/freedom-information-act-foia-service-center"
+              class="usa-identifier__required-link usa-link">FOIA requests</a>
+            <a href="https://www.cms.gov/about-cms/agency-information/aboutwebsite/nofearact"
+              class="usa-identifier__required-link usa-link">No FEAR Act data</a>
+          </div>
+
+          <div class="footer-links-group">
+            <a href="https://www.oig.hhs.gov/" class="usa-identifier__required-link usa-link">Office of the Inspector
+              General</a>
+            <a href="https://www.cms.gov/About-CMS/Agency-Information/PerformanceBudget"
+              class="usa-identifier__required-link usa-link">Performance reports</a>
+          </div>
+
+          <div class="footer-links-group">
+            <a href="https://www.cms.gov/privacy" class="usa-identifier__required-link usa-link">Privacy policy</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="usa-identifier__section usa-identifier__section--usagov"
+      aria-label="U.S. government information and services">
+      <div class="usa-identifier__container">
+        <div class="usagov-container">
+          <div class="usagov-text">Looking for U.S. government information and services?</div>
+          <a href="https://www.usa.gov/" class="usagov-link">Visit USA.gov</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

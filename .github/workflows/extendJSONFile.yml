@@ -4,27 +4,30 @@ on:
   workflow_dispatch:
     inputs:
       url_to_json:
-        description: 'URL to JSON file'
-        default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+        description: "URL to JSON file"
+        default: "https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json"
         required: true
         type: string
   workflow_call:
     inputs:
       url_to_json:
-        description: 'URL to JSON file'
-        default: 'https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json'
+        description: "URL to JSON file"
+        default: "https://raw.githubusercontent.com/DSACMS/repo-scaffolder/main/tier1/%7B%7Bcookiecutter.project_slug%7D%7D/repolinter.json"
         required: true
         type: string
     outputs:
-      raw-json: 
-        description: 'JSON of the file'
+      raw-json:
+        description: "JSON of the file"
         value: ${{ jobs.extend-json.outputs.raw-json }}
+
+permissions:
+  contents: read
 
 jobs:
   extend-json:
     runs-on: ubuntu-latest
     name: Extend JSON file with extends property
-    outputs: 
+    outputs:
       raw-json: ${{ steps.extend-json.outputs.raw-json }}
     steps:
       - name: Checkout repository

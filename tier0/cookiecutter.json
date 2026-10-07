@@ -6,9 +6,12 @@
     "project_description": "This is the project description, could match github.com repo description.",
     "project_visibility": ["public", "internal", "private"],
     "create_repo": [true, false],
-    "receive_updates": [true, false],
+    "extra_repo_topics": "",
+    "add_team": [true, false],
     "__prompts__": {
       "create_repo": "Would you like to create a repo on github.com?",
-      "receive_updates": "Would you like to receive updates from the DSACMS team via pull requests?"
-    }
+      "extra_repo_topics": "Enter additional GitHub topics (comma-separated, optional). Example: content-management,dashboard,regulations-and-directives,CodingItForward,Medicare,Medicaid,CMCS,CCSQ",
+      "add_team": "Would you like to add project team members to COMMUNITY.md?"
+    },
+    "_copy_without_render": [".github/codejson"]
 }

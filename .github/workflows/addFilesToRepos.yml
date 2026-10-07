@@ -1,55 +1,58 @@
 name: Add files to repos
 
 on:
-    workflow_dispatch:
-        inputs:
-            query:
-                description: 'Query for github API'
-                default: 'topic:x'
-                required: true
-            org:
-                description: 'Org to search for repos in'
-                default: 'DSACMS'
-                required: true
-            files:
-                description: 'File or folders to add'
-                default: 'tier1/LICENSE'
-                required: true
+  workflow_dispatch:
+    inputs:
+      query:
+        description: "Query for github API"
+        default: "topic:x"
+        required: true
+      org:
+        description: "Org to search for repos in"
+        default: "DSACMS"
+        required: true
+      files:
+        description: "File or folders to add"
+        default: "tier1/LICENSE"
+        required: true
+
+permissions:
+  contents: read
 
 env:
-    repo: ""
+  repo: ""
 
 jobs:
-    find-repos:
-        runs-on: ubuntu-latest
-        name: Find repos and generate matrix
-        steps:
-            - name: Checkout Action
-              uses: actions/checkout@v4
-            - name: Find repos
-              uses: ./.github/findRepos
-              with:
-                query: ${{ github.event.inputs.query }}
-                org: ${{ github.event.inputs.org }}
-                token: ${{ secrets.pat }}
-        outputs:
-            matrix: ${{ env.repo }}
+  find-repos:
+    runs-on: ubuntu-latest
+    name: Find repos and generate matrix
+    steps:
+      - name: Checkout Action
+        uses: actions/checkout@v4
+      - name: Find repos
+        uses: ./.github/findRepos
+        with:
+          query: ${{ github.event.inputs.query }}
+          org: ${{ github.event.inputs.org }}
+          token: ${{ secrets.pat }}
+    outputs:
+      matrix: ${{ env.repo }}
 
-    add-files:
-        runs-on: ubuntu-latest
-        name: Add files
-        needs: [find-repos]
-        strategy:
-            matrix:
-                repo: ${{ fromJSON(needs.find-repos.outputs.matrix ) }}
-        steps:
-            - name: Checkout Action
-              uses: actions/checkout@v4
-            - name: Update file
-              uses: ./.github/addingFile
-              with:
-                repository: ${{ matrix.repo }}
-                files: ${{ github.event.inputs.files }}
-                token: ${{ secrets.pat }}
-            - name: Checkout Action again to stop post error
-              uses: actions/checkout@v4
+  add-files:
+    runs-on: ubuntu-latest
+    name: Add files
+    needs: [find-repos]
+    strategy:
+      matrix:
+        repo: ${{ fromJSON(needs.find-repos.outputs.matrix ) }}
+    steps:
+      - name: Checkout Action
+        uses: actions/checkout@v4
+      - name: Update file
+        uses: ./.github/addingFile
+        with:
+          repository: ${{ matrix.repo }}
+          files: ${{ github.event.inputs.files }}
+          token: ${{ secrets.pat }}
+      - name: Checkout Action again to stop post error
+        uses: actions/checkout@v4

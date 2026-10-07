@@ -1,0 +1,25 @@
+{
+    "ignorePatterns": [
+        {
+            "pattern": "^https://github.com/%7B%7B"
+        },
+        {
+            "pattern": "^https://akashchandwani.medium.com"
+        },
+        {
+            "pattern": "^https://www.congress.gov"
+        },
+        {
+            "pattern": "^https://www.hhs.gov"
+        },
+        {
+            "pattern": "^#%7B%7Bcookiecutter.project_name"
+        },
+        {
+            "pattern": "^GLOSSARY.md"
+        },
+        {
+            "pattern": "^proj-releases-new"
+        }
+    ]
+}
