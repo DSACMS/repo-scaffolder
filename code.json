@@ -25,9 +25,9 @@
   "disclaimerURL": "",
   "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 8122,
+  "laborHours": 8164,
   "reuseFrequency": {
-    "forks": 18,
+    "forks": 19,
     "clones": 0
   },
   "platforms": [
@@ -57,8 +57,8 @@
   "partners": [],
   "date": {
     "created": "2023-10-05T18:06:51Z",
-    "lastModified": "2026-07-31T21:24:06Z",
-    "metadataLastUpdated": "2026-08-01T03:41:33.534Z"
+    "lastModified": "2026-08-21T18:42:30Z",
+    "metadataLastUpdated": "2026-09-01T04:53:59.279Z"
   },
   "tags": [
     "cmsoss-tier3",
